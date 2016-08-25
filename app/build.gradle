@@ -5,7 +5,7 @@ android {
     buildToolsVersion "23.0.3"
 
     defaultConfig {
-        applicationId "com.cetcme.navigationtabdemo"
+        applicationId "com.cetcme.zytyumin"
         minSdkVersion 15
         targetSdkVersion 23
         versionCode 1
@@ -31,4 +31,10 @@ dependencies {
     compile 'net.steamcrafted:load-toast:1.0.10'
     compile 'com.akexorcist:RoundCornerProgressBar:2.0.3'
 
+    compile files('libs/baidumapapi_base_v4_0_0.jar')
+    compile files('libs/baidumapapi_cloud_v4_0_0.jar')
+    compile files('libs/baidumapapi_map_v4_0_0.jar')
+    compile files('libs/baidumapapi_radar_v4_0_0.jar')
+    compile files('libs/baidumapapi_search_v4_0_0.jar')
+    compile files('libs/baidumapapi_util_v4_0_0.jar')
 }

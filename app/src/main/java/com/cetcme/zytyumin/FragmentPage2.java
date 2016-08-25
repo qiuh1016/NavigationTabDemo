@@ -7,6 +7,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.baidu.mapapi.map.MapView;
+
 import IconPager.BaseFragment;
 import navigationView.NavigationView;
 
@@ -16,11 +18,14 @@ import navigationView.NavigationView;
 public class FragmentPage2 extends BaseFragment {
 
     private View view;
+    private MapView mapView;
 
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.fragment_2, null, false);
         initNavigationView();
+        mapView = (MapView) view.findViewById(R.id.baiduMap_in_fragment_2);
+
         return view;
     }
 

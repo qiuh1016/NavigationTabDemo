@@ -9,17 +9,20 @@ import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.widget.Toast;
 
+import com.baidu.mapapi.SDKInitializer;
+
 import java.util.ArrayList;
 import java.util.List;
 
 import IconPager.BaseFragment;
 import IconPager.IconPagerAdapter;
 import IconPager.IconTabPageIndicator;
+import IconPager.NoScrollViewPager;
 
 
 public class MainActivity extends FragmentActivity {
 
-    private ViewPager mViewPager;
+    private NoScrollViewPager mViewPager;
     private IconTabPageIndicator mIndicator;
 
     //按2次返回退出
@@ -30,13 +33,13 @@ public class MainActivity extends FragmentActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        SDKInitializer.initialize(getApplicationContext());
         setContentView(R.layout.activity_main);
-
         initViews();
     }
 
     private void initViews() {
-        mViewPager = (ViewPager) findViewById(R.id.view_pager);
+        mViewPager = (NoScrollViewPager) findViewById(R.id.view_pager);
         mIndicator = (IconTabPageIndicator) findViewById(R.id.indicator);
         List<BaseFragment> fragments = initFragments();
         FragmentAdapter adapter = new FragmentAdapter(fragments, getSupportFragmentManager());
