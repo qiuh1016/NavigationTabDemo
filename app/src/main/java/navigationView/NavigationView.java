@@ -12,7 +12,7 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import com.cetcme.navigationtabdemo.R;
+import com.cetcme.zytyumin.R;
 
 /**
  * 导航栏组件,目前包括返回键,标题,右侧按钮.其中:

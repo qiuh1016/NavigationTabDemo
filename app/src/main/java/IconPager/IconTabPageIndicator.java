@@ -11,7 +11,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 
-import com.cetcme.navigationtabdemo.R;
+import com.cetcme.zytyumin.R;
 
 import static android.view.ViewGroup.LayoutParams.MATCH_PARENT;
 
