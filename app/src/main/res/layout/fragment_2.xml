@@ -9,7 +9,7 @@
     android:background="#eee"
     tools:context=".MainActivity">
 
-    <navigationView.NavigationView
+    <MyClass.NavigationView
         android:id="@+id/nav_main_in_fragment_2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>

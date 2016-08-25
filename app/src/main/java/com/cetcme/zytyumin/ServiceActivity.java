@@ -4,7 +4,7 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.util.Log;
 
-import navigationView.NavigationView;
+import MyClass.NavigationView;
 
 public class ServiceActivity extends Activity {
 
@@ -26,7 +26,7 @@ public class ServiceActivity extends Activity {
     private void initNavigationView() {
         navigationView = (NavigationView) findViewById(R.id.nav_main_in_service_activity);
         navigationView.setTitle(getString(R.string.gird_1_in_fragment_1));
-        navigationView.setBackView(android.R.drawable.ic_menu_revert);
+        navigationView.setBackView(R.drawable.back);
         navigationView.setRightView(0);
         navigationView.setClickCallback(new NavigationView.ClickCallback() {
 

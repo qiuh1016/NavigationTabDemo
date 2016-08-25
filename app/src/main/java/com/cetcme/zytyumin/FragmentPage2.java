@@ -23,7 +23,7 @@ import com.baidu.mapapi.map.OverlayOptions;
 import com.baidu.mapapi.model.LatLng;
 
 import IconPager.BaseFragment;
-import navigationView.NavigationView;
+import MyClass.NavigationView;
 
 /**
  * Created by qiuhong on 8/24/16.
@@ -47,16 +47,6 @@ public class FragmentPage2 extends BaseFragment implements  BaiduMap.OnMarkerCli
         initNavigationView();
         initBaiduMap();
 
-        String shipInfo = "浙嘉渔1234" + "\n" +
-                "船东：" + "123" + "\n" +
-                "电话：" + "0754" + "\n" +
-                "负责人：" + "123" + "\n" +
-                "电话：" + "1234" + "\n" +
-                "终端序号：" + "10000001" + "\n" +
-                "是否在线：" + "是" + "\n" +
-                "是否在港：" + "是" + "\n" +
-                "伏休期起始日期：" + "1990/01/01" + "\n" +
-                "伏休期结束日期：" + "1990/01/01";
         mapMark(new LatLng(30, 122), "浙嘉渔1234");
 
         return view;

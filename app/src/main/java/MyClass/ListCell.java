@@ -1,0 +1,54 @@
+package MyClass;
+
+import android.content.Context;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.widget.LinearLayout;
+import android.widget.TextView;
+
+import com.cetcme.zytyumin.R;
+
+/**
+ * Created by qiuhong on 8/25/16.
+ */
+public class ListCell extends LinearLayout implements View.OnClickListener {
+
+    private TextView textView;
+    private LinearLayout linearLayout;
+
+    private ClickCallback callback;
+
+    public ListCell(Context context, String text, int backgroundResource) {
+        super(context);
+
+        View view = LayoutInflater.from(context).inflate(R.layout.list_cell, this, true);
+
+        linearLayout = (LinearLayout) view.findViewById(R.id.list_cell);
+        linearLayout.setBackgroundResource(backgroundResource);
+        linearLayout.setOnClickListener(this);
+
+        textView = (TextView) view.findViewById(R.id.textView_in_List_Cell);
+        textView.setText(text);
+
+    }
+
+    /**
+     * 设置按钮点击回调接口
+     * @param callback
+     */
+    public void setClickCallback(ClickCallback callback) {
+        this.callback = callback;
+    }
+
+    public static interface ClickCallback{
+        /**
+         * 点击返回按钮回调
+         */
+        void onClick();
+    }
+
+    @Override
+    public void onClick(View v) {
+        callback.onClick();
+    }
+}

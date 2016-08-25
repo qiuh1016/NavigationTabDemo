@@ -10,40 +10,61 @@
     tools:context=".MainActivity">
 
 
-    <navigationView.NavigationView
+    <MyClass.NavigationView
         android:id="@+id/nav_main_in_fragment_1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 
-    <TextView
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="滚动新闻"
-        android:id="@+id/textView4"
-        android:layout_below="@+id/nav_main_in_fragment_1"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:gravity="center"
-        android:background="@android:drawable/editbox_background_normal"
-        android:layout_marginLeft="16dp"
-        android:layout_marginRight="16dp"
-        android:layout_marginTop="16dp" />
+        android:layout_height="match_parent"
+        android:layout_below="@+id/nav_main_in_fragment_1">
 
-    <GridView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/gridViewInFragment_1"
-        android:layout_below="@+id/textView4"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="10dp"
-        android:numColumns="3"
-        android:columnWidth="120dp"
-        android:verticalSpacing="10dp"
-        android:stretchMode="columnWidth"
-        android:layout_marginLeft="16dp"
-        android:layout_marginRight="16dp" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+        <com.youth.banner.Banner
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:id="@+id/banner_in_fragment_1"
+            android:gravity="center"
+
+            app:is_auto_play="true"
+
+            app:title_background="#90000000"
+            app:title_height="28dp"
+            app:title_textcolor="@color/white"
+            app:title_textsize="5sp"
+
+            app:indicator_height="7dp"
+            app:indicator_margin="4dp"
+            app:indicator_width="7dp"
+            app:indicator_drawable_selected="@drawable/indicator_selected_radius"
+            app:indicator_drawable_unselected="@drawable/indicator_unselected_radius"
+            />
+
+        <MyClass.NoScrollGridView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/gridViewInFragment_1"
+            android:numColumns="3"
+            android:columnWidth="120dp"
+            android:verticalSpacing="10dp"
+            android:stretchMode="columnWidth"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="10dp" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+
+
+
+
 </RelativeLayout>

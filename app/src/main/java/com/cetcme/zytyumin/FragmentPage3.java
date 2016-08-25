@@ -10,7 +10,7 @@ import android.view.ViewGroup;
 import android.widget.LinearLayout;
 
 import IconPager.BaseFragment;
-import navigationView.NavigationView;
+import MyClass.NavigationView;
 
 /**
  * Created by qiuhong on 8/24/16.
@@ -19,6 +19,7 @@ public class FragmentPage3 extends BaseFragment {
 
     private View view;
     private String TAG = "FragmentPage3";
+    private NavigationView navigationView;
 
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -41,8 +42,6 @@ public class FragmentPage3 extends BaseFragment {
         });
         return view;
     }
-
-    private NavigationView navigationView;
 
     private void initNavigationView() {
         navigationView = (NavigationView) view.findViewById(R.id.nav_main_in_fragment_3);

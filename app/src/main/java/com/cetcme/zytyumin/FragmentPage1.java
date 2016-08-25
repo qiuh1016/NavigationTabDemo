@@ -11,13 +11,17 @@ import android.widget.GridView;
 import android.widget.SimpleAdapter;
 import android.widget.Toast;
 
+import com.youth.banner.Banner;
+import com.youth.banner.BannerConfig;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
 import IconPager.BaseFragment;
-import navigationView.NavigationView;
+import MyClass.NoScrollGridView;
+import MyClass.NavigationView;
 
 /**
  * Created by qiuhong on 8/24/16.
@@ -25,6 +29,10 @@ import navigationView.NavigationView;
 public class FragmentPage1 extends BaseFragment {
     private View view;
     private String TAG = "FragmentPage1";
+
+    private GridView gridView;
+    private List<Map<String, Object>> data_list;
+    private SimpleAdapter sim_adapter;
 
     private int[] gridIcon = {
             R.mipmap.ic_launcher,
@@ -40,10 +48,30 @@ public class FragmentPage1 extends BaseFragment {
     private Class[] gridClass = {
             ServiceActivity.class,
             RecordActivity.class,
-            null,
+            ShipActivity.class,
             null,
             null,
             null
+    };
+
+    private Banner banner;
+//    String[] images= new String[] {"http://img.dahe.cn/qf/2016/8/24/1212BRZXKT.jpg", "http://photocdn.sohu.com/20160825/Img465863888.jpg", "http://img3.qianzhan123.com/news/201608/19/20160825-23aea49bce08ba25_600x5000.jpg"};
+//    String[] titles=new String[]{"法国警察强制要求穆斯林妇女脱下泳衣", "中国外长3年来首次访日", "张一山新戏《家有儿女初长成》"};
+
+    private String[] images = new String[] {
+            "http://www.cnfm.gov.cn/tpxwsyyzw/201607/W020160729535413736589.jpg",
+            "http://www.cnfm.gov.cn/tpxwsyyzw/201606/W020160613350121243228.jpg",
+            "http://www.cnfm.gov.cn/tpxwsyyzw/201606/W020160607311179962227.jpg",
+            "http://www.cnfm.gov.cn/tpxwsyyzw/201605/W020160530525181788332.jpg",
+            "http://www.cnfm.gov.cn/tpxwsyyzw/201606/W020160629399731306479.jpg"
+    };
+
+    private String[] titles = new String[] {
+            "学习习近平总书记“七一”重要讲话加快推进渔业转型升级",
+            "于康震：以科技为支撑 以市场为导向 实现有质量的渔业转型升级发展",
+            "水生生物增殖放流活动在全国范围同步举行",
+            "中国秘鲁举行双边渔业会谈",
+            "渔业渔政管理局开展定点扶贫村结对帮扶工作"
     };
 
     public enum Function {
@@ -65,6 +93,7 @@ public class FragmentPage1 extends BaseFragment {
 
         initNavigationView();
         initGridView();
+        initBanner();
 
         return view;
     }
@@ -90,12 +119,8 @@ public class FragmentPage1 extends BaseFragment {
         });
     }
 
-    private GridView gridView;
-    private List<Map<String, Object>> data_list;
-    private SimpleAdapter sim_adapter;
-
     private void initGridView() {
-        gridView = (GridView) view.findViewById(R.id.gridViewInFragment_1);
+        gridView = (NoScrollGridView) view.findViewById(R.id.gridViewInFragment_1);
         //新建List
         data_list = new ArrayList<>();
         //获取数据
@@ -135,5 +160,21 @@ public class FragmentPage1 extends BaseFragment {
         }
 
         return data_list;
+    }
+
+    private void initBanner() {
+        banner = (Banner) view.findViewById(R.id.banner_in_fragment_1);
+        banner.setBannerStyle(BannerConfig.CIRCLE_INDICATOR_TITLE_INSIDE);
+        banner.setImages(images);
+        banner.setBannerTitle(titles);
+        banner.setDelayTime(8000);
+        banner.setBannerAnimation(BannerConfig.ROTATEDOWN);
+
+        banner.setOnBannerClickListener(new Banner.OnBannerClickListener() {
+            @Override
+            public void OnBannerClick(View view, int position) {
+                Log.i(TAG, "OnBannerClick: " + position);
+            }
+        });
     }
 }

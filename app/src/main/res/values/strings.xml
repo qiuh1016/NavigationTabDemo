@@ -8,7 +8,7 @@
     <string name="gird_4_in_fragment_1">法律法规</string>
     <string name="gird_5_in_fragment_1">业务流程</string>
     <string name="gird_6_in_fragment_1">待办任务</string>
-    
+
     <string name="line_1_in_service_activity">渔船检验申报</string>
     <string name="line_2_in_service_activity">图纸审查申报</string>
     <string name="line_3_in_service_activity">产品检验申报</string>
@@ -18,5 +18,10 @@
     <string name="line_3_in_record_activity">交易记录</string>
     <string name="line_4_in_record_activity">检验记录</string>
     <string name="line_5_in_record_activity">审图记录</string>
+
+    <string name="line_1_in_visa_activity">出港确认</string>
+    <string name="line_2_in_visa_activity">进港确认</string>
+    <string name="line_3_in_visa_activity">打卡记录</string>
+    <string name="line_4_in_visa_activity">出海记录</string>
 
 </resources>
