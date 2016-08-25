@@ -32,7 +32,8 @@
         <activity android:name=".ServiceActivity" />
         <activity android:name=".RecordActivity" />
         <activity android:name=".ShipActivity" />
-        <activity android:name=".VisaActivity"></activity>
+        <activity android:name=".VisaActivity" />
+        <activity android:name=".LoginActivity" />
     </application>
 
 </manifest>

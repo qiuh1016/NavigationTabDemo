@@ -168,8 +168,6 @@ public class FragmentPage1 extends BaseFragment {
         banner.setImages(images);
         banner.setBannerTitle(titles);
         banner.setDelayTime(8000);
-        banner.setBannerAnimation(BannerConfig.ROTATEDOWN);
-
         banner.setOnBannerClickListener(new Banner.OnBannerClickListener() {
             @Override
             public void OnBannerClick(View view, int position) {

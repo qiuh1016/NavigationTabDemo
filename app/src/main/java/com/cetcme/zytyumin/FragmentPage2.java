@@ -48,6 +48,7 @@ public class FragmentPage2 extends BaseFragment implements  BaiduMap.OnMarkerCli
         initBaiduMap();
 
         mapMark(new LatLng(30, 122), "浙嘉渔1234");
+        mapMark(new LatLng(31, 123), "浙嘉渔1234");
 
         return view;
     }

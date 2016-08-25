@@ -16,12 +16,12 @@
 
         <ImageView
             android:id="@+id/iv_nav_back"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
             android:padding="13dp"
             android:layout_alignParentLeft="true"
             android:layout_centerVertical="true"
-            android:src="@android:drawable/ic_menu_revert"/>
+            android:src="@drawable/back"/>
 
         <TextView
             android:id="@+id/tv_nav_title"

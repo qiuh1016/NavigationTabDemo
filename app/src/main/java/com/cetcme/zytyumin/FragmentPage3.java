@@ -31,13 +31,10 @@ public class FragmentPage3 extends BaseFragment {
             @Override
             public void onClick(View v) {
                 Log.i(TAG, "onClick: setting1");
-                Intent intent = new Intent(getActivity(), ServiceActivity.class);
-                Bundle bundle = new Bundle();
-                bundle.putString("title", "个性签名");
-                intent.putExtras(bundle);
+                Intent intent = new Intent(getActivity(), LoginActivity.class);
                 MainActivity activity = (MainActivity) getActivity();
                 startActivity(intent);
-                activity.overridePendingTransition(R.anim.push_left_in_no_alpha, R.anim.push_left_out_no_alpha);
+//                activity.overridePendingTransition(R.anim.push_left_in_no_alpha, R.anim.push_left_out_no_alpha);
             }
         });
         return view;
