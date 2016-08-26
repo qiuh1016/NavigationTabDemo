@@ -66,6 +66,15 @@ public class FragmentPage1 extends BaseFragment {
             "http://www.cnfm.gov.cn/tpxwsyyzw/201606/W020160629399731306479.jpg"
     };
 
+    private String[] urls = new String[] {
+            "https://view.inews.qq.com/a/NEW201608260218860A",
+            "http://www.cnfm.gov.cn/tpxwsyyzw/201607/t20160729_5222942.htm",
+            "http://www.cnfm.gov.cn/tpxwsyyzw/201606/t20160613_5167471.htm",
+            "http://www.cnfm.gov.cn/tpxwsyyzw/201606/t20160607_5163334.htm",
+            "http://www.cnfm.gov.cn/tpxwsyyzw/201605/t20160530_5154751.htm",
+            "http://www.cnfm.gov.cn/tpxwsyyzw/201606/t20160629_5190352.htm"
+    };
+
     private String[] titles = new String[] {
             "学习习近平总书记“七一”重要讲话加快推进渔业转型升级",
             "于康震：以科技为支撑 以市场为导向 实现有质量的渔业转型升级发展",
@@ -172,6 +181,13 @@ public class FragmentPage1 extends BaseFragment {
             @Override
             public void OnBannerClick(View view, int position) {
                 Log.i(TAG, "OnBannerClick: " + position);
+
+                Intent intent = new Intent();
+                Bundle bundle = new Bundle();
+                bundle.putString("url", urls[position - 1]);
+                intent.putExtras(bundle);
+                intent.setClass(getActivity(), WebActivity.class);
+                startActivity(intent);
             }
         });
     }

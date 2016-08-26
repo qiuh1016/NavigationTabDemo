@@ -34,6 +34,7 @@
         <activity android:name=".ShipActivity" />
         <activity android:name=".VisaActivity" />
         <activity android:name=".LoginActivity" />
+        <activity android:name=".WebActivity"></activity>
     </application>
 
 </manifest>
