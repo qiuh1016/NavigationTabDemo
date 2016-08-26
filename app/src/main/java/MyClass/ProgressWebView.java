@@ -1,11 +1,12 @@
 package MyClass;
 
 import android.content.Context;
-import android.os.Handler;
+import android.graphics.drawable.Drawable;
 import android.util.AttributeSet;
-import android.view.WindowManager;
 import android.webkit.WebView;
 import android.widget.ProgressBar;
+
+import com.cetcme.zytyumin.R;
 
 /**
  * Created by qiuhong on 8/18/16.
@@ -13,13 +14,23 @@ import android.widget.ProgressBar;
 @SuppressWarnings("deprecation")
 public class ProgressWebView extends WebView {
 
-    private ProgressBar progressbar;
+    private ProgressBar progressBar;
 
     public ProgressWebView(Context context, AttributeSet attrs) {
         super(context, attrs);
-        progressbar = new ProgressBar(context, null, android.R.attr.progressBarStyleHorizontal);
-        progressbar.setLayoutParams(new LayoutParams(LayoutParams.FILL_PARENT, WindowManager.LayoutParams.WRAP_CONTENT, 0, 0));
-        addView(progressbar);
+        progressBar = new ProgressBar(context, null, android.R.attr.progressBarStyleHorizontal);
+        progressBar.setLayoutParams(new LayoutParams(LayoutParams.MATCH_PARENT, 10, 0, 0));
+
+        Drawable drawable;
+        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.LOLLIPOP) {
+            drawable = context.getResources().getDrawable(R.drawable.progress_bar_states, null);
+        } else {
+            drawable = context.getResources().getDrawable(R.drawable.progress_bar_states);
+
+        }
+        progressBar.setProgressDrawable(drawable);
+
+        addView(progressBar);
         //        setWebViewClient(new WebViewClient(){});
         setWebChromeClient(new WebChromeClient());
     }
@@ -28,11 +39,11 @@ public class ProgressWebView extends WebView {
         @Override
         public void onProgressChanged(WebView view, int newProgress) {
             if (newProgress == 100) {
-                progressbar.setVisibility(GONE);
+                progressBar.setVisibility(GONE);
             } else {
-                if (progressbar.getVisibility() == GONE)
-                    progressbar.setVisibility(VISIBLE);
-                progressbar.setProgress(newProgress);
+                if (progressBar.getVisibility() == GONE)
+                    progressBar.setVisibility(VISIBLE);
+                progressBar.setProgress(newProgress);
             }
             super.onProgressChanged(view, newProgress);
         }
@@ -41,10 +52,10 @@ public class ProgressWebView extends WebView {
 
     @Override
     protected void onScrollChanged(int l, int t, int oldl, int oldt) {
-        LayoutParams lp = (LayoutParams) progressbar.getLayoutParams();
+        LayoutParams lp = (LayoutParams) progressBar.getLayoutParams();
         lp.x = l;
         lp.y = t;
-        progressbar.setLayoutParams(lp);
+        progressBar.setLayoutParams(lp);
         super.onScrollChanged(l, t, oldl, oldt);
     }
 }
