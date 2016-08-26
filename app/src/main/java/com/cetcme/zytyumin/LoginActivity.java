@@ -4,16 +4,28 @@ import android.app.Activity;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
 
 import MyClass.NavigationView;
 
-public class LoginActivity extends Activity {
+public class LoginActivity extends Activity implements View.OnClickListener{
+
+    private EditText userNameEditText;
+    private EditText passwordEditText;
+    private Button loginButton;
+    private Button forgetButton;
+    private Button signUpButton;
+
+    private String TAG = "LoginActivity";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         initNavigationView();
+        initUI();
     }
 
     public void onBackPressed() {
@@ -41,5 +53,33 @@ public class LoginActivity extends Activity {
                 onBackPressed();
             }
         });
+    }
+
+    private void initUI() {
+        userNameEditText = (EditText) findViewById(R.id.username_editText_in_login_activity);
+        passwordEditText = (EditText) findViewById(R.id.password_editText_in_login_activity);
+
+        loginButton = (Button) findViewById(R.id.login_button_in_login_activity);
+        forgetButton = (Button) findViewById(R.id.forget_password_button_in_login_activity);
+        signUpButton = (Button) findViewById(R.id.sign_up_password_button_in_login_activity);
+
+        loginButton.setOnClickListener(this);
+        forgetButton.setOnClickListener(this);
+        signUpButton.setOnClickListener(this);
+    }
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()) {
+            case R.id.login_button_in_login_activity:
+                Log.i(TAG, "onClick: loginButton");
+                break;
+            case R.id.forget_password_button_in_login_activity:
+                Log.i(TAG, "onClick: forgetButton");
+                break;
+            case R.id.sign_up_password_button_in_login_activity:
+                Log.i(TAG, "onClick: signUpButton");
+                break;
+        }
     }
 }
