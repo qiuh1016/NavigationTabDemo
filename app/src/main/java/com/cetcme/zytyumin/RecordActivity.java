@@ -1,18 +1,24 @@
 package com.cetcme.zytyumin;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.LinearLayout;
 
 import MyClass.NavigationView;
 
-public class RecordActivity extends Activity {
+public class RecordActivity extends Activity implements View.OnClickListener{
+
+    private LinearLayout linearLayout1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_record);
         initNavigationView();
+        initLinearLayout();
     }
 
     public void onBackPressed() {
@@ -41,5 +47,20 @@ public class RecordActivity extends Activity {
                 onBackPressed();
             }
         });
+    }
+
+    private void initLinearLayout() {
+        linearLayout1 = (LinearLayout) findViewById(R.id.line_1_in_record_activity);
+        linearLayout1.setOnClickListener(this);
+    }
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()) {
+            case R.id.line_1_in_record_activity:
+                Intent intent = new Intent();
+                intent.setClass(this, TableActivity.class);
+                startActivity(intent);
+        }
     }
 }

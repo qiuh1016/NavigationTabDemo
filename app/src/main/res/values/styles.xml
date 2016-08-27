@@ -101,5 +101,14 @@
         <item name="android:background">@drawable/single_layout_selector</item>
     </style>
 
+    <!--splash style-->
+    <style name="SplashTheme" parent="AppBaseTheme">
+        <!-- 欢迎页背景引用刚才写好的 -->
+        <item name="android:windowBackground">@drawable/splash</item>
+        <item name="android:windowFullscreen">true</item>
+        <!-- <item name="android:windowIsTranslucent">true</item> --> <!-- 透明背景不要了 -->
+    </style>
+
+
 
 </resources>
