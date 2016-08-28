@@ -64,10 +64,10 @@ public class FragmentPage3 extends BaseFragment {
             @Override
             public void onClick(View v) {
                 Log.i(TAG, "onClick: setting1");
-                Intent intent = new Intent(getActivity(), LoginActivity.class);
+                Intent intent = new Intent(getActivity(), ChangePasswordActivity.class);
                 MainActivity activity = (MainActivity) getActivity();
                 startActivity(intent);
-//                activity.overridePendingTransition(R.anim.push_left_in_no_alpha, R.anim.push_left_out_no_alpha);
+                activity.overridePendingTransition(R.anim.push_left_in_no_alpha, R.anim.push_left_out_no_alpha);
             }
         });
 
@@ -88,10 +88,10 @@ public class FragmentPage3 extends BaseFragment {
             @Override
             public void onClick(View v) {
                 Log.i(TAG, "onClick: setting1");
-                Intent intent = new Intent(getActivity(), LoginActivity.class);
+                Intent intent = new Intent(getActivity(), VersionActivity.class);
                 MainActivity activity = (MainActivity) getActivity();
                 startActivity(intent);
-//                activity.overridePendingTransition(R.anim.push_left_in_no_alpha, R.anim.push_left_out_no_alpha);
+                activity.overridePendingTransition(R.anim.push_left_in_no_alpha, R.anim.push_left_out_no_alpha);
             }
         });
 
@@ -103,7 +103,7 @@ public class FragmentPage3 extends BaseFragment {
                 Intent intent = new Intent(getActivity(), LoginActivity.class);
                 MainActivity activity = (MainActivity) getActivity();
                 startActivity(intent);
-//                activity.overridePendingTransition(R.anim.push_left_in_no_alpha, R.anim.push_left_out_no_alpha);
+                activity.overridePendingTransition(R.anim.push_left_in_no_alpha, R.anim.push_left_out_no_alpha);
             }
         });
     }
