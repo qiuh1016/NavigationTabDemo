@@ -9,4 +9,6 @@
     <color name="blue">#419DE4</color>
     <color name="main_color">#5CB85C</color>
     <color name="light_green">#d3f7d3</color>
+
+    <color name="numberTextInListCell">#fa2222</color>
 </resources>

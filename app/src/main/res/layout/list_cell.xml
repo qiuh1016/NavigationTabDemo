@@ -20,6 +20,7 @@
         android:textColor="@color/text_clo"
         android:layout_weight="1"
         android:id="@+id/textView_in_List_Cell" />
+
     <ImageView
         android:layout_height="20dp"
         android:layout_width="20dp"

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:orientation="vertical"
+    tools:context=".TodoActivity">
+
+    <MyClass.NavigationView
+        android:id="@+id/nav_main_in_todo_activity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="20dp" />
+
+            <LinearLayout style="@style/wrap_layout" >
+                <!-- 上圆角-->
+                <LinearLayout style="@style/top_layout"
+                              android:id="@+id/setting1">
+                    <TextView style="@style/userText"
+                              android:text="@string/line_1_in_todo_activity" />
+                    <TextView style="@style/numberText"
+                        android:text="0"
+                        android:id="@+id/numberText1_in_todo_activity"/>
+                    <ImageView style="@style/img_arrow"/>
+                </LinearLayout>
+
+                <!-- 分割线 -->
+                <View style="@style/bg_line"/>
+                <!-- 无圆角-->
+                <LinearLayout style="@style/mid_layout_light_green">
+                    <TextView style="@style/userText"
+                              android:text="@string/line_2_in_todo_activity" />
+                    <TextView style="@style/numberText"
+                              android:text="0"
+                              android:id="@+id/numberText2_in_todo_activity"/>
+                    <ImageView style="@style/img_arrow"/>
+                </LinearLayout>
+
+                <!-- 分割线 -->
+                <View style="@style/bg_line"/>
+                <!-- 无圆角-->
+                <LinearLayout style="@style/mid_layout">
+                    <TextView style="@style/userText"
+                              android:text="@string/line_3_in_todo_activity" />
+                    <TextView style="@style/numberText"
+                              android:text="0"
+                              android:id="@+id/numberText3_in_todo_activity"/>
+                    <ImageView style="@style/img_arrow"/>
+                </LinearLayout>
+
+                <View style="@style/bg_line"/>
+                <!-- 下圆角-->
+                <LinearLayout style="@style/bottom_layout_light_green">
+                    <TextView style="@style/userText"
+                              android:text="@string/line_4_in_todo_activity" />
+                    <TextView style="@style/numberText"
+                              android:text="0"
+                              android:id="@+id/numberText4_in_todo_activity"/>
+                    <ImageView style="@style/img_arrow"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="30dp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+
+
+</LinearLayout>

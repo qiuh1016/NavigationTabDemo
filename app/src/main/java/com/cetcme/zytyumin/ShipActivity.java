@@ -7,12 +7,13 @@ import android.util.Log;
 import android.widget.LinearLayout;
 
 import MyClass.ListCell;
+import MyClass.ListCellWithNumber;
 import MyClass.ListSeparator;
 import MyClass.NavigationView;
 
 public class ShipActivity extends Activity {
 
-    private String[] ship = {"chuan1", "chuan2", "chuan3", "chuan4", "chuan5"};
+    private String[] ship = {"浙嘉渔1234", "浙嘉渔3214", "浙嘉渔1314"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

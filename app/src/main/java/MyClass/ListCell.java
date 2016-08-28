@@ -40,7 +40,7 @@ public class ListCell extends LinearLayout implements View.OnClickListener {
         this.callback = callback;
     }
 
-    public static interface ClickCallback{
+    public interface ClickCallback{
         /**
          * 点击返回按钮回调
          */

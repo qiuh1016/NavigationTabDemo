@@ -24,4 +24,9 @@
     <string name="line_3_in_visa_activity">打卡记录</string>
     <string name="line_4_in_visa_activity">出海记录</string>
 
+    <string name="line_1_in_todo_activity">审图意见书</string>
+    <string name="line_2_in_todo_activity">报检表</string>
+    <string name="line_3_in_todo_activity">整改意见书</string>
+    <string name="line_4_in_todo_activity">检验记录</string>
+
 </resources>

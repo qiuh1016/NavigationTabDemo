@@ -107,6 +107,7 @@ public class TableActivity extends Activity {
             tv.setBackgroundResource(R.drawable.table_background_light_green);
             tv.setGravity(Gravity.CENTER);
             tv.setPadding(0, 20, 0, 20);
+            tv.getPaint().setFakeBoldText(true);
             tableHeadRow.addView(tv);
         }
         //新建的TableRow添加到TableLayout

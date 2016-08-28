@@ -35,12 +35,12 @@ public class FragmentPage1 extends BaseFragment {
     private SimpleAdapter sim_adapter;
 
     private int[] gridIcon = {
-            R.mipmap.ic_launcher,
-            R.mipmap.ic_launcher,
-            R.mipmap.ic_launcher,
-            R.mipmap.ic_launcher,
-            R.mipmap.ic_launcher,
-            R.mipmap.ic_launcher
+            R.drawable.t_google_plus_green,
+            R.drawable.t_magnifying_glass_green,
+            R.drawable.t_pencil_green,
+            R.drawable.t_pinterest_green,
+            R.drawable.t_square_green,
+            R.drawable.t_twitter_green
     };
 
     private String[] gridName;
@@ -51,7 +51,7 @@ public class FragmentPage1 extends BaseFragment {
             ShipActivity.class,
             null,
             null,
-            null
+            TodoActivity.class
     };
 
     private Banner banner;
