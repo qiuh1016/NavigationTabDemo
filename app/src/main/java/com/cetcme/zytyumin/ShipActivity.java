@@ -7,13 +7,20 @@ import android.util.Log;
 import android.widget.LinearLayout;
 
 import MyClass.ListCell;
-import MyClass.ListCellWithNumber;
 import MyClass.ListSeparator;
 import MyClass.NavigationView;
 
 public class ShipActivity extends Activity {
 
-    private String[] ship = {"浙嘉渔1234", "浙嘉渔3214", "浙嘉渔1314"};
+    private String[] shipName = {
+            "浙嘉渔1234",
+            "浙嘉渔3214",
+            "浙嘉渔1314"};
+
+    private String[] shipNo = {
+            "3303812002070002",
+            "3303812001050005",
+            "3302251998010002"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,11 +62,11 @@ public class ShipActivity extends Activity {
         LinearLayout linearLayout = (LinearLayout) findViewById(R.id.linerLayout_in_visa_activity);
 
         int selector;
-        for (int i = 0; i < ship.length; i++) {
+        for (int i = 0; i < shipName.length; i++) {
 
             if (i == 0) {
                 selector = R.drawable.top_layout_selector;
-            } else if (i == ship.length - 1){
+            } else if (i == shipName.length - 1){
                 selector = (i % 2 == 0) ? R.drawable.bottom_layout_selector: R.drawable.bottom_layout_light_green_selector;
             } else {
                 selector = (i % 2 == 0) ? R.drawable.mid_layout_selector: R.drawable.mid_layout_light_green_selector;
@@ -68,17 +75,21 @@ public class ShipActivity extends Activity {
             /**
              * 功能行 list_cell
              */
-            ListCell listCell = new ListCell(this, ship[i], selector);
+            ListCell listCell = new ListCell(this, shipName[i], selector);
             final int finalI = i;
             listCell.setClickCallback(new ListCell.ClickCallback() {
                 @Override
                 public void onClick() {
-                    Log.i("main", "onClick: " + ship[finalI]);
+                    Log.i("main", "onClick: " + shipName[finalI]);
                     /**
                      * 进入visa界面
                      */
                     Intent intent = new Intent();
                     intent.setClass(getApplicationContext(), VisaActivity.class);
+                    Bundle bundle = new Bundle();
+                    bundle.putString("shipName", shipName[finalI]);
+                    bundle.putString("shipNo", shipNo[finalI]);
+                    intent.putExtras(bundle);
                     startActivity(intent);
                     overridePendingTransition(R.anim.push_left_in_no_alpha, R.anim.push_left_out_no_alpha);
 
@@ -89,7 +100,7 @@ public class ShipActivity extends Activity {
             /**
              * 分割线 list_separator
              */
-            if (i != ship.length - 1) {
+            if (i != shipName.length - 1) {
                 ListSeparator listSeparator = new ListSeparator(this);
                 linearLayout.addView(listSeparator);
             }

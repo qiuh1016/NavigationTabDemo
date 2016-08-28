@@ -9,11 +9,17 @@ import MyClass.NavigationView;
 
 public class VisaActivity extends Activity {
 
+    private String shipName;
+    private String shipNo;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_visa);
+
+        getIntentData();
         initNavigationView();
+
     }
 
     public void onBackPressed() {
@@ -26,7 +32,7 @@ public class VisaActivity extends Activity {
 
     private void initNavigationView() {
         navigationView = (NavigationView) findViewById(R.id.nav_main_in_visa_activity);
-        navigationView.setTitle(getString(R.string.gird_3_in_fragment_1));
+        navigationView.setTitle(shipName);
         navigationView.setBackView(R.drawable.back);
         navigationView.setRightView(0);
         navigationView.setClickCallback(new NavigationView.ClickCallback() {
@@ -42,5 +48,11 @@ public class VisaActivity extends Activity {
                 onBackPressed();
             }
         });
+    }
+
+    private void getIntentData() {
+        Bundle bundle = this.getIntent().getExtras();
+        shipName = bundle.getString("shipName");
+        shipNo = bundle.getString("shipNo");
     }
 }

@@ -55,8 +55,6 @@ public class FragmentPage1 extends BaseFragment {
     };
 
     private Banner banner;
-//    String[] images= new String[] {"http://img.dahe.cn/qf/2016/8/24/1212BRZXKT.jpg", "http://photocdn.sohu.com/20160825/Img465863888.jpg", "http://img3.qianzhan123.com/news/201608/19/20160825-23aea49bce08ba25_600x5000.jpg"};
-//    String[] titles=new String[]{"法国警察强制要求穆斯林妇女脱下泳衣", "中国外长3年来首次访日", "张一山新戏《家有儿女初长成》"};
 
     private String[] images = new String[] {
             "http://www.cnfm.gov.cn/tpxwsyyzw/201607/W020160729535413736589.jpg",

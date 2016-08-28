@@ -41,6 +41,8 @@
         <activity android:name=".TableActivity"/>
         <activity android:name=".TodoActivity">
         </activity>
+        <activity android:name=".ChangePasswordActivity">
+        </activity>
     </application>
 
 </manifest>
