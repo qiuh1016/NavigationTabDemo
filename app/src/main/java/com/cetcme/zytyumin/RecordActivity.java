@@ -31,7 +31,7 @@ public class RecordActivity extends Activity implements View.OnClickListener{
 
     private void initNavigationView() {
         navigationView = (NavigationView) findViewById(R.id.nav_main_in_record_activity);
-        navigationView.setTitle(getString(R.string.gird_2_in_fragment_1));
+        navigationView.setTitle(getString(R.string.gird_2_in_fragment_homepage));
         navigationView.setBackView(R.drawable.back);
         navigationView.setRightView(0);
         navigationView.setClickCallback(new NavigationView.ClickCallback() {

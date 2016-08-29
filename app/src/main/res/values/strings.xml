@@ -2,12 +2,12 @@
 <resources>
     <string name="app_name">浙渔通渔民版</string>
 
-    <string name="gird_1_in_fragment_1">业务办理</string>
-    <string name="gird_2_in_fragment_1">记录查询</string>
-    <string name="gird_3_in_fragment_1">电子签证</string>
-    <string name="gird_4_in_fragment_1">法律法规</string>
-    <string name="gird_5_in_fragment_1">业务流程</string>
-    <string name="gird_6_in_fragment_1">待办任务</string>
+    <string name="gird_1_in_fragment_homepage">业务办理</string>
+    <string name="gird_2_in_fragment_homepage">记录查询</string>
+    <string name="gird_3_in_fragment_homepage">电子签证</string>
+    <string name="gird_4_in_fragment_homepage">法律法规</string>
+    <string name="gird_5_in_fragment_homepage">业务流程</string>
+    <string name="gird_6_in_fragment_homepage">待办任务</string>
 
     <string name="line_1_in_service_activity">渔船检验申报</string>
     <string name="line_2_in_service_activity">图纸审查申报</string>

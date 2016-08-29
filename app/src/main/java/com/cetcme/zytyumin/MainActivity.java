@@ -6,7 +6,6 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
-import android.support.v4.view.ViewPager;
 import android.widget.Toast;
 
 import com.baidu.mapapi.SDKInitializer;
@@ -50,17 +49,17 @@ public class MainActivity extends FragmentActivity {
     private List<BaseFragment> initFragments() {
         List<BaseFragment> fragments = new ArrayList<BaseFragment>();
 
-        BaseFragment userFragment = new FragmentPage1();
+        BaseFragment userFragment = new FragmentHomepage();
         userFragment.setTitle("首页");
         userFragment.setIconId(R.drawable.tab_user_selector);
         fragments.add(userFragment);
 
-        BaseFragment noteFragment = new FragmentPage2();
+        BaseFragment noteFragment = new FragmentMap();
         noteFragment.setTitle("地图");
         noteFragment.setIconId(R.drawable.tab_record_selector);
         fragments.add(noteFragment);
 
-        BaseFragment contactFragment = new FragmentPage3();
+        BaseFragment contactFragment = new FragmentUser();
         contactFragment.setTitle("我的");
         contactFragment.setIconId(R.drawable.tab_user_selector);
         fragments.add(contactFragment);

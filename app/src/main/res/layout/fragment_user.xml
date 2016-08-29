@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:orientation="vertical"
+android:background="#eeeeee" >
+
+    <MyClass.NavigationView
+        android:id="@+id/nav_main_in_fragment_user"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="20dp" />
+
+            <LinearLayout style="@style/wrap_layout" >
+                <!-- 上圆角-->
+                <LinearLayout style="@style/top_layout"
+                    android:id="@+id/line_1_in_fragment_user">
+                    <TextView style="@style/userText" android:text="修改密码" />
+                    <ImageView style="@style/img_arrow"/>
+                </LinearLayout>
+
+                <!-- 分割线 -->
+                <View style="@style/bg_line"/>
+                <!-- 无圆角-->
+                <LinearLayout style="@style/mid_layout_light_green"
+                              android:id="@+id/line_2_in_fragment_user">
+                    <TextView style="@style/userText" android:text="我的待办" />
+                    <TextView style="@style/numberText"
+                              android:text="0"
+                              android:id="@+id/todoNumber_in_fragment_user"/>
+                    <ImageView style="@style/img_arrow"/>
+                </LinearLayout>
+
+                <View style="@style/bg_line"/>
+                <!-- 下圆角-->
+                <LinearLayout style="@style/bottom_layout"
+                              android:id="@+id/line_3_in_fragment_user">
+                    <TextView style="@style/userText" android:text="版本信息" />
+                    <ImageView style="@style/img_arrow"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <!-- 全圆角-->
+            <LinearLayout style="@style/wrap_layout">
+                <LinearLayout style="@style/single_layout"
+                              android:id="@+id/line_4_in_fragment_user">
+                    <TextView style="@style/userText" android:text="帮        助"/>
+                    <ImageView style="@style/img_arrow"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="30dp" />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
