@@ -30,8 +30,8 @@ public class LoginActivity extends Activity implements View.OnClickListener{
 
     public void onBackPressed() {
         super.onBackPressed();
-//        overridePendingTransition(R.anim.push_right_in_no_alpha,
-//                R.anim.push_right_out_no_alpha);
+        overridePendingTransition(R.anim.stay,
+                R.anim.push_up_out_no_alpha);
     }
 
     private NavigationView navigationView;
@@ -39,7 +39,7 @@ public class LoginActivity extends Activity implements View.OnClickListener{
     private void initNavigationView() {
         navigationView = (NavigationView) findViewById(R.id.nav_main_in_login_activity);
         navigationView.setTitle("登陆");
-        navigationView.setRightView(0);
+        navigationView.setBackView(R.drawable.back);
         navigationView.setClickCallback(new NavigationView.ClickCallback() {
 
             @Override

@@ -4,6 +4,7 @@
     <style name="AppTheme" parent="Theme.AppCompat.Light">
         <item name="tabView">@style/TabView</item>
         <item name="tabPageIndicator">@style/TabIndicator</item>
+        <item name="android:windowIsTranslucent">true</item>
     </style>
     <style name="TabIndicator"/>
     <style name="TabView">
@@ -116,6 +117,12 @@
         <item name="android:windowFullscreen">true</item>
         <!-- <item name="android:windowIsTranslucent">true</item> --> <!-- 透明背景不要了 -->
     </style>
+
+    <!--activity切换动画需要的style-->
+    <style name="activityTheme" parent="@android:style/Theme">
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
+
 
 
 

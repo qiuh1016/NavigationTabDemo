@@ -20,8 +20,7 @@
             android:layout_height="45dp"
             android:padding="13dp"
             android:layout_alignParentLeft="true"
-            android:layout_centerVertical="true"
-            android:src="@drawable/back"/>
+            android:layout_centerVertical="true" />
 
         <TextView
             android:id="@+id/tv_nav_title"
@@ -40,8 +39,7 @@
             android:layout_height="50dp"
             android:padding="13dp"
             android:layout_alignParentRight="true"
-            android:layout_centerVertical="true"
-            android:src="@drawable/icon_user_normal"/>
+            android:layout_centerVertical="true" />
 
     </RelativeLayout>
 

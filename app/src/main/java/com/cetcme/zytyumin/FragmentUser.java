@@ -103,7 +103,8 @@ public class FragmentUser extends BaseFragment {
                 Intent intent = new Intent(getActivity(), LoginActivity.class);
                 MainActivity activity = (MainActivity) getActivity();
                 startActivity(intent);
-                activity.overridePendingTransition(R.anim.push_left_in_no_alpha, R.anim.push_left_out_no_alpha);
+                activity.overridePendingTransition(R.anim.push_up_in_no_alpha, R.anim.stay);
+//                activity.overridePendingTransition(R.anim.push_left_in_no_alpha, R.anim.push_left_out_no_alpha);
             }
         });
     }
