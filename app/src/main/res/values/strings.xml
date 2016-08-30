@@ -29,4 +29,7 @@
     <string name="line_3_in_todo_activity">整改意见书</string>
     <string name="line_4_in_todo_activity">检验记录</string>
 
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
 </resources>

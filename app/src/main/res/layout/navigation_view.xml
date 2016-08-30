@@ -41,12 +41,6 @@
 
     </RelativeLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="1px"
-        android:background="#FF000000"
-        android:visibility="invisible"/>
-
 
 </LinearLayout>
 

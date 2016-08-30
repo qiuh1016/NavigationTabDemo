@@ -43,8 +43,7 @@
             app:indicator_margin="4dp"
             app:indicator_width="7dp"
             app:indicator_drawable_selected="@drawable/indicator_selected_radius"
-            app:indicator_drawable_unselected="@drawable/indicator_unselected_radius"
-            />
+            app:indicator_drawable_unselected="@drawable/indicator_unselected_radius" />
 
         <MyClass.NoScrollGridView
             android:layout_width="match_parent"

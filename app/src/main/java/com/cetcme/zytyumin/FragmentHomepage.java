@@ -49,7 +49,7 @@ public class FragmentHomepage extends BaseFragment {
             ServiceActivity.class,
             RecordActivity.class,
             ShipActivity.class,
-            null,
+            SignActivity.class,
             null,
             TodoActivity.class
     };
@@ -175,6 +175,7 @@ public class FragmentHomepage extends BaseFragment {
         banner.setImages(images);
         banner.setBannerTitle(titles);
         banner.setDelayTime(8000);
+        banner.setScrollerTime(350);
         banner.setOnBannerClickListener(new Banner.OnBannerClickListener() {
             @Override
             public void OnBannerClick(View view, int position) {
