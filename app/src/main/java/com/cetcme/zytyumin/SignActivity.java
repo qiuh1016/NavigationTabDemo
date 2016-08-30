@@ -135,9 +135,9 @@ public class SignActivity extends FragmentActivity {
         found.setOnClickListener(new TabOnClickListener(1));
         contact.setOnClickListener(new TabOnClickListener(2));
 
-        fragments.add(new ChatMainTab01());
-        fragments.add(new ChatMainTab02());
-        fragments.add(new ChatMainTab02());
+        fragments.add(new ChatMainTab01Fragment());
+        fragments.add(new ChatMainTab02Fragment());
+        fragments.add(new ChatMainTab02Fragment());
 
         mTabChat=(LinearLayout) findViewById(R.id.id_tab1_chat);
         mTabFound=(LinearLayout) findViewById(R.id.id_tab2_found);

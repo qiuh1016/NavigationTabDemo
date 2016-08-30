@@ -49,17 +49,17 @@ public class MainActivity extends FragmentActivity {
     private List<BaseFragment> initFragments() {
         List<BaseFragment> fragments = new ArrayList<BaseFragment>();
 
-        BaseFragment userFragment = new FragmentHomepage();
+        BaseFragment userFragment = new HomepageFragment();
         userFragment.setTitle("首页");
         userFragment.setIconId(R.drawable.tab_homepage_selector);
         fragments.add(userFragment);
 
-        BaseFragment noteFragment = new FragmentMap();
+        BaseFragment noteFragment = new MapFragment();
         noteFragment.setTitle("地图");
         noteFragment.setIconId(R.drawable.tab_map_selector);
         fragments.add(noteFragment);
 
-        BaseFragment contactFragment = new FragmentUser();
+        BaseFragment contactFragment = new UserFragment();
         contactFragment.setTitle("我的");
         contactFragment.setIconId(R.drawable.tab_user_selector);
         fragments.add(contactFragment);

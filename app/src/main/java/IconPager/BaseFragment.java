@@ -16,7 +16,9 @@ import com.cetcme.zytyumin.R;
  * FIXME
  */
 public class BaseFragment extends Fragment {
+
     private String title;
+
     private int iconId;
 
     public String getTitle() {
@@ -35,9 +37,4 @@ public class BaseFragment extends Fragment {
         this.iconId = iconId;
     }
 
-    @Override
-    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment, null, false);
-        return view;
-    }
 }

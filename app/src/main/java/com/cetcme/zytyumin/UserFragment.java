@@ -16,10 +16,10 @@ import MyClass.NavigationView;
 /**
  * Created by qiuhong on 8/24/16.
  */
-public class FragmentUser extends BaseFragment {
+public class UserFragment extends BaseFragment {
 
     private View view;
-    private String TAG = "FragmentUser";
+    private String TAG = "UserFragment";
     private NavigationView navigationView;
     private int todoNumber = 3;
 

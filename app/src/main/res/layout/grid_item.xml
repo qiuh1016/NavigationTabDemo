@@ -5,17 +5,14 @@
     android:orientation="vertical"
     android:gravity="center"
     android:padding="10dp"
-    android:background="@android:drawable/editbox_background_normal"
-    >
+    android:background="@android:drawable/editbox_background_normal">
 
 
     <ImageView
         android:src="@mipmap/ic_launcher"
         android:id="@+id/grid_item_image"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-
-        />
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"/>
 
     <TextView
         android:id="@+id/grid_item_text"
@@ -23,5 +20,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textColor="@color/text_clo"
+        android:gravity="center"
         android:text="文字" />
 </LinearLayout>

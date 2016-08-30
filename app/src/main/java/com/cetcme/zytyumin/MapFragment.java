@@ -28,7 +28,7 @@ import MyClass.NavigationView;
 /**
  * Created by qiuhong on 8/24/16.
  */
-public class FragmentMap extends BaseFragment implements  BaiduMap.OnMarkerClickListener {
+public class MapFragment extends BaseFragment implements  BaiduMap.OnMarkerClickListener {
 
     private View view;
     private MapView mapView;
@@ -56,7 +56,6 @@ public class FragmentMap extends BaseFragment implements  BaiduMap.OnMarkerClick
     private void initNavigationView() {
         navigationView = (NavigationView) view.findViewById(R.id.nav_main_in_fragment_map);
         navigationView.setTitle("地图");
-        navigationView.setBackView(R.drawable.icon_back_button);
         navigationView.setRightView(R.drawable.icon_search);
         navigationView.setClickCallback(new NavigationView.ClickCallback() {
 

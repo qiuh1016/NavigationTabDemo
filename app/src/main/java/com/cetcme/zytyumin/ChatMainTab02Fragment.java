@@ -9,10 +9,10 @@ import android.view.ViewGroup;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class ChatMainTab02 extends Fragment{
+public class ChatMainTab02Fragment extends Fragment{
 
     public View onCreateView(LayoutInflater inflater,ViewGroup container,Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.chat_tab_02, container, false);
+        View view = inflater.inflate(R.layout.fragment_chat_tab_02, container, false);
         return view;
     }
 

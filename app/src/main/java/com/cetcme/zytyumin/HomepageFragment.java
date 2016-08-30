@@ -26,9 +26,9 @@ import MyClass.NavigationView;
 /**
  * Created by qiuhong on 8/24/16.
  */
-public class FragmentHomepage extends BaseFragment {
+public class HomepageFragment extends BaseFragment {
     private View view;
-    private String TAG = "FragmentHomepage";
+    private String TAG = "HomepageFragment";
 
     private GridView gridView;
     private List<Map<String, Object>> data_list;
