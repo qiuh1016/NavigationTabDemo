@@ -1,7 +1,6 @@
 package com.cetcme.zytyumin;
 
 import android.app.Activity;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -39,7 +38,7 @@ public class LoginActivity extends Activity implements View.OnClickListener{
     private void initNavigationView() {
         navigationView = (NavigationView) findViewById(R.id.nav_main_in_login_activity);
         navigationView.setTitle("登陆");
-        navigationView.setBackView(R.drawable.back);
+        navigationView.setBackView(R.drawable.icon_back_button);
         navigationView.setClickCallback(new NavigationView.ClickCallback() {
 
             @Override

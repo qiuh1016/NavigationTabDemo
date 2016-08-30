@@ -35,7 +35,7 @@
                 <View style="@style/bg_line"/>
 
                 <!-- 无圆角-->
-                <LinearLayout style="@style/mid_layout_light_green"
+                <LinearLayout style="@style/mid_layout_light"
                     android:id="@+id/line_2_in_service_activity" >
                     <TextView style="@style/userText" android:text="@string/line_2_in_service_activity" />
                     <ImageView style="@style/img_arrow"/>

@@ -5,13 +5,10 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-
-import org.w3c.dom.Text;
 
 import MyClass.NavigationView;
 
@@ -40,7 +37,7 @@ public class VersionActivity extends Activity {
     private void initNavigationView() {
         navigationView = (NavigationView) findViewById(R.id.nav_main_in_version_activity);
         navigationView.setTitle("版本信息");
-        navigationView.setBackView(R.drawable.back);
+        navigationView.setBackView(R.drawable.icon_back_button);
         navigationView.setRightView(0);
         navigationView.setClickCallback(new NavigationView.ClickCallback() {
 

@@ -45,7 +45,7 @@ public class FragmentMap extends BaseFragment implements  BaiduMap.OnMarkerClick
         view = inflater.inflate(R.layout.fragment_map, null, false);
 
         initNavigationView();
-        initBaiduMap();
+        initMapView();
 
         mapMark(new LatLng(30, 122), "浙嘉渔1234");
         mapMark(new LatLng(31, 123), "浙嘉渔1234");
@@ -56,8 +56,8 @@ public class FragmentMap extends BaseFragment implements  BaiduMap.OnMarkerClick
     private void initNavigationView() {
         navigationView = (NavigationView) view.findViewById(R.id.nav_main_in_fragment_map);
         navigationView.setTitle("地图");
-        navigationView.setBackView(0);
-        navigationView.setRightView(R.drawable.icon_square_nor);
+        navigationView.setBackView(R.drawable.icon_back_button);
+        navigationView.setRightView(R.drawable.icon_search);
         navigationView.setClickCallback(new NavigationView.ClickCallback() {
 
             @Override
@@ -72,7 +72,7 @@ public class FragmentMap extends BaseFragment implements  BaiduMap.OnMarkerClick
         });
     }
 
-    private void initBaiduMap() {
+    private void initMapView() {
         mapView = (MapView) view.findViewById(R.id.baiduMap_in_fragment_2);
         baiduMap = mapView.getMap();
         baiduMap.setOnMarkerClickListener(this);

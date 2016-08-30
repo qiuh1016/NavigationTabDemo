@@ -41,7 +41,7 @@ public class ShipActivity extends Activity {
     private void initNavigationView() {
         navigationView = (NavigationView) findViewById(R.id.nav_main_in_ship_activity);
         navigationView.setTitle("您的船只");
-        navigationView.setBackView(R.drawable.back);
+        navigationView.setBackView(R.drawable.icon_back_button);
         navigationView.setRightView(0);
         navigationView.setClickCallback(new NavigationView.ClickCallback() {
 
@@ -67,9 +67,9 @@ public class ShipActivity extends Activity {
             if (i == 0) {
                 selector = R.drawable.top_layout_selector;
             } else if (i == shipName.length - 1){
-                selector = (i % 2 == 0) ? R.drawable.bottom_layout_selector: R.drawable.bottom_layout_light_green_selector;
+                selector = (i % 2 == 0) ? R.drawable.bottom_layout_selector: R.drawable.bottom_layout_light_selector;
             } else {
-                selector = (i % 2 == 0) ? R.drawable.mid_layout_selector: R.drawable.mid_layout_light_green_selector;
+                selector = (i % 2 == 0) ? R.drawable.mid_layout_selector: R.drawable.mid_layout_light_selector;
             }
 
             /**

@@ -35,12 +35,12 @@ public class FragmentHomepage extends BaseFragment {
     private SimpleAdapter sim_adapter;
 
     private int[] gridIcon = {
-            R.drawable.t_google_plus_green,
-            R.drawable.t_magnifying_glass_green,
-            R.drawable.t_pencil_green,
-            R.drawable.t_pinterest_green,
-            R.drawable.t_square_green,
-            R.drawable.t_twitter_green
+            R.drawable.t_google_plus_blue,
+            R.drawable.t_magnifying_glass_blue,
+            R.drawable.t_pencil_blue,
+            R.drawable.t_pinterest_blue,
+            R.drawable.t_square_blue,
+            R.drawable.t_twitter_blue
     };
 
     private String[] gridName;

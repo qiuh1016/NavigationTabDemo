@@ -1,14 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="tab_text_normal">#696969</color>
-    <color name="tab_text_selected">#71a44e</color>
+    <!--<color name="tab_text_selected">#71a44e</color>-->
+
+    <color name="tab_text_selected">#157CFB</color>
 
     <color name="border_clo">#ccc</color>
     <color name="text_clo">#333333</color>
     <color name="white">#fff</color>
     <color name="blue">#419DE4</color>
-    <color name="main_color">#5CB85C</color>
-    <color name="light_green">#d3f7d3</color>
+    <!--<color name="main_color">#5CB85C</color>-->
+    <!--<color name="light_green">#d3f7d3</color>-->
+    <color name="main_color">#157CFB</color>
+    <!-- 深蓝色3F51B5-->
+    <color name="main_color_light">#ddedfd</color>
+
 
     <color name="numberTextInListCell">#fa2222</color>
 </resources>

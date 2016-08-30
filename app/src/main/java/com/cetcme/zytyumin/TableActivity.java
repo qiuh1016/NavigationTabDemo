@@ -1,15 +1,11 @@
 package com.cetcme.zytyumin;
 
 import android.app.Activity;
-import android.os.Build;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.LinearLayoutCompat;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.LinearLayout;
 import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TextView;
@@ -47,7 +43,7 @@ public class TableActivity extends Activity {
     private void initNavigationView() {
         navigationView = (NavigationView) findViewById(R.id.nav_main_in_table_activity);
         navigationView.setTitle("投保记录");
-        navigationView.setBackView(R.drawable.back);
+        navigationView.setBackView(R.drawable.icon_back_button);
         navigationView.setRightView(0);
         navigationView.setClickCallback(new NavigationView.ClickCallback() {
 
@@ -104,7 +100,7 @@ public class TableActivity extends Activity {
             //tv用于显示
             TextView tv = new TextView(this);
             tv.setText(tableHeadString[col]);
-            tv.setBackgroundResource(R.drawable.table_background_light_green);
+            tv.setBackgroundResource(R.drawable.table_background_light);
             tv.setGravity(Gravity.CENTER);
             tv.setPadding(0, 20, 0, 20);
             tv.getPaint().setFakeBoldText(true);
@@ -135,7 +131,7 @@ public class TableActivity extends Activity {
             if (row % 2 == 0) {
                 tableRow.setBackgroundResource(R.drawable.mid_layout_selector);
             } else {
-                tableRow.setBackgroundResource(R.drawable.mid_layout_light_green_selector);
+                tableRow.setBackgroundResource(R.drawable.mid_layout_light_selector);
             }
 
             //新建的TableRow添加到TableLayout

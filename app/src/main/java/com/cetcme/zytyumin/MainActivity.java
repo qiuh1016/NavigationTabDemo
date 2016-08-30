@@ -51,12 +51,12 @@ public class MainActivity extends FragmentActivity {
 
         BaseFragment userFragment = new FragmentHomepage();
         userFragment.setTitle("首页");
-        userFragment.setIconId(R.drawable.tab_user_selector);
+        userFragment.setIconId(R.drawable.tab_homepage_selector);
         fragments.add(userFragment);
 
         BaseFragment noteFragment = new FragmentMap();
         noteFragment.setTitle("地图");
-        noteFragment.setIconId(R.drawable.tab_record_selector);
+        noteFragment.setIconId(R.drawable.tab_map_selector);
         fragments.add(noteFragment);
 
         BaseFragment contactFragment = new FragmentUser();

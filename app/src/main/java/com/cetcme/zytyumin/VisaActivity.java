@@ -1,7 +1,6 @@
 package com.cetcme.zytyumin;
 
 import android.app.Activity;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 
@@ -33,7 +32,7 @@ public class VisaActivity extends Activity {
     private void initNavigationView() {
         navigationView = (NavigationView) findViewById(R.id.nav_main_in_visa_activity);
         navigationView.setTitle(shipName);
-        navigationView.setBackView(R.drawable.back);
+        navigationView.setBackView(R.drawable.icon_back_button);
         navigationView.setRightView(0);
         navigationView.setClickCallback(new NavigationView.ClickCallback() {
 

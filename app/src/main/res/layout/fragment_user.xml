@@ -34,7 +34,7 @@ android:background="#eeeeee" >
                 <!-- 分割线 -->
                 <View style="@style/bg_line"/>
                 <!-- 无圆角-->
-                <LinearLayout style="@style/mid_layout_light_green"
+                <LinearLayout style="@style/mid_layout_light"
                               android:id="@+id/line_2_in_fragment_user">
                     <TextView style="@style/userText" android:text="我的待办" />
                     <TextView style="@style/numberText"

@@ -7,6 +7,6 @@
         <!-- 图片 -->
         <bitmap
             android:gravity="center"
-            android:src="@drawable/back" />
+            android:src="@drawable/icon_back_button" />
     </item>
 </layer-list>

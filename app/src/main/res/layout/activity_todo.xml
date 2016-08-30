@@ -44,7 +44,7 @@
                 <!-- 分割线 -->
                 <View style="@style/bg_line"/>
                 <!-- 无圆角-->
-                <LinearLayout style="@style/mid_layout_light_green">
+                <LinearLayout style="@style/mid_layout_light">
                     <TextView style="@style/userText"
                               android:text="@string/line_2_in_todo_activity" />
                     <TextView style="@style/numberText"
@@ -67,7 +67,7 @@
 
                 <View style="@style/bg_line"/>
                 <!-- 下圆角-->
-                <LinearLayout style="@style/bottom_layout_light_green">
+                <LinearLayout style="@style/bottom_layout_light">
                     <TextView style="@style/userText"
                               android:text="@string/line_4_in_todo_activity" />
                     <TextView style="@style/numberText"
