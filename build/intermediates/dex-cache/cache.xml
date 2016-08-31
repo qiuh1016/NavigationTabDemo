@@ -1,2 +1,166 @@
 <?xml version="1.0" encoding="utf-8"?>
-<items version="2" />
+<items version="2" >
+
+    <item
+        jar="/Users/qiuhong/.gradle/caches/modules-2/files-2.1/cz.msebera.android/httpclient/4.3.6/526a9f794eab830eae4f23a62c572878b3f491ab/httpclient-4.3.6.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="526a9f794eab830eae4f23a62c572878b3f491ab">
+        <dex dex="/Users/qiuhong/Desktop/zytyumin/app/build/intermediates/transforms/dex/debug/folders/1000/10/httpclient-4.3.6_164ce044190d10ebc30a7369b1d670794f97b135/classes.dex" />
+    </item>
+    <item
+        jar="/Users/qiuhong/Desktop/zytyumin/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="df0ed039b7b779cba982ed22767e995575160ac4">
+        <dex dex="/Users/qiuhong/Desktop/zytyumin/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_568bb3f167e414f6b78769d1973df8151c16cd82/classes.dex" />
+    </item>
+    <item
+        jar="/Users/qiuhong/Desktop/zytyumin/app/build/intermediates/exploded-aar/com.youth.banner/banner/1.2.8/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="e9dac7ce253fc16a109f8d1a0440ebd8de075e99">
+        <dex dex="/Users/qiuhong/Desktop/zytyumin/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.youth.banner-banner-1.2.8_dbbab134aa1f2bce7e08ff3eeb9486187e05e0cf/classes.dex" />
+    </item>
+    <item
+        jar="/Users/qiuhong/Desktop/zytyumin/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="67bd36ee9340ec7c254108936ad16b24bed160cc">
+        <dex dex="/Users/qiuhong/Desktop/zytyumin/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-v4-23.4.0_adfcb863dd0e3f0b0ce49f6865fc85549fc8e010/classes.dex" />
+    </item>
+    <item
+        jar="/Users/qiuhong/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/23.4.0/support-annotations-23.4.0.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="ffbe55fdb2bb456b1485831706a9eac3300bb6b8">
+        <dex dex="/Users/qiuhong/Desktop/zytyumin/app/build/intermediates/transforms/dex/debug/folders/1000/10/support-annotations-23.4.0_4e1246f1cf05b8e7e17c500ae8035043c3c927d6/classes.dex" />
+    </item>
+    <item
+        jar="/Users/qiuhong/Desktop/zytyumin/app/libs/baidumapapi_radar_v4_0_0.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="81b00e6e2da11e12554d8cbf0acc23627fd1225b">
+        <dex dex="/Users/qiuhong/Desktop/zytyumin/app/build/intermediates/transforms/dex/debug/folders/1000/2/baidumapapi_radar_v4_0_0_da5a6f0fc24d60cd0a14a901b769e52121f97c81/classes.dex" />
+    </item>
+    <item
+        jar="/Users/qiuhong/Desktop/zytyumin/app/build/intermediates/exploded-aar/com.akexorcist/RoundCornerProgressBar/2.0.3/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="88c6386ad8356b89487b43bcaae4827b1abe999c">
+        <dex dex="/Users/qiuhong/Desktop/zytyumin/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.akexorcist-RoundCornerProgressBar-2.0.3_3284a3d7043653f6712f4eb1e3896a97750b6c3e/classes.dex" />
+    </item>
+    <item
+        jar="/Users/qiuhong/Desktop/zytyumin/app/libs/baidumapapi_base_v4_0_0.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="dc207932ddfb65566a157ca311a6a6dffc7fccab">
+        <dex dex="/Users/qiuhong/Desktop/zytyumin/app/build/intermediates/transforms/dex/debug/folders/1000/2/baidumapapi_base_v4_0_0_ef629a0dfdebe993f8b1bd2c500a9c3b309db000/classes.dex" />
+    </item>
+    <item
+        jar="/Users/qiuhong/.gradle/caches/modules-2/files-2.1/com.nineoldandroids/library/2.4.0/e9b63380f3a242dbdbf103a2355ad7e43bad17cb/library-2.4.0.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="e9b63380f3a242dbdbf103a2355ad7e43bad17cb">
+        <dex dex="/Users/qiuhong/Desktop/zytyumin/app/build/intermediates/transforms/dex/debug/folders/1000/10/library-2.4.0_591b50181f221fe016a2a3714bbf4a84a53a2900/classes.dex" />
+    </item>
+    <item
+        jar="/Users/qiuhong/Desktop/zytyumin/app/build/intermediates/exploded-aar/com.kaopiz/kprogresshud/1.0.5/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="303f3c19296009125297a0cf7971c55c55ec0d6f">
+        <dex dex="/Users/qiuhong/Desktop/zytyumin/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.kaopiz-kprogresshud-1.0.5_962223ebd35d56be89aa45dd14e9a0aadfe56ae2/classes.dex" />
+    </item>
+    <item
+        jar="/Users/qiuhong/Desktop/zytyumin/app/libs/baidumapapi_map_v4_0_0.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="db4a1025ee9c6f95747aab4a69baa1391534d80e">
+        <dex dex="/Users/qiuhong/Desktop/zytyumin/app/build/intermediates/transforms/dex/debug/folders/1000/2/baidumapapi_map_v4_0_0_105f6d2168acca5120eb205730549f20a12326df/classes.dex" />
+    </item>
+    <item
+        jar="/Users/qiuhong/Desktop/zytyumin/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/23.4.0/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="de4db3785756bfb0915a9f59a9b3f2fea7407be4">
+        <dex dex="/Users/qiuhong/Desktop/zytyumin/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-animated-vector-drawable-23.4.0_ee9e2bd8f7d00d3316f1dae1443330fab7563f10/classes.dex" />
+    </item>
+    <item
+        jar="/Users/qiuhong/Desktop/zytyumin/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/jars/libs/internal_impl-23.4.0.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="ea3c07504d2c8f4b13aa17c45c1b68ed9c1c3674">
+        <dex dex="/Users/qiuhong/Desktop/zytyumin/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-23.4.0_3488d88b99db42f9f60ea3ee22cca3fa62491c8f/classes.dex" />
+    </item>
+    <item
+        jar="/Users/qiuhong/Desktop/zytyumin/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/23.4.0/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="c2c594cace5d83a3227b2b6e658ecbfd586d3ed9">
+        <dex dex="/Users/qiuhong/Desktop/zytyumin/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-vector-drawable-23.4.0_6ee9ec965a0eda311d7a8e417e7420cbe11fc587/classes.dex" />
+    </item>
+    <item
+        jar="/Users/qiuhong/Desktop/zytyumin/app/libs/baidumapapi_cloud_v4_0_0.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="e2aca735ca322917c5ee5fd40d663773391cf0a6">
+        <dex dex="/Users/qiuhong/Desktop/zytyumin/app/build/intermediates/transforms/dex/debug/folders/1000/2/baidumapapi_cloud_v4_0_0_2e681f8430d43c59acc184796ee8d77b58ffcc8a/classes.dex" />
+    </item>
+    <item
+        jar="/Users/qiuhong/Desktop/zytyumin/app/libs/baidumapapi_search_v4_0_0.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="08f97ee0e35fb17d405d29bf62eef305faffffcc">
+        <dex dex="/Users/qiuhong/Desktop/zytyumin/app/build/intermediates/transforms/dex/debug/folders/1000/2/baidumapapi_search_v4_0_0_a9dec679ba6ed4ba360b9ca9fe3c975909967b4f/classes.dex" />
+    </item>
+    <item
+        jar="/Users/qiuhong/Desktop/zytyumin/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="5e3583b3a23ef5ad77c18d56be505b03b86f4cda">
+        <dex dex="/Users/qiuhong/Desktop/zytyumin/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_0d988ebef588e7d0438e73d449cb5a0f367d5954/classes.dex" />
+    </item>
+    <item
+        jar="/Users/qiuhong/Desktop/zytyumin/app/build/intermediates/exploded-aar/com.github.jjobes/slideDateTimePicker/1.0.2/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="5bec1dde607b63ec122cbaaf21be42a047ccdfd7">
+        <dex dex="/Users/qiuhong/Desktop/zytyumin/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.github.jjobes-slideDateTimePicker-1.0.2_40d63c6f7a69cbc147b93398eba495cbeed3b8af/classes.dex" />
+    </item>
+    <item
+        jar="/Users/qiuhong/Desktop/zytyumin/app/build/intermediates/exploded-aar/net.steamcrafted/load-toast/1.0.10/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="9749ddf99ada8de851c06344d325bc12593f1949">
+        <dex dex="/Users/qiuhong/Desktop/zytyumin/app/build/intermediates/transforms/dex/debug/folders/1000/10/net.steamcrafted-load-toast-1.0.10_b70d898676f02d857da62cfcf9a6ee5e262f9ad1/classes.dex" />
+    </item>
+    <item
+        jar="/Users/qiuhong/.gradle/caches/modules-2/files-2.1/com.loopj.android/android-async-http/1.4.9/386a4339ffe52d5d63e80f9bed8d2b1d1a418249/android-async-http-1.4.9.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="386a4339ffe52d5d63e80f9bed8d2b1d1a418249">
+        <dex dex="/Users/qiuhong/Desktop/zytyumin/app/build/intermediates/transforms/dex/debug/folders/1000/10/android-async-http-1.4.9_56dec57c63c0ea006a572967100bb9ac2969bd06/classes.dex" />
+    </item>
+    <item
+        jar="/Users/qiuhong/.gradle/caches/modules-2/files-2.1/com.github.bumptech.glide/glide/3.6.1/86b122e640af09b0723e1fa44083c354ba6d9089/glide-3.6.1.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="86b122e640af09b0723e1fa44083c354ba6d9089">
+        <dex dex="/Users/qiuhong/Desktop/zytyumin/app/build/intermediates/transforms/dex/debug/folders/1000/10/glide-3.6.1_72e3d0ae30cfa54213dbd5874116d23693635ebf/classes.dex" />
+    </item>
+    <item
+        jar="/Users/qiuhong/Desktop/zytyumin/app/libs/baidumapapi_util_v4_0_0.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="1e9069435803e5a4f32dc429906def33a95aaf17">
+        <dex dex="/Users/qiuhong/Desktop/zytyumin/app/build/intermediates/transforms/dex/debug/folders/1000/2/baidumapapi_util_v4_0_0_cc3877a73021c8687c39752b043cad71bf8b506b/classes.dex" />
+    </item>
+    <item
+        jar="/Users/qiuhong/Desktop/zytyumin/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="548f06de403a9409f00554b3ee12a9fdea0e236c">
+        <dex dex="/Users/qiuhong/Desktop/zytyumin/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-appcompat-v7-23.4.0_6934f2d10df50807c41a8159b3ed4e7538daf37d/classes.dex" />
+    </item>
+
+</items>

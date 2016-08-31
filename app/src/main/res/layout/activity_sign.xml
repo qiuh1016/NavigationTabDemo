@@ -9,6 +9,7 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:orientation="vertical"
+    android:background="#FFFFFF"
     tools:context=".SignActivity">
 
     <MyClass.NavigationView
@@ -25,7 +26,7 @@
         android:background="#38000000"/>
 
     <android.support.v4.view.ViewPager
-        android:id="@+id/id_viewpager"
+        android:id="@+id/viewpager_in_sign_activity"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"/>

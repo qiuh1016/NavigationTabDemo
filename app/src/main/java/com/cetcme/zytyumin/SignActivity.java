@@ -92,7 +92,7 @@ public class SignActivity extends FragmentActivity {
 
         initView();
 
-        mViewPager = (ViewPager) findViewById(R.id.id_viewpager);
+        mViewPager = (ViewPager) findViewById(R.id.viewpager_in_sign_activity);
 
         /**
          * 初始化Adapter
@@ -100,7 +100,8 @@ public class SignActivity extends FragmentActivity {
         mAdapter = new FragmentAdapter(getSupportFragmentManager(), fragments);
 
         mViewPager.setAdapter(mAdapter);
-        mViewPager.setOnPageChangeListener(new TabOnPageChangeListener());
+//        mViewPager.setOnPageChangeListener(new TabOnPageChangeListener());
+        mViewPager.addOnPageChangeListener(new TabOnPageChangeListener());
 
         initTabLine();
     }
@@ -185,10 +186,10 @@ public class SignActivity extends FragmentActivity {
 
         //当前页面被滑动时调用
         public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels){
-            LinearLayout.LayoutParams lp=(android.widget.LinearLayout.LayoutParams) mTabLine.getLayoutParams();
+            LinearLayout.LayoutParams layoutParams = (android.widget.LinearLayout.LayoutParams) mTabLine.getLayoutParams();
             //返回组件距离左侧组件的距离
-            lp.leftMargin= (int) ((positionOffset+position)*screenWidth/3);
-            mTabLine.setLayoutParams(lp);
+            layoutParams.leftMargin= (int) ((positionOffset + position) * screenWidth / 3);
+            mTabLine.setLayoutParams(layoutParams);
         }
 
         //当新的页面被选中时调用

@@ -31,14 +31,11 @@
             android:layout_height="200dp"
             android:id="@+id/banner_in_fragment_homepage"
             android:gravity="center"
-
             app:is_auto_play="true"
-
             app:title_background="#90000000"
             app:title_height="28dp"
             app:title_textcolor="@color/white"
             app:title_textsize="5sp"
-
             app:indicator_height="7dp"
             app:indicator_margin="4dp"
             app:indicator_width="7dp"
