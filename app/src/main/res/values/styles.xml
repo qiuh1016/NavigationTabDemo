@@ -47,7 +47,7 @@
 
     <!-- textview样式 -->
     <style name="userText">
-        <item name="android:textSize">16dp</item>
+        <item name="android:textSize">15sp</item>
         <item name="android:textColor">@color/text_clo</item>
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
@@ -56,7 +56,7 @@
 
     <!-- number textview样式 -->
     <style name="numberText">
-        <item name="android:textSize">16dp</item>
+        <item name="android:textSize">15sp</item>
         <item name="android:textColor">@color/text_clo</item>
         <item name="android:layout_width">25dp</item>
         <item name="android:layout_height">wrap_content</item>

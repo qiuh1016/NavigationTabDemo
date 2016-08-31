@@ -59,7 +59,7 @@
                         android:layout_height="match_parent"
                         android:id="@+id/username_editText_in_login_activity"
                         android:layout_weight="1"
-                        android:hint="账户"
+                        android:hint="用户名"
                         android:layout_marginRight="20dp"
                         android:background="#FFFFFF"
                         android:layout_marginLeft="20dp"
@@ -152,6 +152,11 @@
 
 
     </ScrollView>
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:id="@+id/imageView3"/>
 
 
 </LinearLayout>
