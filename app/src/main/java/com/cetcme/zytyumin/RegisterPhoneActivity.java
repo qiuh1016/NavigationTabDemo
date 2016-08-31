@@ -1,9 +1,11 @@
 package com.cetcme.zytyumin;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.os.Bundle;
+import android.telephony.TelephonyManager;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -17,7 +19,7 @@ import java.util.regex.Pattern;
 import MyClass.CodeUtils;
 import MyClass.NavigationView;
 
-public class InputPhoneActivity extends Activity implements View.OnClickListener{
+public class RegisterPhoneActivity extends Activity implements View.OnClickListener{
 
     private EditText phoneEditText;
     private EditText codeUtilsEditText;
@@ -31,7 +33,7 @@ public class InputPhoneActivity extends Activity implements View.OnClickListener
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_input_phone);
+        setContentView(R.layout.activity_register_phone);
         initNavigationView();
         initUI();
         initCodeUtils();
@@ -46,7 +48,7 @@ public class InputPhoneActivity extends Activity implements View.OnClickListener
     private NavigationView navigationView;
 
     private void initNavigationView() {
-        navigationView = (NavigationView) findViewById(R.id.nav_main_in_input_phone_activity);
+        navigationView = (NavigationView) findViewById(R.id.nav_main_in_register_phone_activity);
         navigationView.setTitle("注册");
         navigationView.setBackView(R.drawable.icon_back_button);
         navigationView.setRightView(0);
@@ -66,11 +68,11 @@ public class InputPhoneActivity extends Activity implements View.OnClickListener
     }
 
     private void initUI() {
-        phoneEditText = (EditText) findViewById(R.id.cellphone_editText_in_input_phone_activity);
-        codeUtilsEditText = (EditText) findViewById(R.id.codeUtils_editText_in_input_phone_activity);
-        codeUtilsImageView = (ImageView) findViewById(R.id.codeUtils_image_in_input_phone_activity);
-        getSMSButton = (Button) findViewById(R.id.sms_button_in_input_phone_activity);
-        nextButton = (Button) findViewById(R.id.next_button_in_input_phone_activity);
+        phoneEditText = (EditText) findViewById(R.id.cellphone_editText_in_register_phone_activity);
+        codeUtilsEditText = (EditText) findViewById(R.id.codeUtils_editText_in_register_phone_activity);
+        codeUtilsImageView = (ImageView) findViewById(R.id.codeUtils_image_in_register_phone_activity);
+        getSMSButton = (Button) findViewById(R.id.sms_button_in_register_phone_activity);
+        nextButton = (Button) findViewById(R.id.next_button_in_register_phone_activity);
 
         codeUtilsImageView.setOnClickListener(this);
         getSMSButton.setOnClickListener(this);
@@ -78,21 +80,33 @@ public class InputPhoneActivity extends Activity implements View.OnClickListener
 
         getSMSButton.setHeight(codeUtilsImageView.getHeight());
         getSMSButton.setWidth(codeUtilsImageView.getWidth());
+
+        /**
+         * 获取手机号码
+         */
+        TelephonyManager tm = (TelephonyManager) this.getSystemService(Context.TELEPHONY_SERVICE);
+        String deviceid = tm.getDeviceId();//获取智能设备唯一编号
+        String tel  = tm.getLine1Number();//获取本机号码
+        String imei = tm.getSimSerialNumber();//获得SIM卡的序号
+        String imsi = tm.getSubscriberId();//得到用户Id
+        phoneEditText.setText(tel);
+        Log.i("main", "initUI: tel" + tel);
+
     }
 
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
-            case R.id.sms_button_in_input_phone_activity:
+            case R.id.sms_button_in_register_phone_activity:
                 checkPhone();
                 break;
-            case R.id.codeUtils_image_in_input_phone_activity:
+            case R.id.codeUtils_image_in_register_phone_activity:
                 initCodeUtils();
                 break;
-            case R.id.next_button_in_input_phone_activity:
+            case R.id.next_button_in_register_phone_activity:
 //                modifyCode();
                 Intent intent = new Intent();
-                intent.setClass(this, InputInfoActivity.class);
+                intent.setClass(this, RegisterInfoActivity.class);
                 Bundle bundle = new Bundle();
                 bundle.putString("phone", phoneEditText.getText().toString());
                 intent.putExtras(bundle);

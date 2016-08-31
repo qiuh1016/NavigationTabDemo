@@ -10,6 +10,7 @@
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
     <uses-permission android:name="android.permission.WRITE_SETTINGS"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
 
     <application
         android:allowBackup="true"
@@ -46,9 +47,9 @@
         </activity>
         <activity android:name=".SignActivity">
         </activity>
-        <activity android:name=".InputPhoneActivity">
+        <activity android:name=".RegisterPhoneActivity">
         </activity>
-        <activity android:name=".InputInfoActivity">
+        <activity android:name=".RegisterInfoActivity">
         </activity>
     </application>
 

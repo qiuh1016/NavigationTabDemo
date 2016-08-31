@@ -2,15 +2,12 @@ package com.cetcme.zytyumin;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ImageView;
 
-import MyClass.CodeUtils;
 import MyClass.NavigationView;
 
 public class LoginActivity extends Activity implements View.OnClickListener{
@@ -83,7 +80,7 @@ public class LoginActivity extends Activity implements View.OnClickListener{
             case R.id.sign_up_password_button_in_login_activity:
                 Log.i(TAG, "onClick: signUpButton");
                 Intent intent = new Intent();
-                intent.setClass(this, InputPhoneActivity.class);
+                intent.setClass(this, RegisterPhoneActivity.class);
                 startActivity(intent);
                 overridePendingTransition(R.anim.push_left_in_no_alpha, R.anim.push_left_out_no_alpha);
                 break;

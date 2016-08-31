@@ -9,11 +9,10 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
-import android.widget.Toast;
 
 import MyClass.NavigationView;
 
-public class InputInfoActivity extends Activity implements View.OnClickListener{
+public class RegisterInfoActivity extends Activity implements View.OnClickListener{
 
     private EditText accountEditText;
     private EditText psw1EditText;
@@ -30,7 +29,7 @@ public class InputInfoActivity extends Activity implements View.OnClickListener{
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_input_info);
+        setContentView(R.layout.activity_register_info);
         initNavigationView();
         initUI();
     }
@@ -44,7 +43,7 @@ public class InputInfoActivity extends Activity implements View.OnClickListener{
     private NavigationView navigationView;
 
     private void initNavigationView() {
-        navigationView = (NavigationView) findViewById(R.id.nav_main_in_input_info_activity);
+        navigationView = (NavigationView) findViewById(R.id.nav_main_in_register_info_activity);
         navigationView.setTitle("注册");
         navigationView.setBackView(R.drawable.icon_back_button);
         navigationView.setRightView(0);
@@ -64,22 +63,22 @@ public class InputInfoActivity extends Activity implements View.OnClickListener{
     }
 
     private void initUI() {
-        accountEditText = (EditText) findViewById(R.id.account_editText_in_input_info_activity);
-        psw1EditText = (EditText) findViewById(R.id.psw_1_editText_in_input_info_activity);
-        psw2EditText = (EditText) findViewById(R.id.psw_2_editText_in_input_info_activity);
-        nameEditText = (EditText) findViewById(R.id.name_editText_in_input_info_activity);
-        idEditText = (EditText) findViewById(R.id.id_editText_in_input_info_activity);
-        phoneEditText = (EditText) findViewById(R.id.phone_editText_in_input_info_activity);
-        emailEditText = (EditText) findViewById(R.id.email_editText_in_input_info_activity);
+        accountEditText = (EditText) findViewById(R.id.account_editText_in_register_info_activity);
+        psw1EditText = (EditText) findViewById(R.id.psw_1_editText_in_register_info_activity);
+        psw2EditText = (EditText) findViewById(R.id.psw_2_editText_in_register_info_activity);
+        nameEditText = (EditText) findViewById(R.id.name_editText_in_register_info_activity);
+        idEditText = (EditText) findViewById(R.id.id_editText_in_register_info_activity);
+        phoneEditText = (EditText) findViewById(R.id.phone_editText_in_register_info_activity);
+        emailEditText = (EditText) findViewById(R.id.email_editText_in_register_info_activity);
 
         Bundle bundle = getIntent().getExtras();
         String phone = bundle.getString("phone");
         phoneEditText.setText(phone);
 
-        signUpButton = (Button) findViewById(R.id.sign_up_button_in_input_info_activity);
+        signUpButton = (Button) findViewById(R.id.sign_up_button_in_register_info_activity);
         signUpButton.setOnClickListener(this);
 
-        spinner = (Spinner) findViewById(R.id.spinner_in_input_info_activity);
+        spinner = (Spinner) findViewById(R.id.spinner_in_register_info_activity);
         final String[] mItems = {"个人帐号", "企业帐号"};
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this,android.R.layout.simple_spinner_item, mItems);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
@@ -88,6 +87,13 @@ public class InputInfoActivity extends Activity implements View.OnClickListener{
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 Log.i("main", "onItemSelected: " + mItems[position]);
+                if (position == 1) {
+                    nameEditText.setHint("企业名称");
+                    idEditText.setHint("企业注册号");
+                } else {
+                    nameEditText.setHint("姓名");
+                    idEditText.setHint("身份证号");
+                }
             }
 
             @Override
@@ -101,7 +107,7 @@ public class InputInfoActivity extends Activity implements View.OnClickListener{
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
-            case R.id.sign_up_button_in_input_info_activity:
+            case R.id.sign_up_button_in_register_info_activity:
                 break;
         }
     }
