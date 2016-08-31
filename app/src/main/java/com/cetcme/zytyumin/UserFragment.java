@@ -94,7 +94,10 @@ public class UserFragment extends BaseFragment {
         linearLayout1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Log.i(TAG, "onClick: setting1");
+                if (!user.getBoolean("hasLogin", false)) {
+                    startLoginActivity();
+                    return;
+                }
                 Intent intent = new Intent(getActivity(), ChangePasswordActivity.class);
                 MainActivity activity = (MainActivity) getActivity();
                 startActivity(intent);
@@ -106,7 +109,10 @@ public class UserFragment extends BaseFragment {
         linearLayout2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Log.i(TAG, "onClick: setting1");
+                if (!user.getBoolean("hasLogin", false)) {
+                    startLoginActivity();
+                    return;
+                }
                 Intent intent = new Intent(getActivity(), TodoActivity.class);
                 MainActivity activity = (MainActivity) getActivity();
                 startActivity(intent);
@@ -118,7 +124,6 @@ public class UserFragment extends BaseFragment {
         linearLayout3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Log.i(TAG, "onClick: setting1");
                 Intent intent = new Intent(getActivity(), VersionActivity.class);
                 MainActivity activity = (MainActivity) getActivity();
                 startActivity(intent);
@@ -156,13 +161,17 @@ public class UserFragment extends BaseFragment {
                 if (user.getBoolean("hasLogin", false)) {
                     logoutDialog();
                 } else {
-                    Intent intent = new Intent(getActivity(), LoginActivity.class);
-                    MainActivity activity = (MainActivity) getActivity();
-                    startActivity(intent);
-                    activity.overridePendingTransition(R.anim.push_up_in_no_alpha, R.anim.stay);
+                    startLoginActivity();
                 }
             }
         });
+    }
+
+    private void startLoginActivity() {
+        Intent intent = new Intent(getActivity(), LoginActivity.class);
+        MainActivity activity = (MainActivity) getActivity();
+        startActivity(intent);
+        activity.overridePendingTransition(R.anim.push_up_in_no_alpha, R.anim.stay);
     }
 
     private void modifyLoginButton(boolean hasLogin) {
