@@ -1,12 +1,15 @@
 package com.cetcme.zytyumin;
 
 import android.app.Activity;
+import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 
+import MyClass.CodeUtils;
 import MyClass.NavigationView;
 
 public class LoginActivity extends Activity implements View.OnClickListener{
@@ -25,6 +28,7 @@ public class LoginActivity extends Activity implements View.OnClickListener{
         setContentView(R.layout.activity_login);
         initNavigationView();
         initUI();
+        testImage();
     }
 
     public void onBackPressed() {
@@ -80,5 +84,31 @@ public class LoginActivity extends Activity implements View.OnClickListener{
                 Log.i(TAG, "onClick: signUpButton");
                 break;
         }
+    }
+
+    /**
+     * 生成随即验证码
+     * @author qh
+     * created at 8/31/16 10:35
+     */
+
+    ImageView imageView;
+    private void testImage() {
+        imageView = (ImageView) findViewById(R.id.imageView3);
+        getCodeUtils();
+        imageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                getCodeUtils();
+            }
+        });
+    }
+
+    private void getCodeUtils() {
+        CodeUtils codeUtils = new CodeUtils();
+        Bitmap bitmap = codeUtils.createBitmap();
+        String code = codeUtils.getCode();
+        imageView.setImageBitmap(bitmap);
+        Log.i("main", "******: " + code);
     }
 }
