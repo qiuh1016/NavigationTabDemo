@@ -46,6 +46,10 @@
         </activity>
         <activity android:name=".SignActivity">
         </activity>
+        <activity android:name=".InputPhoneActivity">
+        </activity>
+        <activity android:name=".InputInfoActivity">
+        </activity>
     </application>
 
 </manifest>

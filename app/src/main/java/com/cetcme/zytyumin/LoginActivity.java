@@ -1,6 +1,7 @@
 package com.cetcme.zytyumin;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.util.Log;
@@ -28,7 +29,6 @@ public class LoginActivity extends Activity implements View.OnClickListener{
         setContentView(R.layout.activity_login);
         initNavigationView();
         initUI();
-        testImage();
     }
 
     public void onBackPressed() {
@@ -82,33 +82,12 @@ public class LoginActivity extends Activity implements View.OnClickListener{
                 break;
             case R.id.sign_up_password_button_in_login_activity:
                 Log.i(TAG, "onClick: signUpButton");
+                Intent intent = new Intent();
+                intent.setClass(this, InputPhoneActivity.class);
+                startActivity(intent);
+                overridePendingTransition(R.anim.push_left_in_no_alpha, R.anim.push_left_out_no_alpha);
                 break;
         }
     }
 
-    /**
-     * 生成随即验证码
-     * @author qh
-     * created at 8/31/16 10:35
-     */
-
-    ImageView imageView;
-    private void testImage() {
-        imageView = (ImageView) findViewById(R.id.imageView3);
-        getCodeUtils();
-        imageView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                getCodeUtils();
-            }
-        });
-    }
-
-    private void getCodeUtils() {
-        CodeUtils codeUtils = new CodeUtils();
-        Bitmap bitmap = codeUtils.createBitmap();
-        String code = codeUtils.getCode();
-        imageView.setImageBitmap(bitmap);
-        Log.i("main", "******: " + code);
-    }
 }

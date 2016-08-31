@@ -1,0 +1,104 @@
+ECLIPSE ANDROID PROJECT IMPORT SUMMARY
+======================================
+
+Ignored Files:
+--------------
+The following files were *not* copied into the new Gradle project; you
+should evaluate whether these are still needed in your project and if
+so manually move them:
+
+* .idea/
+* .idea/.name
+* .idea/compiler.xml
+* .idea/copyright/
+* .idea/copyright/profiles_settings.xml
+* .idea/encodings.xml
+* .idea/libraries/
+* .idea/libraries/libs.xml
+* .idea/misc.xml
+* .idea/modules.xml
+* .idea/scopes/
+* .idea/scopes/scope_settings.xml
+* .idea/uiDesigner.xml
+* .idea/vcs.xml
+* .idea/workspace.xml
+* ant.properties
+* build.xml
+* fa_820_appdemo.iml
+* proguard-project.txt
+* test.iml
+
+Replaced Jars with Dependencies:
+--------------------------------
+The importer recognized the following .jar files as third party
+libraries and replaced them with Gradle dependencies instead. This has
+the advantage that more explicit version information is known, and the
+libraries can be updated automatically. However, it is possible that
+the .jar file in your project was of an older version than the
+dependency we picked, which could render the project not compileable.
+You can disable the jar replacement in the import wizard and try again:
+
+android-support-v4.jar => com.android.support:support-v4:19.+
+
+Moved Files:
+------------
+Android Gradle projects use a different directory structure than ADT
+Eclipse projects. Here's how the projects were restructured:
+
+* AndroidManifest.xml => androidApp_fr/src/main/AndroidManifest.xml
+* assets/ => androidApp_fr/src/main/assets/
+* libs/AMap_Location_V2.5.0_20160526.jar => androidApp_fr/libs/AMap_Location_V2.5.0_20160526.jar
+* libs/SangforSDK.jar => androidApp_fr/libs/SangforSDK.jar
+* libs/Xg_sdk_v2.37.jar => androidApp_fr/libs/Xg_sdk_v2.37.jar
+* libs/android-async-http-1.4.6.jar => androidApp_fr/libs/android-async-http-1.4.6.jar
+* libs/armeabi/libBaiduMapSDK_v3_4_0_15.so => androidApp_fr/src/main/jniLibs/armeabi/libBaiduMapSDK_v3_4_0_15.so
+* libs/armeabi/libZBarDecoder.so => androidApp_fr/src/main/jniLibs/armeabi/libZBarDecoder.so
+* libs/armeabi/libauth_forward.so => androidApp_fr/src/main/jniLibs/armeabi/libauth_forward.so
+* libs/armeabi/libbdpush_V2_4.so => androidApp_fr/src/main/jniLibs/armeabi/libbdpush_V2_4.so
+* libs/armeabi/libhttps.so => androidApp_fr/src/main/jniLibs/armeabi/libhttps.so
+* libs/armeabi/libpkcs12cert.so => androidApp_fr/src/main/jniLibs/armeabi/libpkcs12cert.so
+* libs/armeabi/libsubstrate.so => androidApp_fr/src/main/jniLibs/armeabi/libsubstrate.so
+* libs/armeabi/libsvpnservice.so => androidApp_fr/src/main/jniLibs/armeabi/libsvpnservice.so
+* libs/armeabi/libtpnsSecurity.so => androidApp_fr/src/main/jniLibs/armeabi/libtpnsSecurity.so
+* libs/armeabi/libtpnsWatchdog.so => androidApp_fr/src/main/jniLibs/armeabi/libtpnsWatchdog.so
+* libs/baidumapapi_v3_4_0.jar => androidApp_fr/libs/baidumapapi_v3_4_0.jar
+* libs/core-3.1.0.jar => androidApp_fr/libs/core-3.1.0.jar
+* libs/frmobile.jar => androidApp_fr/libs/frmobile.jar
+* libs/httpmime-4.2.1.jar => androidApp_fr/libs/httpmime-4.2.1.jar
+* libs/js.jar => androidApp_fr/libs/js.jar
+* libs/mid-sdk-2.10.jar => androidApp_fr/libs/mid-sdk-2.10.jar
+* libs/pushservice-4.5.5.77.jar => androidApp_fr/libs/pushservice-4.5.5.77.jar
+* libs/wup-1.0.0-SNAPSHOT.jar => androidApp_fr/libs/wup-1.0.0-SNAPSHOT.jar
+* libs/xUtils-2.6.14.jar => androidApp_fr/libs/xUtils-2.6.14.jar
+* libs/zbardecoder.jar => androidApp_fr/libs/zbardecoder.jar
+* res/ => androidApp_fr/src/main/res/
+* src/ => androidApp_fr/src/main/java/
+
+Missing Android Support Repository:
+-----------------------------------
+Some useful libraries, such as the Android Support Library, are
+installed from a special Maven repository, which should be installed
+via the SDK manager.
+
+It looks like this library is missing from your SDK installation at:
+null
+
+To install it, open the SDK manager, and in the Extras category,
+select "Android Support Repository". You may also want to install the
+"Google Repository" if you want to use libraries like Google Play
+Services.
+
+Next Steps:
+-----------
+You can now build the project. The Gradle project needs network
+connectivity to download dependencies.
+
+Bugs:
+-----
+If for some reason your project does not build, and you determine that
+it is due to a bug or limitation of the Eclipse to Gradle importer,
+please file a bug at http://b.android.com with category
+Component-Tools.
+
+(This import summary is for your information only, and can be deleted
+after import once you are satisfied with the results.)
