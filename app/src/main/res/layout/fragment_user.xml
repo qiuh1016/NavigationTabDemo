@@ -53,16 +53,20 @@ android:background="#eeeeee" >
 
             </LinearLayout>
 
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="30dp" />
 
-            <!-- 全圆角-->
-            <LinearLayout style="@style/wrap_layout">
-                <LinearLayout style="@style/single_layout"
-                              android:id="@+id/line_4_in_fragment_user">
-                    <TextView style="@style/userText" android:text="帮        助"/>
-                    <ImageView style="@style/img_arrow"/>
-                </LinearLayout>
-
-            </LinearLayout>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="登陆"
+                android:id="@+id/button_in_fragment_user"
+                android:background="@drawable/single_select"
+                android:layout_marginRight="8dp"
+                android:layout_marginLeft="8dp"
+                android:textSize="16sp"
+                android:textColor="#FFFFFF" />
 
             <Space
                 android:layout_width="match_parent"

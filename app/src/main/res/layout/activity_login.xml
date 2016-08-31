@@ -37,7 +37,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
                 android:id="@+id/imageView"
-                android:src="@drawable/zheyutongicon" />
+                android:src="@drawable/zheyutongicon"/>
 
             <Space
                 android:layout_width="match_parent"
