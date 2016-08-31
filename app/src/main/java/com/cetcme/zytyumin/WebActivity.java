@@ -11,12 +11,14 @@ import MyClass.ProgressWebView;
 
 public class WebActivity extends Activity {
 
-
+    private String title;
+    private String url;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_web);
+        initData();
         initNavigationView();
         initWebView();
     }
@@ -25,7 +27,7 @@ public class WebActivity extends Activity {
 
     private void initNavigationView() {
         navigationView = (NavigationView) findViewById(R.id.nav_main_in_web_activity);
-        navigationView.setTitle("新闻");
+        navigationView.setTitle(title);
         navigationView.setBackView(R.drawable.icon_back_button);
         navigationView.setRightView(0);
         navigationView.setClickCallback(new NavigationView.ClickCallback() {
@@ -43,18 +45,15 @@ public class WebActivity extends Activity {
         });
     }
 
-    private ProgressWebView webView;
+    private void initData() {
+        Bundle bundle = this.getIntent().getExtras();
+        url = bundle.getString("url");
+        title = bundle.getString("title");
+    }
 
     private void initWebView() {
-        webView = (ProgressWebView) findViewById(R.id.progressWebView_in_web_activity);
+        ProgressWebView webView = (ProgressWebView) findViewById(R.id.progressWebView_in_web_activity);
 //        webView.loadUrl("file:///android_asset/www/terms.html");
-
-        /**
-         * 获取url
-         */
-        Bundle bundle = this.getIntent().getExtras();
-        String url = bundle.getString("url");
-
         webView.loadUrl(url);
         webView.setWebViewClient(new WebViewClient(){
             @Override

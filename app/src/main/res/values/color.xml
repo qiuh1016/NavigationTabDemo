@@ -16,6 +16,8 @@
     <color name="main_color_light">#ddedfd</color>
     <color name="numberTextInListCell">#fa2222</color>
 
+    <color name="logout_button_color">#fa2222</color><!--红色 -->
+
 
     <color name="ivory">#FFFFF0</color><!--象牙色 -->
     <color name="lightyellow">#FFFFE0</color><!--亮黄色 -->

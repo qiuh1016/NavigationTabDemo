@@ -1,18 +1,26 @@
 package com.cetcme.zytyumin;
 
 import android.app.Activity;
+import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
+import android.support.v4.content.ContextCompat;
 import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.CheckBox;
+import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.TextView;
 
 import MyClass.NavigationView;
 
 public class RegisterInfoActivity extends Activity implements View.OnClickListener{
+
+    private Spinner spinner;
 
     private EditText accountEditText;
     private EditText psw1EditText;
@@ -22,8 +30,8 @@ public class RegisterInfoActivity extends Activity implements View.OnClickListen
     private EditText phoneEditText;
     private EditText emailEditText;
 
-    private Spinner spinner;
-
+    private CheckBox checkBox;
+    private TextView userTermsTextView;
     private Button signUpButton;
 
     @Override
@@ -94,6 +102,8 @@ public class RegisterInfoActivity extends Activity implements View.OnClickListen
                     nameEditText.setHint("姓名");
                     idEditText.setHint("身份证号");
                 }
+                nameEditText.setText("");
+                idEditText.setText("");
             }
 
             @Override
@@ -102,12 +112,33 @@ public class RegisterInfoActivity extends Activity implements View.OnClickListen
             }
         });
 
+        checkBox = (CheckBox) findViewById(R.id.checkBox_in_register_info_activity);
+        checkBox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                signUpButton.setEnabled(isChecked);
+                checkBox.setTextColor(isChecked ? getResources().getColor( R.color.text_clo) : getResources().getColor( R.color.red));
+            }
+        });
+
+        userTermsTextView = (TextView) findViewById(R.id.user_terms_in_register_info_activity);
+        userTermsTextView.setOnClickListener(this);
+
     }
 
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.sign_up_button_in_register_info_activity:
+                break;
+            case R.id.user_terms_in_register_info_activity:
+                Intent intent = new Intent();
+                Bundle bundle = new Bundle();
+                bundle.putString("url", "file:///android_asset/www/terms.html");
+                bundle.putString("title", "用户协议");
+                intent.putExtras(bundle);
+                intent.setClass(this, WebActivity.class);
+                startActivity(intent);
                 break;
         }
     }

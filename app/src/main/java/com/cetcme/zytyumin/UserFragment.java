@@ -1,6 +1,7 @@
 package com.cetcme.zytyumin;
 
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
@@ -9,6 +10,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.support.annotation.Nullable;
 import android.support.v4.content.ContextCompat;
+import android.support.v7.app.AlertDialog;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -34,14 +36,18 @@ public class UserFragment extends BaseFragment {
     private int todoNumber = 3;
 
     private Button loginButton;
-    private boolean hasLogin;
 
     private KProgressHUD kProgressHUD;
     private KProgressHUD okHUD;
 
+    private SharedPreferences user;
+
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.fragment_user, null, false);
+
+        user = getActivity().getSharedPreferences("user", Context.MODE_PRIVATE);
+
         initNavigationView();
         initHud();
         initTodoNumber();
@@ -72,6 +78,13 @@ public class UserFragment extends BaseFragment {
 
     private void initTodoNumber() {
         TextView todoNumberTextView = (TextView) view.findViewById(R.id.todoNumber_in_fragment_user);
+        /**
+         * 如果没登录则不现实todo数量
+         */
+        if (!user.getBoolean("hasLogin", false)) {
+            todoNumberTextView.setVisibility(View.INVISIBLE);
+            return;
+        }
         todoNumberTextView.setText(String.valueOf(todoNumber));
         todoNumberTextView.setVisibility(todoNumber == 0 ? View.INVISIBLE : View.VISIBLE);
     }
@@ -113,18 +126,6 @@ public class UserFragment extends BaseFragment {
             }
         });
 
-//        LinearLayout linearLayout4 = (LinearLayout) view.findViewById(R.id.line_4_in_fragment_user);
-//        linearLayout4.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Log.i(TAG, "onClick: setting1");
-//                Intent intent = new Intent(getActivity(), LoginActivity.class);
-//                MainActivity activity = (MainActivity) getActivity();
-//                startActivity(intent);
-//                activity.overridePendingTransition(R.anim.push_up_in_no_alpha, R.anim.stay);
-////                activity.overridePendingTransition(R.anim.push_left_in_no_alpha, R.anim.push_left_out_no_alpha);
-//            }
-//        });
     }
 
     private void initHud() {
@@ -147,52 +148,21 @@ public class UserFragment extends BaseFragment {
     }
 
     private void initLoginButton() {
-
         loginButton = (Button) view.findViewById(R.id.button_in_fragment_user);
-
-        final SharedPreferences user = getActivity().getSharedPreferences("user", Context.MODE_PRIVATE);
-        hasLogin = user.getBoolean("hasLogin", false);
-
-        modifyLoginButton(hasLogin);
-
+        modifyLoginButton(user.getBoolean("hasLogin", false));
         loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-                hasLogin = user.getBoolean("hasLogin", false);
-
-                if (hasLogin) {
-                    kProgressHUD.show();
-
-                    new Handler().postDelayed(new Runnable() {
-                        @Override
-                        public void run() {
-                            kProgressHUD.dismiss();
-                            okHUD.show();
-                            new Handler().postDelayed(new Runnable() {
-                                @Override
-                                public void run() {
-                                    okHUD.dismiss();
-                                    modifyLoginButton(false);
-                                    SharedPreferences.Editor editor = user.edit();//获取编辑器
-                                    editor.putBoolean("hasLogin", false);
-                                    editor.apply();//提交修改
-                                }
-                            },1000);
-                        }
-                    }, 3000);
+                if (user.getBoolean("hasLogin", false)) {
+                    logoutDialog();
                 } else {
                     Intent intent = new Intent(getActivity(), LoginActivity.class);
                     MainActivity activity = (MainActivity) getActivity();
                     startActivity(intent);
                     activity.overridePendingTransition(R.anim.push_up_in_no_alpha, R.anim.stay);
-                    activity.overridePendingTransition(R.anim.push_left_in_no_alpha, R.anim.push_left_out_no_alpha);
                 }
-
-
             }
         });
-
     }
 
     private void modifyLoginButton(boolean hasLogin) {
@@ -212,7 +182,40 @@ public class UserFragment extends BaseFragment {
          * 重新设置登陆按钮
          */
         SharedPreferences user = getActivity().getSharedPreferences("user", Context.MODE_PRIVATE);
-        hasLogin = user.getBoolean("hasLogin", false);
-        modifyLoginButton(hasLogin);
+        modifyLoginButton(user.getBoolean("hasLogin", false));
+        initTodoNumber();
+    }
+
+    private void logoutDialog() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+        builder.setIcon(android.R.drawable.ic_menu_myplaces);
+        builder.setMessage("是否继续?");
+        builder.setTitle("即将退出登录");
+        builder.setPositiveButton("退出", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                kProgressHUD.show();
+                new Handler().postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        kProgressHUD.dismiss();
+                        okHUD.show();
+                        new Handler().postDelayed(new Runnable() {
+                            @Override
+                            public void run() {
+                                okHUD.dismiss();
+                                modifyLoginButton(false);
+                                SharedPreferences.Editor editor = user.edit();//获取编辑器
+                                editor.putBoolean("hasLogin", false);
+                                editor.apply();//提交修改
+                                initTodoNumber();
+                            }
+                        },1000);
+                    }
+                }, 2000);
+            }
+        });
+        builder.setNegativeButton("取消", null);
+        builder.create().show();
     }
 }

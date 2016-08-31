@@ -1,5 +1,7 @@
 package com.cetcme.zytyumin;
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -29,6 +31,8 @@ import MyClass.NavigationView;
 public class HomepageFragment extends BaseFragment {
     private View view;
     private String TAG = "HomepageFragment";
+
+    private SharedPreferences user;
 
     private GridView gridView;
     private List<Map<String, Object>> data_list;
@@ -88,6 +92,7 @@ public class HomepageFragment extends BaseFragment {
     @Override
     public View onCreateView(LayoutInflater inflater, final ViewGroup container, Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.fragment_homepage, null);
+        user = getActivity().getSharedPreferences("user", Context.MODE_PRIVATE);
 
         gridName = new String[]{
                 getString(R.string.gird_1_in_fragment_homepage),
@@ -133,7 +138,7 @@ public class HomepageFragment extends BaseFragment {
         //获取数据
         getData();
         //新建适配器
-        String [] from ={"image","text"};
+        final String [] from ={"image","text"};
         int [] to = {R.id.grid_item_image,R.id.grid_item_text};
         sim_adapter = new SimpleAdapter(getActivity(), data_list, R.layout.grid_item, from, to);
         //配置适配器
@@ -143,6 +148,21 @@ public class HomepageFragment extends BaseFragment {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
+                /**
+                 * 为登陆则跳出登陆界面
+                 */
+                if (!user.getBoolean("hasLogin",false)) {
+                    Intent intent = new Intent();
+                    intent.setClass(getActivity(), LoginActivity.class);
+                    startActivity(intent);
+                    MainActivity activity = (MainActivity) getActivity();
+                    activity.overridePendingTransition(R.anim.push_up_in_no_alpha, R.anim.stay);
+                    return;
+                }
+
+                /**
+                 * 已登陆则正常显示功能界面
+                 */
                 if (gridClass[position] != null) {
                     Intent intent = new Intent();
                     intent.setClass(getActivity(), gridClass[position]);
@@ -184,6 +204,7 @@ public class HomepageFragment extends BaseFragment {
                 Intent intent = new Intent();
                 Bundle bundle = new Bundle();
                 bundle.putString("url", urls[position - 1]);
+                bundle.putString("title", "新闻");
                 intent.putExtras(bundle);
                 intent.setClass(getActivity(), WebActivity.class);
                 startActivity(intent);

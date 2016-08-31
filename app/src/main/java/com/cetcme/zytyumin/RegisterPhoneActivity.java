@@ -1,18 +1,28 @@
 package com.cetcme.zytyumin;
 
+import android.Manifest;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
+import android.os.Build;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.content.ContextCompat;
 import android.telephony.TelephonyManager;
 import android.util.Log;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.Toast;
 
+import java.util.LinkedList;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -78,40 +88,50 @@ public class RegisterPhoneActivity extends Activity implements View.OnClickListe
         getSMSButton.setOnClickListener(this);
         nextButton.setOnClickListener(this);
 
-        getSMSButton.setHeight(codeUtilsImageView.getHeight());
-        getSMSButton.setWidth(codeUtilsImageView.getWidth());
+        insertPhoneNumber();
 
-        /**
-         * 获取手机号码
-         */
+    }
+
+    /**
+     * 获取手机号码
+     */
+    private String getMobilePhoneNumber() {
         TelephonyManager tm = (TelephonyManager) this.getSystemService(Context.TELEPHONY_SERVICE);
         String deviceid = tm.getDeviceId();//获取智能设备唯一编号
         String tel  = tm.getLine1Number();//获取本机号码
         String imei = tm.getSimSerialNumber();//获得SIM卡的序号
         String imsi = tm.getSubscriberId();//得到用户Id
-        phoneEditText.setText(tel);
-        Log.i("main", "initUI: tel" + tel);
-
+        return tel;
     }
+
+    final public static int REQUEST_CODE_ASK_CALL_PHONE = 123;
+
+    private void insertPhoneNumber () {
+        if (Build.VERSION.SDK_INT >= 23) {
+            int checkCallPhonePermission = ContextCompat.checkSelfPermission(this, Manifest.permission.CALL_PHONE);
+            if (checkCallPhonePermission != PackageManager.PERMISSION_GRANTED) {
+                ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.CALL_PHONE},REQUEST_CODE_ASK_CALL_PHONE);
+                return;
+            } else {
+                //
+            }
+        } else {
+            phoneEditText.setText(getMobilePhoneNumber());
+        }
+    }
+
 
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.sms_button_in_register_phone_activity:
-                checkPhone();
+                checkCodeAndPhone();
                 break;
             case R.id.codeUtils_image_in_register_phone_activity:
                 initCodeUtils();
                 break;
             case R.id.next_button_in_register_phone_activity:
-//                modifyCode();
-                Intent intent = new Intent();
-                intent.setClass(this, RegisterInfoActivity.class);
-                Bundle bundle = new Bundle();
-                bundle.putString("phone", phoneEditText.getText().toString());
-                intent.putExtras(bundle);
-                startActivity(intent);
-                overridePendingTransition(R.anim.push_left_in_no_alpha, R.anim.push_left_out_no_alpha);
+                next();
                 break;
         }
     }
@@ -127,7 +147,7 @@ public class RegisterPhoneActivity extends Activity implements View.OnClickListe
         codeUtilsBitmap = codeUtils.createBitmap();
         codeUtilsCode = codeUtils.getCode();
         codeUtilsImageView.setImageBitmap(codeUtilsBitmap);
-        Log.i("main", "******: " + codeUtilsCode);
+        Log.i("main", "code: " + codeUtilsCode);
     }
 
     /**
@@ -135,35 +155,75 @@ public class RegisterPhoneActivity extends Activity implements View.OnClickListe
      * @author qh
      * created at 8/31/16 13:42
      */
-    private void modifyCode() {
-
+    private void checkCodeAndPhone() {
         String inputCode = codeUtilsEditText.getText().toString();
-
-        if (inputCode.equals(codeUtilsCode)) {
-            next();
-        } else {
-            Toast.makeText(this, "图片验证码错误", Toast.LENGTH_SHORT).show();
+        if (!inputCode.equals(codeUtilsCode)) {
             initCodeUtils();
+            return;
         }
-    }
-
-    private void checkPhone() {
         String inputMobileNO = phoneEditText.getText().toString();
         if (isMobileNO(inputMobileNO)) {
-           getSMS();
+            getSMS();
         } else {
             Toast.makeText(this, "手机号错误", Toast.LENGTH_SHORT).show();
         }
     }
 
     private void getSMS() {
-        //TODO:
+        //TODO: 让服务器发送sms
+        /**
+         * 定时器
+         */
+        getSMSButton.setEnabled(false);
+        getSMSButton.setText("60");
+        new Thread(new ThreadShow()).start();
     }
 
     private void next() {
-        //TODO:
+        //TODO:向服务器验证短信
+        /**
+         * 跳转
+         */
+        Intent intent = new Intent();
+        intent.setClass(this, RegisterInfoActivity.class);
+        Bundle bundle = new Bundle();
+        bundle.putString("phone", phoneEditText.getText().toString());
+        intent.putExtras(bundle);
+        startActivity(intent);
+        overridePendingTransition(R.anim.push_left_in_no_alpha, R.anim.push_left_out_no_alpha);
     }
 
+    // 线程类
+    class ThreadShow implements Runnable {
+
+        @Override
+        public void run() {
+
+            for (int i = 0; i < 60; i++) {
+                try {
+                    Thread.sleep(1000);
+                    final int finalI = i;
+                    runOnUiThread(new Runnable() {
+                        @Override
+                        public void run() {
+                            getSMSButton.setText(String.valueOf(59 - finalI));
+                        }
+                    });
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+
+            runOnUiThread(new Runnable() {
+                @Override
+                public void run() {
+                    getSMSButton.setEnabled(true);
+                    getSMSButton.setText("重新获取");
+                }
+            });
+
+        }
+    }
 
     /**
      * 正则表达式判断手机号
