@@ -13,11 +13,11 @@
     <string name="line_2_in_service_activity">图纸审查申报</string>
     <string name="line_3_in_service_activity">产品检验申报</string>
 
-    <string name="line_1_in_record_activity">投保记录</string>
-    <string name="line_2_in_record_activity">理赔记录</string>
-    <string name="line_3_in_record_activity">交易记录</string>
-    <string name="line_4_in_record_activity">检验记录</string>
-    <string name="line_5_in_record_activity">审图记录</string>
+    <string name="line_1_in_record_activity">投保查询</string>
+    <string name="line_2_in_record_activity">理赔查询</string>
+    <string name="line_3_in_record_activity">交易查询</string>
+    <string name="line_4_in_record_activity">检验查询</string>
+    <string name="line_5_in_record_activity">审图查询</string>
 
     <string name="line_1_in_visa_activity">出港确认</string>
     <string name="line_2_in_visa_activity">进港确认</string>
@@ -55,4 +55,75 @@
     <string name="baiduGeoConvUrl">http://api.map.baidu.com/geoconv/v1/</string>
     <string name="baiduGeoConvAppKey">stfZ8nXV0rvMfTLuAAY9SX2AqgLGLuOQ</string>
     <string name="title_activity_visa">VisaActivity</string>
+
+    <!--xia-->
+    <string name="c_boat_name">渔船名称</string>
+    <string name="c_boat_cde">渔船代码</string>
+    <string name="c_ply_app_no">投保单号</string>
+    <string name="c_ply_no">互保凭证号</string>
+    <string name="c_nme_cn">产品名称</string>
+    <string name="c_app_nme">投保人姓名</string>
+    <string name="c_app_cde">投保人代码</string>
+    <string name="c_insurance_date">投保日期</string>
+    <string name="t_insrnc_bgn_tm">保险起期</string>
+    <string name="T_insrnc_end_tm">保险止期</string>
+    <string name="c_is_owe_money">是否欠费</string>
+    <string name="n_prm">保费合计</string>
+    <string name="n_amt">保额合计</string>
+    <string name="t_app_udr_tm">提交核保日期</string>
+    <string name="n_rate">费率</string>
+    <string name="t_udr_date">核保日期</string>
+    <string name="c_orig_flg">新保/续保</string>
+    <string name="c_udr_mrk">核保标志</string>
+    <string name="c_edr_type">批改类型</string>
+
+    <!-- 理赔 -->
+    <string name="n_pay_tms">理算次数</string>
+    <string name="c_clm_no">理赔编号</string>
+    <string name="c_dpt_cnm">承保机构</string>
+    <string name="n_sum_clm_amt">赔款总金额</string>
+    <string name="c_clm_mainstatus">赔案主状态</string>
+    <string name="t_clm_rgst_tm">立案日期</string>
+    <string name="t_cls_tm">结案日期</string>
+    <string name="c_eac_dcm_no">结案归档号</string>
+    <string name="c_prod_name">产品名称</string>
+
+    <!-- 渔船交易 -->
+    <string name="trading_detail_info">渔船交易详细信息</string>
+    <string name="c_prn_no">合同号</string>
+    <string name="c_accept_dpt_name">受理机构</string>
+    <string name="c_delfalg">合同状态</string>
+    <string name="n_transfer_price_lower">转让价格(万元)</string>
+    <string name="n_22_jia_prop">转让产权(%)</string>
+    <string name="c_22_deal_mode">买卖后渔船处理方式</string>
+    <string name="c_signed_addr">鉴定地点</string>
+    <string name="t_signed_date">鉴定日期</string>
+    <string name="c_seller_name">出卖人</string>
+    <string name="c_buyer_name">买受人</string>
+    <string name="buyer_link_name">买方联系人</string>
+    <string name="seller_link_name">卖方联系人</string>
+    <string name="c_seller_card_holder">出卖人持证人</string>
+    <string name="c_buyer_card_holder">买方持证人</string>
+    <string name="buyer_link_tel">买方联系人电话</string>
+    <string name="seller_link_tel">卖方联系人电话</string>
+    <string name="fishing_permit_period_date">捕捉许可截止日</string>
+    <string name="fishing_permit_no">捕捉许可编号</string>
+    <string name="vessel_cert_period_date">渔船证件截止日</string>
+    <string name="vessel_cert_number">渔船证件号</string>
+    <string name="register_period_date">注册截止日</string>
+    <string name="register_number">注册号</string>
+    <string name="ownership_number">渔船归属号</string>
+    <string name="ownership_get_date">渔船归属日期</string>
+    <string name="norm_permit_number">普通允许号</string>
+    <string name="norm_permit_period_date">普通允许号有效期</string>
+    <string name="remeber_password">记住密码</string>
+    <string name="xlistview_header_hint_normal">下拉刷新</string>
+    <string name="xlistview_header_hint_ready">松开刷新数据</string>
+    <string name="xlistview_header_hint_loading">正在加载...</string>
+    <string name="xlistview_header_last_time">上次更新时间：</string>
+    <string name="xlistview_footer_hint_normal">查看更多</string>
+    <string name="xlistview_footer_hint_ready">松开载入更多</string>
+    <string name="switch_wifi">建议切换到WIFI模式！</string>
+    <string name="no_network">无法连接服务器，请检查网络！</string>
+    <!--xia end-->
 </resources>

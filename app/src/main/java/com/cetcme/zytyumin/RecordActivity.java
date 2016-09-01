@@ -7,11 +7,15 @@ import android.util.Log;
 import android.view.View;
 import android.widget.LinearLayout;
 
+import com.cetcme.zytyumin.xia.SearcherClaimActivity;
+import com.cetcme.zytyumin.xia.SearcherDrawingCheckActivity;
+import com.cetcme.zytyumin.xia.SearcherPayEnsuranceActivity;
+import com.cetcme.zytyumin.xia.SearcherShipDetectActivity;
+import com.cetcme.zytyumin.xia.SearcherTradeActivity;
+
 import MyClass.NavigationView;
 
 public class RecordActivity extends Activity implements View.OnClickListener{
-
-    private LinearLayout linearLayout1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,17 +54,35 @@ public class RecordActivity extends Activity implements View.OnClickListener{
     }
 
     private void initLinearLayout() {
-        linearLayout1 = (LinearLayout) findViewById(R.id.line_1_in_record_activity);
-        linearLayout1.setOnClickListener(this);
+        findViewById(R.id.line_1_in_record_activity).setOnClickListener(this);
+        findViewById(R.id.line_2_in_record_activity).setOnClickListener(this);
+        findViewById(R.id.line_3_in_record_activity).setOnClickListener(this);
+        findViewById(R.id.line_4_in_record_activity).setOnClickListener(this);
+        findViewById(R.id.line_5_in_record_activity).setOnClickListener(this);
     }
 
     @Override
     public void onClick(View v) {
+        Intent intent = new Intent();
         switch (v.getId()) {
             case R.id.line_1_in_record_activity:
-                Intent intent = new Intent();
-                intent.setClass(this, TableActivity.class);
-                startActivity(intent);
+                intent.setClass(this, SearcherPayEnsuranceActivity.class);
+                break;
+            case R.id.line_2_in_record_activity:
+                intent.setClass(this, SearcherClaimActivity.class);
+                break;
+            case R.id.line_3_in_record_activity:
+                intent.setClass(this, SearcherTradeActivity.class);
+                break;
+            case R.id.line_4_in_record_activity:
+                intent.setClass(this, SearcherShipDetectActivity.class);
+                break;
+            case R.id.line_5_in_record_activity:
+                intent.setClass(this, SearcherDrawingCheckActivity.class);
+                break;
+            default:
+                break;
         }
+        startActivity(intent);
     }
 }

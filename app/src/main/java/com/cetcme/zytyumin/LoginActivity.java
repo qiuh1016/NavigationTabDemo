@@ -186,65 +186,7 @@ public class LoginActivity extends Activity implements View.OnClickListener{
 
         AsyncHttpClient client = new AsyncHttpClient();
 
-        client.post(urlBody, params, new JsonHttpResponseHandler("UTF-8") {
-            @Override
-            public void onSuccess(int statusCode, PreferenceActivity.Header[] headers, JSONObject response) {
-                // If the response is JSONObject instead of expected JSONArray
-                Log.i("Main", response.toString());
-                Integer code;
-                try {
-                    code = response.getInt("code");
-                    if (code == 0) {
 
-                        //保存deviceNo 供轨迹查询
-                        try {
-                            String deviceNo = response.getString("deviceNo");
-
-                            //保存deviceNo
-                            SharedPreferences user = getSharedPreferences("user", Context.MODE_PRIVATE);
-                            SharedPreferences.Editor editor = user.edit();
-                            editor.putString("deviceNo", deviceNo);
-                            editor.apply();
-                        } catch (JSONException e) {
-                            e.printStackTrace();
-                        }
-
-                        //保存shipNo
-                        try {
-                            String shipNo = response.getString("shipNo");
-
-                            //保存deviceNo
-                            SharedPreferences user = getSharedPreferences("user", Context.MODE_PRIVATE);
-                            SharedPreferences.Editor editor = user.edit();
-                            editor.putString("shipNo", shipNo);
-                            editor.apply();
-                        } catch (JSONException e) {
-                            e.printStackTrace();
-                        }
-
-
-                        return;
-                    } else {
-                        String msg = response.getString("msg");
-                        System.out.println(msg);
-                        Toast.makeText(getApplicationContext(), msg, LENGTH_SHORT).show();
-                    }
-                } catch (JSONException e) {
-                    e.printStackTrace();
-//                    Toast.makeText(getApplicationContext(), "Login Failed!", LENGTH_SHORT).show();
-                }
-                kProgressHUD.dismiss();
-                loginButton.setEnabled(true);
-            }
-
-            @Override
-            public void onFailure(int statusCode, Header[] headers, Throwable throwable, JSONObject errorResponse) {
-                // called when response HTTP status is "4XX" (eg. 401, 403, 404)
-                kProgressHUD.dismiss();
-                loginButton.setEnabled(true);
-//                Toast.makeText(getApplicationContext(), "网络连接失败", Toast.LENGTH_SHORT).show();
-            }
-        });
     }
 
 
