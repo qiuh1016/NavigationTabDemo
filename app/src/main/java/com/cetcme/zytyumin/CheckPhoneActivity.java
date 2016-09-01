@@ -8,28 +8,23 @@ import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.os.Build;
 import android.os.Bundle;
-import android.os.Handler;
-import android.os.Message;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.telephony.TelephonyManager;
 import android.util.Log;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.Toast;
 
-import java.util.LinkedList;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import MyClass.CodeUtils;
 import MyClass.NavigationView;
 
-public class RegisterPhoneActivity extends Activity implements View.OnClickListener{
+public class CheckPhoneActivity extends Activity implements View.OnClickListener{
 
     private EditText phoneEditText;
     private EditText codeUtilsEditText;
@@ -43,7 +38,7 @@ public class RegisterPhoneActivity extends Activity implements View.OnClickListe
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_register_phone);
+        setContentView(R.layout.activity_check_phone);
         initNavigationView();
         initUI();
         initCodeUtils();
@@ -58,8 +53,8 @@ public class RegisterPhoneActivity extends Activity implements View.OnClickListe
     private NavigationView navigationView;
 
     private void initNavigationView() {
-        navigationView = (NavigationView) findViewById(R.id.nav_main_in_register_phone_activity);
-        navigationView.setTitle("注册");
+        navigationView = (NavigationView) findViewById(R.id.nav_main_in_check_phone_activity);
+        navigationView.setTitle("验证手机号");
         navigationView.setBackView(R.drawable.icon_back_button);
         navigationView.setRightView(0);
         navigationView.setClickCallback(new NavigationView.ClickCallback() {
@@ -78,11 +73,11 @@ public class RegisterPhoneActivity extends Activity implements View.OnClickListe
     }
 
     private void initUI() {
-        phoneEditText = (EditText) findViewById(R.id.cellphone_editText_in_register_phone_activity);
-        codeUtilsEditText = (EditText) findViewById(R.id.codeUtils_editText_in_register_phone_activity);
-        codeUtilsImageView = (ImageView) findViewById(R.id.codeUtils_image_in_register_phone_activity);
-        getSMSButton = (Button) findViewById(R.id.sms_button_in_register_phone_activity);
-        nextButton = (Button) findViewById(R.id.next_button_in_register_phone_activity);
+        phoneEditText = (EditText) findViewById(R.id.cellphone_editText_in_check_phone_activity);
+        codeUtilsEditText = (EditText) findViewById(R.id.codeUtils_editText_in_check_phone_activity);
+        codeUtilsImageView = (ImageView) findViewById(R.id.codeUtils_image_in_check_phone_activity);
+        getSMSButton = (Button) findViewById(R.id.sms_button_in_check_phone_activity);
+        nextButton = (Button) findViewById(R.id.next_button_in_check_phone_activity);
 
         codeUtilsImageView.setOnClickListener(this);
         getSMSButton.setOnClickListener(this);
@@ -124,13 +119,13 @@ public class RegisterPhoneActivity extends Activity implements View.OnClickListe
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
-            case R.id.sms_button_in_register_phone_activity:
+            case R.id.sms_button_in_check_phone_activity:
                 checkCodeAndPhone();
                 break;
-            case R.id.codeUtils_image_in_register_phone_activity:
+            case R.id.codeUtils_image_in_check_phone_activity:
                 initCodeUtils();
                 break;
-            case R.id.next_button_in_register_phone_activity:
+            case R.id.next_button_in_check_phone_activity:
                 next();
                 break;
         }
@@ -181,16 +176,27 @@ public class RegisterPhoneActivity extends Activity implements View.OnClickListe
 
     private void next() {
         //TODO:向服务器验证短信
+
+        Bundle bundle = getIntent().getExtras();
+        boolean isSignUp = bundle.getBoolean("isSignUp");
+
+        Intent intent = new Intent();
         /**
          * 跳转
          */
-        Intent intent = new Intent();
-        intent.setClass(this, RegisterInfoActivity.class);
-        Bundle bundle = new Bundle();
-        bundle.putString("phone", phoneEditText.getText().toString());
-        intent.putExtras(bundle);
-        startActivity(intent);
-        overridePendingTransition(R.anim.push_left_in_no_alpha, R.anim.push_left_out_no_alpha);
+        if (isSignUp) {
+            intent.setClass(this, RegisterInfoActivity.class);
+            Bundle phoneBundle = new Bundle();
+            phoneBundle.putString("phone", phoneEditText.getText().toString());
+            intent.putExtras(phoneBundle);
+            startActivity(intent);
+            overridePendingTransition(R.anim.push_left_in_no_alpha, R.anim.push_left_out_no_alpha);
+        } else {
+            intent.setClass(this, ChangePasswordActivity.class);
+            startActivity(intent);
+            overridePendingTransition(R.anim.push_left_in_no_alpha, R.anim.push_left_out_no_alpha);
+        }
+
     }
 
     // 线程类

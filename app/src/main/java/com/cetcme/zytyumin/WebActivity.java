@@ -64,4 +64,9 @@ public class WebActivity extends Activity {
             }
         });
     }
+
+    public void onBackPressed() {
+        super.onBackPressed();
+        overridePendingTransition(R.anim.stay, R.anim.push_up_out_no_alpha);
+    }
 }

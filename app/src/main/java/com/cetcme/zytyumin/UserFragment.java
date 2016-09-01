@@ -225,6 +225,19 @@ public class UserFragment extends BaseFragment {
             }
         });
         builder.setNegativeButton("取消", null);
-        builder.create().show();
+
+        /**
+         * 设置自定义按钮
+         */
+        AlertDialog alertDialog = builder.create();
+        alertDialog.show();
+
+        Button btnPositive = alertDialog.getButton(android.app.AlertDialog.BUTTON_POSITIVE);
+        Button btnNegative = alertDialog.getButton(android.app.AlertDialog.BUTTON_NEGATIVE);
+        btnNegative.setTextColor(getResources().getColor(R.color.main_color));
+//        btnNegative.setTextSize(18);
+        btnPositive.setTextColor(getResources().getColor(R.color.main_color));
+//        btnPositive.setTextSize(18);
+
     }
 }

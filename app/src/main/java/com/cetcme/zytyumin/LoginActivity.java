@@ -2,12 +2,10 @@ package com.cetcme.zytyumin;
 
 import android.app.Activity;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Handler;
-import android.support.v7.app.AlertDialog;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -43,8 +41,7 @@ public class LoginActivity extends Activity implements View.OnClickListener{
 
     public void onBackPressed() {
         super.onBackPressed();
-        overridePendingTransition(R.anim.stay,
-                R.anim.push_up_out_no_alpha);
+        overridePendingTransition(R.anim.stay, R.anim.push_up_out_no_alpha);
     }
 
     private NavigationView navigationView;
@@ -90,15 +87,23 @@ public class LoginActivity extends Activity implements View.OnClickListener{
                 break;
             case R.id.forget_password_button_in_login_activity:
                 Log.i(TAG, "onClick: forgetButton");
+                openCheckPhoneActivity(false);
                 break;
             case R.id.sign_up_password_button_in_login_activity:
                 Log.i(TAG, "onClick: signUpButton");
-                Intent intent = new Intent();
-                intent.setClass(this, RegisterPhoneActivity.class);
-                startActivity(intent);
-                overridePendingTransition(R.anim.push_left_in_no_alpha, R.anim.push_left_out_no_alpha);
+                openCheckPhoneActivity(true);
                 break;
         }
+    }
+
+    private void openCheckPhoneActivity(boolean isSignUp) {
+        Intent checkPhoneIntent = new Intent();
+        checkPhoneIntent.setClass(this, CheckPhoneActivity.class);
+        Bundle bundle = new Bundle();
+        bundle.putBoolean("isSignUp", isSignUp);
+        checkPhoneIntent.putExtras(bundle);
+        startActivity(checkPhoneIntent);
+        overridePendingTransition(R.anim.push_left_in_no_alpha, R.anim.push_left_out_no_alpha);
     }
 
     private void initHud() {
