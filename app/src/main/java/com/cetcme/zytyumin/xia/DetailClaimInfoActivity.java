@@ -5,19 +5,15 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Iterator;
-import java.util.Map;
 import java.util.Map.Entry;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-import java.util.zip.Inflater;
 
 import com.cetcme.zytyumin.R;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Context;
-import android.graphics.Color;
-import android.media.Image;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Handler;
@@ -25,14 +21,12 @@ import android.os.Message;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.view.View.OnClickListener;
 import android.view.Window;
-import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.cetcme.zytyumin.Http.GetWebDataWithHttpGet;
-import com.cetcme.zytyumin.Http.ParseJson;
+import com.cetcme.zytyumin.jecInfoHttp.GetWebDataWithHttpGet;
+import com.cetcme.zytyumin.jecInfoHttp.ParseJson;
 import com.cetcme.zytyumin.MyClass.NavigationView;
 
 public class DetailClaimInfoActivity extends Activity {

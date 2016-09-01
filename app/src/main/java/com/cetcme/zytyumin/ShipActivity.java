@@ -18,7 +18,7 @@ public class ShipActivity extends Activity {
             "浙嘉渔1314"};
 
     private String[] shipNo = {
-            "3303812002070002",
+            "3303811998090003",
             "3303812001050005",
             "3302251998010002"};
 

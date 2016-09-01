@@ -14,15 +14,22 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import com.cetcme.zytyumin.MyClass.PrivateEncode;
 import com.kaopiz.kprogresshud.KProgressHUD;
-import com.loopj.android.http.AsyncHttpClient;
-import com.loopj.android.http.JsonHttpResponseHandler;
-import com.loopj.android.http.RequestParams;
+
+
+import com.cetcme.zytyumin.MyClass.NavigationView;
 
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import com.cetcme.zytyumin.MyClass.NavigationView;
+import java.io.IOException;
+
+import okhttp3.Call;
+import okhttp3.Callback;
+import okhttp3.OkHttpClient;
+import okhttp3.Request;
+import okhttp3.Response;
 
 
 public class LoginActivity extends Activity implements View.OnClickListener{
@@ -144,49 +151,69 @@ public class LoginActivity extends Activity implements View.OnClickListener{
             return;
         }
 
-
         kProgressHUD.show();
-        /**
-         * 登陆操作 替换3000ms
-         */
-        new Handler().postDelayed(new Runnable() {
+
+        OkHttpClient client = new OkHttpClient();
+        String url = "http://61.164.218.155:8085/Account/login?loginName=" + username + "&password=" + PrivateEncode.getMD5(password) +"&deviceType=0&clientId=1";
+        Request request = new Request.Builder()
+                .url(url)
+                .get()
+                .build();
+        Call call = client.newCall(request);
+        call.enqueue(new Callback() {
             @Override
-            public void run() {
-                kProgressHUD.dismiss();
-                okHUD.show();
-                new Handler().postDelayed(new Runnable() {
+            public void onFailure(Call call, IOException e) {
+                Log.i(TAG, "onFailure: failed");
+                runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
-                        okHUD.dismiss();
-                        SharedPreferences user = getSharedPreferences("user", Context.MODE_PRIVATE);
-                        SharedPreferences.Editor editor = user.edit();//获取编辑器
-                        editor.putBoolean("hasLogin", true);
-                        editor.apply();//提交修改
-                        onBackPressed();
+                        Toast.makeText(LoginActivity.this, "网络连接失败", Toast.LENGTH_SHORT).show();
+                        kProgressHUD.dismiss();
                     }
-                },1000);
+                });
             }
-        }, 3000);
 
-
+            @Override
+            public void onResponse(Call call, Response response) throws IOException {
+                try {
+                    if (response.isSuccessful()) {
+                        JSONObject json = new JSONObject(response.body().string());
+                        String msg = json.getString("msg");
+                        final String sessionKey = json.getString("SessionKey");
+                        if (msg.equals("成功")) {
+                            kProgressHUD.dismiss();
+                            okHUD.show();
+                            new Handler().postDelayed(new Runnable() {
+                                @Override
+                                public void run() {
+                                   okHUD.dismiss();
+                                    SharedPreferences user = getSharedPreferences("user", Context.MODE_PRIVATE);
+                                    SharedPreferences.Editor editor = user.edit();
+                                    editor.putBoolean("hasLogin", true);
+                                    editor.putString("SessionKey", sessionKey);
+                                    editor.apply();
+                                    onBackPressed();
+                                }
+                            }, 1000);
+                        } else {
+                            kProgressHUD.dismiss();
+                            Toast.makeText(LoginActivity.this, msg, Toast.LENGTH_SHORT).show();
+                        }
+                    }
+                } catch (IOException e) {
+                    e.printStackTrace();
+                    kProgressHUD.dismiss();
+                    Toast.makeText(LoginActivity.this, "登录失败", Toast.LENGTH_SHORT).show();
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                    kProgressHUD.dismiss();
+                    Toast.makeText(LoginActivity.this, "登录失败", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
 
     }
 
-    private void login(final String loginName, final String password) {
-        RequestParams params = new RequestParams();
-        params.put("loginName", loginName);
-        params.put("password", password);
-        params.put("deviceType", 0);
-        params.put("clientId", 1);
-
-        SharedPreferences user = getSharedPreferences("user", Context.MODE_PRIVATE);
-        String serverIP = user.getString("serverIP", getString(R.string.serverIP));
-        String urlBody = "http://"+serverIP+getString(R.string.loginUrl);
-
-        AsyncHttpClient client = new AsyncHttpClient();
-
-
-    }
 
 
 }

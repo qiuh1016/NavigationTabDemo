@@ -153,7 +153,7 @@ public class HomepageFragment extends BaseFragment {
                  */
                 if (!user.getBoolean("hasLogin",false)) {
                     Intent intent = new Intent();
-                    intent.setClass(getActivity(), LoginActivity.class);
+                    intent.setClass(getActivity(), CheckPhoneActivity.LoginActivity.class);
                     startActivity(intent);
                     MainActivity activity = (MainActivity) getActivity();
                     activity.overridePendingTransition(R.anim.push_up_in_no_alpha, R.anim.stay);

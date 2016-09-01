@@ -33,6 +33,7 @@
 
     <!--API-->
     <string name="rcldServerIP">120.27.149.252</string>
+    <string name="defaultServerIP_1">120.27.149.252</string>
     <string name="serverIP">192.168.3.171:8080</string>
 
     <string name="loginUrl">/api/Account/login</string>

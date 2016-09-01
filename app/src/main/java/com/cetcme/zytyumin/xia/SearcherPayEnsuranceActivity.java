@@ -4,8 +4,8 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 import com.cetcme.zytyumin.R;
-import com.cetcme.zytyumin.Http.GetWebDataWithHttpGet;
-import com.cetcme.zytyumin.Http.ParseJson;
+import com.cetcme.zytyumin.jecInfoHttp.GetWebDataWithHttpGet;
+import com.cetcme.zytyumin.jecInfoHttp.ParseJson;
 import com.cetcme.zytyumin.MyClass.NavigationView;
 
 import android.app.Activity;

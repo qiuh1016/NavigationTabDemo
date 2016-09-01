@@ -4,12 +4,9 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.graphics.Color;
-import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.annotation.Nullable;
-import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AlertDialog;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -168,7 +165,7 @@ public class UserFragment extends BaseFragment {
     }
 
     private void startLoginActivity() {
-        Intent intent = new Intent(getActivity(), LoginActivity.class);
+        Intent intent = new Intent(getActivity(), CheckPhoneActivity.LoginActivity.class);
         MainActivity activity = (MainActivity) getActivity();
         startActivity(intent);
         activity.overridePendingTransition(R.anim.push_up_in_no_alpha, R.anim.stay);
