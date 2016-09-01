@@ -10,6 +10,7 @@ import android.widget.ListView;
 import android.widget.SimpleAdapter;
 import android.widget.Toast;
 
+import com.cetcme.zytyumin.MyClass.NavigationView;
 import com.cetcme.zytyumin.R;
 import com.handmark.pulltorefresh.library.PullToRefreshBase;
 import com.handmark.pulltorefresh.library.PullToRefreshListView;
@@ -34,7 +35,7 @@ import java.util.Map;
 
 import static android.widget.Toast.LENGTH_SHORT;
 
-public class PunchActivity extends AppCompatActivity {
+public class PunchActivity extends Activity {
 
 
     private PullToRefreshListView listView;
@@ -57,18 +58,11 @@ public class PunchActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_punch);
-        setTitle("打卡记录");
 
         Bundle bundle = this.getIntent().getExtras();
         shipNo = bundle.getString("shipNo");
 
-        /**
-         * 导航栏返回按钮
-         */
-        android.support.v7.app.ActionBar actionBar = getSupportActionBar();
-        if (actionBar != null) {
-            actionBar.setDisplayHomeAsUpEnabled(true);
-        }
+        initNavigationView();
 
         /**
          * umeng 推送
@@ -76,6 +70,32 @@ public class PunchActivity extends AppCompatActivity {
         PushAgent.getInstance(this).onAppStart();
 
         toast = Toast.makeText(PunchActivity.this, "", LENGTH_SHORT);
+
+        initListView();
+
+    }
+
+    private void initNavigationView() {
+        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_main_in_punch_activity);
+        navigationView.setTitle("打卡记录");
+        navigationView.setBackView(R.drawable.icon_back_button);
+        navigationView.setRightView(0);
+        navigationView.setClickCallback(new NavigationView.ClickCallback() {
+
+            @Override
+            public void onRightClick() {
+                Log.i("main","点击了右侧按钮!");
+            }
+
+            @Override
+            public void onBackClick() {
+                Log.i("main","点击了左侧按钮!");
+                onBackPressed();
+            }
+        });
+    }
+
+    private void initListView() {
         listView = (PullToRefreshListView) findViewById(R.id.punchHistoryListView);
         listView.setMode(PullToRefreshBase.Mode.BOTH);
 

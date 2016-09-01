@@ -5,19 +5,30 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Color;
+import android.os.Build;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.ViewGroup;
+import android.view.WindowManager;
 import android.widget.AdapterView;
+import android.widget.Button;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.ListView;
+import android.widget.RelativeLayout;
 import android.widget.SimpleAdapter;
+import android.widget.TextView;
 import android.widget.Toast;
 
+import com.cetcme.zytyumin.MyClass.DensityUtil;
+import com.cetcme.zytyumin.MyClass.NavigationView;
 import com.cetcme.zytyumin.MyClass.PrivateEncode;
 import com.cetcme.zytyumin.R;
 import com.kaopiz.kprogresshud.KProgressHUD;
@@ -28,6 +39,7 @@ import org.apache.http.Header;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+import org.w3c.dom.Text;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -48,7 +60,7 @@ import okhttp3.Request;
 
 import static android.widget.Toast.LENGTH_SHORT;
 
-public class ioConfirmActivity extends AppCompatActivity {
+public class ioConfirmActivity extends Activity {
 
     private ListView listView;
     private SimpleAdapter simpleAdapter;
@@ -63,18 +75,20 @@ public class ioConfirmActivity extends AppCompatActivity {
 
     private String shipNo;
 
+    private String title;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_io_confirm);
 
-        /**
-         * 导航栏返回按钮
-         */
-        android.support.v7.app.ActionBar actionBar = getSupportActionBar();
-        if (actionBar != null) {
-            actionBar.setDisplayHomeAsUpEnabled(true);
-        }
+//        /**
+//         * 导航栏返回按钮
+//         */
+//        android.support.v7.app.ActionBar actionBar = getSupportActionBar();
+//        if (actionBar != null) {
+//            actionBar.setDisplayHomeAsUpEnabled(true);
+//        }
 
         /**
          * umeng 推送
@@ -85,11 +99,23 @@ public class ioConfirmActivity extends AppCompatActivity {
         shipNo = bundle.getString("shipNo");
         iofFlag = bundle.getInt("iofFlag");
         if (iofFlag == 1) {
-            setTitle("出港确认");
+            title = "出港确认";
         } else if (iofFlag == 2) {
-            setTitle("进港确认");
+            title = "进港确认";
         }
 
+        initNavigationView();
+        initListView();
+
+        toast = Toast.makeText(ioConfirmActivity.this, "", LENGTH_SHORT);
+    }
+
+    public void onPause() {
+        super.onPause();
+        MobclickAgent.onPause(this);
+    }
+
+    private void initListView() {
         listView = (ListView) findViewById(R.id.punchListView);
         simpleAdapter = new SimpleAdapter(this, getPunchData(), R.layout.punch_list_cell,
                 new String[]{"name", "id", "punchTime", "dataTypeString"},
@@ -98,7 +124,7 @@ public class ioConfirmActivity extends AppCompatActivity {
                         R.id.idTextViewInPunchListCell,
                         R.id.punchTimeTextViewInPunchListView,
                         R.id.dataTypeTextViewInPunchListView
-                        });
+                });
         listView.setAdapter(simpleAdapter);
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -106,13 +132,67 @@ public class ioConfirmActivity extends AppCompatActivity {
                 dialog(dataList.get(position), position);
             }
         });
-
-        toast = Toast.makeText(ioConfirmActivity.this, "", LENGTH_SHORT);
     }
 
-    public void onPause() {
-        super.onPause();
-        MobclickAgent.onPause(this);
+    private NavigationView navigationView;
+
+    private void initNavigationView() {
+        navigationView = (NavigationView) findViewById(R.id.nav_main_in_io_confirm_activity);
+        navigationView.setTitle(title);
+        navigationView.setBackView(R.drawable.icon_back_button);
+        navigationView.setRightView(0);
+
+        RelativeLayout.LayoutParams params1 = (RelativeLayout.LayoutParams) navigationView.getRightView().getLayoutParams();
+        navigationView.removeView(navigationView.getRightView());
+
+        TextView textView_confirm = new TextView(this);
+        textView_confirm.setText("确认");
+        textView_confirm.setTextColor(Color.WHITE);
+        textView_confirm.setTextSize(14);
+        textView_confirm.setGravity(Gravity.CENTER);
+        textView_confirm.setLayoutParams(params1);
+        textView_confirm.setId(R.id.textView_confirm_in_io_confirm_activity);
+        textView_confirm.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.i("main", "onClick: confirm");
+                confirm();
+            }
+        });
+
+        TextView textView_add = new TextView(this);
+        textView_add.setText("添加");
+        textView_add.setTextColor(Color.WHITE);
+        textView_add.setTextSize(14);
+        textView_add.setGravity(Gravity.CENTER);
+        RelativeLayout.LayoutParams params2 = new RelativeLayout.LayoutParams(DensityUtil.dip2px(this, 50), DensityUtil.dip2px(this, 50));
+        params2.addRule(RelativeLayout.ALIGN_RIGHT, R.id.textView_confirm_in_io_confirm_activity);
+        params2.setMargins(0,0,DensityUtil.dip2px(this, 50),0);
+        textView_add.setLayoutParams(params2);
+        textView_add.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.i("main", "onClick: add");
+                add();
+            }
+        });
+
+        navigationView.addView(textView_confirm);
+        navigationView.addView(textView_add);
+
+        navigationView.setClickCallback(new NavigationView.ClickCallback() {
+
+            @Override
+            public void onRightClick() {
+                Log.i("main","点击了右侧按钮!");
+            }
+
+            @Override
+            public void onBackClick() {
+                Log.i("main","点击了左侧按钮!");
+                onBackPressed();
+            }
+        });
     }
 
     @Override
@@ -144,9 +224,6 @@ public class ioConfirmActivity extends AppCompatActivity {
                 addIntent.setClass(getApplicationContext(), ReasonActivity.class);
                 addIntent.putExtras(bundle);
                 startActivity(addIntent);
-//                overridePendingTransition(R.anim.zoom_in,R.anim.zoom_out);
-
-//                overridePendingTransition(android.R.anim.fade_in,android.R.anim.fade_out);
                 overridePendingTransition(R.anim.push_left_in_no_alpha, R.anim.push_left_out_no_alpha);
                 return false;
             }
@@ -186,6 +263,51 @@ public class ioConfirmActivity extends AppCompatActivity {
         return true;
     }
 
+    private void add() {
+        Bundle bundle = new Bundle();
+        bundle.putStringArrayList("ids", ids);
+        Intent addIntent = new Intent();
+        addIntent.setClass(getApplicationContext(), ReasonActivity.class);
+        addIntent.putExtras(bundle);
+        startActivity(addIntent);
+        overridePendingTransition(R.anim.push_left_in_no_alpha, R.anim.push_left_out_no_alpha);
+    }
+
+    private void confirm() {
+        if (dataList.isEmpty()) {
+            return;
+        }
+
+        String punchInfo = "";
+        for (Map<String, Object> map: dataList) {
+            punchInfo += "姓    名：" + map.get("name") + ",\n身份证：" + map.get("id") + ";\n";
+        }
+
+        punchInfo = punchInfo.substring(0,punchInfo.length() - 2);
+        punchInfo += ".";
+
+        AlertDialog.Builder builder = new AlertDialog.Builder(ioConfirmActivity.this);
+        //builder.setMessage(punchInfo);
+        builder.setTitle("确认上传？"); //("共" + dataList.size() + "人,确认上传?");
+        builder.setNegativeButton("取消", null);
+        builder.setPositiveButton("上传", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                upload();
+            }
+        });
+        /**
+         * 设置自定义按钮
+         */
+        AlertDialog alertDialog = builder.create();
+        alertDialog.show();
+
+        Button btnPositive = alertDialog.getButton(android.app.AlertDialog.BUTTON_POSITIVE);
+        Button btnNegative = alertDialog.getButton(android.app.AlertDialog.BUTTON_NEGATIVE);
+        btnNegative.setTextColor(getResources().getColor(R.color.main_color));
+        btnPositive.setTextColor(getResources().getColor(R.color.main_color));
+    }
+
     public void onBackPressed() {
 
         if (dataList.size() == 0) {
@@ -193,19 +315,29 @@ public class ioConfirmActivity extends AppCompatActivity {
         }
 
         if (showBackDialog) {
-            AlertDialog.Builder dialog = new AlertDialog.Builder(ioConfirmActivity.this);
-            dialog.setIcon(android.R.drawable.ic_delete);
-            dialog.setTitle("返回将丢失现有操作");
-            dialog.setMessage("是否继续？");
-            dialog.setPositiveButton("返回", new DialogInterface.OnClickListener() {
+            AlertDialog.Builder builder = new AlertDialog.Builder(ioConfirmActivity.this);
+            builder.setIcon(android.R.drawable.ic_delete);
+            builder.setTitle("返回将丢失现有操作");
+            builder.setMessage("是否继续？");
+            builder.setPositiveButton("返回", new DialogInterface.OnClickListener() {
                 @Override
                 public void onClick(DialogInterface dialog, int which) {
                     showBackDialog = false;
                     onBackPressed();
                 }
             });
-            dialog.setNegativeButton("取消",null);
-            dialog.show();
+            builder.setNegativeButton("取消",null);
+            /**
+             * 设置自定义按钮
+             */
+            AlertDialog alertDialog = builder.create();
+            alertDialog.show();
+
+            Button btnPositive = alertDialog.getButton(android.app.AlertDialog.BUTTON_POSITIVE);
+            Button btnNegative = alertDialog.getButton(android.app.AlertDialog.BUTTON_NEGATIVE);
+            btnNegative.setTextColor(getResources().getColor(R.color.main_color));
+            btnPositive.setTextColor(getResources().getColor(R.color.main_color));
+
         } else {
             super.onBackPressed();
             overridePendingTransition(R.anim.push_right_in_no_alpha,
@@ -250,8 +382,6 @@ public class ioConfirmActivity extends AppCompatActivity {
         }
 
     }
-
-
 
 
     private List<Map<String, Object>> getPunchData() {
@@ -426,7 +556,16 @@ public class ioConfirmActivity extends AppCompatActivity {
 
             }
         });
-        builder.create().show();
+        /**
+         * 设置自定义按钮
+         */
+        AlertDialog alertDialog = builder.create();
+        alertDialog.show();
+
+        Button btnPositive = alertDialog.getButton(android.app.AlertDialog.BUTTON_POSITIVE);
+        Button btnNegative = alertDialog.getButton(android.app.AlertDialog.BUTTON_NEGATIVE);
+        btnNegative.setTextColor(getResources().getColor(R.color.main_color));
+        btnPositive.setTextColor(getResources().getColor(R.color.main_color));
     }
 
     private void upload() {
@@ -537,82 +676,7 @@ public class ioConfirmActivity extends AppCompatActivity {
 
         });
 
-
-
     }
 
-
-    private void uploadPunch(final int position) {
-
-        //获取保存的用户名和密码
-        String username,password,serverIP;
-        SharedPreferences user = getSharedPreferences("user", Activity.MODE_PRIVATE);
-        username = user.getString("username","");
-        password = user.getString("password","");
-        serverIP = user.getString("serverIP", getString(R.string.defaultServerIP_1));
-
-        //设置输入参数
-        RequestParams params = new RequestParams();
-        params.put("userName", username);
-        params.put("password", password);
-        params.put("iofFlag", iofFlag);
-        params.put("sailorIdNo", dataList.get(position).get("id"));
-        params.put("sailorName", dataList.get(position).get("name"));
-        params.put("punchTime", dataList.get(position).get("punchTime"));
-        params.put("dataType", dataList.get(position).get("dataType"));
-        params.put("reason", dataList.get(position).get("reason"));
-
-
-        String urlBody = "http://"+serverIP+"/api/app/iof/sailor/new.json";
-//        String url = urlBody+"?userName="+shipNumber+"&password="+password+"&startTime="+startTime+"&endTime="+endTime;
-        AsyncHttpClient client = new AsyncHttpClient();
-        client.post(urlBody, params, new JsonHttpResponseHandler("UTF-8"){
-            @Override
-            public void onSuccess(int statusCode, Header[] headers, JSONObject response) {
-                // If the response is JSONObject instead of expected JSONArray
-                Log.i("Main",response.toString());
-                try {
-                    int code = response.getInt("code");
-                    if (code == 0) {
-                        uploadOKList.add(position);
-                        Log.i("Main", uploadOKList.toString());
-                        if (uploadOKList.size() == dataList.size()) {
-                            kProgressHUD.dismiss();
-                            toast.setText("上传成功");
-                            toast.show();
-                            return;
-                        }
-                    } else {
-                        Log.i("Main", position + "not ok");
-                    }
-                } catch (JSONException e) {
-                    e.printStackTrace();
-                    Log.i("Main", "error");
-                }
-
-                kProgressHUD.dismiss();
-                toast.setText("上传失败");
-                toast.show();
-
-            }
-            @Override
-            public void onFailure(int statusCode, Header[] headers, Throwable throwable, JSONObject errorResponse) {
-                // called when response HTTP status is "4XX" (eg. 401, 403, 404)
-                kProgressHUD.dismiss();
-                toast.setText("网络连接失败");
-                toast.show();
-            }
-
-            @Override
-            public void onFailure(int statusCode, Header[] headers, String response, Throwable throwable) {
-                Log.i("Main", response);
-                kProgressHUD.dismiss();
-                toast.setText("网络连接失败");
-                toast.show();
-            }
-
-
-        });
-    }
 
 }

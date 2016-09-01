@@ -1,5 +1,6 @@
 package com.cetcme.zytyumin.rcld;
 
+import android.app.Activity;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -7,6 +8,7 @@ import android.view.MenuItem;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
 
+import com.cetcme.zytyumin.MyClass.NavigationView;
 import com.cetcme.zytyumin.R;
 import com.umeng.analytics.MobclickAgent;
 import com.umeng.message.PushAgent;
@@ -24,7 +26,7 @@ import java.util.Hashtable;
 import java.util.List;
 import java.util.Map;
 
-public class iofSailorActivity extends AppCompatActivity {
+public class iofSailorActivity extends Activity {
 
     private ListView listView;
     private SimpleAdapter simpleAdapter;
@@ -38,14 +40,6 @@ public class iofSailorActivity extends AppCompatActivity {
         setContentView(R.layout.activity_iof_sailor);
 
         /**
-         * 导航栏返回按钮
-         */
-        android.support.v7.app.ActionBar actionBar = getSupportActionBar();
-        if (actionBar != null) {
-            actionBar.setDisplayHomeAsUpEnabled(true);
-        }
-
-        /**
          * umeng 推送
          */
         PushAgent.getInstance(this).onAppStart();
@@ -54,9 +48,14 @@ public class iofSailorActivity extends AppCompatActivity {
         String iofTime = bundle.getString("iofTime");
         String iofFlag = bundle.getString("iofFlag");
         sailorListString = bundle.getString("iofSailorList");
-//        setTitle(iofTime + " " + iofFlag);
-        setTitle("船员名单");
 
+        initNavigationView();
+        initListView();
+
+
+    }
+
+    private void initListView() {
         listView = (ListView) findViewById(R.id.iofSailorListView);
         simpleAdapter = new SimpleAdapter(iofSailorActivity.this, getioSailorData(), R.layout.punch_list_cell,
                 new String[]{"sailorName", "sailorIdNo", "reason","dataType"},
@@ -67,7 +66,26 @@ public class iofSailorActivity extends AppCompatActivity {
                         R.id.dataTypeTextViewInPunchListView
                 });
         listView.setAdapter(simpleAdapter);
+    }
 
+    private void initNavigationView() {
+        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_main_in_ioSailor_activity);
+        navigationView.setTitle("船员名单");
+        navigationView.setBackView(R.drawable.icon_back_button);
+        navigationView.setRightView(0);
+        navigationView.setClickCallback(new NavigationView.ClickCallback() {
+
+            @Override
+            public void onRightClick() {
+                Log.i("main","点击了右侧按钮!");
+            }
+
+            @Override
+            public void onBackClick() {
+                Log.i("main","点击了左侧按钮!");
+                onBackPressed();
+            }
+        });
     }
 
     public void onResume() {

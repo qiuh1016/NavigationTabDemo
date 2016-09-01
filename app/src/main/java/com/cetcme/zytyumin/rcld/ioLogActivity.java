@@ -13,6 +13,7 @@ import android.widget.ListView;
 import android.widget.SimpleAdapter;
 import android.widget.Toast;
 
+import com.cetcme.zytyumin.MyClass.NavigationView;
 import com.cetcme.zytyumin.R;
 import com.handmark.pulltorefresh.library.PullToRefreshBase;
 import com.handmark.pulltorefresh.library.PullToRefreshListView;
@@ -40,8 +41,7 @@ import java.util.Map;
 
 import static android.widget.Toast.LENGTH_SHORT;
 
-public class ioLogActivity extends AppCompatActivity {
-
+public class ioLogActivity extends Activity {
 
     private PullToRefreshListView listView;
 
@@ -64,18 +64,10 @@ public class ioLogActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_io_log);
 
-        setTitle("出海记录");
-
         Bundle bundle = this.getIntent().getExtras();
         shipNo = bundle.getString("shipNo");
 
-        /**
-         * 导航栏返回按钮
-         */
-        android.support.v7.app.ActionBar actionBar = getSupportActionBar();
-        if (actionBar != null) {
-            actionBar.setDisplayHomeAsUpEnabled(true);
-        }
+        initNavigationView();
 
         /**
          * umeng 推送
@@ -83,6 +75,11 @@ public class ioLogActivity extends AppCompatActivity {
         PushAgent.getInstance(this).onAppStart();
 
         toast = Toast.makeText(ioLogActivity.this, "", LENGTH_SHORT);
+
+        initListView();
+    }
+
+    private void initListView() {
         listView = (PullToRefreshListView) findViewById(R.id.ioLogListView);
         listView.setMode(PullToRefreshBase.Mode.BOTH);
 
@@ -134,6 +131,26 @@ public class ioLogActivity extends AppCompatActivity {
                 intent.putExtras(bundle);
                 startActivity(intent);
                 overridePendingTransition(R.anim.push_left_in_no_alpha, R.anim.push_left_out_no_alpha);
+            }
+        });
+    }
+
+    private void initNavigationView() {
+        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_main_in_ioLog_activity);
+        navigationView.setTitle("出海记录");
+        navigationView.setBackView(R.drawable.icon_back_button);
+        navigationView.setRightView(0);
+        navigationView.setClickCallback(new NavigationView.ClickCallback() {
+
+            @Override
+            public void onRightClick() {
+                Log.i("main","点击了右侧按钮!");
+            }
+
+            @Override
+            public void onBackClick() {
+                Log.i("main","点击了左侧按钮!");
+                onBackPressed();
             }
         });
     }

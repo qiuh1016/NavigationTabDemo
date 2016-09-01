@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -7,173 +8,148 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.cetcme.rcldandroidZhejiang.ReasonActivity"
-    android:background="#efeff4">
+    android:orientation="vertical"
+    tools:context=".rcld.ReasonActivity">
 
-    <RelativeLayout
+    <com.cetcme.zytyumin.MyClass.NavigationView
+        android:id="@+id/nav_main_in_reason_activity"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/boder"
-        android:id="@+id/relativeLayout6"
-        android:layout_alignParentTop="false"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_centerVertical="true"
-        android:layout_marginLeft="16dp"
-        android:layout_marginRight="16dp">
+        android:layout_height="wrap_content"/>
 
-        <EditText
-            android:layout_width="wrap_content"
-            android:layout_height="40dp"
-            android:id="@+id/nameTextViewInReasonActivity"
-            android:layout_below="@+id/textView26"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentEnd="true"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
-            android:singleLine="true"
-            android:textSize="15dp"
-            android:background="@android:drawable/editbox_background_normal"
-            android:layout_marginTop="5dp"
-            android:layout_marginBottom="5dp" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
 
-        <EditText
-            android:layout_width="wrap_content"
-            android:layout_height="40dp"
-            android:id="@+id/idTextViewInReasonActivity"
-            android:layout_below="@+id/textView27"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentEnd="true"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
-            android:singleLine="true"
-            android:textSize="15dp"
-            android:background="@android:drawable/editbox_background_normal"
-            android:layout_marginTop="5dp"
-            android:layout_marginBottom="5dp"
-            android:inputType="text" />
-
-        <EditText
-            android:layout_width="wrap_content"
-            android:layout_height="40dp"
-            android:id="@+id/reasonTextViewInReasonActivity"
-            android:singleLine="true"
-            android:textSize="15dp"
-            android:layout_below="@+id/textView28"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentEnd="true"
-            android:layout_alignLeft="@+id/textView25"
-            android:layout_alignStart="@+id/textView25"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
-            android:background="@android:drawable/editbox_background_normal"
-            android:layout_marginTop="5dp"
-            android:layout_marginBottom="5dp"
-            android:inputType="text" />
-
-        <TextView
-            android:gravity="center_vertical|start"
-            android:layout_width="wrap_content"
-            android:layout_height="40dp"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="  添加人员"
-            android:id="@+id/textView25"
-            android:textColor="#ffffff"
-            android:background="#3562bd"
-            android:textSize="16sp"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentEnd="true" />
-
-        <TextView
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="姓名"
-            android:id="@+id/textView26"
-            android:layout_marginTop="55dp"
-            android:layout_below="@+id/textView"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentEnd="true"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
-            android:textSize="16sp" />
+            android:orientation="vertical">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:id="@+id/textView27"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentEnd="true"
-            android:layout_below="@+id/nameTextViewInReasonActivity"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="5dp"
-            android:layout_marginRight="20dp"
-            android:text="身份证"
-            android:textSize="16sp" />
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="20dp" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="原因"
-            android:id="@+id/textView28"
-            android:layout_below="@+id/idTextViewInReasonActivity"
-            android:layout_marginTop="5dp"
-            android:layout_alignLeft="@+id/textView25"
-            android:layout_alignStart="@+id/textView25"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentEnd="true"
-            android:layout_marginRight="20dp"
-            android:layout_marginLeft="20dp"
-            android:textSize="16sp" />
+            <LinearLayout style="@style/wrap_layout"
+                          android:id="@+id/linearLayout">
+                <!-- 上圆角-->
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:gravity="center_vertical"
+                    android:layout_height="50dp"
+                    android:background="@drawable/top_unselect">
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="40dp"
-            android:text="添加"
-            android:id="@+id/addButtonInReasonActivity"
-            android:textColor="#ffffff"
-            android:background="#3562bd"
-            android:textSize="15sp"
-            android:layout_below="@+id/reasonTextViewInReasonActivity"
-            android:layout_alignLeft="@+id/reasonTextViewInReasonActivity"
-            android:layout_alignStart="@+id/reasonTextViewInReasonActivity"
-            android:layout_alignRight="@+id/reasonTextViewInReasonActivity"
-            android:layout_alignEnd="@+id/reasonTextViewInReasonActivity"
-            android:layout_marginTop="15dp"
-            android:layout_marginBottom="20dp" />
-    </RelativeLayout>
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/name_in_reason_activity"
+                        android:layout_weight="1"
+                        android:hint="姓名"
+                        android:layout_marginRight="20dp"
+                        android:background="#FFFFFF"
+                        android:password="false"
+                        android:layout_marginLeft="20dp"
+                        android:textSize="16sp"
+                        android:singleLine="true" />
+                </LinearLayout>
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Fill"
-        android:id="@+id/button111"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="10dp"
-        android:layout_marginLeft="16dp" />
+                <!-- 分割线 -->
+                <View style="@style/bg_line"/>
+                <!-- 无圆角-->
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:gravity="center_vertical"
+                    android:layout_height="50dp"
+                    android:background="@drawable/bottom_unselect">
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="ID Check: ON"
-        android:id="@+id/idCheckButton"
-        android:layout_alignParentTop="true"
-        android:layout_toRightOf="@+id/button111"
-        android:layout_toEndOf="@+id/button111"
-        android:layout_marginTop="10dp" />
-</RelativeLayout>
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/id_in_reason_activity"
+                        android:layout_weight="1"
+                        android:hint="身份证"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:background="#FFFFFF"
+                        android:password="false"
+                        android:textSize="16sp"
+                        android:singleLine="true"
+                        android:inputType="number"/>
+                </LinearLayout>
+
+                <!-- 分割线 -->
+                <View style="@style/bg_line"/>
+                <!-- 下圆角-->
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:gravity="center_vertical"
+                    android:layout_height="50dp"
+                    android:background="@drawable/bottom_unselect">
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/reason_in_reason_activity"
+                        android:layout_weight="1"
+                        android:hint="添加原因"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:background="#FFFFFF"
+                        android:password="false"
+                        android:textSize="16sp"
+                        android:singleLine="true" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="30dp" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="添加"
+                android:id="@+id/add_button_in_reason_activity"
+                android:background="@drawable/single_select"
+                android:layout_marginRight="8dp"
+                android:layout_marginLeft="8dp"
+                android:textSize="16sp"
+                android:textColor="#FFFFFF" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="50dp" />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Fill"
+                    android:id="@+id/fill_button_in_reason_activity"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginLeft="16dp"/>
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ID Check: ON"
+                    android:id="@+id/id_check_button_in_reason_activity"
+                    android:layout_alignParentTop="true"
+                    android:layout_toRightOf="@+id/button111"
+                    android:layout_toEndOf="@+id/button111"
+                    android:layout_marginLeft="16dp"/>
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

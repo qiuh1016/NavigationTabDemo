@@ -8,6 +8,7 @@ user:
 	username 		String
 	password 		String
 	hasLogin		Boolen
-	SessionKey		String
+	sessionKey		String
+	debugMode		String
 
 

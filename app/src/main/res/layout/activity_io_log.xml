@@ -9,6 +9,12 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".rcld.ioLogActivity">
 
+    <com.cetcme.zytyumin.MyClass.NavigationView
+        android:id="@+id/nav_main_in_ioLog_activity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+
     <com.handmark.pulltorefresh.library.PullToRefreshListView
         android:id="@+id/ioLogListView"
         android:layout_height="match_parent"
@@ -16,6 +22,7 @@
         android:layout_marginLeft="16dp"
         android:layout_marginTop="10dp"
         android:layout_marginRight="16dp"
-        android:layout_marginBottom="10dp" />
+        android:layout_marginBottom="10dp"
+        android:layout_below="@+id/nav_main_in_ioLog_activity"/>
 
 </RelativeLayout>

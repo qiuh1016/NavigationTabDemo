@@ -52,23 +52,27 @@
     </layouts>
   </component>
   <component name="AndroidLogFilters">
-    <option name="TOOL_WINDOW_CUSTOM_FILTER" value="Main" />
+    <option name="TOOL_WINDOW_CUSTOM_FILTER" value="main" />
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e279e6be-7f14-4cf0-a014-66e978e760d8" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/gradle.xml" afterPath="$PROJECT_DIR$/.idea/gradle.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/cetcme/zytyumin/MyClass/DensityUtil.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/values/ids.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SharedPreferences.txt" afterPath="$PROJECT_DIR$/SharedPreferences.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/app.iml" afterPath="$PROJECT_DIR$/app/app.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build.gradle" afterPath="$PROJECT_DIR$/app/build.gradle" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/cetcme/zytyumin/LoginActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/cetcme/zytyumin/LoginActivity.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/cetcme/zytyumin/rcld/PunchActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/cetcme/zytyumin/rcld/PunchActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/cetcme/zytyumin/rcld/ReasonActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/cetcme/zytyumin/rcld/ReasonActivity.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/cetcme/zytyumin/rcld/ioConfirmActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/cetcme/zytyumin/rcld/ioConfirmActivity.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/cetcme/zytyumin/rcld/ioLogActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/cetcme/zytyumin/rcld/ioLogActivity.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/cetcme/zytyumin/rcld/iofSailorActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/cetcme/zytyumin/rcld/iofSailorActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/settings.gradle" afterPath="$PROJECT_DIR$/settings.gradle" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_io_confirm.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_io_confirm.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_io_log.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_io_log.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_iof_sailor.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_iof_sailor.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_login.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_login.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_punch.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_punch.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_reason.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_reason.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/navigation_view.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/navigation_view.xml" />
     </list>
     <ignored path="zytyumin.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -115,29 +119,24 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="LoginActivity.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/cetcme/zytyumin/LoginActivity.java">
+      <file leaf-file-name="ReasonActivity.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/cetcme/zytyumin/rcld/ReasonActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="30" />
+            <state vertical-scroll-proportion="-7.111111">
+              <caret line="186" column="49" selection-start-line="186" selection-start-column="49" selection-end-line="186" selection-end-column="49" />
               <folding>
-                <element signature="method#onCreate#0;class#LoginActivity#0" expanded="false" />
-                <element signature="method#onBackPressed#0;class#LoginActivity#0" expanded="false" />
-                <element signature="method#initNavigationView#0;class#LoginActivity#0" expanded="false" />
-                <element signature="class#2174:2488" expanded="false" />
-                <element signature="method#onBackClick#0;class#2174:2488" expanded="false" />
-                <element signature="method#initUI#0;class#LoginActivity#0" expanded="false" />
-                <element signature="method#onClick#0;class#LoginActivity#0" expanded="false" />
-                <element signature="method#openCheckPhoneActivity#0;class#LoginActivity#0" expanded="false" />
-                <element signature="method#initHud#0;class#LoginActivity#0" expanded="false" />
-                <element signature="method#onSuccess#0;class#5858:8236" expanded="false" />
-                <element signature="method#onFailure#0;class#5858:8236" expanded="false" />
-                <element signature="method#onFailure#1;class#5858:8236" expanded="false" />
-                <element signature="method#login#0;class#LoginActivity#0" expanded="false" />
-                <element signature="class#9032:13357" expanded="false" />
-                <element signature="method#onFailure#0;class#9032:13357" expanded="false" />
-                <element signature="method#onResponse#0;class#9032:13357" expanded="false" />
-                <element signature="e#12799#12822#0" expanded="false" />
+                <element signature="method#onCreate#0;class#ReasonActivity#0" expanded="false" />
+                <element signature="method#initUI#0;class#ReasonActivity#0" expanded="false" />
+                <element signature="method#initNavigationView#0;class#ReasonActivity#0" expanded="false" />
+                <element signature="class#3589:3903" expanded="false" />
+                <element signature="method#onBackClick#0;class#3589:3903" expanded="false" />
+                <element signature="method#onPause#0;class#ReasonActivity#0" expanded="false" />
+                <element signature="method#onOptionsItemSelected#0;class#ReasonActivity#0" expanded="false" />
+                <element signature="method#changeButtonState#0;class#ReasonActivity#0" expanded="false" />
+                <element signature="class#8703:9392" expanded="false" />
+                <element signature="method#beforeTextChanged#0;class#8703:9392" expanded="false" />
+                <element signature="method#onTextChanged#0;class#8703:9392" expanded="false" />
+                <element signature="method#afterTextChanged#0;class#8703:9392" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -147,66 +146,83 @@
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/cetcme/zytyumin/rcld/ioConfirmActivity.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="306" column="21" selection-start-line="306" selection-start-column="21" selection-end-line="306" selection-end-column="21" />
+              <caret line="328" column="49" selection-start-line="328" selection-start-column="49" selection-end-line="328" selection-end-column="49" />
               <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#9099#9136#0" expanded="true" />
-                <element signature="e#9950#9981#0" expanded="true" />
-                <element signature="e#13498#15676#0" expanded="true" />
-                <element signature="e#14283#15235#0" expanded="true" />
-                <element signature="e#15234#15235#0" expanded="true" />
-                <element signature="e#15675#15676#0" expanded="true" />
-                <element signature="e#17412#17449#0" expanded="true" />
-                <element signature="e#17819#17851#0" expanded="true" />
-                <element signature="e#20226#20263#0" expanded="true" />
+                <element signature="method#onCreate#0;class#ioConfirmActivity#0" expanded="false" />
+                <element signature="e#2473#2486#0" expanded="false" />
+                <element signature="method#onPause#0;class#ioConfirmActivity#0" expanded="false" />
+                <element signature="method#initListView#0;class#ioConfirmActivity#0" expanded="false" />
+                <element signature="method#initNavigationView#0;class#ioConfirmActivity#0" expanded="false" />
+                <element signature="class#6259:6573" expanded="false" />
+                <element signature="method#onBackClick#0;class#6259:6573" expanded="false" />
+                <element signature="method#onOptionsItemSelected#0;class#ioConfirmActivity#0" expanded="false" />
+                <element signature="method#onCreateOptionsMenu#0;class#ioConfirmActivity#0" expanded="false" />
+                <element signature="method#add#0;class#ioConfirmActivity#0" expanded="false" />
+                <element signature="method#confirm#0;class#ioConfirmActivity#0" expanded="false" />
+                <element signature="e#14050#14087#0" expanded="true" />
+                <element signature="e#14901#14932#0" expanded="true" />
+                <element signature="e#18449#20627#0" expanded="true" />
+                <element signature="e#19234#20186#0" expanded="true" />
+                <element signature="e#20185#20186#0" expanded="true" />
+                <element signature="e#20626#20627#0" expanded="true" />
+                <element signature="method#upload#0;class#ioConfirmActivity#0" expanded="false" />
+                <element signature="class#23502:25249" expanded="false" />
+                <element signature="method#onSuccess#0;class#23502:25249" expanded="false" />
+                <element signature="method#onFailure#0;class#23502:25249" expanded="false" />
+                <element signature="method#onFailure#1;class#23502:25249" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ioLogActivity.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/cetcme/zytyumin/rcld/ioLogActivity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.2485294">
-              <caret line="174" column="38" selection-start-line="174" selection-start-column="38" selection-end-line="174" selection-end-column="38" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#7678#7707#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PunchActivity.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="PunchActivity.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/cetcme/zytyumin/rcld/PunchActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="189" column="53" selection-start-line="189" selection-start-column="53" selection-end-line="189" selection-end-column="53" />
+            <state vertical-scroll-proportion="0.19821826">
+              <caret line="102" column="49" selection-start-line="102" selection-start-column="49" selection-end-line="102" selection-end-column="49" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#6386#6423#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ReasonActivity.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/cetcme/zytyumin/rcld/ReasonActivity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="24" column="13" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
+      <file leaf-file-name="activity_io_confirm.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_io_confirm.xml">
+          <provider selected="true" editor-type-id="android-designer">
+            <state />
+          </provider>
+          <provider editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-10.227273">
+              <caret line="20" column="44" selection-start-line="20" selection-start-column="44" selection-end-line="20" selection-end-column="44" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="iofSailorActivity.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/cetcme/zytyumin/rcld/iofSailorActivity.java">
+      <file leaf-file-name="UserFragment.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/cetcme/zytyumin/UserFragment.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="26" column="13" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
+              <caret line="228" column="8" selection-start-line="228" selection-start-column="8" selection-end-line="229" selection-end-column="27" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="activity_reason.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_reason.xml">
+          <provider selected="true" editor-type-id="android-designer">
+            <state />
+          </provider>
+          <provider editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-8.272727">
+              <caret line="14" column="52" selection-start-line="14" selection-start-column="52" selection-end-line="14" selection-end-column="52" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#274#307#0" expanded="true" />
+                <element signature="e#332#367#0" expanded="true" />
+                <element signature="e#393#428#0" expanded="true" />
+                <element signature="e#452#485#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -217,10 +233,10 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="layoutResourceFile_vertical" />
+        <option value="resourceFile" />
         <option value="valueResourceFile" />
         <option value="Class" />
-        <option value="resourceFile" />
+        <option value="layoutResourceFile_vertical" />
       </list>
     </option>
   </component>
@@ -4392,17 +4408,7 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/src/main/java/com/cetcme/zytyumin/RecordActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/cetcme/zytyumin/RegisterInfoActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/cetcme/zytyumin/ServiceActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/cetcme/zytyumin/SignActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/cetcme/zytyumin/TableActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/cetcme/zytyumin/TodoActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/cetcme/zytyumin/VersionActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/cetcme/zytyumin/WebActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_check_phone.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_change_password.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_login.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_record.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_register_info.xml" />
@@ -4430,7 +4436,6 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/cetcme/zytyumin/ioConfirmActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/cetcme/zytyumin/ReasonActivity.java" />
         <option value="$PROJECT_DIR$/app/build.gradle" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/cetcme/zytyumin/rcld/ReasonActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/cetcme/zytyumin/ShipActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/cetcme/zytyumin/CheckPhoneActivity.java" />
@@ -4439,15 +4444,26 @@
         <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/cetcme/zytyumin/VisaActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/cetcme/zytyumin/LoginActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/cetcme/zytyumin/MyClass/DensityUtil.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/navigation_view.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/values/ids.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_login.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_punch.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/cetcme/zytyumin/rcld/iofSailorActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/cetcme/zytyumin/rcld/PunchActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/cetcme/zytyumin/rcld/ioLogActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_iof_sailor.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_io_log.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_reason_1.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/cetcme/zytyumin/rcld/ReasonActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_io_confirm.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_reason.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/cetcme/zytyumin/rcld/ioConfirmActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/cetcme/zytyumin/rcld/PunchActivity.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="29" />
+    <option name="x" value="-42" />
     <option name="y" value="23" />
     <option name="width" value="1366" />
     <option name="height" value="824" />
@@ -4516,6 +4532,56 @@
               <option name="myItemId" value="app" />
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="values" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderTypeNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="zytyumin" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="zytyumin" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="layout" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderTypeNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="zytyumin" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -4554,6 +4620,28 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="rcld" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="zytyumin" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="zytyumin" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MyClass" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -4898,15 +4986,16 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="29" y="23" width="1366" height="824" extended-state="0" />
+    <frame x="-42" y="23" width="1366" height="824" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Android Model" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297568" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.59322035" sideWeight="0.49264705" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32627118" sideWeight="0.49264705" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3997175" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32909605" sideWeight="0.5100143" order="7" side_tool="true" content_ui="tabs" />
@@ -4918,13 +5007,12 @@
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32909605" sideWeight="0.4899857" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297568" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24964234" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24924472" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26359516" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32909605" sideWeight="0.49754903" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32909605" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -4944,219 +5032,11 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="2" />
+      <option name="time" value="3" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/record_search_layout.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.828125">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/cetcme/zytyumin/RecordActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="71" column="55" selection-start-line="71" selection-start-column="55" selection-end-line="71" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/cetcme/zytyumin/xia/SearcherClaimActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="37" column="45" selection-start-line="37" selection-start-column="45" selection-end-line="37" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/claim_listview_item.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/detail_info_item.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/detail_info_layout.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.7843137">
-          <caret line="7" column="25" selection-start-line="7" selection-start-column="25" selection-end-line="7" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/ensurance_listview_item.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_chat_tab_01.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/search_claim_layout.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.5294118">
-          <caret line="6" column="25" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/search_drawing_check_layout.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.5294118">
-          <caret line="6" column="25" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/search_ship_detect_layout.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.5294118">
-          <caret line="6" column="25" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/search_pay_insurance_layout.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.5294118">
-          <caret line="6" column="25" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/search_trade_layout.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.5294118">
-          <caret line="6" column="25" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/trade_listview_item.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="7.509804">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/cetcme/zytyumin/MyClass/PrivateEncode.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="26" column="18" selection-start-line="26" selection-start-column="18" selection-end-line="26" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/cetcme/zytyumin/MyClass/Base64Encoder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Library/Android/sdk/sources/android-23/android/os/Message.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33333334">
-          <caret line="38" column="15" selection-start-line="38" selection-start-column="15" selection-end-line="38" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/cetcme/zytyumin/xia/DetailPayInsuranceInfoActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.22303921">
-          <caret line="93" column="20" selection-start-line="93" selection-start-column="20" selection-end-line="93" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/ship_detect_process_info.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.37239584">
-          <caret line="11" column="25" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/ship_detect_listview_item.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.5911458">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/tab_view.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.28645834">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/tab_view_with_red_point.xml">
       <provider editor-type-id="android-designer">
         <state />
@@ -5205,17 +5085,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_reason.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/values/styles.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -5228,17 +5097,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.325">
           <caret line="44" column="54" selection-start-line="44" selection-start-column="54" selection-end-line="44" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_io_confirm.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.45468998">
-          <caret line="22" column="17" selection-start-line="22" selection-start-column="17" selection-end-line="22" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -5261,13 +5119,6 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/cetcme/zytyumin/ShipActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5602941">
-          <caret line="87" column="67" selection-start-line="87" selection-start-column="67" selection-end-line="87" selection-end-column="67" />
         </state>
       </provider>
     </entry>
@@ -5331,20 +5182,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/cetcme/zytyumin/UserFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5029412">
-          <caret line="159" column="24" selection-start-line="159" selection-start-column="24" selection-end-line="159" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/cetcme/zytyumin/CheckPhoneActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.30588236">
-          <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="38" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$PROJECT_DIR$/FRAndroid/libs/android-async-http-1.4.6.jar!/com/loopj/android/http/AsyncHttpClient.class">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-95.37037">
@@ -5364,14 +5201,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/cetcme/zytyumin/rcld/ReasonActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="24" column="13" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/cetcme/zytyumin/LoginActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -5387,7 +5216,6 @@
             <element signature="method#openCheckPhoneActivity#0;class#LoginActivity#0" expanded="false" />
             <element signature="method#initHud#0;class#LoginActivity#0" expanded="false" />
             <element signature="method#onSuccess#0;class#5858:8236" expanded="false" />
-            <element signature="method#onFailure#0;class#5858:8236" expanded="false" />
             <element signature="method#onFailure#1;class#5858:8236" expanded="false" />
             <element signature="method#login#0;class#LoginActivity#0" expanded="false" />
             <element signature="class#9032:13357" expanded="false" />
@@ -5398,53 +5226,341 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/cetcme/zytyumin/rcld/iofSailorActivity.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/cetcme/zytyumin/CheckPhoneActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="26" column="13" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
+          <caret line="66" column="4" selection-start-line="66" selection-start-column="4" selection-end-line="86" selection-end-column="5" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="method#onCreate#0;class#CheckPhoneActivity#0" expanded="false" />
+            <element signature="method#onBackPressed#0;class#CheckPhoneActivity#0" expanded="false" />
+            <element signature="method#initNavigationView#0;class#CheckPhoneActivity#0" expanded="false" />
+            <element signature="class#2269:2583" expanded="false" />
+            <element signature="method#onBackClick#0;class#2269:2583" expanded="false" />
+            <element signature="method#initUI#0;class#CheckPhoneActivity#0" expanded="false" />
+            <element signature="docComment;method#getMobilePhoneNumber#0;class#CheckPhoneActivity#0" expanded="false" />
+            <element signature="method#getMobilePhoneNumber#0;class#CheckPhoneActivity#0" expanded="false" />
+            <element signature="method#insertPhoneNumber#0;class#CheckPhoneActivity#0" expanded="false" />
+            <element signature="method#onClick#0;class#CheckPhoneActivity#0" expanded="false" />
+            <element signature="docComment;method#initCodeUtils#0;class#CheckPhoneActivity#0" expanded="false" />
+            <element signature="method#initCodeUtils#0;class#CheckPhoneActivity#0" expanded="false" />
+            <element signature="docComment;method#checkCodeAndPhone#0;class#CheckPhoneActivity#0" expanded="false" />
+            <element signature="method#checkCodeAndPhone#0;class#CheckPhoneActivity#0" expanded="false" />
+            <element signature="method#getSMS#0;class#CheckPhoneActivity#0" expanded="false" />
+            <element signature="method#next#0;class#CheckPhoneActivity#0" expanded="false" />
+            <element signature="class#ThreadShow#0;class#CheckPhoneActivity#0" expanded="false" />
+            <element signature="method#run#0;class#ThreadShow#0;class#CheckPhoneActivity#0" expanded="false" />
+            <element signature="docComment;method#isMobileNO#0;class#CheckPhoneActivity#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/cetcme/zytyumin/rcld/PunchActivity.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/cetcme/zytyumin/MyClass/NoScrollGridView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.13382353">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/cetcme/zytyumin/MyClass/ProgressWebView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.2867647">
+          <caret line="21" column="52" selection-start-line="21" selection-start-column="40" selection-end-line="21" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/dimens.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="189" column="53" selection-start-line="189" selection-start-column="53" selection-end-line="189" selection-end-column="53" />
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/attrs.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Library/Android/sdk/sources/android-23/android/os/Build.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="539" column="32" selection-start-line="539" selection-start-column="32" selection-end-line="539" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Library/Android/sdk/sources/android-23/android/widget/RelativeLayout.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33184856">
+          <caret line="1409" column="20" selection-start-line="1409" selection-start-column="20" selection-end-line="1409" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Library/Android/sdk/sources/android-23/android/content/res/Resources.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33184856">
+          <caret line="2138" column="26" selection-start-line="2138" selection-start-column="26" selection-end-line="2138" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/navigation_view.xml">
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-9.227273">
+          <caret line="33" column="12" selection-start-line="33" selection-start-column="12" selection-end-line="33" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/cetcme/zytyumin/MyClass/NavigationView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="24" column="13" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/ids.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.1818181">
+          <caret line="2" column="32" selection-start-line="2" selection-start-column="32" selection-end-line="2" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_login.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.0588236">
+          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/cetcme/zytyumin/MyClass/DensityUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.22941177">
+          <caret line="12" column="22" selection-start-line="12" selection-start-column="22" selection-end-line="12" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/detail_info_item.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_iof_sailor.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.55802864">
+          <caret line="27" column="52" selection-start-line="27" selection-start-column="52" selection-end-line="27" selection-end-column="52" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#6386#6423#0" expanded="true" />
+            <element signature="e#272#305#0" expanded="true" />
+            <element signature="e#330#365#0" expanded="true" />
+            <element signature="e#391#426#0" expanded="true" />
+            <element signature="e#450#483#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/cetcme/zytyumin/MyClass/FragmentAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.13382353">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_punch.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.22734499">
+          <caret line="11" column="4" selection-start-line="11" selection-start-column="4" selection-end-line="14" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/cetcme/zytyumin/rcld/iofSailorActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.2867647">
+          <caret line="39" column="48" selection-start-line="39" selection-start-column="48" selection-end-line="39" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/cetcme/zytyumin/ShipActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.19705883">
+          <caret line="38" column="0" selection-start-line="38" selection-start-column="0" selection-end-line="58" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/cetcme/zytyumin/SignActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.2485294">
+          <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_io_log.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.26868045">
+          <caret line="13" column="43" selection-start-line="13" selection-start-column="43" selection-end-line="13" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/cetcme/zytyumin/rcld/ioLogActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.11470588">
+          <caret line="64" column="43" selection-start-line="64" selection-start-column="43" selection-end-line="64" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_user.xml">
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-13.590909">
+          <caret line="23" column="47" selection-start-line="23" selection-start-column="47" selection-end-line="23" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_change_password.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.59936404">
+          <caret line="41" column="29" selection-start-line="0" selection-start-column="0" selection-end-line="128" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/cetcme/zytyumin/rcld/ReasonActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.111111">
+          <caret line="186" column="49" selection-start-line="186" selection-start-column="49" selection-end-line="186" selection-end-column="49" />
+          <folding>
+            <element signature="method#onCreate#0;class#ReasonActivity#0" expanded="false" />
+            <element signature="method#initUI#0;class#ReasonActivity#0" expanded="false" />
+            <element signature="method#initNavigationView#0;class#ReasonActivity#0" expanded="false" />
+            <element signature="class#3589:3903" expanded="false" />
+            <element signature="method#onBackClick#0;class#3589:3903" expanded="false" />
+            <element signature="method#onPause#0;class#ReasonActivity#0" expanded="false" />
+            <element signature="method#onOptionsItemSelected#0;class#ReasonActivity#0" expanded="false" />
+            <element signature="method#changeButtonState#0;class#ReasonActivity#0" expanded="false" />
+            <element signature="class#8703:9392" expanded="false" />
+            <element signature="method#beforeTextChanged#0;class#8703:9392" expanded="false" />
+            <element signature="method#onTextChanged#0;class#8703:9392" expanded="false" />
+            <element signature="method#afterTextChanged#0;class#8703:9392" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_io_confirm.xml">
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-10.227273">
+          <caret line="20" column="44" selection-start-line="20" selection-start-column="44" selection-end-line="20" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_reason.xml">
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.272727">
+          <caret line="14" column="52" selection-start-line="14" selection-start-column="52" selection-end-line="14" selection-end-column="52" />
+          <folding>
+            <element signature="e#274#307#0" expanded="true" />
+            <element signature="e#332#367#0" expanded="true" />
+            <element signature="e#393#428#0" expanded="true" />
+            <element signature="e#452#485#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/cetcme/zytyumin/UserFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="228" column="8" selection-start-line="228" selection-start-column="8" selection-end-line="229" selection-end-column="27" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/cetcme/zytyumin/rcld/ioConfirmActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="306" column="21" selection-start-line="306" selection-start-column="21" selection-end-line="306" selection-end-column="21" />
+          <caret line="328" column="49" selection-start-line="328" selection-start-column="49" selection-end-line="328" selection-end-column="49" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#9099#9136#0" expanded="true" />
-            <element signature="e#9950#9981#0" expanded="true" />
-            <element signature="e#13498#15676#0" expanded="true" />
-            <element signature="e#14283#15235#0" expanded="true" />
-            <element signature="e#15234#15235#0" expanded="true" />
-            <element signature="e#15675#15676#0" expanded="true" />
-            <element signature="e#17412#17449#0" expanded="true" />
-            <element signature="e#17819#17851#0" expanded="true" />
-            <element signature="e#20226#20263#0" expanded="true" />
+            <element signature="method#onCreate#0;class#ioConfirmActivity#0" expanded="false" />
+            <element signature="e#2473#2486#0" expanded="false" />
+            <element signature="method#onPause#0;class#ioConfirmActivity#0" expanded="false" />
+            <element signature="method#initListView#0;class#ioConfirmActivity#0" expanded="false" />
+            <element signature="method#initNavigationView#0;class#ioConfirmActivity#0" expanded="false" />
+            <element signature="class#6259:6573" expanded="false" />
+            <element signature="method#onBackClick#0;class#6259:6573" expanded="false" />
+            <element signature="method#onOptionsItemSelected#0;class#ioConfirmActivity#0" expanded="false" />
+            <element signature="method#onCreateOptionsMenu#0;class#ioConfirmActivity#0" expanded="false" />
+            <element signature="method#add#0;class#ioConfirmActivity#0" expanded="false" />
+            <element signature="method#confirm#0;class#ioConfirmActivity#0" expanded="false" />
+            <element signature="e#14050#14087#0" expanded="true" />
+            <element signature="e#14901#14932#0" expanded="true" />
+            <element signature="e#18449#20627#0" expanded="true" />
+            <element signature="e#19234#20186#0" expanded="true" />
+            <element signature="e#20185#20186#0" expanded="true" />
+            <element signature="e#20626#20627#0" expanded="true" />
+            <element signature="method#upload#0;class#ioConfirmActivity#0" expanded="false" />
+            <element signature="class#23502:25249" expanded="false" />
+            <element signature="method#onSuccess#0;class#23502:25249" expanded="false" />
+            <element signature="method#onFailure#0;class#23502:25249" expanded="false" />
+            <element signature="method#onFailure#1;class#23502:25249" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/cetcme/zytyumin/rcld/ioLogActivity.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/cetcme/zytyumin/rcld/PunchActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2485294">
-          <caret line="174" column="38" selection-start-line="174" selection-start-column="38" selection-end-line="174" selection-end-column="38" />
+        <state vertical-scroll-proportion="0.19821826">
+          <caret line="102" column="49" selection-start-line="102" selection-start-column="49" selection-end-line="102" selection-end-column="49" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#7678#7707#0" expanded="true" />
           </folding>
         </state>
       </provider>
