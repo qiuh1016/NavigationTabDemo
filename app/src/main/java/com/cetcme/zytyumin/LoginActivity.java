@@ -31,7 +31,6 @@ import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
 
-
 public class LoginActivity extends Activity implements View.OnClickListener{
 
     private EditText userNameEditText;
@@ -44,6 +43,8 @@ public class LoginActivity extends Activity implements View.OnClickListener{
 
     private KProgressHUD kProgressHUD;
     private KProgressHUD okHUD;
+
+    private String mURL = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -153,21 +154,40 @@ public class LoginActivity extends Activity implements View.OnClickListener{
 
         kProgressHUD.show();
 
+//        new Handler().postDelayed(new Runnable() {
+//            @Override
+//            public void run() {
+//                kProgressHUD.dismiss();
+//                okHUD.show();
+//                new Handler().postDelayed(new Runnable() {
+//                    @Override
+//                    public void run() {
+//                        okHUD.dismiss();
+//                        SharedPreferences user = getSharedPreferences("user", Context.MODE_PRIVATE);
+//                        SharedPreferences.Editor editor = user.edit();//获取编辑器
+//                        editor.putBoolean("hasLogin", true);
+////                        editor.putString("SessionKey",SessionKey);
+//                        editor.apply();//提交修改
+//                        onBackPressed();
+//                    }
+//                },1000);
+//            }
+//        },2000);
+
         OkHttpClient client = new OkHttpClient();
-        String url = "http://61.164.218.155:8085/Account/login?loginName=" + username + "&password=" + PrivateEncode.getMD5(password) +"&deviceType=0&clientId=1";
+        String url = "http://61.164.218.155:8085/Account/login?loginName="+username+"&password="+PrivateEncode.getMD5(password)+"&deviceType=0&clientId=1";
         Request request = new Request.Builder()
                 .url(url)
-                .get()
                 .build();
         Call call = client.newCall(request);
         call.enqueue(new Callback() {
             @Override
             public void onFailure(Call call, IOException e) {
-                Log.i(TAG, "onFailure: failed");
+                Log.v("OKHttp","failed");
                 runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
-                        Toast.makeText(LoginActivity.this, "网络连接失败", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getApplicationContext(), "网络连接失败", Toast.LENGTH_SHORT).show();
                         kProgressHUD.dismiss();
                     }
                 });
@@ -176,44 +196,97 @@ public class LoginActivity extends Activity implements View.OnClickListener{
             @Override
             public void onResponse(Call call, Response response) throws IOException {
                 try {
-                    if (response.isSuccessful()) {
-                        JSONObject json = new JSONObject(response.body().string());
-                        String msg = json.getString("msg");
-                        final String sessionKey = json.getString("SessionKey");
-                        if (msg.equals("成功")) {
-                            kProgressHUD.dismiss();
-                            okHUD.show();
-                            new Handler().postDelayed(new Runnable() {
+                    if(response.isSuccessful()){
+                        //The call was successful. print it to the log
+
+                        String responseString = response.body().string();
+                        Log.v("OKHttp","success: " + responseString);
+
+                        try {
+                            JSONObject json = new JSONObject(responseString);
+                            final String msg = json.getString("Msg");
+                            final String sessionKey = json.getString("SessionKey");
+
+                            /**
+                             * 登录成功
+                             */
+                            if (msg.equals("成功")) {
+                                runOnUiThread(new Runnable() {
+                                    @Override
+                                    public void run() {
+                                        kProgressHUD.dismiss();
+                                        okHUD.show();
+                                        saveLoginFlagAndSessionKey(true, sessionKey);
+                                        new Handler().postDelayed(new Runnable() {
+                                            @Override
+                                            public void run() {
+                                                okHUD.dismiss();
+                                                onBackPressed();
+                                            }
+                                        },1000);
+                                    }
+                                });
+
+                            } else {
+                                /**
+                                 * 登录失败
+                                 */
+                                Log.i(TAG, "onResponse: 密码错误");
+                                runOnUiThread(new Runnable() {
+                                    @Override
+                                    public void run() {
+                                        kProgressHUD.dismiss();
+                                        Toast.makeText(getApplicationContext(), msg, Toast.LENGTH_SHORT).show();
+                                    }
+                                });
+
+                            }
+
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                            Log.i(TAG, "onResponse: json解析错误");
+                            runOnUiThread(new Runnable() {
                                 @Override
                                 public void run() {
-                                   okHUD.dismiss();
-                                    SharedPreferences user = getSharedPreferences("user", Context.MODE_PRIVATE);
-                                    SharedPreferences.Editor editor = user.edit();
-                                    editor.putBoolean("hasLogin", true);
-                                    editor.putString("SessionKey", sessionKey);
-                                    editor.apply();
-                                    onBackPressed();
+                                    kProgressHUD.dismiss();
+                                    Toast.makeText(getApplicationContext(), "解析错误", Toast.LENGTH_SHORT).show();
                                 }
-                            }, 1000);
-                        } else {
-                            kProgressHUD.dismiss();
-                            Toast.makeText(LoginActivity.this, msg, Toast.LENGTH_SHORT).show();
+                            });
+
                         }
+
+                    } else {
+                        kProgressHUD.dismiss();
+                        runOnUiThread(new Runnable() {
+                            @Override
+                            public void run() {
+                                Toast.makeText(getApplicationContext(), "登录失败", Toast.LENGTH_SHORT).show();
+                            }
+                        });
+                        Log.v("OKHttp","is not Successful: " );
                     }
-                } catch (IOException e) {
+                }catch (IOException e) {
+                    Log.i(TAG, "onResponse: http try 失败");
                     e.printStackTrace();
                     kProgressHUD.dismiss();
-                    Toast.makeText(LoginActivity.this, "登录失败", Toast.LENGTH_SHORT).show();
-                } catch (JSONException e) {
-                    e.printStackTrace();
-                    kProgressHUD.dismiss();
-                    Toast.makeText(LoginActivity.this, "登录失败", Toast.LENGTH_SHORT).show();
+                    runOnUiThread(new Runnable() {
+                        @Override
+                        public void run() {
+                            Toast.makeText(getApplicationContext(), "登录失败", Toast.LENGTH_SHORT).show();
+                        }
+                    });
                 }
             }
         });
-
     }
 
+    private void saveLoginFlagAndSessionKey(boolean hasLogin, String sessionKey) {
+        SharedPreferences user = getSharedPreferences("user", Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = user.edit();//获取编辑器
+        editor.putBoolean("hasLogin", hasLogin);
+        editor.putString("SessionKey", sessionKey);
+        editor.apply();//提交修改
+    }
 
 
 }

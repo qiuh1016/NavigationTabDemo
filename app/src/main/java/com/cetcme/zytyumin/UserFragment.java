@@ -165,7 +165,7 @@ public class UserFragment extends BaseFragment {
     }
 
     private void startLoginActivity() {
-        Intent intent = new Intent(getActivity(), CheckPhoneActivity.LoginActivity.class);
+        Intent intent = new Intent(getActivity(), LoginActivity.class);
         MainActivity activity = (MainActivity) getActivity();
         startActivity(intent);
         activity.overridePendingTransition(R.anim.push_up_in_no_alpha, R.anim.stay);

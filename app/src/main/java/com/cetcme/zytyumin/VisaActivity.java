@@ -96,6 +96,7 @@ public class VisaActivity extends Activity {
                 bundle.putString("shipNo", shipNo);
                 Intent intent = new Intent();
                 intent.setClass(getApplicationContext(), PunchActivity.class);
+                intent.putExtras(bundle);
                 startActivity(intent);
                 overridePendingTransition(R.anim.push_left_in_no_alpha, R.anim.push_left_out_no_alpha);
             }
@@ -108,6 +109,7 @@ public class VisaActivity extends Activity {
                 bundle.putString("shipNo", shipNo);
                 Intent intent = new Intent();
                 intent.setClass(getApplicationContext(), ioLogActivity.class);
+                intent.putExtras(bundle);
                 startActivity(intent);
                 overridePendingTransition(R.anim.push_left_in_no_alpha, R.anim.push_left_out_no_alpha);
             }
