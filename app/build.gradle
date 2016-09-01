@@ -41,4 +41,5 @@ dependencies {
     compile 'com.umeng.analytics:analytics:latest.integration'
     compile project(':pullToRefresh')
     compile project(':PushSDK')
+    compile project(':FRAndroid')
 }

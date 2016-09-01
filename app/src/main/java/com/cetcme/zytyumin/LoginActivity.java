@@ -19,7 +19,13 @@ import com.kaopiz.kprogresshud.KProgressHUD;
 
 
 import com.cetcme.zytyumin.MyClass.NavigationView;
+import com.loopj.android.http.AsyncHttpClient;
+import com.loopj.android.http.JsonHttpResponseHandler;
+import com.loopj.android.http.RequestParams;
+import com.loopj.android.http.ResponseHandlerInterface;
 
+import org.apache.http.Header;
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -99,7 +105,7 @@ public class LoginActivity extends Activity implements View.OnClickListener{
         switch (v.getId()) {
             case R.id.login_button_in_login_activity:
                 Log.i(TAG, "onClick: loginButton");
-                login();
+                loginWithASC();
                 break;
             case R.id.forget_password_button_in_login_activity:
                 Log.i(TAG, "onClick: forgetButton");
@@ -141,12 +147,93 @@ public class LoginActivity extends Activity implements View.OnClickListener{
                 .setDimAmount(0.3f);
     }
 
+    private void loginWithASC () {
+        /**
+         * 判断用户名和密码是否填写
+         */
+        final String username = userNameEditText.getText().toString();
+        final String password = passwordEditText.getText().toString();
+        if (username.isEmpty() || password.isEmpty()) {
+            Toast.makeText(this, "用户名或密码不能为空", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
+        kProgressHUD.show();
+
+        RequestParams params = new RequestParams();
+        params.put("username", username);
+        params.put("password", password);
+        params.put("deviceType", "0");
+        params.put("clientId", "1");
+        String urlBody = "http://61.164.218.155:8085/Account/login";
+        String url = "http://61.164.218.155:8085/Account/login?loginName="+username+"&password="+PrivateEncode.getMD5(password)+"&deviceType=0&clientId=1";
+
+        AsyncHttpClient client = new AsyncHttpClient();
+        client.get(this, url, params, new JsonHttpResponseHandler("UTF-8") {
+            @Override
+            public void onSuccess(int statusCode, Header[] headers, JSONObject response) {
+                Log.i("Main", response.toString());
+                kProgressHUD.dismiss();
+                try {
+                    final String msg = response.getString("Msg");
+                    final String sessionKey = response.getString("SessionKey");
+
+                    /**
+                     * 登录成功
+                     */
+                    if (msg.equals("成功")) {
+                        kProgressHUD.dismiss();
+                        okHUD.show();
+                        saveData(true, username, password, sessionKey);
+                        new Handler().postDelayed(new Runnable() {
+                            @Override
+                            public void run() {
+                                okHUD.dismiss();
+                                onBackPressed();
+                            }
+                        },1000);
+                    } else {
+                        /**
+                         * 登录失败
+                         */
+                        kProgressHUD.dismiss();
+                        Toast.makeText(getApplicationContext(), msg, Toast.LENGTH_SHORT).show();
+                    }
+
+                } catch (JSONException e) {
+                    /**
+                     * json解析失败
+                     */
+                    e.printStackTrace();
+                    Log.i(TAG, "onResponse: json解析错误");
+                    kProgressHUD.dismiss();
+                    Toast.makeText(getApplicationContext(), "解析错误", Toast.LENGTH_SHORT).show();
+                }
+            }
+
+            @Override
+            public void onFailure(int statusCode, Header[] headers, Throwable throwable, JSONObject errorResponse) {
+                Log.i("Main", errorResponse.toString());
+                kProgressHUD.dismiss();
+                Toast.makeText(getApplicationContext(), "网络连接失败1", Toast.LENGTH_SHORT).show();
+            }
+
+            @Override
+            public void onFailure(int statusCode, Header[] headers, String responseString, Throwable throwable) {
+                Log.i("Main", responseString.toString());
+                kProgressHUD.dismiss();
+                Toast.makeText(getApplicationContext(), "网络连接失败2", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+    }
+
     private void login() {
         /**
          * 判断用户名和密码是否填写
          */
-        String username = userNameEditText.getText().toString();
-        String password = passwordEditText.getText().toString();
+        final String username = userNameEditText.getText().toString();
+        final String password = passwordEditText.getText().toString();
         if (username.isEmpty() || password.isEmpty()) {
             Toast.makeText(this, "用户名或密码不能为空", Toast.LENGTH_SHORT).show();
             return;
@@ -195,7 +282,7 @@ public class LoginActivity extends Activity implements View.OnClickListener{
                                 public void run() {
                                     kProgressHUD.dismiss();
                                     okHUD.show();
-                                    saveLoginFlagAndSessionKey(true, sessionKey);
+                                    saveData(true, username, password, sessionKey);
                                     new Handler().postDelayed(new Runnable() {
                                         @Override
                                         public void run() {
@@ -268,13 +355,23 @@ public class LoginActivity extends Activity implements View.OnClickListener{
         });
     }
 
-    private void saveLoginFlagAndSessionKey(boolean hasLogin, String sessionKey) {
+    private void saveData(boolean hasLogin, String username, String password, String sessionKey) {
         SharedPreferences user = getSharedPreferences("user", Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = user.edit();//获取编辑器
         editor.putBoolean("hasLogin", hasLogin);
-        editor.putString("SessionKey", sessionKey);
+        editor.putString("username", username);
+        editor.putString("password", password);
+        editor.putString("sessionKey", sessionKey);
         editor.apply();//提交修改
     }
 
-
+    @Override
+    public void onResume() {
+        super.onResume();
+        SharedPreferences user = getSharedPreferences("user", Context.MODE_PRIVATE);
+        String username = user.getString("username", "");
+        if (!username.isEmpty()) {
+            userNameEditText.setText(username);
+        }
+    }
 }

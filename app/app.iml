@@ -141,6 +141,7 @@
     <orderEntry type="library" exported="" name="library-2.4.0" level="project" />
     <orderEntry type="module" module-name="PushSDK" exported="" />
     <orderEntry type="module" module-name="pullToRefresh" exported="" />
+    <orderEntry type="module" module-name="FRAndroid" exported="" />
     <orderEntry type="library" exported="" name="org.apache.http.legacy-android-23" level="project" />
   </component>
 </module>

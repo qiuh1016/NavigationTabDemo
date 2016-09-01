@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="transparent">#00000000</color>
+    <color name="lightgrey">#999999</color>
+    <color name="result_view">#b0000000</color>
+    <color name="viewfinder_mask">#65000000</color>
+    <color name="possible_result_points">#c000ffda</color>
+
+    <color name="fr_background_default">#21A8B2</color>
+    <color name="fr_base_color">#303030</color>
+    <color name="fr_base_blue">#027eba</color>
+    <color name="fr_base_light">#cccccc</color>
+    <color name="fr_base_dark">#202230</color>
+    <color name="fr_actionbar_pressed">#696969</color>
+
+</resources>

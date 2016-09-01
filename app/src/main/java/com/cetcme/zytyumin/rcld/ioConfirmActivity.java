@@ -24,9 +24,6 @@ import com.kaopiz.kprogresshud.KProgressHUD;
 import com.umeng.analytics.MobclickAgent;
 import com.umeng.message.PushAgent;
 
-import org.android.agoo.net.async.AsyncHttpClient;
-import org.android.agoo.net.async.AsyncHttpResponseHandler;
-import org.android.agoo.net.async.RequestParams;
 import org.apache.http.Header;
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -40,6 +37,10 @@ import java.util.Hashtable;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
+
+import com.loopj.android.http.AsyncHttpClient;
+import com.loopj.android.http.JsonHttpResponseHandler;
+import com.loopj.android.http.RequestParams;
 
 import okhttp3.Call;
 import okhttp3.OkHttpClient;
@@ -255,8 +256,6 @@ public class ioConfirmActivity extends AppCompatActivity {
 
     private List<Map<String, Object>> getPunchData() {
 
-        /*0901
-
         kProgressHUD = KProgressHUD.create(ioConfirmActivity.this)
                 .setStyle(KProgressHUD.Style.SPIN_INDETERMINATE)
                 .setLabel("获取中")
@@ -300,9 +299,6 @@ public class ioConfirmActivity extends AppCompatActivity {
         String urlBody = "http://"+serverIP+ getString(R.string.punchGetUrl);
         String url = urlBody+"?userName="+username+"&password="+password+"&shipNo="+shipNo+"&startTime="+startTime+"&endTime="+endTime;
         AsyncHttpClient client = new AsyncHttpClient();
-
-        client.get(ioConfirmActivity.this, url , new AsyncHttpResponseHandler());
-
         client.get(url, null, new JsonHttpResponseHandler("UTF-8"){
             @Override
             public void onSuccess(int statusCode, Header[] headers, JSONObject response) {
@@ -354,20 +350,19 @@ public class ioConfirmActivity extends AppCompatActivity {
 
         return dataList;
 
-        0901*/
 
-        Map<String, Object> map = new Hashtable<>();
-        map.put("iofFlag",iofFlag);
-        map.put("id", "sailorIdNo");
-        map.put("name", "sailorName");
-        map.put("dataType", 0);
-        map.put("dataTypeString", "自动生成");
-        map.put("punchTime", "punchTime");
-        map.put("reason", "");
-        dataList.add(map);
-        dataList.add(map);
-        dataList.add(map);
-        return dataList;
+//        Map<String, Object> map = new Hashtable<>();
+//        map.put("iofFlag",iofFlag);
+//        map.put("id", "sailorIdNo");
+//        map.put("name", "sailorName");
+//        map.put("dataType", 0);
+//        map.put("dataTypeString", "自动生成");
+//        map.put("punchTime", "punchTime");
+//        map.put("reason", "");
+//        dataList.add(map);
+//        dataList.add(map);
+//        dataList.add(map);
+//        return dataList;
     }
 
     private void dialog(final Map<String,Object> map, final int position) {
@@ -483,9 +478,6 @@ public class ioConfirmActivity extends AppCompatActivity {
         serverIP = user.getString("serverIP", getString(R.string.defaultServerIP_1));
         shipNo   = user.getString("shipNo","");
 
-
-        /*  0901
-
         //设置输入参数
         RequestParams params = new RequestParams();
         params.put("userName", username);
@@ -545,12 +537,10 @@ public class ioConfirmActivity extends AppCompatActivity {
 
         });
 
-        0901 */
 
 
     }
 
-    /* 0901
 
     private void uploadPunch(final int position) {
 
@@ -624,7 +614,5 @@ public class ioConfirmActivity extends AppCompatActivity {
 
         });
     }
-
-    0901*/
 
 }

@@ -17,6 +17,11 @@ import com.kaopiz.kprogresshud.KProgressHUD;
 import com.umeng.analytics.MobclickAgent;
 import com.umeng.message.PushAgent;
 
+import com.loopj.android.http.AsyncHttpClient;
+import com.loopj.android.http.JsonHttpResponseHandler;
+import com.loopj.android.http.RequestParams;
+
+import org.apache.http.Header;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -169,8 +174,6 @@ public class PunchActivity extends AppCompatActivity {
             listView.getLoadingLayoutProxy(false,true).setPullLabel("上拉可以加载");
         }
 
-        /*0901
-
         //设置输入参数
         RequestParams params = new RequestParams();
         params.put("userName", username);
@@ -258,8 +261,6 @@ public class PunchActivity extends AppCompatActivity {
                 toast.show();
             }
         });
-
-        0901*/
 
         return dataList;
     }

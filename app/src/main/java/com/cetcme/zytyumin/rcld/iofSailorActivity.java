@@ -11,6 +11,10 @@ import com.cetcme.zytyumin.R;
 import com.umeng.analytics.MobclickAgent;
 import com.umeng.message.PushAgent;
 
+import com.loopj.android.http.AsyncHttpClient;
+import com.loopj.android.http.JsonHttpResponseHandler;
+import com.loopj.android.http.RequestParams;
+
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;

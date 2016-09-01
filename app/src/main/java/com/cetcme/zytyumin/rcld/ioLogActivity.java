@@ -20,6 +20,11 @@ import com.kaopiz.kprogresshud.KProgressHUD;
 import com.umeng.analytics.MobclickAgent;
 import com.umeng.message.PushAgent;
 
+import com.loopj.android.http.AsyncHttpClient;
+import com.loopj.android.http.JsonHttpResponseHandler;
+import com.loopj.android.http.RequestParams;
+
+import org.apache.http.Header;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -198,7 +203,6 @@ public class ioLogActivity extends AppCompatActivity {
         calendar.add(Calendar.MONTH, -1);//
         String startTime = df.format(calendar.getTime());//设置起始日期
 
-        /*0901
 
         //设置输入参数
         RequestParams params = new RequestParams();
@@ -211,7 +215,7 @@ public class ioLogActivity extends AppCompatActivity {
         String urlBody = "http://"+serverIP+ getString(R.string.iofGetUrl);
         String url = urlBody+"?userName="+username+"&password="+password+"&pageNum=0"+"&pageSize=20";
         AsyncHttpClient client = new AsyncHttpClient();
-        client.get(urlBody, params, new JsonHttpResponseHandler("UTF-8"){
+        client.get(this, urlBody, params, new JsonHttpResponseHandler("UTF-8"){
             @Override
             public void onSuccess(int statusCode, Header[] headers, JSONObject response) {
                 // If the response is JSONObject instead of expected JSONArray
@@ -311,7 +315,6 @@ public class ioLogActivity extends AppCompatActivity {
             }
         });
 
-        0901*/
 
         return dataList;
     }
