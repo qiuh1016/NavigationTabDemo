@@ -56,72 +56,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e279e6be-7f14-4cf0-a014-66e978e760d8" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/classes/androidTest/debug/com/handmark/pulltorefresh/library/R$anim.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/classes/androidTest/debug/com/handmark/pulltorefresh/library/R$attr.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/classes/androidTest/debug/com/handmark/pulltorefresh/library/R$dimen.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/classes/androidTest/debug/com/handmark/pulltorefresh/library/R$drawable.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/classes/androidTest/debug/com/handmark/pulltorefresh/library/R$id.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/classes/androidTest/debug/com/handmark/pulltorefresh/library/R$layout.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/classes/androidTest/debug/com/handmark/pulltorefresh/library/R$string.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/classes/androidTest/debug/com/handmark/pulltorefresh/library/R$styleable.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/classes/androidTest/debug/com/handmark/pulltorefresh/library/R.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/classes/androidTest/debug/com/handmark/pulltorefresh/library/test/BuildConfig.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/classes/androidTest/debug/com/handmark/pulltorefresh/library/test/R$anim.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/classes/androidTest/debug/com/handmark/pulltorefresh/library/test/R$attr.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/classes/androidTest/debug/com/handmark/pulltorefresh/library/test/R$dimen.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/classes/androidTest/debug/com/handmark/pulltorefresh/library/test/R$drawable.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/classes/androidTest/debug/com/handmark/pulltorefresh/library/test/R$id.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/classes/androidTest/debug/com/handmark/pulltorefresh/library/test/R$layout.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/classes/androidTest/debug/com/handmark/pulltorefresh/library/test/R$string.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/classes/androidTest/debug/com/handmark/pulltorefresh/library/test/R$styleable.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/classes/androidTest/debug/com/handmark/pulltorefresh/library/test/R.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/incremental-safeguard/androidTest/debug/tag.txt" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PushSDK/build/intermediates/bundles/debug/classes.jar" afterPath="$PROJECT_DIR$/PushSDK/build/intermediates/bundles/debug/classes.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PushSDK/build/intermediates/bundles/debug/libs/com.umeng.message_v2.8.1.jar" afterPath="$PROJECT_DIR$/PushSDK/build/intermediates/bundles/debug/libs/com.umeng.message_v2.8.1.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PushSDK/build/intermediates/bundles/release/classes.jar" afterPath="$PROJECT_DIR$/PushSDK/build/intermediates/bundles/release/classes.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PushSDK/build/intermediates/bundles/release/libs/com.umeng.message_v2.8.1.jar" afterPath="$PROJECT_DIR$/PushSDK/build/intermediates/bundles/release/libs/com.umeng.message_v2.8.1.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PushSDK/build/intermediates/res/resources-debug-androidTest.ap_" afterPath="$PROJECT_DIR$/PushSDK/build/intermediates/res/resources-debug-androidTest.ap_" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PushSDK/build/outputs/aar/PushSDK-debug.aar" afterPath="$PROJECT_DIR$/PushSDK/build/outputs/aar/PushSDK-debug.aar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PushSDK/build/outputs/aar/PushSDK-release.aar" afterPath="$PROJECT_DIR$/PushSDK/build/outputs/aar/PushSDK-release.aar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/generated/mockable-android-23.jar" afterPath="$PROJECT_DIR$/build/generated/mockable-android-23.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/bundles/debug/classes.jar" afterPath="$PROJECT_DIR$/pullToRefresh/build/intermediates/bundles/debug/classes.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/bundles/release/classes.jar" afterPath="$PROJECT_DIR$/pullToRefresh/build/intermediates/bundles/release/classes.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/res/resources-debug-androidTest.ap_" afterPath="$PROJECT_DIR$/pullToRefresh/build/intermediates/res/resources-debug-androidTest.ap_" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pullToRefresh/build/outputs/aar/pullToRefresh-debug.aar" afterPath="$PROJECT_DIR$/pullToRefresh/build/outputs/aar/pullToRefresh-debug.aar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pullToRefresh/build/outputs/aar/pullToRefresh-release.aar" afterPath="$PROJECT_DIR$/pullToRefresh/build/outputs/aar/pullToRefresh-release.aar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/cetcme/zytyumin/CheckPhoneActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/cetcme/zytyumin/CheckPhoneActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/cetcme/zytyumin/HomepageFragment.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/cetcme/zytyumin/HomepageFragment.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/app.iml" afterPath="$PROJECT_DIR$/app/app.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/cetcme/zytyumin/LoginActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/cetcme/zytyumin/LoginActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/cetcme/zytyumin/UserFragment.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/cetcme/zytyumin/UserFragment.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/cetcme/zytyumin/VisaActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/cetcme/zytyumin/VisaActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/dex-cache/cache.xml" afterPath="$PROJECT_DIR$/build/intermediates/dex-cache/cache.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/blame/res/androidTest/debug/multi/values-ar.json" afterPath="$PROJECT_DIR$/pullToRefresh/build/intermediates/blame/res/androidTest/debug/multi/values-ar.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/blame/res/androidTest/debug/multi/values-cs.json" afterPath="$PROJECT_DIR$/pullToRefresh/build/intermediates/blame/res/androidTest/debug/multi/values-cs.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/blame/res/androidTest/debug/multi/values-de.json" afterPath="$PROJECT_DIR$/pullToRefresh/build/intermediates/blame/res/androidTest/debug/multi/values-de.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/blame/res/androidTest/debug/multi/values-es.json" afterPath="$PROJECT_DIR$/pullToRefresh/build/intermediates/blame/res/androidTest/debug/multi/values-es.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/blame/res/androidTest/debug/multi/values-fi.json" afterPath="$PROJECT_DIR$/pullToRefresh/build/intermediates/blame/res/androidTest/debug/multi/values-fi.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/blame/res/androidTest/debug/multi/values-fr.json" afterPath="$PROJECT_DIR$/pullToRefresh/build/intermediates/blame/res/androidTest/debug/multi/values-fr.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/blame/res/androidTest/debug/multi/values-he.json" afterPath="$PROJECT_DIR$/pullToRefresh/build/intermediates/blame/res/androidTest/debug/multi/values-he.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/blame/res/androidTest/debug/multi/values-it.json" afterPath="$PROJECT_DIR$/pullToRefresh/build/intermediates/blame/res/androidTest/debug/multi/values-it.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/blame/res/androidTest/debug/multi/values-iw.json" afterPath="$PROJECT_DIR$/pullToRefresh/build/intermediates/blame/res/androidTest/debug/multi/values-iw.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/blame/res/androidTest/debug/multi/values-ja.json" afterPath="$PROJECT_DIR$/pullToRefresh/build/intermediates/blame/res/androidTest/debug/multi/values-ja.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/blame/res/androidTest/debug/multi/values-ko.json" afterPath="$PROJECT_DIR$/pullToRefresh/build/intermediates/blame/res/androidTest/debug/multi/values-ko.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/blame/res/androidTest/debug/multi/values-nl.json" afterPath="$PROJECT_DIR$/pullToRefresh/build/intermediates/blame/res/androidTest/debug/multi/values-nl.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/blame/res/androidTest/debug/multi/values-pl.json" afterPath="$PROJECT_DIR$/pullToRefresh/build/intermediates/blame/res/androidTest/debug/multi/values-pl.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/blame/res/androidTest/debug/multi/values-pt-rBR.json" afterPath="$PROJECT_DIR$/pullToRefresh/build/intermediates/blame/res/androidTest/debug/multi/values-pt-rBR.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/blame/res/androidTest/debug/multi/values-pt.json" afterPath="$PROJECT_DIR$/pullToRefresh/build/intermediates/blame/res/androidTest/debug/multi/values-pt.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/blame/res/androidTest/debug/multi/values-ro.json" afterPath="$PROJECT_DIR$/pullToRefresh/build/intermediates/blame/res/androidTest/debug/multi/values-ro.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/blame/res/androidTest/debug/multi/values-ru.json" afterPath="$PROJECT_DIR$/pullToRefresh/build/intermediates/blame/res/androidTest/debug/multi/values-ru.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/blame/res/androidTest/debug/multi/values-zh.json" afterPath="$PROJECT_DIR$/pullToRefresh/build/intermediates/blame/res/androidTest/debug/multi/values-zh.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/blame/res/androidTest/debug/multi/values.json" afterPath="$PROJECT_DIR$/pullToRefresh/build/intermediates/blame/res/androidTest/debug/multi/values.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/blame/res/androidTest/debug/single/anim.json" afterPath="$PROJECT_DIR$/pullToRefresh/build/intermediates/blame/res/androidTest/debug/single/anim.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/blame/res/androidTest/debug/single/drawable-hdpi-v4.json" afterPath="$PROJECT_DIR$/pullToRefresh/build/intermediates/blame/res/androidTest/debug/single/drawable-hdpi-v4.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/blame/res/androidTest/debug/single/drawable-mdpi-v4.json" afterPath="$PROJECT_DIR$/pullToRefresh/build/intermediates/blame/res/androidTest/debug/single/drawable-mdpi-v4.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/blame/res/androidTest/debug/single/drawable-xhdpi-v4.json" afterPath="$PROJECT_DIR$/pullToRefresh/build/intermediates/blame/res/androidTest/debug/single/drawable-xhdpi-v4.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/blame/res/androidTest/debug/single/drawable.json" afterPath="$PROJECT_DIR$/pullToRefresh/build/intermediates/blame/res/androidTest/debug/single/drawable.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/blame/res/androidTest/debug/single/layout.json" afterPath="$PROJECT_DIR$/pullToRefresh/build/intermediates/blame/res/androidTest/debug/single/layout.json" />
     </list>
     <ignored path="zytyumin.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -171,26 +109,10 @@
       <file leaf-file-name="LoginActivity.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/cetcme/zytyumin/LoginActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.25441176">
-              <caret line="205" column="77" selection-start-line="205" selection-start-column="77" selection-end-line="205" selection-end-column="77" />
+            <state vertical-scroll-proportion="0.11470588">
+              <caret line="154" column="28" selection-start-line="154" selection-start-column="28" selection-end-line="154" selection-end-column="28" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#2008#2009#0" expanded="true" />
-                <element signature="e#2064#2065#0" expanded="true" />
-                <element signature="e#6437#6713#0" expanded="true" />
-                <element signature="e#6712#6713#0" expanded="true" />
-                <element signature="e#7588#8408#0" expanded="true" />
-                <element signature="e#7977#8329#0" expanded="true" />
-                <element signature="e#8328#8329#0" expanded="true" />
-                <element signature="e#8407#8408#0" expanded="true" />
-                <element signature="e#8671#9038#0" expanded="true" />
-                <element signature="e#9037#9038#0" expanded="true" />
-                <element signature="e#9280#9626#0" expanded="true" />
-                <element signature="e#9625#9626#0" expanded="true" />
-                <element signature="e#9772#10038#0" expanded="true" />
-                <element signature="e#10037#10038#0" expanded="true" />
-                <element signature="e#10346#10592#0" expanded="true" />
-                <element signature="e#10591#10592#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -3663,7 +3585,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -3684,8 +3605,8 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="AndroidView">
         <subPane>
           <PATH>
@@ -3694,72 +3615,9 @@
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="zytyumin" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="zytyumin" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="zytyumin" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="zytyumin" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="zytyumin" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="rcld" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="zytyumin" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="manifests" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidManifestsGroupNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -4157,25 +4015,25 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_homepage.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.8255208">
           <caret line="61" column="0" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
           <folding />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/record_search_layout.xml">
       <provider editor-type-id="android-designer">
         <state />
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/record_search_layout.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-1.828125">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/cetcme/zytyumin/RecordActivity.java">
@@ -4193,124 +4051,124 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/claim_listview_item.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/detail_info_item.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/detail_info_layout.xml">
       <provider editor-type-id="android-designer">
         <state />
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/detail_info_layout.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-1.7843137">
           <caret line="7" column="25" selection-start-line="7" selection-start-column="25" selection-end-line="7" selection-end-column="25" />
           <folding />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/ensurance_listview_item.xml">
       <provider editor-type-id="android-designer">
         <state />
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/ensurance_listview_item.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_chat_tab_01.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/search_claim_layout.xml">
       <provider editor-type-id="android-designer">
         <state />
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/search_claim_layout.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-1.5294118">
           <caret line="6" column="25" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="25" />
           <folding />
         </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/search_drawing_check_layout.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-1.5294118">
           <caret line="6" column="25" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="25" />
           <folding />
         </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/search_ship_detect_layout.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-1.5294118">
           <caret line="6" column="25" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="25" />
           <folding />
         </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/search_pay_insurance_layout.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-1.5294118">
           <caret line="6" column="25" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="25" />
           <folding />
         </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/search_trade_layout.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-1.5294118">
           <caret line="6" column="25" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="25" />
           <folding />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/trade_listview_item.xml">
       <provider editor-type-id="android-designer">
         <state />
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/trade_listview_item.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="7.509804">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/cetcme/zytyumin/MyClass/PrivateEncode.java">
@@ -4343,58 +4201,58 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/ship_detect_process_info.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.37239584">
           <caret line="11" column="25" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="25" />
           <folding />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/ship_detect_listview_item.xml">
       <provider editor-type-id="android-designer">
         <state />
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/ship_detect_listview_item.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.5911458">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/tab_view.xml">
       <provider editor-type-id="android-designer">
         <state />
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/tab_view.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.28645834">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/tab_view_with_red_point.xml">
       <provider editor-type-id="android-designer">
         <state />
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/tab_view_with_red_point.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.7942708">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/view_pager_in_sign_activity.xml">
       <provider editor-type-id="android-designer">
         <state />
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/view_pager_in_sign_activity.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="1.1979166">
           <caret line="72" column="0" selection-start-line="72" selection-start-column="0" selection-end-line="72" selection-end-column="0" />
           <folding />
         </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
       </provider>
     </entry>
     <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp/3.4.1/c7c4f9e35c2fd5900da24f9872e3971801f08ce0/okhttp-3.4.1.jar!/okhttp3/ResponseBody.class">
@@ -4424,14 +4282,14 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_reason.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/values/styles.xml">
@@ -4450,36 +4308,36 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_io_confirm.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.45468998">
           <caret line="22" column="17" selection-start-line="22" selection-start-column="17" selection-end-line="22" selection-end-column="17" />
           <folding />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/punch_list_cell.xml">
       <provider editor-type-id="android-designer">
         <state />
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/punch_list_cell.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/io_log_list_cell.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/cetcme/zytyumin/ShipActivity.java">
@@ -4522,7 +4380,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.029885057">
           <caret line="24" column="13" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -4530,10 +4387,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.029885057">
           <caret line="364" column="40" selection-start-line="364" selection-start-column="40" selection-end-line="364" selection-end-column="40" />
-          <folding>
-            <element signature="e#6127#6128#0" expanded="false" />
-            <element signature="e#6183#6184#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -4541,7 +4394,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.55172414">
           <caret line="162" column="19" selection-start-line="162" selection-start-column="19" selection-end-line="162" selection-end-column="19" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -4549,7 +4401,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.67126435">
           <caret line="39" column="42" selection-start-line="39" selection-start-column="42" selection-end-line="39" selection-end-column="42" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -4573,7 +4424,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.21323529">
           <caret line="57" column="41" selection-start-line="57" selection-start-column="35" selection-end-line="57" selection-end-column="41" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -4581,7 +4431,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.40735295">
           <caret line="90" column="0" selection-start-line="90" selection-start-column="0" selection-end-line="90" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -4589,9 +4438,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.55735296">
           <caret line="203" column="51" selection-start-line="203" selection-start-column="51" selection-end-line="203" selection-end-column="51" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -4599,7 +4445,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.5029412">
           <caret line="159" column="24" selection-start-line="159" selection-start-column="24" selection-end-line="159" selection-end-column="24" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -4607,52 +4452,15 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.30588236">
           <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="38" selection-end-column="24" />
-          <folding>
-            <element signature="method#onCreate#0;class#CheckPhoneActivity#0" expanded="false" />
-            <element signature="method#onBackPressed#0;class#CheckPhoneActivity#0" expanded="false" />
-            <element signature="method#initNavigationView#0;class#CheckPhoneActivity#0" expanded="false" />
-            <element signature="class#2269:2583" expanded="false" />
-            <element signature="method#onBackClick#0;class#2269:2583" expanded="false" />
-            <element signature="method#initUI#0;class#CheckPhoneActivity#0" expanded="false" />
-            <element signature="docComment;method#getMobilePhoneNumber#0;class#CheckPhoneActivity#0" expanded="false" />
-            <element signature="method#getMobilePhoneNumber#0;class#CheckPhoneActivity#0" expanded="false" />
-            <element signature="method#insertPhoneNumber#0;class#CheckPhoneActivity#0" expanded="false" />
-            <element signature="method#onClick#0;class#CheckPhoneActivity#0" expanded="false" />
-            <element signature="docComment;method#initCodeUtils#0;class#CheckPhoneActivity#0" expanded="false" />
-            <element signature="method#initCodeUtils#0;class#CheckPhoneActivity#0" expanded="false" />
-            <element signature="docComment;method#checkCodeAndPhone#0;class#CheckPhoneActivity#0" expanded="false" />
-            <element signature="method#checkCodeAndPhone#0;class#CheckPhoneActivity#0" expanded="false" />
-            <element signature="method#getSMS#0;class#CheckPhoneActivity#0" expanded="false" />
-            <element signature="method#next#0;class#CheckPhoneActivity#0" expanded="false" />
-            <element signature="class#ThreadShow#0;class#CheckPhoneActivity#0" expanded="false" />
-            <element signature="method#run#0;class#ThreadShow#0;class#CheckPhoneActivity#0" expanded="false" />
-            <element signature="docComment;method#isMobileNO#0;class#CheckPhoneActivity#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/cetcme/zytyumin/LoginActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.25441176">
-          <caret line="205" column="77" selection-start-line="205" selection-start-column="77" selection-end-line="205" selection-end-column="77" />
+        <state vertical-scroll-proportion="0.11470588">
+          <caret line="154" column="28" selection-start-line="154" selection-start-column="28" selection-end-line="154" selection-end-column="28" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2008#2009#0" expanded="true" />
-            <element signature="e#2064#2065#0" expanded="true" />
-            <element signature="e#6437#6713#0" expanded="true" />
-            <element signature="e#6712#6713#0" expanded="true" />
-            <element signature="e#7588#8408#0" expanded="true" />
-            <element signature="e#7977#8329#0" expanded="true" />
-            <element signature="e#8328#8329#0" expanded="true" />
-            <element signature="e#8407#8408#0" expanded="true" />
-            <element signature="e#8671#9038#0" expanded="true" />
-            <element signature="e#9037#9038#0" expanded="true" />
-            <element signature="e#9280#9626#0" expanded="true" />
-            <element signature="e#9625#9626#0" expanded="true" />
-            <element signature="e#9772#10038#0" expanded="true" />
-            <element signature="e#10037#10038#0" expanded="true" />
-            <element signature="e#10346#10592#0" expanded="true" />
-            <element signature="e#10591#10592#0" expanded="true" />
           </folding>
         </state>
       </provider>

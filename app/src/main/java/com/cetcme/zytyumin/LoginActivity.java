@@ -154,26 +154,6 @@ public class LoginActivity extends Activity implements View.OnClickListener{
 
         kProgressHUD.show();
 
-//        new Handler().postDelayed(new Runnable() {
-//            @Override
-//            public void run() {
-//                kProgressHUD.dismiss();
-//                okHUD.show();
-//                new Handler().postDelayed(new Runnable() {
-//                    @Override
-//                    public void run() {
-//                        okHUD.dismiss();
-//                        SharedPreferences user = getSharedPreferences("user", Context.MODE_PRIVATE);
-//                        SharedPreferences.Editor editor = user.edit();//获取编辑器
-//                        editor.putBoolean("hasLogin", true);
-////                        editor.putString("SessionKey",SessionKey);
-//                        editor.apply();//提交修改
-//                        onBackPressed();
-//                    }
-//                },1000);
-//            }
-//        },2000);
-
         OkHttpClient client = new OkHttpClient();
         String url = "http://61.164.218.155:8085/Account/login?loginName="+username+"&password="+PrivateEncode.getMD5(password)+"&deviceType=0&clientId=1";
         Request request = new Request.Builder()
@@ -195,79 +175,72 @@ public class LoginActivity extends Activity implements View.OnClickListener{
 
             @Override
             public void onResponse(Call call, Response response) throws IOException {
-                try {
-                    if(response.isSuccessful()){
-                        //The call was successful. print it to the log
+                if(response.isSuccessful()){
+                    //The call was successful. print it to the log
 
-                        String responseString = response.body().string();
-                        Log.v("OKHttp","success: " + responseString);
+                    String responseString = response.body().string();
+                    Log.v("OKHttp","success: " + responseString);
 
-                        try {
-                            JSONObject json = new JSONObject(responseString);
-                            final String msg = json.getString("Msg");
-                            final String sessionKey = json.getString("SessionKey");
+                    try {
+                        JSONObject json = new JSONObject(responseString);
+                        final String msg = json.getString("Msg");
+                        final String sessionKey = json.getString("SessionKey");
 
-                            /**
-                             * 登录成功
-                             */
-                            if (msg.equals("成功")) {
-                                runOnUiThread(new Runnable() {
-                                    @Override
-                                    public void run() {
-                                        kProgressHUD.dismiss();
-                                        okHUD.show();
-                                        saveLoginFlagAndSessionKey(true, sessionKey);
-                                        new Handler().postDelayed(new Runnable() {
-                                            @Override
-                                            public void run() {
-                                                okHUD.dismiss();
-                                                onBackPressed();
-                                            }
-                                        },1000);
-                                    }
-                                });
-
-                            } else {
-                                /**
-                                 * 登录失败
-                                 */
-                                Log.i(TAG, "onResponse: 密码错误");
-                                runOnUiThread(new Runnable() {
-                                    @Override
-                                    public void run() {
-                                        kProgressHUD.dismiss();
-                                        Toast.makeText(getApplicationContext(), msg, Toast.LENGTH_SHORT).show();
-                                    }
-                                });
-
-                            }
-
-                        } catch (JSONException e) {
-                            e.printStackTrace();
-                            Log.i(TAG, "onResponse: json解析错误");
+                        /**
+                         * 登录成功
+                         */
+                        if (msg.equals("成功")) {
                             runOnUiThread(new Runnable() {
                                 @Override
                                 public void run() {
                                     kProgressHUD.dismiss();
-                                    Toast.makeText(getApplicationContext(), "解析错误", Toast.LENGTH_SHORT).show();
+                                    okHUD.show();
+                                    saveLoginFlagAndSessionKey(true, sessionKey);
+                                    new Handler().postDelayed(new Runnable() {
+                                        @Override
+                                        public void run() {
+                                            okHUD.dismiss();
+                                            onBackPressed();
+                                        }
+                                    },1000);
+                                }
+                            });
+
+                        } else {
+                            /**
+                             * 登录失败
+                             */
+                            Log.i(TAG, "onResponse: 密码错误");
+                            runOnUiThread(new Runnable() {
+                                @Override
+                                public void run() {
+                                    kProgressHUD.dismiss();
+                                    Toast.makeText(getApplicationContext(), msg, Toast.LENGTH_SHORT).show();
                                 }
                             });
 
                         }
 
-                    } else {
-                        kProgressHUD.dismiss();
+                    } catch (JSONException e) {
+                        /**
+                         * json解析失败
+                         */
+                        e.printStackTrace();
+                        Log.i(TAG, "onResponse: json解析错误");
                         runOnUiThread(new Runnable() {
                             @Override
                             public void run() {
-                                Toast.makeText(getApplicationContext(), "登录失败", Toast.LENGTH_SHORT).show();
+                                kProgressHUD.dismiss();
+                                Toast.makeText(getApplicationContext(), "解析错误", Toast.LENGTH_SHORT).show();
                             }
                         });
-                        Log.v("OKHttp","is not Successful: " );
+
                     }
-                }catch (IOException e) {
-                    Log.i(TAG, "onResponse: http try 失败");
-                    e.printStackTrace();
+
+                } else {
+                    /**
+                     * 网络请求不成功
+                     */
                     kProgressHUD.dismiss();
                     runOnUiThread(new Runnable() {
                         @Override
@@ -275,7 +248,22 @@ public class LoginActivity extends Activity implements View.OnClickListener{
                             Toast.makeText(getApplicationContext(), "登录失败", Toast.LENGTH_SHORT).show();
                         }
                     });
+                    Log.v("OKHttp","is not Successful: " );
                 }
+
+//                try {
+//
+//                }catch (IOException e) {
+//                    Log.i(TAG, "onResponse: http try 失败");
+//                    e.printStackTrace();
+//                    kProgressHUD.dismiss();
+//                    runOnUiThread(new Runnable() {
+//                        @Override
+//                        public void run() {
+//                            Toast.makeText(getApplicationContext(), "登录失败", Toast.LENGTH_SHORT).show();
+//                        }
+//                    });
+//                }
             }
         });
     }
