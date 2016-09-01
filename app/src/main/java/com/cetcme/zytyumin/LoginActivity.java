@@ -213,14 +213,12 @@ public class LoginActivity extends Activity implements View.OnClickListener{
 
             @Override
             public void onFailure(int statusCode, Header[] headers, Throwable throwable, JSONObject errorResponse) {
-                Log.i("Main", errorResponse.toString());
                 kProgressHUD.dismiss();
                 Toast.makeText(getApplicationContext(), "网络连接失败1", Toast.LENGTH_SHORT).show();
             }
 
             @Override
             public void onFailure(int statusCode, Header[] headers, String responseString, Throwable throwable) {
-                Log.i("Main", responseString.toString());
                 kProgressHUD.dismiss();
                 Toast.makeText(getApplicationContext(), "网络连接失败2", Toast.LENGTH_SHORT).show();
             }
