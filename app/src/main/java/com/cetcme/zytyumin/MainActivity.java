@@ -13,10 +13,10 @@ import com.baidu.mapapi.SDKInitializer;
 import java.util.ArrayList;
 import java.util.List;
 
-import IconPager.BaseFragment;
-import IconPager.IconPagerAdapter;
-import IconPager.IconTabPageIndicator;
-import IconPager.NoScrollViewPager;
+import com.cetcme.zytyumin.IconPager.BaseFragment;
+import com.cetcme.zytyumin.IconPager.IconPagerAdapter;
+import com.cetcme.zytyumin.IconPager.IconTabPageIndicator;
+import com.cetcme.zytyumin.IconPager.NoScrollViewPager;
 
 
 public class MainActivity extends FragmentActivity {

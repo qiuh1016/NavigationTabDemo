@@ -1,4 +1,4 @@
-package MyClass;
+package com.cetcme.zytyumin.MyClass;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;

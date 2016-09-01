@@ -10,7 +10,7 @@ import android.util.Log;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import MyClass.NavigationView;
+import com.cetcme.zytyumin.MyClass.NavigationView;
 
 public class VersionActivity extends Activity {
 

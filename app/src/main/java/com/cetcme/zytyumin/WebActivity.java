@@ -6,8 +6,8 @@ import android.util.Log;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 
-import MyClass.NavigationView;
-import MyClass.ProgressWebView;
+import com.cetcme.zytyumin.MyClass.NavigationView;
+import com.cetcme.zytyumin.MyClass.ProgressWebView;
 
 public class WebActivity extends Activity {
 

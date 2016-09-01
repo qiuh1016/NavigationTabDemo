@@ -21,9 +21,9 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import IconPager.BaseFragment;
-import MyClass.NoScrollGridView;
-import MyClass.NavigationView;
+import com.cetcme.zytyumin.IconPager.BaseFragment;
+import com.cetcme.zytyumin. MyClass.NoScrollGridView;
+import com.cetcme.zytyumin.MyClass.NavigationView;
 
 /**
  * Created by qiuhong on 8/24/16.

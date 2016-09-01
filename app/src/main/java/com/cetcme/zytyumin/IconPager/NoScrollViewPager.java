@@ -1,4 +1,4 @@
-package IconPager;
+package com.cetcme.zytyumin.IconPager;
 
 import android.content.Context;
 import android.support.v4.view.ViewPager;

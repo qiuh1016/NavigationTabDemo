@@ -22,8 +22,8 @@ import com.baidu.mapapi.map.MarkerOptions;
 import com.baidu.mapapi.map.OverlayOptions;
 import com.baidu.mapapi.model.LatLng;
 
-import IconPager.BaseFragment;
-import MyClass.NavigationView;
+import com.cetcme.zytyumin.IconPager.BaseFragment;
+import com.cetcme.zytyumin.MyClass.NavigationView;
 
 /**
  * Created by qiuhong on 8/24/16.

@@ -21,8 +21,8 @@ import android.widget.Toast;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import MyClass.CodeUtils;
-import MyClass.NavigationView;
+import com.cetcme.zytyumin.MyClass.CodeUtils;
+import com.cetcme.zytyumin.MyClass.NavigationView;
 
 public class CheckPhoneActivity extends Activity implements View.OnClickListener{
 

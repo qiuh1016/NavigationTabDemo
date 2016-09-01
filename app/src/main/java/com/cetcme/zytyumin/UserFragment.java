@@ -22,8 +22,8 @@ import android.widget.TextView;
 
 import com.kaopiz.kprogresshud.KProgressHUD;
 
-import IconPager.BaseFragment;
-import MyClass.NavigationView;
+import com.cetcme.zytyumin.IconPager.BaseFragment;
+import com.cetcme.zytyumin.MyClass.NavigationView;
 
 /**
  * Created by qiuhong on 8/24/16.

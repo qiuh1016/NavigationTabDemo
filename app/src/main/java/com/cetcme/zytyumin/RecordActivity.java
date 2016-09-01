@@ -13,7 +13,7 @@ import com.cetcme.zytyumin.xia.SearcherPayEnsuranceActivity;
 import com.cetcme.zytyumin.xia.SearcherShipDetectActivity;
 import com.cetcme.zytyumin.xia.SearcherTradeActivity;
 
-import MyClass.NavigationView;
+import com.cetcme.zytyumin.MyClass.NavigationView;
 
 public class RecordActivity extends Activity implements View.OnClickListener{
 

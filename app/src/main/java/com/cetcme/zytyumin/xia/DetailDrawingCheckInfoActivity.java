@@ -12,8 +12,8 @@ import android.widget.TextView;
 
 import com.cetcme.zytyumin.R;
 
-import MyClass.NavigationView;
-import MyClass.ProgressWebView;
+import com.cetcme.zytyumin.MyClass.NavigationView;
+import com.cetcme.zytyumin.MyClass.ProgressWebView;
 
 public class DetailDrawingCheckInfoActivity extends Activity {
 

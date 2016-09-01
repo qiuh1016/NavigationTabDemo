@@ -6,9 +6,9 @@ import android.os.Bundle;
 import android.util.Log;
 import android.widget.LinearLayout;
 
-import MyClass.ListCell;
-import MyClass.ListSeparator;
-import MyClass.NavigationView;
+import com.cetcme.zytyumin.MyClass.ListCell;
+import com.cetcme.zytyumin.MyClass.ListSeparator;
+import com.cetcme.zytyumin.MyClass.NavigationView;
 
 public class ShipActivity extends Activity {
 

@@ -1,4 +1,4 @@
-package MyClass;
+package com.cetcme.zytyumin.MyClass;
 
 /**
  * Created by qiuhong on 8/24/16.

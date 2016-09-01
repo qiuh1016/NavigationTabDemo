@@ -1,4 +1,4 @@
-package MyClass;
+package com.cetcme.zytyumin.MyClass;
 
 import android.content.Context;
 import android.graphics.drawable.Drawable;

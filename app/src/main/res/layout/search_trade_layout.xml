@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical" >
 
-    <MyClass.NavigationView
+    <com.cetcme.zytyumin.MyClass.NavigationView
         android:id="@+id/nav_main_in_search_trade"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>

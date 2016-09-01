@@ -6,7 +6,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
-import MyClass.NavigationView;
+import com.cetcme.zytyumin.MyClass.NavigationView;
 
 public class TodoActivity extends Activity {
 

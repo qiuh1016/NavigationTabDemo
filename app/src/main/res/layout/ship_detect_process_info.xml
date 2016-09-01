@@ -4,12 +4,12 @@
     android:layout_height="match_parent"
     android:orientation="vertical" >
 
-    <MyClass.NavigationView
+    <com.cetcme.zytyumin.MyClass.NavigationView
         android:id="@+id/nav_main_in_ship_detect_process"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 
-    <MyClass.ProgressWebView
+    <com.cetcme.zytyumin.MyClass.ProgressWebView
         android:id="@+id/web_view_in_in_ship_detect_process"
         android:layout_width="fill_parent"
         android:layout_height="match_parent" />

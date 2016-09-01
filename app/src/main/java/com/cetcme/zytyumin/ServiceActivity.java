@@ -4,7 +4,7 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.util.Log;
 
-import MyClass.NavigationView;
+import com.cetcme.zytyumin.MyClass.NavigationView;
 
 public class ServiceActivity extends Activity {
 

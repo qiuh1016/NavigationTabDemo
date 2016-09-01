@@ -31,9 +31,9 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import Http.GetWebDataWithHttpGet;
-import Http.ParseJson;
-import MyClass.NavigationView;
+import com.cetcme.zytyumin.Http.GetWebDataWithHttpGet;
+import com.cetcme.zytyumin.Http.ParseJson;
+import com.cetcme.zytyumin.MyClass.NavigationView;
 
 public class DetailClaimInfoActivity extends Activity {
 

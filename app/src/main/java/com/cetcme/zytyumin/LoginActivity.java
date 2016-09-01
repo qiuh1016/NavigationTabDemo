@@ -22,9 +22,8 @@ import com.loopj.android.http.RequestParams;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import MyClass.NavigationView;
+import com.cetcme.zytyumin.MyClass.NavigationView;
 
-import static android.widget.Toast.LENGTH_SHORT;
 
 public class LoginActivity extends Activity implements View.OnClickListener{
 

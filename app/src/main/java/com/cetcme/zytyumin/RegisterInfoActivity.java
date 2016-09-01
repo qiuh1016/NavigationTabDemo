@@ -16,7 +16,7 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
 
-import MyClass.NavigationView;
+import com.cetcme.zytyumin.MyClass.NavigationView;
 
 public class RegisterInfoActivity extends Activity implements View.OnClickListener{
 

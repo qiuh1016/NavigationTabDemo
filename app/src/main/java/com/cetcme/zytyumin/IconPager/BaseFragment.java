@@ -1,4 +1,4 @@
-package IconPager;
+package com.cetcme.zytyumin.IconPager;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;

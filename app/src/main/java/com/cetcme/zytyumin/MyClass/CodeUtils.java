@@ -1,4 +1,4 @@
-package MyClass;
+package com.cetcme.zytyumin.MyClass;
 
 
 import android.graphics.Bitmap;

@@ -15,8 +15,8 @@ import android.widget.TextView;
 import java.util.ArrayList;
 import java.util.List;
 
-import MyClass.FragmentAdapter;
-import MyClass.NavigationView;
+import com.cetcme.zytyumin.MyClass.FragmentAdapter;
+import com.cetcme.zytyumin.MyClass.NavigationView;
 
 public class SignActivity extends FragmentActivity {
 

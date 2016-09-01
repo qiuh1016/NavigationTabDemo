@@ -1,4 +1,4 @@
-package IconPager;
+package com.cetcme.zytyumin.IconPager;
 
 public interface IconPagerAdapter {
     /**

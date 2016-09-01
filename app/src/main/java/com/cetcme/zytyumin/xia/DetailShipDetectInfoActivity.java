@@ -11,8 +11,8 @@ import android.webkit.WebViewClient;
 
 import com.cetcme.zytyumin.R;
 
-import MyClass.NavigationView;
-import MyClass.ProgressWebView;
+import com.cetcme.zytyumin.MyClass.NavigationView;
+import com.cetcme.zytyumin.MyClass.ProgressWebView;
 
 public class DetailShipDetectInfoActivity extends Activity {
 

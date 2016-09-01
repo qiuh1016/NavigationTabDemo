@@ -1,4 +1,4 @@
-package Http;
+package com.cetcme.zytyumin.Http;
 
 import java.io.BufferedReader;
 import java.io.IOException;

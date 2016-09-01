@@ -9,7 +9,7 @@
     android:background="#eee"
     tools:context=".MainActivity">
 
-    <MyClass.NavigationView
+    <com.cetcme.zytyumin.MyClass.NavigationView
         android:id="@+id/nav_main_in_fragment_map"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>

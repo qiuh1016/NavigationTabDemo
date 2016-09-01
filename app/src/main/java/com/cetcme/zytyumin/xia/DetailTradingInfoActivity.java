@@ -12,9 +12,9 @@ import java.util.regex.Pattern;
 import java.util.zip.Inflater;
 
 import com.cetcme.zytyumin.R;
-import Http.GetWebDataWithHttpGet;
-import Http.ParseJson;
-import MyClass.NavigationView;
+import com.cetcme.zytyumin.Http.GetWebDataWithHttpGet;
+import com.cetcme.zytyumin.Http.ParseJson;
+import com.cetcme.zytyumin.MyClass.NavigationView;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
