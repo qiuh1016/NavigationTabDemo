@@ -74,7 +74,7 @@ public class DetailTradingInfoActivity extends Activity {
 	private NavigationView navigationView;
 
 	private void initNavigationView() {
-		navigationView = (NavigationView) findViewById(R.id.nav_main_in_ship_detect_process);
+		navigationView = (NavigationView) findViewById(R.id.nav_main_in_detail_info_layout);
 		navigationView.setTitle("交易查询详情");
 		navigationView.setBackView(R.drawable.icon_back_button);
 		navigationView.setClickCallback(new NavigationView.ClickCallback() {
