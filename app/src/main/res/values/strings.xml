@@ -31,4 +31,28 @@
 
     <string name="user_terms"><u>用户协议</u></string>
 
+    <!--API-->
+    <string name="rcldServerIP">120.27.149.252</string>
+    <string name="serverIP">192.168.3.171:8080</string>
+
+    <string name="loginUrl">/api/Account/login</string>
+    <string name="shipGetUrl">/api/ship/get.json</string>
+    <string name="shipUpdateUrl">/api/ship/update.json</string>
+    <string name="fenceUrl">/api/fence/all.json</string>
+    <string name="punchGetUrl">/api/punch/get.json</string>
+    <string name="iofGetUrl">/api/iof/get.json</string>
+    <string name="punchAllByPageUrl">/api/punch/allByPage.json</string>
+    <string name="trailGetUrl">/api/trail/get.json</string>
+    <string name="sailorNewUrl">/api/iof/sailor/new.json</string>
+    <string name="helpAlarmUrl">/api/device/helpAlarm.json</string>
+    <string name="changePWUrl">/api/password/change.json</string>
+    <string name="feedbackUrl">/api/feedback/save.json</string>
+    <string name="fenceConstructionUrl">/api/fence/construction.json</string>
+
+    <string name="getDownLoadUrl">/api/app/fishermanApp.json</string>
+    <string name="appVersionUrl">/api/app/latestVersion.json</string>
+
+    <string name="baiduGeoConvUrl">http://api.map.baidu.com/geoconv/v1/</string>
+    <string name="baiduGeoConvAppKey">stfZ8nXV0rvMfTLuAAY9SX2AqgLGLuOQ</string>
+    <string name="title_activity_visa">VisaActivity</string>
 </resources>

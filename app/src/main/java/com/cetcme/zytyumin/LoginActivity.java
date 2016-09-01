@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Handler;
+import android.preference.PreferenceActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -14,8 +15,16 @@ import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.kaopiz.kprogresshud.KProgressHUD;
+import com.loopj.android.http.AsyncHttpClient;
+import com.loopj.android.http.JsonHttpResponseHandler;
+import com.loopj.android.http.RequestParams;
+
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import MyClass.NavigationView;
+
+import static android.widget.Toast.LENGTH_SHORT;
 
 public class LoginActivity extends Activity implements View.OnClickListener{
 
@@ -159,8 +168,84 @@ public class LoginActivity extends Activity implements View.OnClickListener{
                 },1000);
             }
         }, 3000);
+
+
+
     }
 
+    private void login(final String loginName, final String password) {
+        RequestParams params = new RequestParams();
+        params.put("loginName", loginName);
+        params.put("password", password);
+        params.put("deviceType", 0);
+        params.put("clientId", 1);
+
+        SharedPreferences user = getSharedPreferences("user", Context.MODE_PRIVATE);
+        String serverIP = user.getString("serverIP", getString(R.string.serverIP));
+        String urlBody = "http://"+serverIP+getString(R.string.loginUrl);
+
+        AsyncHttpClient client = new AsyncHttpClient();
+
+        client.post(urlBody, params, new JsonHttpResponseHandler("UTF-8") {
+            @Override
+            public void onSuccess(int statusCode, PreferenceActivity.Header[] headers, JSONObject response) {
+                // If the response is JSONObject instead of expected JSONArray
+                Log.i("Main", response.toString());
+                Integer code;
+                try {
+                    code = response.getInt("code");
+                    if (code == 0) {
+
+                        //保存deviceNo 供轨迹查询
+                        try {
+                            String deviceNo = response.getString("deviceNo");
+
+                            //保存deviceNo
+                            SharedPreferences user = getSharedPreferences("user", Context.MODE_PRIVATE);
+                            SharedPreferences.Editor editor = user.edit();
+                            editor.putString("deviceNo", deviceNo);
+                            editor.apply();
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                        }
+
+                        //保存shipNo
+                        try {
+                            String shipNo = response.getString("shipNo");
+
+                            //保存deviceNo
+                            SharedPreferences user = getSharedPreferences("user", Context.MODE_PRIVATE);
+                            SharedPreferences.Editor editor = user.edit();
+                            editor.putString("shipNo", shipNo);
+                            editor.apply();
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                        }
+
+
+                        return;
+                    } else {
+                        String msg = response.getString("msg");
+                        System.out.println(msg);
+                        Toast.makeText(getApplicationContext(), msg, LENGTH_SHORT).show();
+                    }
+                } catch (JSONException e) {
+                    e.printStackTrace();
+//                    Toast.makeText(getApplicationContext(), "Login Failed!", LENGTH_SHORT).show();
+                }
+                kProgressHUD.dismiss();
+                loginButton.setEnabled(true);
+            }
+
+            @Override
+            public void onFailure(int statusCode, Header[] headers, Throwable throwable, JSONObject errorResponse) {
+                // called when response HTTP status is "4XX" (eg. 401, 403, 404)
+                kProgressHUD.dismiss();
+                loginButton.setEnabled(true);
+//                Toast.makeText(getApplicationContext(), "网络连接失败", Toast.LENGTH_SHORT).show();
+            }
+        });
+    }
 
 
 }
