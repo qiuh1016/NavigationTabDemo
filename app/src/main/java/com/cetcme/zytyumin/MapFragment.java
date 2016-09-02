@@ -137,6 +137,9 @@ public class MapFragment extends BaseFragment implements  BaiduMap.OnMarkerClick
     public boolean onMarkerClick(Marker marker) {
 
         Intent intent = new Intent();
+        Bundle bundle = new Bundle();
+        bundle.putString("shipName", "浙三渔04529");
+        intent.putExtras(bundle);
         intent.setClass(getActivity(), ShipInfoActivity.class);
         startActivity(intent);
         return false;

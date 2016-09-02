@@ -10,7 +10,10 @@ import android.content.Intent;
 import android.util.Log;
 import android.widget.AdapterView;
 import android.widget.GridView;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.SimpleAdapter;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.youth.banner.Banner;
@@ -24,6 +27,8 @@ import java.util.Map;
 import com.cetcme.zytyumin.IconPager.BaseFragment;
 import com.cetcme.zytyumin. MyClass.NoScrollGridView;
 import com.cetcme.zytyumin.MyClass.NavigationView;
+
+import org.w3c.dom.Text;
 
 /**
  * Created by qiuhong on 8/24/16.
@@ -39,12 +44,12 @@ public class HomepageFragment extends BaseFragment {
     private SimpleAdapter sim_adapter;
 
     private int[] gridIcon = {
-            R.drawable.t_google_plus_blue,
-            R.drawable.t_magnifying_glass_blue,
-            R.drawable.t_pencil_blue,
-            R.drawable.t_pinterest_blue,
-            R.drawable.t_square_blue,
-            R.drawable.t_twitter_blue
+            R.drawable.homepage_service,
+            R.drawable.homepage_record,
+            R.drawable.homepage_visa,
+            R.drawable.homepage_low,
+            R.drawable.homepage_process,
+            R.drawable.homepage_todo
     };
 
     private String[] gridName;
@@ -54,7 +59,7 @@ public class HomepageFragment extends BaseFragment {
             RecordActivity.class,
             ShipActivity.class,
             SignActivity.class,
-            null,
+            ProcessActivity.class,
             TodoActivity.class
     };
 
@@ -139,8 +144,8 @@ public class HomepageFragment extends BaseFragment {
         getData();
         //新建适配器
         final String [] from ={"image","text"};
-        int [] to = {R.id.grid_item_image,R.id.grid_item_text};
-        sim_adapter = new SimpleAdapter(getActivity(), data_list, R.layout.grid_item, from, to);
+        int [] to = {R.id.grid_item_image, R.id.grid_item_text};
+        MyGridAdapter sim_adapter = new MyGridAdapter(getActivity(), data_list, R.layout.grid_item, from, to);
         //配置适配器
         gridView.setAdapter(sim_adapter);
         //点击事件
@@ -210,5 +215,76 @@ public class HomepageFragment extends BaseFragment {
                 startActivity(intent);
             }
         });
+    }
+
+    class MyGridAdapter extends SimpleAdapter {
+
+        public Context context;
+        public int resource;
+
+        /**
+         * Constructor
+         *
+         * @param context  The context where the View associated with this SimpleAdapter is running
+         * @param data     A List of Maps. Each entry in the List corresponds to one row in the list. The
+         *                 Maps contain the data for each row, and should include all the entries specified in
+         *                 "from"
+         * @param resource Resource identifier of a view layout that defines the views for this list
+         *                 item. The layout file should include at least those named views defined in "to"
+         * @param from     A list of column names that will be added to the Map associated with each
+         *                 item.
+         * @param to       The views that should display column in the "from" parameter. These should all be
+         *                 TextViews. The first N views in this list are given the values of the first N columns
+         */
+        public MyGridAdapter(Context context, List<? extends Map<String, ?>> data, int resource, String[] from, int[] to) {
+            super(context, data, resource, from, to);
+            this.context = context;
+            this.resource = resource;
+        }
+
+        @Override
+        public View getView(int position, View convertView, ViewGroup parent) {
+            LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+
+            if (convertView == null) {
+                Log.i(TAG, "getView: " + position);
+
+                convertView = inflater.inflate(R.layout.grid_item, parent, false);
+
+                TextView textView = (TextView) convertView.findViewById(R.id.grid_item_text);
+                ImageView imageView = (ImageView) convertView.findViewById(R.id.grid_item_image);
+                textView.setText(gridName[position]);
+                imageView.setImageResource(gridIcon[position]);
+
+                LinearLayout linearLayout = (LinearLayout) convertView.findViewById(R.id.grid_item_layout);
+                linearLayout.setPadding(30,30,30,30);
+//                linearLayout.
+
+                switch (position) {
+                    case 0:
+                        linearLayout.setBackgroundResource(R.drawable.grid_item_background_top_left);
+                        break;
+                    case 2:
+                        linearLayout.setBackgroundResource(R.drawable.grid_item_background_top_right);
+                        break;
+                    case 3:
+                        linearLayout.setBackgroundResource(R.drawable.grid_item_background_bottom_left);
+                        break;
+                    case 5:
+                        linearLayout.setBackgroundResource(R.drawable.grid_item_background_bottom_right);
+                        break;
+                    default:
+                        linearLayout.setBackgroundResource(R.drawable.grid_item_background_no_radius);
+                        break;
+                }
+
+            }
+
+
+            return convertView;
+        }
+
+
+
     }
 }

@@ -117,8 +117,11 @@
         <activity android:name=".rcld.ioLogActivity"/>
         <activity android:name=".rcld.ReasonActivity"/>
         <activity android:name=".rcld.PunchActivity"/>
-        <activity android:name=".ShipInfoActivity"
-                  android:theme="@style/myDialogActivityStyle">
+        <activity
+            android:name=".ShipInfoActivity"
+            android:theme="@style/myDialogActivityStyle">
+        </activity>
+        <activity android:name=".ProcessActivity">
         </activity>
     </application>
 

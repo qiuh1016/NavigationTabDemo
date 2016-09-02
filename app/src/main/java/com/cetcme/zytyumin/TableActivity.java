@@ -121,7 +121,7 @@ public class TableActivity extends Activity {
                 //tv用于显示
                 TextView tv = new TextView(this);
                 tv.setText(info.get(row).get(tableHeadString[col]).toString());
-                tv.setBackgroundResource(R.drawable.boder);
+                tv.setBackgroundResource(R.drawable.grid_item_background_top_left);
                 tv.setGravity(Gravity.CENTER);
                 tv.setPadding(0, 20, 0, 20);
                 tableRow.addView(tv);

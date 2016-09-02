@@ -164,15 +164,15 @@ public class LoginActivity extends Activity implements View.OnClickListener{
         kProgressHUD.show();
 
         RequestParams params = new RequestParams();
-        params.put("username", username);
-        params.put("password", password);
+        params.put("loginName", username);
+        params.put("password", PrivateEncode.getMD5(password));
         params.put("deviceType", "0");
         params.put("clientId", "1");
         String urlBody = "http://61.164.218.155:8085/Account/login";
         String url = "http://61.164.218.155:8085/Account/login?loginName="+username+"&password="+PrivateEncode.getMD5(password)+"&deviceType=0&clientId=1";
 
         AsyncHttpClient client = new AsyncHttpClient();
-        client.get(this, url, params, new JsonHttpResponseHandler("UTF-8") {
+        client.get(urlBody, params, new JsonHttpResponseHandler("UTF-8") {
             @Override
             public void onSuccess(int statusCode, Header[] headers, JSONObject response) {
                 Log.i("Main", response.toString());

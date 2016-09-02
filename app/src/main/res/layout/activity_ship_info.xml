@@ -19,8 +19,7 @@
         android:background="@drawable/bottom_unselect">
 
         <!--text layout-->
-        <LinearLayout style="@style/wrap_layout"
-            >
+        <LinearLayout style="@style/wrap_layout">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -30,12 +29,15 @@
                     android:id="@+id/text1_in_ship_info_activity"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:padding="7dp"
                     android:textColor="@color/text_clo"
                     android:textSize="15sp"
                     android:text="@string/line_1_in_ship_info_activity"
                     android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp"/>
+                    android:layout_marginRight="10dp"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="3dp"
+                    android:paddingRight="3dp"/>
             </LinearLayout>
 
             <!-- 分割线 -->
@@ -50,12 +52,15 @@
                     android:id="@+id/text2_in_ship_info_activity"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:padding="7dp"
                     android:textColor="@color/text_clo"
                     android:textSize="15sp"
                     android:text="@string/line_2_in_ship_info_activity"
                     android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp"/>
+                    android:layout_marginRight="10dp"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="3dp"
+                    android:paddingRight="3dp"/>
             </LinearLayout>
 
             <!-- 分割线 -->
@@ -67,10 +72,13 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
-                android:padding="7dp"
                 android:textColor="@color/text_clo"
                 android:textSize="15sp"
-                android:text="@string/line_3_in_ship_info_activity" />
+                android:text="@string/line_3_in_ship_info_activity"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:paddingLeft="3dp"
+                android:paddingRight="3dp"/>
 
             <!-- 分割线 -->
             <View style="@style/bg_line"/>
@@ -86,10 +94,13 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="10dp"
-                    android:padding="7dp"
                     android:textColor="@color/text_clo"
                     android:textSize="15sp"
-                    android:text="@string/line_4_in_ship_info_activity" />
+                    android:text="@string/line_4_in_ship_info_activity"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="3dp"
+                    android:paddingRight="3dp"/>
             </LinearLayout>
 
             <!-- 分割线 -->
@@ -101,10 +112,13 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
-                android:padding="7dp"
                 android:textColor="@color/text_clo"
                 android:textSize="15sp"
-                android:text="@string/line_5_in_ship_info_activity" />
+                android:text="@string/line_5_in_ship_info_activity"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:paddingLeft="3dp"
+                android:paddingRight="3dp"/>
 
             <!-- 分割线 -->
             <View style="@style/bg_line"/>
@@ -119,10 +133,13 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="10dp"
-                    android:padding="7dp"
                     android:textColor="@color/text_clo"
                     android:textSize="15sp"
-                    android:text="@string/line_6_in_ship_info_activity" />
+                    android:text="@string/line_6_in_ship_info_activity"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="3dp"
+                    android:paddingRight="3dp"/>
             </LinearLayout>
 
             <!-- 分割线 -->
@@ -138,10 +155,13 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="10dp"
-                    android:padding="7dp"
                     android:textColor="@color/text_clo"
                     android:textSize="15sp"
-                    android:text="@string/line_7_in_ship_info_activity" />
+                    android:text="@string/line_7_in_ship_info_activity"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="3dp"
+                    android:paddingRight="3dp"/>
             </LinearLayout>
 
         </LinearLayout>
@@ -150,34 +170,33 @@
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            >
+            android:layout_marginTop="10dp">
 
             <Button
-                android:id="@+id/left_button_in_ship_info_activity"
+                android:id="@+id/route_button_in_ship_info_activity"
                 android:layout_width="120dp"
                 android:layout_height="40dp"
-                android:text="是"
+                android:text="轨迹"
                 android:textSize="14sp"
                 android:textColor="#fff"
                 android:background="@drawable/single_select"
                 android:gravity="center"
-                android:onClick="leftButtonTapped"
+                android:onClick="routeButtonTapped"
                 android:layout_marginBottom="10dp"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="5dp"/>
 
             <Button
-                android:id="@+id/right_button_in_ship_info_activity"
+                android:id="@+id/detail_button_in_ship_info_activity"
                 android:layout_width="120dp"
                 android:layout_height="40dp"
                 android:layout_marginLeft="5dp"
-                android:text="否"
+                android:text="详情"
                 android:textSize="14sp"
                 android:textColor="#fff"
                 android:background="@drawable/single_select"
                 android:gravity="center"
-                android:onClick="rightButtonTapped"
+                android:onClick="detailButtonTapped"
                 android:layout_marginBottom="10dp"
                 android:layout_marginRight="10dp"/>
         </LinearLayout>

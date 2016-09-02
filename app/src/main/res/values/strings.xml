@@ -13,6 +13,10 @@
     <string name="line_2_in_service_activity">图纸审查申报</string>
     <string name="line_3_in_service_activity">产品检验申报</string>
 
+    <string name="line_1_in_process_activity">渔船检验业务流程</string>
+    <string name="line_2_in_process_activity">渔船登记业务流程</string>
+    <string name="line_3_in_process_activity">捕捞许可业务流程</string>
+
     <string name="line_1_in_record_activity">投保查询</string>
     <string name="line_2_in_record_activity">理赔查询</string>
     <string name="line_3_in_record_activity">交易查询</string>
