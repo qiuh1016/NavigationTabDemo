@@ -28,17 +28,25 @@ public class RegisterInfoActivity extends Activity implements View.OnClickListen
     private EditText psw2EditText;
     private EditText nameEditText;
     private EditText idEditText;
-    private EditText phoneEditText;
     private EditText emailEditText;
 
     private CheckBox checkBox;
     private TextView userTermsTextView;
     private Button signUpButton;
 
+    private String phone;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register_info);
+
+        /**
+         * 获取手机号
+         */
+        Bundle bundle = getIntent().getExtras();
+        phone = bundle.getString("phone");
+
         initNavigationView();
         initUI();
     }
@@ -77,7 +85,6 @@ public class RegisterInfoActivity extends Activity implements View.OnClickListen
         psw2EditText = (EditText) findViewById(R.id.psw_2_editText_in_register_info_activity);
         nameEditText = (EditText) findViewById(R.id.name_editText_in_register_info_activity);
         idEditText = (EditText) findViewById(R.id.id_editText_in_register_info_activity);
-        phoneEditText = (EditText) findViewById(R.id.phone_editText_in_register_info_activity);
         emailEditText = (EditText) findViewById(R.id.email_editText_in_register_info_activity);
 
         /**
@@ -87,20 +94,11 @@ public class RegisterInfoActivity extends Activity implements View.OnClickListen
         emailEditText.setInputType(InputType.TYPE_TEXT_VARIATION_EMAIL_ADDRESS);
         idEditText.setInputType(InputType.TYPE_TEXT_VARIATION_EMAIL_ADDRESS);
 
-
-        /**
-         * 自动填写手机号
-         */
-        Bundle bundle = getIntent().getExtras();
-        String phone = bundle.getString("phone");
-        phoneEditText.setText(phone);
-
         /**
          * 注册按钮
          */
         signUpButton = (Button) findViewById(R.id.sign_up_button_in_register_info_activity);
         signUpButton.setOnClickListener(this);
-
 
         /**
          * spinner

@@ -177,28 +177,7 @@
                 </LinearLayout>
 
                 <!-- 分割线 -->
-                <View style="@style/bg_line"/>
                 <!-- 全圆角-->
-                <LinearLayout
-                    android:orientation="horizontal"
-                    android:layout_width="match_parent"
-                    android:gravity="center_vertical"
-                    android:layout_height="50dp"
-                    android:background="@drawable/bottom_unselect">
-
-                    <EditText
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:inputType="number"
-                        android:id="@+id/phone_editText_in_register_info_activity"
-                        android:layout_weight="1"
-                        android:hint="联系电话"
-                        android:layout_marginLeft="20dp"
-                        android:layout_marginRight="20dp"
-                        android:background="#FFFFFF"
-                        android:textSize="16sp"
-                        android:singleLine="true" />
-                </LinearLayout>
 
                 <!-- 分割线 -->
                 <View style="@style/bg_line"/>
@@ -215,7 +194,7 @@
                         android:layout_height="match_parent"
                         android:id="@+id/email_editText_in_register_info_activity"
                         android:layout_weight="1"
-                        android:hint="邮箱"
+                        android:hint="邮箱（选填）"
                         android:layout_marginLeft="20dp"
                         android:layout_marginRight="20dp"
                         android:background="#FFFFFF"
