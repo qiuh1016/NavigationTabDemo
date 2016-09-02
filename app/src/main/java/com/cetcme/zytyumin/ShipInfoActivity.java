@@ -1,6 +1,7 @@
 package com.cetcme.zytyumin;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -13,6 +14,7 @@ import android.widget.Toast;
 
 import com.cetcme.zytyumin.MyClass.NavigationView;
 import com.cetcme.zytyumin.MyClass.PrivateEncode;
+import com.cetcme.zytyumin.rcld.RouteActivity;
 import com.loopj.android.http.AsyncHttpClient;
 import com.loopj.android.http.JsonHttpResponseHandler;
 import com.loopj.android.http.RequestParams;
@@ -88,20 +90,24 @@ public class ShipInfoActivity extends Activity {
      */
     @Override
     public boolean onTouchEvent(MotionEvent event) {
-        finish();
-        Log.i(TAG, "onTouchEvent: ");
+//        finish();
+//        Log.i(TAG, "onTouchEvent: ");
         return true;
     }
 
     public void detailButtonTapped(View v) {
-        Log.i(TAG, "rightButtonTapped: ");
-//        this.finish();
+//        Intent intent = new Intent();
+//        intent.setClass(this, ServiceActivity.class);
+//        overridePendingTransition(R.anim.push_left_in_no_alpha, R.anim.push_left_out_no_alpha);
+//        startActivity(intent);
+        Toast.makeText(ShipInfoActivity.this, "显示详情界面", Toast.LENGTH_SHORT).show();
     }
 
     public void routeButtonTapped(View v) {
-        Log.i(TAG, "leftButtonTapped: ");
-//        this.finish();
-
+        Intent intent = new Intent();
+        intent.setClass(this, RouteActivity.class);
+        overridePendingTransition(R.anim.push_left_in_no_alpha, R.anim.push_left_out_no_alpha);
+        startActivity(intent);
     }
 
     private void getShipInfo(String shipName) {
@@ -153,6 +159,13 @@ public class ShipInfoActivity extends Activity {
                         /**
                          * 失败
                          */
+                        Toast.makeText(ShipInfoActivity.this, msg, Toast.LENGTH_SHORT).show();
+                        new Handler().postDelayed(new Runnable() {
+                            @Override
+                            public void run() {
+                                finish();
+                            }
+                        }, 2000);
                     }
 
                 } catch (JSONException e) {
@@ -161,17 +174,20 @@ public class ShipInfoActivity extends Activity {
                      */
                     e.printStackTrace();
                     Log.i(TAG, "onResponse: json解析错误");
+                    Toast.makeText(ShipInfoActivity.this, "获取信息失败", Toast.LENGTH_SHORT).show();
                 }
             }
 
             @Override
             public void onFailure(int statusCode, Header[] headers, Throwable throwable, JSONObject errorResponse) {
                 Log.i(TAG, "onFailure: 1");
+                Toast.makeText(ShipInfoActivity.this, "获取信息失败", Toast.LENGTH_SHORT).show();
             }
 
             @Override
             public void onFailure(int statusCode, Header[] headers, String responseString, Throwable throwable) {
                 Log.i(TAG, "onFailure: 2");
+                Toast.makeText(ShipInfoActivity.this, "获取信息失败", Toast.LENGTH_SHORT).show();
             }
         });
     }

@@ -57,7 +57,7 @@ public class HomepageFragment extends BaseFragment {
     private Class[] gridClass = {
             ServiceActivity.class,
             RecordActivity.class,
-            ShipActivity.class,
+            VisaActivity.class,
             SignActivity.class,
             ProcessActivity.class,
             TodoActivity.class
@@ -93,6 +93,17 @@ public class HomepageFragment extends BaseFragment {
     public enum Function {
         SERVICE, RECORD, VISE, LAW, PROCESS, TODO
     }
+
+    //TODO: 测试用的船名
+    public String[] shipNames = {
+             "浙三渔04529",
+             "浙嘉渔3214",
+             "浙嘉渔1314"};
+
+    public String[] shipNumbers = {
+            "3303811998090003",
+            "3303812001050005",
+            "3302251998010002"};
 
     @Override
     public View onCreateView(LayoutInflater inflater, final ViewGroup container, Bundle savedInstanceState) {
@@ -169,11 +180,43 @@ public class HomepageFragment extends BaseFragment {
                  * 已登陆则正常显示功能界面
                  */
                 if (gridClass[position] != null) {
-                    Intent intent = new Intent();
-                    intent.setClass(getActivity(), gridClass[position]);
-                    startActivity(intent);
-                    MainActivity activity = (MainActivity) getActivity();
-                    activity.overridePendingTransition(R.anim.push_left_in_no_alpha, R.anim.push_left_out_no_alpha);
+
+
+                    if (position == 2) {
+                        /**
+                         * 打开电子签证界面前进行判断是否只有一条船
+                         */
+                        if (shipNames.length > 1) {
+                            Intent intent = new Intent();
+                            intent.setClass(getActivity(), ShipActivity.class);
+                            Bundle bundle = new Bundle();
+                            bundle.putBoolean("openFromMapFragment", false);
+                            bundle.putStringArray("shipNames", shipNames);
+                            bundle.putStringArray("shipNumbers", shipNumbers);
+                            intent.putExtras(bundle);
+                            startActivity(intent);
+                            MainActivity activity = (MainActivity) getActivity();
+                            activity.overridePendingTransition(R.anim.push_left_in_no_alpha, R.anim.push_left_out_no_alpha);
+                        } else {
+                            Intent intent = new Intent();
+                            intent.setClass(getActivity(), gridClass[position]);
+                            Bundle bundle = new Bundle();
+                            bundle.putString("shipName", shipNames[0]);
+                            bundle.putString("shipNumber", shipNumbers[0]);
+                            intent.putExtras(bundle);
+                            startActivity(intent);
+                            MainActivity activity = (MainActivity) getActivity();
+                            activity.overridePendingTransition(R.anim.push_left_in_no_alpha, R.anim.push_left_out_no_alpha);
+                        }
+
+                    } else {
+                        Intent intent = new Intent();
+                        intent.setClass(getActivity(), gridClass[position]);
+                        startActivity(intent);
+                        MainActivity activity = (MainActivity) getActivity();
+                        activity.overridePendingTransition(R.anim.push_left_in_no_alpha, R.anim.push_left_out_no_alpha);
+                    }
+
                 } else {
                     Toast.makeText(getActivity(), "待开发", Toast.LENGTH_SHORT).show();
                 }

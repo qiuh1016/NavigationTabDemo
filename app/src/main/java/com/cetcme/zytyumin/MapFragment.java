@@ -41,6 +41,16 @@ public class MapFragment extends BaseFragment implements  BaiduMap.OnMarkerClick
     private InfoWindow mInfoWindow;
     private boolean infoWindowIsShow = true;
 
+    private String[] shipNames = {
+            "浙三渔04529",
+            "浙嘉渔3214",
+            "浙嘉渔1314"};
+
+    private String[] shipNumbers = {
+            "3303811998090003",
+            "3303812001050005",
+            "3302251998010002"};
+
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.fragment_map, null, false);
@@ -57,12 +67,22 @@ public class MapFragment extends BaseFragment implements  BaiduMap.OnMarkerClick
     private void initNavigationView() {
         navigationView = (NavigationView) view.findViewById(R.id.nav_main_in_fragment_map);
         navigationView.setTitle("地图");
-        navigationView.setRightView(R.drawable.icon_search);
+        navigationView.setRightView(R.drawable.icon_list);
         navigationView.setClickCallback(new NavigationView.ClickCallback() {
 
             @Override
             public void onRightClick() {
                 Log.i("main","点击了右侧按钮!");
+                Intent intent = new Intent();
+                intent.setClass(getActivity(), ShipActivity.class);
+                Bundle bundle = new Bundle();
+                bundle.putBoolean("openFromMapFragment", true);
+                bundle.putStringArray("shipNames", shipNames);
+                bundle.putStringArray("shipNumbers", shipNumbers);
+                intent.putExtras(bundle);
+                startActivity(intent);
+                MainActivity activity = (MainActivity) getActivity();
+                activity.overridePendingTransition(R.anim.push_left_in_no_alpha, R.anim.push_left_out_no_alpha);
             }
 
             @Override

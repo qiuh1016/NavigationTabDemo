@@ -123,6 +123,8 @@
         </activity>
         <activity android:name=".ProcessActivity">
         </activity>
+        <activity android:name=".rcld.RouteActivity"/>
+        <activity android:name=".rcld.RouteDisplayActivity"/>
     </application>
 
 </manifest>

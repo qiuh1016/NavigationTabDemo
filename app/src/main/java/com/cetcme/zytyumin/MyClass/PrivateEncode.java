@@ -63,7 +63,7 @@ public class PrivateEncode {
         return d * Math.PI / 180.0;
     }
 
-    public Double GetDistance(double lat1, double lng1, double lat2, double lng2) {
+    public static Double GetDistance(double lat1, double lng1, double lat2, double lng2) {
         double radLat1 = rad(lat1);
         double radLat2 = rad(lat2);
         double a = radLat1 - radLat2;
