@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v4.content.ContextCompat;
+import android.text.InputType;
 import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
@@ -79,13 +80,31 @@ public class RegisterInfoActivity extends Activity implements View.OnClickListen
         phoneEditText = (EditText) findViewById(R.id.phone_editText_in_register_info_activity);
         emailEditText = (EditText) findViewById(R.id.email_editText_in_register_info_activity);
 
+        /**
+         * 设置为英文键盘
+         */
+        accountEditText.setInputType(InputType.TYPE_TEXT_VARIATION_EMAIL_ADDRESS);
+        emailEditText.setInputType(InputType.TYPE_TEXT_VARIATION_EMAIL_ADDRESS);
+        idEditText.setInputType(InputType.TYPE_TEXT_VARIATION_EMAIL_ADDRESS);
+
+
+        /**
+         * 自动填写手机号
+         */
         Bundle bundle = getIntent().getExtras();
         String phone = bundle.getString("phone");
         phoneEditText.setText(phone);
 
+        /**
+         * 注册按钮
+         */
         signUpButton = (Button) findViewById(R.id.sign_up_button_in_register_info_activity);
         signUpButton.setOnClickListener(this);
 
+
+        /**
+         * spinner
+         */
         spinner = (Spinner) findViewById(R.id.spinner_in_register_info_activity);
         final String[] mItems = {"个人帐号", "企业帐号"};
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this,android.R.layout.simple_spinner_item, mItems);
@@ -112,6 +131,9 @@ public class RegisterInfoActivity extends Activity implements View.OnClickListen
             }
         });
 
+        /**
+         * 单选框
+         */
         checkBox = (CheckBox) findViewById(R.id.checkBox_in_register_info_activity);
         checkBox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
@@ -121,6 +143,9 @@ public class RegisterInfoActivity extends Activity implements View.OnClickListen
             }
         });
 
+        /**
+         * 用户协议
+         */
         userTermsTextView = (TextView) findViewById(R.id.user_terms_in_register_info_activity);
         userTermsTextView.setOnClickListener(this);
 

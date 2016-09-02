@@ -28,17 +28,22 @@ public class NavigationView extends RelativeLayout implements View.OnClickListen
         this(context, null);
     }
 
+    private RelativeLayout backgroundLayout;
     private ImageView backView;
     private TextView titleView;
     private ImageView rightView;
     public NavigationView(Context context, AttributeSet attrs) {
         super(context, attrs);
         View view = LayoutInflater.from(context).inflate(R.layout.navigation_view, this, true);
+
         backView = (ImageView) view.findViewById(R.id.iv_nav_back);
         backView.setOnClickListener(this);
-        titleView = (TextView) view.findViewById(R.id.tv_nav_title);
         rightView = (ImageView) view.findViewById(R.id.iv_nav_right);
         rightView.setOnClickListener(this);
+
+        titleView = (TextView) view.findViewById(R.id.tv_nav_title);
+        backgroundLayout = (RelativeLayout) view.findViewById(R.id.iv_nav_layout);
+
     }
 
     /**
@@ -61,6 +66,15 @@ public class NavigationView extends RelativeLayout implements View.OnClickListen
      */
     public void setRightView(int imageResource) {
         rightView.setImageResource(imageResource);
+    }
+
+    /**
+     * 设置背景资源
+     * @author qh
+     * created at 9/2/16 10:54
+     */
+    public void setBackgroundResource(int resid) {
+        backgroundLayout.setBackgroundResource(resid);
     }
 
     /**

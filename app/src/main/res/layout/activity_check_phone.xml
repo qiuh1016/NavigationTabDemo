@@ -9,10 +9,7 @@
               android:paddingTop="@dimen/activity_vertical_margin"
               tools:context=".CheckPhoneActivity"
               android:background="#EEEEEE"
-              android:orientation="vertical"
-
-              android:focusable="true"
-              android:focusableInTouchMode="true" >
+              android:orientation="vertical" >
 
     <com.cetcme.zytyumin.MyClass.NavigationView
         android:id="@+id/nav_main_in_check_phone_activity"

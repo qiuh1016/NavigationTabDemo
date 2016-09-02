@@ -1,5 +1,6 @@
 package com.cetcme.zytyumin;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.util.Log;
@@ -134,14 +135,20 @@ public class MapFragment extends BaseFragment implements  BaiduMap.OnMarkerClick
 
     @Override
     public boolean onMarkerClick(Marker marker) {
-        if (marker.equals(comMarker)) {
-            if (infoWindowIsShow) {
-                baiduMap.hideInfoWindow();
-            } else {
-                baiduMap.showInfoWindow(mInfoWindow);
-            }
-            infoWindowIsShow = !infoWindowIsShow;
-        }
+
+        Intent intent = new Intent();
+        intent.setClass(getActivity(), ShipInfoActivity.class);
+        startActivity(intent);
         return false;
+
+//        if (marker.equals(comMarker)) {
+//            if (infoWindowIsShow) {
+//                baiduMap.hideInfoWindow();
+//            } else {
+//                baiduMap.showInfoWindow(mInfoWindow);
+//            }
+//            infoWindowIsShow = !infoWindowIsShow;
+//        }
+//        return false;
     }
 }

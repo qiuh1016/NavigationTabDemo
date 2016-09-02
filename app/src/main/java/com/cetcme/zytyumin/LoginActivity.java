@@ -6,7 +6,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Handler;
-import android.preference.PreferenceActivity;
+import android.text.InputType;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -22,10 +22,8 @@ import com.cetcme.zytyumin.MyClass.NavigationView;
 import com.loopj.android.http.AsyncHttpClient;
 import com.loopj.android.http.JsonHttpResponseHandler;
 import com.loopj.android.http.RequestParams;
-import com.loopj.android.http.ResponseHandlerInterface;
 
 import org.apache.http.Header;
-import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -39,7 +37,7 @@ import okhttp3.Response;
 
 public class LoginActivity extends Activity implements View.OnClickListener{
 
-    private EditText userNameEditText;
+    private EditText usernameEditText;
     private EditText passwordEditText;
     private Button loginButton;
     private Button forgetButton;
@@ -88,8 +86,12 @@ public class LoginActivity extends Activity implements View.OnClickListener{
     }
 
     private void initUI() {
-        userNameEditText = (EditText) findViewById(R.id.username_editText_in_login_activity);
+        usernameEditText = (EditText) findViewById(R.id.username_editText_in_login_activity);
         passwordEditText = (EditText) findViewById(R.id.password_editText_in_login_activity);
+        /**
+         * 设置为英文键盘
+         */
+        usernameEditText.setInputType(InputType.TYPE_TEXT_VARIATION_EMAIL_ADDRESS);
 
         loginButton = (Button) findViewById(R.id.login_button_in_login_activity);
         forgetButton = (Button) findViewById(R.id.forget_password_button_in_login_activity);
@@ -151,10 +153,11 @@ public class LoginActivity extends Activity implements View.OnClickListener{
         /**
          * 判断用户名和密码是否填写
          */
-        final String username = userNameEditText.getText().toString();
+        final String username = usernameEditText.getText().toString();
         final String password = passwordEditText.getText().toString();
         if (username.isEmpty() || password.isEmpty()) {
             Toast.makeText(this, "用户名或密码不能为空", Toast.LENGTH_SHORT).show();
+            loginButtonAnimator();
             return;
         }
 
@@ -198,6 +201,8 @@ public class LoginActivity extends Activity implements View.OnClickListener{
                          */
                         kProgressHUD.dismiss();
                         Toast.makeText(getApplicationContext(), msg, Toast.LENGTH_SHORT).show();
+                        Log.i(TAG, "onSuccess: rotation");
+                        loginButtonAnimator();
                     }
 
                 } catch (JSONException e) {
@@ -230,7 +235,7 @@ public class LoginActivity extends Activity implements View.OnClickListener{
         /**
          * 判断用户名和密码是否填写
          */
-        final String username = userNameEditText.getText().toString();
+        final String username = usernameEditText.getText().toString();
         final String password = passwordEditText.getText().toString();
         if (username.isEmpty() || password.isEmpty()) {
             Toast.makeText(this, "用户名或密码不能为空", Toast.LENGTH_SHORT).show();
@@ -369,7 +374,53 @@ public class LoginActivity extends Activity implements View.OnClickListener{
         SharedPreferences user = getSharedPreferences("user", Context.MODE_PRIVATE);
         String username = user.getString("username", "");
         if (!username.isEmpty()) {
-            userNameEditText.setText(username);
+            usernameEditText.setText(username);
         }
+    }
+
+    private void loginButtonAnimator() {
+        loginButton.animate()
+                .translationX(-50)
+                .setDuration(50);
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                loginButton.animate()
+                        .translationX(50)
+                        .setDuration(100);
+                new Handler().postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        loginButton.animate()
+                                .translationX(-50)
+                                .setDuration(100);
+                        new Handler().postDelayed(new Runnable() {
+                            @Override
+                            public void run() {
+                                loginButton.animate()
+                                        .translationX(50)
+                                        .setDuration(100);
+                                new Handler().postDelayed(new Runnable() {
+                                    @Override
+                                    public void run() {
+                                        loginButton.animate()
+                                                .translationX(-50)
+                                                .setDuration(100);
+                                        new Handler().postDelayed(new Runnable() {
+                                            @Override
+                                            public void run() {
+                                                loginButton.animate()
+                                                        .translationX(0)
+                                                        .setDuration(50);
+                                            }
+                                        },50);
+                                    }
+                                },100);
+                            }
+                        },100);
+                    }
+                },100);
+            }
+        },50);
     }
 }

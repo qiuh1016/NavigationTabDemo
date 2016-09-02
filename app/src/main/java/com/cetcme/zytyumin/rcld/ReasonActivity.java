@@ -8,6 +8,7 @@ import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.Editable;
+import android.text.InputType;
 import android.text.TextWatcher;
 import android.util.Log;
 import android.view.MenuItem;
@@ -74,6 +75,12 @@ public class ReasonActivity extends Activity implements View.OnClickListener{
         addButton = (Button) findViewById(R.id.add_button_in_reason_activity);
         fillButton = (Button) findViewById(R.id.fill_button_in_reason_activity);
         idCheckButton = (Button) findViewById(R.id.id_check_button_in_reason_activity);
+
+        /**
+         * 设置为英文键盘
+         */
+        idTextView.setInputType(InputType.TYPE_TEXT_VARIATION_EMAIL_ADDRESS);
+
         addButton.setOnClickListener(this);
         fillButton.setOnClickListener(this);
         idCheckButton.setOnClickListener(this);

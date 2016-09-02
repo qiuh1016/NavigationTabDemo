@@ -49,10 +49,16 @@ public class CheckPhoneActivity extends Activity implements View.OnClickListener
     private Bitmap codeUtilsBitmap;
     private String codeUtilsCode;
 
+    private boolean isSignUp;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_check_phone);
+
+        Bundle bundle = getIntent().getExtras();
+        isSignUp = bundle.getBoolean("isSignUp");
+
         initNavigationView();
         initUI();
         initCodeUtils();
@@ -97,7 +103,14 @@ public class CheckPhoneActivity extends Activity implements View.OnClickListener
         getSMSButton.setOnClickListener(this);
         nextButton.setOnClickListener(this);
 
-        insertPhoneNumber();
+        if (!isSignUp) {
+            phoneEditText.setHint("已向您的手机发送验证码");
+            phoneEditText.setEnabled(false);
+            getSMSButton.setVisibility(View.INVISIBLE);
+            codeUtilsEditText.requestFocus();
+        }
+
+//        insertPhoneNumber();
 
     }
 
@@ -128,7 +141,6 @@ public class CheckPhoneActivity extends Activity implements View.OnClickListener
             phoneEditText.setText(getMobilePhoneNumber());
         }
     }
-
 
     @Override
     public void onClick(View v) {
@@ -190,10 +202,6 @@ public class CheckPhoneActivity extends Activity implements View.OnClickListener
 
     private void next() {
         //TODO:向服务器验证短信
-
-        Bundle bundle = getIntent().getExtras();
-        boolean isSignUp = bundle.getBoolean("isSignUp");
-
         Intent intent = new Intent();
         /**
          * 跳转

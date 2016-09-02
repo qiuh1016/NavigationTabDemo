@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:gravity="center_horizontal"
+              android:orientation="vertical" >
+
+    <com.cetcme.zytyumin.MyClass.NavigationView
+        android:id="@+id/nav_main_in_ship_info_activity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <LinearLayout
+        android:id="@+id/bottom_layout_in_ship_info_activity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:background="@drawable/bottom_unselect">
+
+        <!--text layout-->
+        <LinearLayout style="@style/wrap_layout"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/top_unselect">
+                <TextView
+                    android:id="@+id/text1_in_ship_info_activity"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="7dp"
+                    android:textColor="@color/text_clo"
+                    android:textSize="15sp"
+                    android:text="@string/line_1_in_ship_info_activity"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"/>
+            </LinearLayout>
+
+            <!-- 分割线 -->
+            <View style="@style/bg_line"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/main_color_light">
+
+                <TextView
+                    android:id="@+id/text2_in_ship_info_activity"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="7dp"
+                    android:textColor="@color/text_clo"
+                    android:textSize="15sp"
+                    android:text="@string/line_2_in_ship_info_activity"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"/>
+            </LinearLayout>
+
+            <!-- 分割线 -->
+            <View style="@style/bg_line"/>
+
+            <TextView
+                android:id="@+id/text3_in_ship_info_activity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:padding="7dp"
+                android:textColor="@color/text_clo"
+                android:textSize="15sp"
+                android:text="@string/line_3_in_ship_info_activity" />
+
+            <!-- 分割线 -->
+            <View style="@style/bg_line"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/main_color_light">
+
+                <TextView
+                    android:id="@+id/text4_in_ship_info_activity"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:padding="7dp"
+                    android:textColor="@color/text_clo"
+                    android:textSize="15sp"
+                    android:text="@string/line_4_in_ship_info_activity" />
+            </LinearLayout>
+
+            <!-- 分割线 -->
+            <View style="@style/bg_line"/>
+
+            <TextView
+                android:id="@+id/text5_in_ship_info_activity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:padding="7dp"
+                android:textColor="@color/text_clo"
+                android:textSize="15sp"
+                android:text="@string/line_5_in_ship_info_activity" />
+
+            <!-- 分割线 -->
+            <View style="@style/bg_line"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/main_color_light">
+                <TextView
+                    android:id="@+id/text6_in_ship_info_activity"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:padding="7dp"
+                    android:textColor="@color/text_clo"
+                    android:textSize="15sp"
+                    android:text="@string/line_6_in_ship_info_activity" />
+            </LinearLayout>
+
+            <!-- 分割线 -->
+            <View style="@style/bg_line"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bottom_unselect">
+                <TextView
+                    android:id="@+id/text7_in_ship_info_activity"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:padding="7dp"
+                    android:textColor="@color/text_clo"
+                    android:textSize="15sp"
+                    android:text="@string/line_7_in_ship_info_activity" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!--button layout-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            >
+
+            <Button
+                android:id="@+id/left_button_in_ship_info_activity"
+                android:layout_width="120dp"
+                android:layout_height="40dp"
+                android:text="是"
+                android:textSize="14sp"
+                android:textColor="#fff"
+                android:background="@drawable/single_select"
+                android:gravity="center"
+                android:onClick="leftButtonTapped"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="5dp"/>
+
+            <Button
+                android:id="@+id/right_button_in_ship_info_activity"
+                android:layout_width="120dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="5dp"
+                android:text="否"
+                android:textSize="14sp"
+                android:textColor="#fff"
+                android:background="@drawable/single_select"
+                android:gravity="center"
+                android:onClick="rightButtonTapped"
+                android:layout_marginBottom="10dp"
+                android:layout_marginRight="10dp"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

@@ -29,6 +29,15 @@
     <string name="line_3_in_todo_activity">整改意见书</string>
     <string name="line_4_in_todo_activity">检验记录</string>
 
+    <string name="line_1_in_ship_info_activity">渔船材质：</string>
+    <string name="line_2_in_ship_info_activity">渔船长度：</string>
+    <string name="line_3_in_ship_info_activity">总功率数：</string>
+    <string name="line_4_in_ship_info_activity">总吨位数：</string>
+    <string name="line_5_in_ship_info_activity">渔船类型：</string>
+    <string name="line_6_in_ship_info_activity">作业类型：</string>
+    <string name="line_7_in_ship_info_activity">更新时间：</string>
+
+
     <string name="user_terms"><u>用户协议</u></string>
 
     <!--API-->
@@ -56,6 +65,7 @@
     <string name="baiduGeoConvUrl">http://api.map.baidu.com/geoconv/v1/</string>
     <string name="baiduGeoConvAppKey">stfZ8nXV0rvMfTLuAAY9SX2AqgLGLuOQ</string>
     <string name="title_activity_visa">VisaActivity</string>
+    <!--API end-->
 
     <!--xia-->
     <string name="c_boat_name">渔船名称</string>

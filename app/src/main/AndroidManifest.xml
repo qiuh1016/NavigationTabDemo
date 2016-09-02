@@ -51,77 +51,75 @@
         </activity>
         <activity android:name=".RegisterInfoActivity">
         </activity>
-
-
         <activity
-            android:name="com.cetcme.zytyumin.xia.SearchRecordListActivity"
+            android:name=".xia.SearchRecordListActivity"
             android:launchMode="standard"
-            android:screenOrientation="portrait" >
+            android:screenOrientation="portrait">
         </activity>
         <activity
-            android:name="com.cetcme.zytyumin.xia.SearcherPayEnsuranceActivity"
+            android:name=".xia.SearcherPayEnsuranceActivity"
             android:launchMode="standard"
             android:screenOrientation="portrait"
-            android:windowSoftInputMode="adjustPan|stateHidden" >
+            android:windowSoftInputMode="adjustPan|stateHidden">
         </activity>
         <activity
-            android:name="com.cetcme.zytyumin.xia.DetailPayInsuranceInfoActivity"
+            android:name=".xia.DetailPayInsuranceInfoActivity"
             android:launchMode="standard"
-            android:screenOrientation="portrait" >
+            android:screenOrientation="portrait">
         </activity>
         <activity
-            android:name="com.cetcme.zytyumin.xia.SearcherClaimActivity"
-            android:launchMode="standard"
-            android:screenOrientation="portrait"
-            android:windowSoftInputMode="adjustPan|stateHidden" >
-        </activity>
-        <activity
-            android:name="com.cetcme.zytyumin.xia.DetailClaimInfoActivity"
-            android:launchMode="standard"
-            android:screenOrientation="portrait" >
-        </activity>
-        <activity
-            android:name="com.cetcme.zytyumin.xia.SearcherTradeActivity"
+            android:name=".xia.SearcherClaimActivity"
             android:launchMode="standard"
             android:screenOrientation="portrait"
-            android:windowSoftInputMode="adjustPan|stateHidden" >
+            android:windowSoftInputMode="adjustPan|stateHidden">
         </activity>
         <activity
-            android:name="com.cetcme.zytyumin.xia.DetailTradingInfoActivity"
+            android:name=".xia.DetailClaimInfoActivity"
             android:launchMode="standard"
-            android:screenOrientation="portrait" >
+            android:screenOrientation="portrait">
         </activity>
         <activity
-            android:name="com.cetcme.zytyumin.xia.SearcherShipDetectActivity"
-            android:launchMode="standard"
-            android:screenOrientation="portrait"
-            android:windowSoftInputMode="adjustPan|stateHidden" >
-        </activity>
-        <activity
-            android:name="com.cetcme.zytyumin.xia.SearcherDrawingCheckActivity"
+            android:name=".xia.SearcherTradeActivity"
             android:launchMode="standard"
             android:screenOrientation="portrait"
-            android:windowSoftInputMode="adjustPan|stateHidden" >
+            android:windowSoftInputMode="adjustPan|stateHidden">
         </activity>
         <activity
-            android:name="com.cetcme.zytyumin.xia.DetailShipDetectInfoActivity"
+            android:name=".xia.DetailTradingInfoActivity"
             android:launchMode="standard"
-            android:screenOrientation="portrait" >
+            android:screenOrientation="portrait">
         </activity>
         <activity
-            android:name="com.cetcme.zytyumin.xia.DetailDrawingCheckInfoActivity"
+            android:name=".xia.SearcherShipDetectActivity"
             android:launchMode="standard"
             android:screenOrientation="portrait"
-            android:windowSoftInputMode="adjustPan|stateHidden" >
+            android:windowSoftInputMode="adjustPan|stateHidden">
         </activity>
-
-        <activity android:name="com.cetcme.zytyumin.rcld.ioConfirmActivity" />
-        <activity android:name="com.cetcme.zytyumin.rcld.iofSailorActivity" />
-        <activity android:name="com.cetcme.zytyumin.rcld.ioLogActivity" />
-        <activity android:name="com.cetcme.zytyumin.rcld.ReasonActivity" />
-        <activity android:name="com.cetcme.zytyumin.rcld.PunchActivity" />
-
-
+        <activity
+            android:name=".xia.SearcherDrawingCheckActivity"
+            android:launchMode="standard"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden">
+        </activity>
+        <activity
+            android:name=".xia.DetailShipDetectInfoActivity"
+            android:launchMode="standard"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name=".xia.DetailDrawingCheckInfoActivity"
+            android:launchMode="standard"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden">
+        </activity>
+        <activity android:name=".rcld.ioConfirmActivity"/>
+        <activity android:name=".rcld.iofSailorActivity"/>
+        <activity android:name=".rcld.ioLogActivity"/>
+        <activity android:name=".rcld.ReasonActivity"/>
+        <activity android:name=".rcld.PunchActivity"/>
+        <activity android:name=".ShipInfoActivity"
+                  android:theme="@style/myDialogActivityStyle">
+        </activity>
     </application>
 
 </manifest>

@@ -75,7 +75,7 @@
                         android:password="false"
                         android:textSize="16sp"
                         android:singleLine="true"
-                        android:inputType="number"/>
+                        android:inputType="text"/>
                 </LinearLayout>
 
                 <!-- 分割线 -->
