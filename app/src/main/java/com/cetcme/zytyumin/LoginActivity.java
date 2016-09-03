@@ -4,8 +4,10 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Handler;
+import android.support.v4.content.ContextCompat;
 import android.text.InputType;
 import android.util.Log;
 import android.view.View;
@@ -14,6 +16,8 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import com.cetcme.zytyumin.MyClass.ButtonShack;
+import com.cetcme.zytyumin.MyClass.DensityUtil;
 import com.cetcme.zytyumin.MyClass.PrivateEncode;
 import com.kaopiz.kprogresshud.KProgressHUD;
 
@@ -22,6 +26,8 @@ import com.cetcme.zytyumin.MyClass.NavigationView;
 import com.loopj.android.http.AsyncHttpClient;
 import com.loopj.android.http.JsonHttpResponseHandler;
 import com.loopj.android.http.RequestParams;
+
+import net.steamcrafted.loadtoast.LoadToast;
 
 import org.apache.http.Header;
 import org.json.JSONException;
@@ -112,6 +118,7 @@ public class LoginActivity extends Activity implements View.OnClickListener{
             case R.id.forget_password_button_in_login_activity:
                 Log.i(TAG, "onClick: forgetButton");
                 openCheckPhoneActivity(false);
+//                Toast.makeText(getApplicationContext(), "待开发", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.sign_up_password_button_in_login_activity:
                 Log.i(TAG, "onClick: signUpButton");
@@ -157,7 +164,7 @@ public class LoginActivity extends Activity implements View.OnClickListener{
         final String password = passwordEditText.getText().toString();
         if (username.isEmpty() || password.isEmpty()) {
             Toast.makeText(this, "用户名或密码不能为空", Toast.LENGTH_SHORT).show();
-            loginButtonAnimator();
+            ButtonShack.run(loginButton);
             return;
         }
 
@@ -175,16 +182,16 @@ public class LoginActivity extends Activity implements View.OnClickListener{
         client.get(urlBody, params, new JsonHttpResponseHandler("UTF-8") {
             @Override
             public void onSuccess(int statusCode, Header[] headers, JSONObject response) {
-                Log.i("Main", response.toString());
                 kProgressHUD.dismiss();
                 try {
-                    final String msg = response.getString("Msg");
-                    final String sessionKey = response.getString("SessionKey");
+                    int code = response.getInt("Code");
+                    String msg = response.getString("Msg");
+                    String sessionKey = response.getString("SessionKey");
 
                     /**
                      * 登录成功
                      */
-                    if (msg.equals("成功")) {
+                    if (code == 0) {
                         kProgressHUD.dismiss();
                         okHUD.show();
                         saveData(true, username, password, sessionKey);
@@ -202,7 +209,7 @@ public class LoginActivity extends Activity implements View.OnClickListener{
                         kProgressHUD.dismiss();
                         Toast.makeText(getApplicationContext(), msg, Toast.LENGTH_SHORT).show();
                         Log.i(TAG, "onSuccess: rotation");
-                        loginButtonAnimator();
+                        ButtonShack.run(loginButton);
                     }
 
                 } catch (JSONException e) {
@@ -378,49 +385,4 @@ public class LoginActivity extends Activity implements View.OnClickListener{
         }
     }
 
-    private void loginButtonAnimator() {
-        loginButton.animate()
-                .translationX(-50)
-                .setDuration(50);
-        new Handler().postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                loginButton.animate()
-                        .translationX(50)
-                        .setDuration(100);
-                new Handler().postDelayed(new Runnable() {
-                    @Override
-                    public void run() {
-                        loginButton.animate()
-                                .translationX(-50)
-                                .setDuration(100);
-                        new Handler().postDelayed(new Runnable() {
-                            @Override
-                            public void run() {
-                                loginButton.animate()
-                                        .translationX(50)
-                                        .setDuration(100);
-                                new Handler().postDelayed(new Runnable() {
-                                    @Override
-                                    public void run() {
-                                        loginButton.animate()
-                                                .translationX(-50)
-                                                .setDuration(100);
-                                        new Handler().postDelayed(new Runnable() {
-                                            @Override
-                                            public void run() {
-                                                loginButton.animate()
-                                                        .translationX(0)
-                                                        .setDuration(50);
-                                            }
-                                        },50);
-                                    }
-                                },100);
-                            }
-                        },100);
-                    }
-                },100);
-            }
-        },50);
-    }
 }

@@ -2,7 +2,6 @@ package com.cetcme.zytyumin.rcld;
 
 import android.app.Activity;
 import android.content.SharedPreferences;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.MenuItem;
@@ -12,8 +11,10 @@ import android.widget.Toast;
 
 import com.cetcme.zytyumin.MyClass.NavigationView;
 import com.cetcme.zytyumin.R;
-import com.handmark.pulltorefresh.library.PullToRefreshBase;
-import com.handmark.pulltorefresh.library.PullToRefreshListView;
+//import com.handmark.pulltorefresh.library.PullToRefreshBase;
+//import com.handmark.pulltorefresh.library.PullToRefreshListView;
+import com.fr.android.ui.ptrlibrary.PullToRefreshBase;
+import com.fr.android.ui.ptrlibrary.PullToRefreshListView;
 import com.kaopiz.kprogresshud.KProgressHUD;
 import com.umeng.analytics.MobclickAgent;
 import com.umeng.message.PushAgent;
@@ -116,27 +117,48 @@ public class PunchActivity extends Activity {
                 });
         listView.setAdapter(simpleAdapter);
 
-        listView.setOnRefreshListener(new PullToRefreshBase.OnRefreshListener<ListView>() {
+//        listView.setOnRefreshListener(new PullToRefreshBase.OnRefreshListener<ListView>() {
+//            @Override
+//            public void onRefresh(PullToRefreshBase<ListView> refreshView) {
+//
+//                if (listView.isHeaderShown()) {
+//                    getPunchData(true);
+//                } else if (listView.isFooterShown()) {
+//                    if (currentPage != totalPage) {
+//                        getPunchData(false);
+//                    } else {
+//                        listView.getLoadingLayoutProxy(false,true).setRefreshingLabel("已全部加载完成");
+//                        listView.getLoadingLayoutProxy(false,true).setReleaseLabel("已全部加载完成");
+//                        listView.getLoadingLayoutProxy(false,true).setPullLabel("已全部加载完成");
+//                        listView.onRefreshComplete();
+//                    }
+//
+//                }
+//
+//            }
+//        });
+
+        listView.setOnRefreshListener(new PullToRefreshBase.OnRefreshListener2<ListView>() {
             @Override
-            public void onRefresh(PullToRefreshBase<ListView> refreshView) {
+            public void onPullDownToRefresh(PullToRefreshBase<ListView> pullToRefreshBase) {
+                getPunchData(true);
+            }
 
-                if (listView.isHeaderShown()) {
-                    getPunchData(true);
-                } else if (listView.isFooterShown()) {
-                    if (currentPage != totalPage) {
-                        getPunchData(false);
-                    } else {
-                        listView.getLoadingLayoutProxy(false,true).setRefreshingLabel("已全部加载完成");
-                        listView.getLoadingLayoutProxy(false,true).setReleaseLabel("已全部加载完成");
-                        listView.getLoadingLayoutProxy(false,true).setPullLabel("已全部加载完成");
-                        listView.onRefreshComplete();
-                    }
-
+            @Override
+            public void onPullUpToRefresh(PullToRefreshBase<ListView> pullToRefreshBase) {
+                if (currentPage != totalPage) {
+                    getPunchData(false);
+                } else {
+                    listView.getLoadingLayoutProxy(false,true).setRefreshingLabel("已全部加载完成");
+                    listView.getLoadingLayoutProxy(false,true).setReleaseLabel("已全部加载完成");
+                    listView.getLoadingLayoutProxy(false,true).setPullLabel("已全部加载完成");
+                    listView.onRefreshComplete();
                 }
-
             }
         });
     }
+
+
 
     public void onResume() {
         super.onResume();
@@ -213,10 +235,8 @@ public class PunchActivity extends Activity {
 
                 try {
                     String msg = response.getString("msg");
-                    if (msg.equals("没有符合条件的数据")) {
-                        toast.setText("没有符合条件的数据");
-                        toast.show();
-                    } else if (msg.equals("成功")) {
+                    if (msg.equals("成功")) {
+
                         JSONArray dataArray = response.getJSONArray("data");
 
                         //刷新的时候 重置总数和总页数
@@ -256,6 +276,9 @@ public class PunchActivity extends Activity {
                             dataList.add(map);
                         }
 
+                    } else {
+                        toast.setText(msg);
+                        toast.show();
                     }
                 } catch (JSONException e) {
                     e.printStackTrace();

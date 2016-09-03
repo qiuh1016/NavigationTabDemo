@@ -30,7 +30,7 @@ public class UserFragment extends BaseFragment {
     private View view;
     private String TAG = "UserFragment";
     private NavigationView navigationView;
-    private int todoNumber = 3;
+    private int todoNumber = 0;
 
     private Button loginButton;
 

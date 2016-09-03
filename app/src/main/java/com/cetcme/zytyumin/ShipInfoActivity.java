@@ -39,6 +39,8 @@ public class ShipInfoActivity extends Activity {
     private TextView jobTypeTextView;
     private TextView updateDateTextView;
 
+    private Toast toast;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,6 +48,7 @@ public class ShipInfoActivity extends Activity {
         setContentView(R.layout.activity_ship_info);
 
         shipName = getIntent().getExtras().getString("shipName");
+        toast = Toast.makeText(getApplicationContext(), "", Toast.LENGTH_SHORT);
 
         initNavigationView();
         initUI();
@@ -90,7 +93,7 @@ public class ShipInfoActivity extends Activity {
      */
     @Override
     public boolean onTouchEvent(MotionEvent event) {
-//        finish();
+        finish();
 //        Log.i(TAG, "onTouchEvent: ");
         return true;
     }
@@ -159,7 +162,8 @@ public class ShipInfoActivity extends Activity {
                         /**
                          * 失败
                          */
-                        Toast.makeText(ShipInfoActivity.this, msg, Toast.LENGTH_SHORT).show();
+                        toast.setText(msg);
+                        toast.show();
                         new Handler().postDelayed(new Runnable() {
                             @Override
                             public void run() {
@@ -173,22 +177,29 @@ public class ShipInfoActivity extends Activity {
                      * json解析失败
                      */
                     e.printStackTrace();
-                    Log.i(TAG, "onResponse: json解析错误");
-                    Toast.makeText(ShipInfoActivity.this, "获取信息失败", Toast.LENGTH_SHORT).show();
+                    toast.setText("json解析错误");
+                    toast.show();
                 }
             }
 
             @Override
             public void onFailure(int statusCode, Header[] headers, Throwable throwable, JSONObject errorResponse) {
                 Log.i(TAG, "onFailure: 1");
-                Toast.makeText(ShipInfoActivity.this, "获取信息失败", Toast.LENGTH_SHORT).show();
+                toast.setText("获取信息失败");
+                toast.show();
             }
 
             @Override
             public void onFailure(int statusCode, Header[] headers, String responseString, Throwable throwable) {
                 Log.i(TAG, "onFailure: 2");
-                Toast.makeText(ShipInfoActivity.this, "获取信息失败", Toast.LENGTH_SHORT).show();
+                toast.setText("获取信息失败");
+                toast.show();
             }
         });
+    }
+
+    protected void onDestroy() {
+        super.onDestroy();
+        toast.cancel();
     }
 }

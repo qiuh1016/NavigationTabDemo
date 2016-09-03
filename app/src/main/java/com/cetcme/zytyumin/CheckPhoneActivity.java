@@ -4,9 +4,9 @@ import android.Manifest;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
+import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
@@ -15,33 +15,36 @@ import android.support.v4.content.ContextCompat;
 import android.telephony.TelephonyManager;
 import android.util.Log;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.OvershootInterpolator;
+import android.view.animation.TranslateAnimation;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
 
-import java.io.IOException;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import com.cetcme.zytyumin.MyClass.ButtonShack;
 import com.cetcme.zytyumin.MyClass.CodeUtils;
 import com.cetcme.zytyumin.MyClass.NavigationView;
-import com.cetcme.zytyumin.MyClass.PrivateEncode;
-import com.kaopiz.kprogresshud.KProgressHUD;
+import com.loopj.android.http.AsyncHttpClient;
+import com.loopj.android.http.JsonHttpResponseHandler;
+import com.loopj.android.http.RequestParams;
 
+import net.steamcrafted.loadtoast.LoadToast;
+
+import org.apache.http.Header;
 import org.json.JSONException;
 import org.json.JSONObject;
-
-import okhttp3.Call;
-import okhttp3.Callback;
-import okhttp3.OkHttpClient;
-import okhttp3.Request;
-import okhttp3.Response;
 
 public class CheckPhoneActivity extends Activity implements View.OnClickListener{
 
     private EditText phoneEditText;
     private EditText codeUtilsEditText;
+    private EditText smsEditText;
+
     private ImageView codeUtilsImageView;
     private Button getSMSButton;
     private Button nextButton;
@@ -50,6 +53,15 @@ public class CheckPhoneActivity extends Activity implements View.OnClickListener
     private String codeUtilsCode;
 
     private boolean isSignUp;
+
+    private boolean isSendSMS = false;
+
+    private boolean stopCountDown = false;
+    private String sendSMSPhoneNumber;
+
+    private String smsCode = "";
+
+    private String TAG = "CheckPhoneActivity";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -95,6 +107,8 @@ public class CheckPhoneActivity extends Activity implements View.OnClickListener
     private void initUI() {
         phoneEditText = (EditText) findViewById(R.id.cellphone_editText_in_check_phone_activity);
         codeUtilsEditText = (EditText) findViewById(R.id.codeUtils_editText_in_check_phone_activity);
+        smsEditText = (EditText) findViewById(R.id.sms_editText_in_check_phone_activity);
+
         codeUtilsImageView = (ImageView) findViewById(R.id.codeUtils_image_in_check_phone_activity);
         getSMSButton = (Button) findViewById(R.id.sms_button_in_check_phone_activity);
         nextButton = (Button) findViewById(R.id.next_button_in_check_phone_activity);
@@ -102,15 +116,6 @@ public class CheckPhoneActivity extends Activity implements View.OnClickListener
         codeUtilsImageView.setOnClickListener(this);
         getSMSButton.setOnClickListener(this);
         nextButton.setOnClickListener(this);
-
-        if (!isSignUp) {
-            phoneEditText.setHint("已向您的手机发送验证码");
-            phoneEditText.setEnabled(false);
-            getSMSButton.setVisibility(View.INVISIBLE);
-            codeUtilsEditText.requestFocus();
-        }
-
-//        insertPhoneNumber();
 
     }
 
@@ -146,7 +151,7 @@ public class CheckPhoneActivity extends Activity implements View.OnClickListener
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.sms_button_in_check_phone_activity:
-                checkCodeAndPhone();
+                getSMSButtonTapped();
                 break;
             case R.id.codeUtils_image_in_check_phone_activity:
                 initCodeUtils();
@@ -171,45 +176,134 @@ public class CheckPhoneActivity extends Activity implements View.OnClickListener
         Log.i("main", "code: " + codeUtilsCode);
     }
 
-    /**
-     * 判断手机号和图片验证码是否正确
-     * @author qh
-     * created at 8/31/16 13:42
-     */
-    private void checkCodeAndPhone() {
+    private void getSMSButtonTapped() {
+        /**
+         * 判断手机号是否正确
+         */
+        final String inputMobileNO = phoneEditText.getText().toString();
+        if (!isMobileNO(inputMobileNO)) {
+            Toast.makeText(this, "手机号错误", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
+        /**
+         * 判断图片验证码是否正确
+         */
         String inputCode = codeUtilsEditText.getText().toString();
         if (!inputCode.equals(codeUtilsCode)) {
             initCodeUtils();
+            Toast.makeText(this, "图片错误", Toast.LENGTH_SHORT).show();
             return;
         }
-        String inputMobileNO = phoneEditText.getText().toString();
-        if (isMobileNO(inputMobileNO)) {
-            getSMS();
-        } else {
-            Toast.makeText(this, "手机号错误", Toast.LENGTH_SHORT).show();
-        }
-    }
 
-    private void getSMS() {
-        //TODO: 让服务器发送sms
         /**
-         * 定时器
+         * sms button 显示倒数
          */
         getSMSButton.setEnabled(false);
         getSMSButton.setText("60");
-        new Thread(new ThreadShow()).start();
+        new Thread(new CountDown()).start();
+
+        /**
+         * 请求发送短信
+         */
+        sendSMS();
+
+    }
+
+    private void sendSMS() {
+        isSendSMS = true;
+
+        RequestParams params = new RequestParams();
+        params.put("phoneNo", sendSMSPhoneNumber);
+        params.put("flag", isSignUp ? 0 : 1); //flag：标示0为注册，1为忘记密码
+        String urlBody = getString(R.string.serverIP) + getString(R.string.sendSMSUrl);
+        AsyncHttpClient client = new AsyncHttpClient();
+        client.get(urlBody, params, new JsonHttpResponseHandler("UTF-8") {
+            @Override
+            public void onSuccess(int statusCode, Header[] headers, JSONObject response) {
+                try {
+                    int flag = response.getInt("Flag");
+                    String msg = response.getString("Msg");
+
+                    Log.i(TAG, "onSuccess: " + response.toString());
+                    if (flag == 0) {
+                        /**
+                         * 发送成功
+                         */
+                        smsCode = response.getString("Code");
+                        Log.i(TAG, "onSuccess: sms send success");
+                    } else if (flag == 1) {
+                        Toast.makeText(getApplicationContext(), "手机号已存在", Toast.LENGTH_LONG).show();
+                        ButtonShack.run(nextButton);
+                        stopCountDown = true;
+                        Log.i(TAG, "onSuccess: phone exist");
+                    } else if (flag == 2) {
+                        Toast.makeText(getApplicationContext(), "手机号不存在", Toast.LENGTH_LONG).show();
+                        ButtonShack.run(nextButton);
+                        stopCountDown = true;
+                        Log.i(TAG, "onSuccess: phone not exist");
+                    }
+                } catch (JSONException e) {
+                    /**
+                     * json解析失败
+                     */
+                    e.printStackTrace();
+                    Log.i(TAG, "onSuccess: sms send json error");
+                }
+            }
+
+            @Override
+            public void onFailure(int statusCode, Header[] headers, Throwable throwable, JSONObject errorResponse) {
+                Toast.makeText(getApplicationContext(), "网络连接失败", Toast.LENGTH_SHORT).show();
+                Log.i(TAG, "onSuccess: sms send network error");
+                stopCountDown = true;
+            }
+
+            @Override
+            public void onFailure(int statusCode, Header[] headers, String responseString, Throwable throwable) {
+                Toast.makeText(getApplicationContext(), "网络连接失败", Toast.LENGTH_SHORT).show();
+                Log.i(TAG, "onSuccess: sms send network error");
+                stopCountDown = true;
+            }
+        });
     }
 
     private void next() {
-        //TODO:向服务器验证短信
-        Intent intent = new Intent();
+
+        String code = smsEditText.getText().toString();
+
         /**
-         * 跳转
+         * 如果短信验证码空或长度不为4就return
          */
+        if (code.isEmpty() || code.length() != 4) {
+            Toast.makeText(getApplicationContext(), "短信验证码错误", Toast.LENGTH_SHORT).show();
+            ButtonShack.run(nextButton);
+            return;
+        }
+
+        /**
+         * 没发送过sms就return
+         */
+        if (!isSendSMS) return;
+
+        /**
+         * 验证短信验证码
+         */
+        if (code.equals(smsCode)) {
+            gotoNextActivity();
+        } else {
+            Toast.makeText(getApplicationContext(), "短信验证码错误", Toast.LENGTH_LONG).show();
+            ButtonShack.run(nextButton);
+        }
+
+    }
+
+    private void gotoNextActivity() {
+        Intent intent = new Intent();
         if (isSignUp) {
             intent.setClass(this, RegisterInfoActivity.class);
             Bundle phoneBundle = new Bundle();
-            phoneBundle.putString("phone", phoneEditText.getText().toString());
+            phoneBundle.putString("phone", sendSMSPhoneNumber);
             intent.putExtras(phoneBundle);
             startActivity(intent);
             overridePendingTransition(R.anim.push_left_in_no_alpha, R.anim.push_left_out_no_alpha);
@@ -218,16 +312,22 @@ public class CheckPhoneActivity extends Activity implements View.OnClickListener
             startActivity(intent);
             overridePendingTransition(R.anim.push_left_in_no_alpha, R.anim.push_left_out_no_alpha);
         }
-
     }
 
     // 线程类
-    class ThreadShow implements Runnable {
+    class CountDown implements Runnable {
 
         @Override
         public void run() {
 
+            Log.i(TAG, "run: Thread count down");
+
             for (int i = 0; i < 60; i++) {
+
+                if (stopCountDown) {
+                    break;
+                }
+
                 try {
                     Thread.sleep(1000);
                     final int finalI = i;
@@ -250,6 +350,7 @@ public class CheckPhoneActivity extends Activity implements View.OnClickListener
                 }
             });
 
+            stopCountDown = false;
         }
     }
 
@@ -263,5 +364,6 @@ public class CheckPhoneActivity extends Activity implements View.OnClickListener
         Matcher m = p.matcher(mobiles);
         return m.matches();
     }
+
 
 }

@@ -15,8 +15,10 @@ import android.widget.Toast;
 
 import com.cetcme.zytyumin.MyClass.NavigationView;
 import com.cetcme.zytyumin.R;
-import com.handmark.pulltorefresh.library.PullToRefreshBase;
-import com.handmark.pulltorefresh.library.PullToRefreshListView;
+//import com.handmark.pulltorefresh.library.PullToRefreshBase;
+//import com.handmark.pulltorefresh.library.PullToRefreshListView;
+import com.fr.android.ui.ptrlibrary.PullToRefreshBase;
+import com.fr.android.ui.ptrlibrary.PullToRefreshListView;
 import com.kaopiz.kprogresshud.KProgressHUD;
 import com.umeng.analytics.MobclickAgent;
 import com.umeng.message.PushAgent;
@@ -98,24 +100,43 @@ public class ioLogActivity extends Activity {
                 });
         listView.setAdapter(simpleAdapter);
 
-        listView.setOnRefreshListener(new PullToRefreshBase.OnRefreshListener<ListView>() {
+//        listView.setOnRefreshListener(new PullToRefreshBase.OnRefreshListener<ListView>() {
+//            @Override
+//            public void onRefresh(PullToRefreshBase<ListView> refreshView) {
+//
+//                if (listView.isHeaderShown()) {
+//                    getioLogData(true);
+//                } else if (listView.isFooterShown()) {
+//                    if (currentPage != totalPage) {
+//                        getioLogData(false);
+//                    } else {
+//                        listView.getLoadingLayoutProxy(false,true).setRefreshingLabel("已全部加载完成");
+//                        listView.getLoadingLayoutProxy(false,true).setReleaseLabel("已全部加载完成");
+//                        listView.getLoadingLayoutProxy(false,true).setPullLabel("已全部加载完成");
+//                        listView.onRefreshComplete();
+//                    }
+//
+//                }
+//
+//            }
+//        });
+
+        listView.setOnRefreshListener(new PullToRefreshBase.OnRefreshListener2<ListView>() {
             @Override
-            public void onRefresh(PullToRefreshBase<ListView> refreshView) {
+            public void onPullDownToRefresh(PullToRefreshBase<ListView> pullToRefreshBase) {
+                getioLogData(true);
+            }
 
-                if (listView.isHeaderShown()) {
-                    getioLogData(true);
-                } else if (listView.isFooterShown()) {
-                    if (currentPage != totalPage) {
-                        getioLogData(false);
-                    } else {
-                        listView.getLoadingLayoutProxy(false,true).setRefreshingLabel("已全部加载完成");
-                        listView.getLoadingLayoutProxy(false,true).setReleaseLabel("已全部加载完成");
-                        listView.getLoadingLayoutProxy(false,true).setPullLabel("已全部加载完成");
-                        listView.onRefreshComplete();
-                    }
-
+            @Override
+            public void onPullUpToRefresh(PullToRefreshBase<ListView> pullToRefreshBase) {
+                if (currentPage != totalPage) {
+                    getioLogData(false);
+                } else {
+                    listView.getLoadingLayoutProxy(false,true).setRefreshingLabel("已全部加载完成");
+                    listView.getLoadingLayoutProxy(false,true).setReleaseLabel("已全部加载完成");
+                    listView.getLoadingLayoutProxy(false,true).setPullLabel("已全部加载完成");
+                    listView.onRefreshComplete();
                 }
-
             }
         });
 
