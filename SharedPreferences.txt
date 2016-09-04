@@ -7,9 +7,10 @@ system:
 user: 
 	username 		String
 	password 		String
-	hasLogin		Boolen
+	hasLogin		boolen
 	sessionKey		String
 	IDCard			String
+	rememberPSW		boolen
 
 
 	//debugMode		String

@@ -208,10 +208,15 @@ public class UserFragment extends BaseFragment {
          * 重新设置登陆按钮
          */
         SharedPreferences user = getActivity().getSharedPreferences("user", Context.MODE_PRIVATE);
-        modifyLoginButton(user.getBoolean("hasLogin", false));
+        boolean hasLogin = user.getBoolean("hasLogin", false);
+        modifyLoginButton(hasLogin);
 
         initTodoNumber();
-        getTodoCount(user.getString("sessionKey", ""), user.getString("username", ""));
+        if (hasLogin) {
+            getTodoCount(user.getString("sessionKey", ""), user.getString("username", ""));
+        }
+
+
     }
 
     private void logoutDialog() {
@@ -222,25 +227,7 @@ public class UserFragment extends BaseFragment {
         builder.setPositiveButton("退出", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
-                kProgressHUD.show();
-                new Handler().postDelayed(new Runnable() {
-                    @Override
-                    public void run() {
-                        kProgressHUD.dismiss();
-                        okHUD.show();
-                        new Handler().postDelayed(new Runnable() {
-                            @Override
-                            public void run() {
-                                okHUD.dismiss();
-                                modifyLoginButton(false);
-                                SharedPreferences.Editor editor = user.edit();//获取编辑器
-                                editor.putBoolean("hasLogin", false);
-                                editor.apply();//提交修改
-                                initTodoNumber();
-                            }
-                        },1000);
-                    }
-                }, 2000);
+                logout();
             }
         });
         builder.setNegativeButton("取消", null);
@@ -275,14 +262,18 @@ public class UserFragment extends BaseFragment {
                     Log.i(TAG, "onSuccess: getTODOCount" + response.toString());
                     int code = response.getInt("Code");
                     if (code == 0) {
-
-//                        {"Code":0,"Check_Drawing_Examine_Opinion_Count":0,"Check_Detect_Info_Detail_Inspection_Count":1,"Check_Detect_Info_Opinion_Count":0,"msg":null}
                         Check_Drawing_Examine_Opinion_Count = response.getInt("Check_Drawing_Examine_Opinion_Count");
                         Check_Detect_Info_Detail_Inspection_Count = response.getInt("Check_Detect_Info_Detail_Inspection_Count");
                         Check_Detect_Info_Opinion_Count = response.getInt("Check_Detect_Info_Opinion_Count");
 
                         todoNumber = Check_Drawing_Examine_Opinion_Count + Check_Detect_Info_Detail_Inspection_Count + Check_Detect_Info_Opinion_Count;
                         initTodoNumber();
+                    } else if (code == 2) {
+                        Toast.makeText(getActivity(), "登陆信息过期，请重新登陆",Toast.LENGTH_SHORT).show();
+                        SharedPreferences.Editor editor = user.edit();//获取编辑器
+                        editor.putBoolean("hasLogin", false);
+                        editor.apply();//提交修改
+                        startLoginActivity();
                     }
 
                 } catch (JSONException e) {
@@ -291,5 +282,35 @@ public class UserFragment extends BaseFragment {
             }
         });
 
+    }
+
+    private void logout() {
+        kProgressHUD.show();
+        sendBroadcast(false);
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                kProgressHUD.dismiss();
+                okHUD.show();
+                new Handler().postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        okHUD.dismiss();
+                        modifyLoginButton(false);
+                        SharedPreferences.Editor editor = user.edit();//获取编辑器
+                        editor.putBoolean("hasLogin", false);
+                        editor.apply();//提交修改
+                        initTodoNumber();
+                    }
+                },1000);
+            }
+        }, 1000);
+    }
+
+    private void sendBroadcast(boolean login) {
+        Intent intent = new Intent();
+        intent.setAction("com.loginFlag");
+        intent.putExtra("loginFlag" , login);
+        getActivity().sendBroadcast(intent);
     }
 }

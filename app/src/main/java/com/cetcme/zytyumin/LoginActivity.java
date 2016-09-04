@@ -12,6 +12,7 @@ import android.text.InputType;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
@@ -44,6 +45,10 @@ public class LoginActivity extends Activity implements View.OnClickListener{
     private Button forgetButton;
     private Button signUpButton;
 
+    private CheckBox checkBox;
+
+    private SharedPreferences user;
+
     private String TAG = "LoginActivity";
 
     private KProgressHUD kProgressHUD;
@@ -53,6 +58,9 @@ public class LoginActivity extends Activity implements View.OnClickListener{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+
+        user = getSharedPreferences("user", Context.MODE_PRIVATE);
+
         initNavigationView();
         initUI();
         initHud();
@@ -98,6 +106,11 @@ public class LoginActivity extends Activity implements View.OnClickListener{
     private void initUI() {
         usernameEditText = (EditText) findViewById(R.id.username_editText_in_login_activity);
         passwordEditText = (EditText) findViewById(R.id.password_editText_in_login_activity);
+
+        checkBox = (CheckBox) findViewById(R.id.checkBox_in_login_activity);
+        checkBox.setChecked(user.getBoolean("rememberPSW", false));
+        checkBox.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.tab_text_normal));
+
         /**
          * 设置为英文键盘
          */
@@ -209,7 +222,7 @@ public class LoginActivity extends Activity implements View.OnClickListener{
                                 onBackPressed();
                             }
                         },1000);
-//                        getTODOCount(sessionKey, username);
+                        sendBroadcast(true);
                     } else {
                         /**
                          * 登录失败
@@ -246,66 +259,6 @@ public class LoginActivity extends Activity implements View.OnClickListener{
 
     }
 
-    private void getTODOCount(String sessionKey, String account) {
-        RequestParams params = new RequestParams();
-        params.put("account", account);
-        params.put("sessionKey", sessionKey);
-        String urlBody = getString(R.string.serverIP) + getString(R.string.getTodoCountUrl);
-
-        AsyncHttpClient client = new AsyncHttpClient();
-        client.get(urlBody, params, new JsonHttpResponseHandler("UTF-8") {
-            @Override
-            public void onSuccess(int statusCode, Header[] headers, JSONObject response) {
-                try {
-
-                    Log.i(TAG, "onSuccess: getTODOCount" + response.toString());
-                    int code = response.getInt("Code");
-                    if (code == 0) {
-
-                        //TODO: 暂时 数量不对
-//                        {"Code":0,"Check_Drawing_Examine_Opinion_Count":0,"Check_Detect_Info_Detail_Inspection_Count":1,"Check_Detect_Info_Opinion_Count":0,"msg":null}
-                        int Check_Drawing_Examine_Opinion_Count = response.getInt("Check_Drawing_Examine_Opinion_Count");
-                        int Check_Detect_Info_Detail_Inspection_Count = response.getInt("Check_Detect_Info_Detail_Inspection_Count");
-                        int Check_Detect_Info_Opinion_Count = response.getInt("Check_Detect_Info_Opinion_Count");
-
-                        int todoSum = Check_Drawing_Examine_Opinion_Count + Check_Detect_Info_Detail_Inspection_Count + Check_Detect_Info_Opinion_Count;
-
-                        /**
-                         * 广播
-                         */
-                        Intent intent=new Intent();
-                        intent.setAction("com.updateTodoCount");
-                        intent.putExtra("todoSum" , todoSum);
-                        sendBroadcast(intent);
-
-                    }
-
-                } catch (JSONException e) {
-                    /**
-                     * json解析失败
-                     */
-                    e.printStackTrace();
-                    Log.i(TAG, "onResponse: json解析错误");
-                    kProgressHUD.dismiss();
-                    Toast.makeText(getApplicationContext(), "解析错误", Toast.LENGTH_SHORT).show();
-                }
-            }
-
-            @Override
-            public void onFailure(int statusCode, Header[] headers, Throwable throwable, JSONObject errorResponse) {
-                kProgressHUD.dismiss();
-                Toast.makeText(getApplicationContext(), "网络连接失败1", Toast.LENGTH_SHORT).show();
-            }
-
-            @Override
-            public void onFailure(int statusCode, Header[] headers, String responseString, Throwable throwable) {
-                kProgressHUD.dismiss();
-                Toast.makeText(getApplicationContext(), "网络连接失败2", Toast.LENGTH_SHORT).show();
-            }
-        });
-
-    }
-
     private void saveData(boolean hasLogin, String username, String password, String sessionKey, String IDCard) {
         SharedPreferences user = getSharedPreferences("user", Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = user.edit();//获取编辑器
@@ -314,19 +267,34 @@ public class LoginActivity extends Activity implements View.OnClickListener{
         editor.putString("password", password);
         editor.putString("sessionKey", sessionKey);
         editor.putString("IDCard", IDCard);
+        editor.putBoolean("rememberPSW", checkBox.isChecked());
         editor.apply();//提交修改
     }
 
     @Override
     public void onResume() {
         super.onResume();
-        SharedPreferences user = getSharedPreferences("user", Context.MODE_PRIVATE);
         String username = user.getString("username", "");
         if (!username.isEmpty()) {
             usernameEditText.setText(username);
         }
 
-        initRequestFocus();
+        if (user.getBoolean("rememberPSW", false)) {
+            passwordEditText.setText(user.getString("password", ""));
+        }
+
+        loginButton.requestFocus();
+    }
+
+    public void rememberPSWLineTapped(View v) {
+        checkBox.setChecked(!checkBox.isChecked());
+    }
+
+    private void sendBroadcast(boolean login) {
+        Intent intent = new Intent();
+        intent.setAction("com.loginFlag");
+        intent.putExtra("loginFlag" , login);
+        sendBroadcast(intent);
     }
 
 }

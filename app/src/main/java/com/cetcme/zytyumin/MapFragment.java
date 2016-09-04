@@ -1,6 +1,10 @@
 package com.cetcme.zytyumin;
 
+import android.content.BroadcastReceiver;
+import android.content.Context;
 import android.content.Intent;
+import android.content.IntentFilter;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.util.Log;
@@ -35,11 +39,15 @@ public class MapFragment extends BaseFragment implements  BaiduMap.OnMarkerClick
     private MapView mapView;
     private BaiduMap baiduMap;
 
-    private NavigationView navigationView;
+    private SharedPreferences user;
+
+    private String TAG = "MapFragment";
 
     private Marker comMarker;
     private InfoWindow mInfoWindow;
     private boolean infoWindowIsShow = true;
+
+    private MyLoginStateReceiver myLoginStateReceiver;
 
     private String[] shipNames = {
             "浙三渔04529",
@@ -55,17 +63,17 @@ public class MapFragment extends BaseFragment implements  BaiduMap.OnMarkerClick
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.fragment_map, null, false);
 
+        user = getActivity().getSharedPreferences("user", Context.MODE_PRIVATE);
+
         initNavigationView();
         initMapView();
-
-        mapMark(new LatLng(30, 122), "浙嘉渔1234");
-        mapMark(new LatLng(31, 123), "浙嘉渔1234");
+        initLoginBroadcast();
 
         return view;
     }
 
     private void initNavigationView() {
-        navigationView = (NavigationView) view.findViewById(R.id.nav_main_in_fragment_map);
+        NavigationView navigationView = (NavigationView) view.findViewById(R.id.nav_main_in_fragment_map);
         navigationView.setTitle("地图");
         navigationView.setRightView(R.drawable.icon_list);
         navigationView.setClickCallback(new NavigationView.ClickCallback() {
@@ -73,16 +81,24 @@ public class MapFragment extends BaseFragment implements  BaiduMap.OnMarkerClick
             @Override
             public void onRightClick() {
                 Log.i("main","点击了右侧按钮!");
-                Intent intent = new Intent();
-                intent.setClass(getActivity(), ShipActivity.class);
-                Bundle bundle = new Bundle();
-                bundle.putBoolean("openFromMapFragment", true);
-                bundle.putStringArray("shipNames", shipNames);
-                bundle.putStringArray("shipNumbers", shipNumbers);
-                intent.putExtras(bundle);
-                startActivity(intent);
-                MainActivity activity = (MainActivity) getActivity();
-                activity.overridePendingTransition(R.anim.push_left_in_no_alpha, R.anim.push_left_out_no_alpha);
+
+                if (user.getBoolean("hasLogin", false)) {
+                    Intent intent = new Intent();
+                    intent.setClass(getActivity(), ShipActivity.class);
+                    Bundle bundle = new Bundle();
+                    bundle.putBoolean("openFromMapFragment", true);
+                    bundle.putStringArray("shipNames", shipNames);
+                    bundle.putStringArray("shipNumbers", shipNumbers);
+                    intent.putExtras(bundle);
+                    startActivity(intent);
+                    MainActivity activity = (MainActivity) getActivity();
+                    activity.overridePendingTransition(R.anim.push_left_in_no_alpha, R.anim.push_left_out_no_alpha);
+                } else {
+                    Intent intent = new Intent(getActivity(), LoginActivity.class);
+                    MainActivity activity = (MainActivity) getActivity();
+                    startActivity(intent);
+                    activity.overridePendingTransition(R.anim.push_up_in_no_alpha, R.anim.stay);
+                }
             }
 
             @Override
@@ -173,5 +189,31 @@ public class MapFragment extends BaseFragment implements  BaiduMap.OnMarkerClick
 //            infoWindowIsShow = !infoWindowIsShow;
 //        }
 //        return false;
+    }
+
+    private void initLoginBroadcast() {
+        myLoginStateReceiver = new MyLoginStateReceiver();
+        IntentFilter filter = new IntentFilter();
+        filter.addAction("com.loginFlag");
+        getActivity().registerReceiver(myLoginStateReceiver, filter);
+    }
+
+    public class MyLoginStateReceiver extends BroadcastReceiver {
+
+        @Override
+        public void onReceive(Context arg0, Intent arg1) {
+
+            Log.i(TAG, "onReceive: get login flag");
+            Bundle bundle = arg1.getExtras();
+            Boolean loginFlag = bundle.getBoolean("loginFlag");
+
+            if (loginFlag) {
+                mapMark(new LatLng(30, 122), "浙嘉渔1234");
+                mapMark(new LatLng(31, 123), "浙嘉渔1234");
+            } else {
+                baiduMap.clear();
+            }
+
+        }
     }
 }
