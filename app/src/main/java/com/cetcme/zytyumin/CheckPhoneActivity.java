@@ -183,6 +183,8 @@ public class CheckPhoneActivity extends Activity implements View.OnClickListener
         final String inputMobileNO = phoneEditText.getText().toString();
         if (!isMobileNO(inputMobileNO)) {
             Toast.makeText(this, "手机号错误", Toast.LENGTH_SHORT).show();
+            initCodeUtils();
+            phoneEditText.requestFocus();
             return;
         }
 
@@ -191,8 +193,9 @@ public class CheckPhoneActivity extends Activity implements View.OnClickListener
          */
         String inputCode = codeUtilsEditText.getText().toString();
         if (!inputCode.equals(codeUtilsCode)) {
+            Toast.makeText(this, "图片验证码错误", Toast.LENGTH_SHORT).show();
             initCodeUtils();
-            Toast.makeText(this, "图片错误", Toast.LENGTH_SHORT).show();
+            codeUtilsEditText.requestFocus();
             return;
         }
 
@@ -202,10 +205,12 @@ public class CheckPhoneActivity extends Activity implements View.OnClickListener
         getSMSButton.setEnabled(false);
         getSMSButton.setText("60");
         new Thread(new CountDown()).start();
+        smsEditText.requestFocus();
 
         /**
          * 请求发送短信
          */
+        sendSMSPhoneNumber = inputMobileNO;
         sendSMS();
 
     }
@@ -217,6 +222,8 @@ public class CheckPhoneActivity extends Activity implements View.OnClickListener
         params.put("phoneNo", sendSMSPhoneNumber);
         params.put("flag", isSignUp ? 0 : 1); //flag：标示0为注册，1为忘记密码
         String urlBody = getString(R.string.serverIP) + getString(R.string.sendSMSUrl);
+
+        Log.i(TAG, "sendSMS: " + params.toString());
         AsyncHttpClient client = new AsyncHttpClient();
         client.get(urlBody, params, new JsonHttpResponseHandler("UTF-8") {
             @Override
@@ -234,12 +241,18 @@ public class CheckPhoneActivity extends Activity implements View.OnClickListener
                         Log.i(TAG, "onSuccess: sms send success");
                     } else if (flag == 1) {
                         Toast.makeText(getApplicationContext(), "手机号已存在", Toast.LENGTH_LONG).show();
+                        isSendSMS = false;
                         ButtonShack.run(nextButton);
+                        phoneEditText.requestFocus();
+                        initCodeUtils();
                         stopCountDown = true;
                         Log.i(TAG, "onSuccess: phone exist");
                     } else if (flag == 2) {
                         Toast.makeText(getApplicationContext(), "手机号不存在", Toast.LENGTH_LONG).show();
+                        isSendSMS = false;
                         ButtonShack.run(nextButton);
+                        phoneEditText.requestFocus();
+                        initCodeUtils();
                         stopCountDown = true;
                         Log.i(TAG, "onSuccess: phone not exist");
                     }
@@ -271,6 +284,11 @@ public class CheckPhoneActivity extends Activity implements View.OnClickListener
     private void next() {
 
         String code = smsEditText.getText().toString();
+        
+        /**
+         * 没发送过sms就return
+         */
+        if (!isSendSMS) return;
 
         /**
          * 如果短信验证码空或长度不为4就return
@@ -280,11 +298,6 @@ public class CheckPhoneActivity extends Activity implements View.OnClickListener
             ButtonShack.run(nextButton);
             return;
         }
-
-        /**
-         * 没发送过sms就return
-         */
-        if (!isSendSMS) return;
 
         /**
          * 验证短信验证码
@@ -320,8 +333,6 @@ public class CheckPhoneActivity extends Activity implements View.OnClickListener
         @Override
         public void run() {
 
-            Log.i(TAG, "run: Thread count down");
-
             for (int i = 0; i < 60; i++) {
 
                 if (stopCountDown) {
@@ -340,6 +351,7 @@ public class CheckPhoneActivity extends Activity implements View.OnClickListener
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
+
             }
 
             runOnUiThread(new Runnable() {

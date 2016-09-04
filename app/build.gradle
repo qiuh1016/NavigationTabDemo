@@ -20,7 +20,7 @@ android {
         }
     }
 
-    useLibrary 'org.apache.http.legacy'
+    useLibrary 'org.apache.http.legacy'  //apache
 
     dexOptions {
         javaMaxHeapSize "4g"
