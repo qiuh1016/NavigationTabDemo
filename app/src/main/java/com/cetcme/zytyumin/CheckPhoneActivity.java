@@ -163,7 +163,7 @@ public class CheckPhoneActivity extends Activity implements View.OnClickListener
     }
 
     /**
-     * 生成图片验证码
+     * 生成图片随机码
      * @author qh
      * created at 8/31/16 13:42
      */
@@ -189,11 +189,11 @@ public class CheckPhoneActivity extends Activity implements View.OnClickListener
         }
 
         /**
-         * 判断图片验证码是否正确
+         * 判断图片随机码是否正确
          */
         String inputCode = codeUtilsEditText.getText().toString();
         if (!inputCode.equals(codeUtilsCode)) {
-            Toast.makeText(this, "图片验证码错误", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "图片随机码错误", Toast.LENGTH_SHORT).show();
             initCodeUtils();
             codeUtilsEditText.requestFocus();
             return;
@@ -284,7 +284,7 @@ public class CheckPhoneActivity extends Activity implements View.OnClickListener
     private void next() {
 
         String code = smsEditText.getText().toString();
-        
+
         /**
          * 没发送过sms就return
          */
@@ -319,10 +319,12 @@ public class CheckPhoneActivity extends Activity implements View.OnClickListener
             phoneBundle.putString("phone", sendSMSPhoneNumber);
             intent.putExtras(phoneBundle);
             startActivity(intent);
+            finish();
             overridePendingTransition(R.anim.push_left_in_no_alpha, R.anim.push_left_out_no_alpha);
         } else {
             intent.setClass(this, ChangePasswordActivity.class);
             startActivity(intent);
+            finish();
             overridePendingTransition(R.anim.push_left_in_no_alpha, R.anim.push_left_out_no_alpha);
         }
     }

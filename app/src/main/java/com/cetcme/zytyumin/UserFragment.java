@@ -1,8 +1,10 @@
 package com.cetcme.zytyumin;
 
+import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Handler;
@@ -16,11 +18,19 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.kaopiz.kprogresshud.KProgressHUD;
 
 import com.cetcme.zytyumin.IconPager.BaseFragment;
 import com.cetcme.zytyumin.MyClass.NavigationView;
+import com.loopj.android.http.AsyncHttpClient;
+import com.loopj.android.http.JsonHttpResponseHandler;
+import com.loopj.android.http.RequestParams;
+
+import org.apache.http.Header;
+import org.json.JSONException;
+import org.json.JSONObject;
 
 /**
  * Created by qiuhong on 8/24/16.
@@ -38,6 +48,10 @@ public class UserFragment extends BaseFragment {
     private KProgressHUD okHUD;
 
     private SharedPreferences user;
+
+    private int Check_Drawing_Examine_Opinion_Count = 0;
+    private int Check_Detect_Info_Detail_Inspection_Count = 0;
+    private int Check_Detect_Info_Opinion_Count = 0;
 
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -110,7 +124,13 @@ public class UserFragment extends BaseFragment {
                     startLoginActivity();
                     return;
                 }
+
+                Bundle bundle = new Bundle();
+                bundle.putInt("Check_Drawing_Examine_Opinion_Count", Check_Drawing_Examine_Opinion_Count);
+                bundle.putInt("Check_Detect_Info_Detail_Inspection_Count", Check_Detect_Info_Detail_Inspection_Count);
+                bundle.putInt("Check_Detect_Info_Opinion_Count", Check_Detect_Info_Opinion_Count);
                 Intent intent = new Intent(getActivity(), TodoActivity.class);
+                intent.putExtras(bundle);
                 MainActivity activity = (MainActivity) getActivity();
                 startActivity(intent);
                 activity.overridePendingTransition(R.anim.push_left_in_no_alpha, R.anim.push_left_out_no_alpha);
@@ -189,7 +209,9 @@ public class UserFragment extends BaseFragment {
          */
         SharedPreferences user = getActivity().getSharedPreferences("user", Context.MODE_PRIVATE);
         modifyLoginButton(user.getBoolean("hasLogin", false));
+
         initTodoNumber();
+        getTodoCount(user.getString("sessionKey", ""), user.getString("username", ""));
     }
 
     private void logoutDialog() {
@@ -232,9 +254,42 @@ public class UserFragment extends BaseFragment {
         Button btnPositive = alertDialog.getButton(android.app.AlertDialog.BUTTON_POSITIVE);
         Button btnNegative = alertDialog.getButton(android.app.AlertDialog.BUTTON_NEGATIVE);
         btnNegative.setTextColor(getResources().getColor(R.color.main_color));
-//        btnNegative.setTextSize(18);
         btnPositive.setTextColor(getResources().getColor(R.color.main_color));
-//        btnPositive.setTextSize(18);
+
+    }
+
+    private void getTodoCount(String sessionKey, String account) {
+
+        Log.i(TAG, "getTodoCount: to get todo count");
+        RequestParams params = new RequestParams();
+        params.put("account", account);
+        params.put("sessionKey", sessionKey);
+        String urlBody = getString(R.string.serverIP) + getString(R.string.getTodoCountUrl);
+
+        AsyncHttpClient client = new AsyncHttpClient();
+        client.get(urlBody, params, new JsonHttpResponseHandler("UTF-8") {
+            @Override
+            public void onSuccess(int statusCode, Header[] headers, JSONObject response) {
+                try {
+
+                    Log.i(TAG, "onSuccess: getTODOCount" + response.toString());
+                    int code = response.getInt("Code");
+                    if (code == 0) {
+
+//                        {"Code":0,"Check_Drawing_Examine_Opinion_Count":0,"Check_Detect_Info_Detail_Inspection_Count":1,"Check_Detect_Info_Opinion_Count":0,"msg":null}
+                        Check_Drawing_Examine_Opinion_Count = response.getInt("Check_Drawing_Examine_Opinion_Count");
+                        Check_Detect_Info_Detail_Inspection_Count = response.getInt("Check_Detect_Info_Detail_Inspection_Count");
+                        Check_Detect_Info_Opinion_Count = response.getInt("Check_Detect_Info_Opinion_Count");
+
+                        todoNumber = Check_Drawing_Examine_Opinion_Count + Check_Detect_Info_Detail_Inspection_Count + Check_Detect_Info_Opinion_Count;
+                        initTodoNumber();
+                    }
+
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+            }
+        });
 
     }
 }

@@ -35,11 +35,6 @@ import org.json.JSONObject;
 
 import java.io.IOException;
 
-import okhttp3.Call;
-import okhttp3.Callback;
-import okhttp3.OkHttpClient;
-import okhttp3.Request;
-import okhttp3.Response;
 
 public class LoginActivity extends Activity implements View.OnClickListener{
 
@@ -54,8 +49,6 @@ public class LoginActivity extends Activity implements View.OnClickListener{
     private KProgressHUD kProgressHUD;
     private KProgressHUD okHUD;
 
-    private String mURL = null;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -63,11 +56,22 @@ public class LoginActivity extends Activity implements View.OnClickListener{
         initNavigationView();
         initUI();
         initHud();
+
     }
 
     public void onBackPressed() {
         super.onBackPressed();
         overridePendingTransition(R.anim.stay, R.anim.push_up_out_no_alpha);
+    }
+
+    private void initRequestFocus() {
+        if (usernameEditText.getText().toString().isEmpty()) {
+            usernameEditText.requestFocus();
+        } else {
+            if (passwordEditText.getText().toString().isEmpty()) {
+                passwordEditText.requestFocus();
+            }
+        }
     }
 
     private NavigationView navigationView;
@@ -175,18 +179,21 @@ public class LoginActivity extends Activity implements View.OnClickListener{
         params.put("password", PrivateEncode.getMD5(password));
         params.put("deviceType", "0");
         params.put("clientId", "1");
-        String urlBody = "http://61.164.218.155:8085/Account/login";
+        String urlBody = getString(R.string.serverIP) + getString(R.string.loginUrl);
         String url = "http://61.164.218.155:8085/Account/login?loginName="+username+"&password="+PrivateEncode.getMD5(password)+"&deviceType=0&clientId=1";
 
         AsyncHttpClient client = new AsyncHttpClient();
         client.get(urlBody, params, new JsonHttpResponseHandler("UTF-8") {
             @Override
             public void onSuccess(int statusCode, Header[] headers, JSONObject response) {
-                kProgressHUD.dismiss();
                 try {
+
+                    Log.i(TAG, "onSuccess: " + response.toString());
                     int code = response.getInt("Code");
                     String msg = response.getString("Msg");
                     String sessionKey = response.getString("SessionKey");
+                    JSONObject user = response.getJSONObject("LogonUser");
+                    String IDCard = user.getString("IDCard");
 
                     /**
                      * 登录成功
@@ -194,7 +201,7 @@ public class LoginActivity extends Activity implements View.OnClickListener{
                     if (code == 0) {
                         kProgressHUD.dismiss();
                         okHUD.show();
-                        saveData(true, username, password, sessionKey);
+                        saveData(true, username, password, sessionKey, IDCard);
                         new Handler().postDelayed(new Runnable() {
                             @Override
                             public void run() {
@@ -202,6 +209,7 @@ public class LoginActivity extends Activity implements View.OnClickListener{
                                 onBackPressed();
                             }
                         },1000);
+//                        getTODOCount(sessionKey, username);
                     } else {
                         /**
                          * 登录失败
@@ -238,140 +246,74 @@ public class LoginActivity extends Activity implements View.OnClickListener{
 
     }
 
-    private void login() {
-        /**
-         * 判断用户名和密码是否填写
-         */
-        final String username = usernameEditText.getText().toString();
-        final String password = passwordEditText.getText().toString();
-        if (username.isEmpty() || password.isEmpty()) {
-            Toast.makeText(this, "用户名或密码不能为空", Toast.LENGTH_SHORT).show();
-            return;
-        }
+    private void getTODOCount(String sessionKey, String account) {
+        RequestParams params = new RequestParams();
+        params.put("account", account);
+        params.put("sessionKey", sessionKey);
+        String urlBody = getString(R.string.serverIP) + getString(R.string.getTodoCountUrl);
 
-        kProgressHUD.show();
-
-        OkHttpClient client = new OkHttpClient();
-        String url = "http://61.164.218.155:8085/Account/login?loginName="+username+"&password="+PrivateEncode.getMD5(password)+"&deviceType=0&clientId=1";
-        Request request = new Request.Builder()
-                .url(url)
-                .build();
-        Call call = client.newCall(request);
-        call.enqueue(new Callback() {
+        AsyncHttpClient client = new AsyncHttpClient();
+        client.get(urlBody, params, new JsonHttpResponseHandler("UTF-8") {
             @Override
-            public void onFailure(Call call, IOException e) {
-                Log.v("OKHttp","failed");
-                runOnUiThread(new Runnable() {
-                    @Override
-                    public void run() {
-                        Toast.makeText(getApplicationContext(), "网络连接失败", Toast.LENGTH_SHORT).show();
-                        kProgressHUD.dismiss();
+            public void onSuccess(int statusCode, Header[] headers, JSONObject response) {
+                try {
+
+                    Log.i(TAG, "onSuccess: getTODOCount" + response.toString());
+                    int code = response.getInt("Code");
+                    if (code == 0) {
+
+                        //TODO: 暂时 数量不对
+//                        {"Code":0,"Check_Drawing_Examine_Opinion_Count":0,"Check_Detect_Info_Detail_Inspection_Count":1,"Check_Detect_Info_Opinion_Count":0,"msg":null}
+                        int Check_Drawing_Examine_Opinion_Count = response.getInt("Check_Drawing_Examine_Opinion_Count");
+                        int Check_Detect_Info_Detail_Inspection_Count = response.getInt("Check_Detect_Info_Detail_Inspection_Count");
+                        int Check_Detect_Info_Opinion_Count = response.getInt("Check_Detect_Info_Opinion_Count");
+
+                        int todoSum = Check_Drawing_Examine_Opinion_Count + Check_Detect_Info_Detail_Inspection_Count + Check_Detect_Info_Opinion_Count;
+
+                        /**
+                         * 广播
+                         */
+                        Intent intent=new Intent();
+                        intent.setAction("com.updateTodoCount");
+                        intent.putExtra("todoSum" , todoSum);
+                        sendBroadcast(intent);
+
                     }
-                });
+
+                } catch (JSONException e) {
+                    /**
+                     * json解析失败
+                     */
+                    e.printStackTrace();
+                    Log.i(TAG, "onResponse: json解析错误");
+                    kProgressHUD.dismiss();
+                    Toast.makeText(getApplicationContext(), "解析错误", Toast.LENGTH_SHORT).show();
+                }
             }
 
             @Override
-            public void onResponse(Call call, Response response) throws IOException {
-                if(response.isSuccessful()){
-                    //The call was successful. print it to the log
+            public void onFailure(int statusCode, Header[] headers, Throwable throwable, JSONObject errorResponse) {
+                kProgressHUD.dismiss();
+                Toast.makeText(getApplicationContext(), "网络连接失败1", Toast.LENGTH_SHORT).show();
+            }
 
-                    String responseString = response.body().string();
-                    Log.v("OKHttp","success: " + responseString);
-
-                    try {
-                        JSONObject json = new JSONObject(responseString);
-                        final String msg = json.getString("Msg");
-                        final String sessionKey = json.getString("SessionKey");
-
-                        /**
-                         * 登录成功
-                         */
-                        if (msg.equals("成功")) {
-                            runOnUiThread(new Runnable() {
-                                @Override
-                                public void run() {
-                                    kProgressHUD.dismiss();
-                                    okHUD.show();
-                                    saveData(true, username, password, sessionKey);
-                                    new Handler().postDelayed(new Runnable() {
-                                        @Override
-                                        public void run() {
-                                            okHUD.dismiss();
-                                            onBackPressed();
-                                        }
-                                    },1000);
-                                }
-                            });
-
-                        } else {
-                            /**
-                             * 登录失败
-                             */
-                            Log.i(TAG, "onResponse: 密码错误");
-                            runOnUiThread(new Runnable() {
-                                @Override
-                                public void run() {
-                                    kProgressHUD.dismiss();
-                                    Toast.makeText(getApplicationContext(), msg, Toast.LENGTH_SHORT).show();
-                                }
-                            });
-
-                        }
-
-                    } catch (JSONException e) {
-                        /**
-                         * json解析失败
-                         */
-                        e.printStackTrace();
-                        Log.i(TAG, "onResponse: json解析错误");
-                        runOnUiThread(new Runnable() {
-                            @Override
-                            public void run() {
-                                kProgressHUD.dismiss();
-                                Toast.makeText(getApplicationContext(), "解析错误", Toast.LENGTH_SHORT).show();
-                            }
-                        });
-
-                    }
-
-                } else {
-                    /**
-                     * 网络请求不成功
-                     */
-                    kProgressHUD.dismiss();
-                    runOnUiThread(new Runnable() {
-                        @Override
-                        public void run() {
-                            Toast.makeText(getApplicationContext(), "登录失败", Toast.LENGTH_SHORT).show();
-                        }
-                    });
-                    Log.v("OKHttp","is not Successful: " );
-                }
-
-//                try {
-//
-//                }catch (IOException e) {
-//                    Log.i(TAG, "onResponse: http try 失败");
-//                    e.printStackTrace();
-//                    kProgressHUD.dismiss();
-//                    runOnUiThread(new Runnable() {
-//                        @Override
-//                        public void run() {
-//                            Toast.makeText(getApplicationContext(), "登录失败", Toast.LENGTH_SHORT).show();
-//                        }
-//                    });
-//                }
+            @Override
+            public void onFailure(int statusCode, Header[] headers, String responseString, Throwable throwable) {
+                kProgressHUD.dismiss();
+                Toast.makeText(getApplicationContext(), "网络连接失败2", Toast.LENGTH_SHORT).show();
             }
         });
+
     }
 
-    private void saveData(boolean hasLogin, String username, String password, String sessionKey) {
+    private void saveData(boolean hasLogin, String username, String password, String sessionKey, String IDCard) {
         SharedPreferences user = getSharedPreferences("user", Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = user.edit();//获取编辑器
         editor.putBoolean("hasLogin", hasLogin);
         editor.putString("username", username);
         editor.putString("password", password);
         editor.putString("sessionKey", sessionKey);
+        editor.putString("IDCard", IDCard);
         editor.apply();//提交修改
     }
 
@@ -383,6 +325,8 @@ public class LoginActivity extends Activity implements View.OnClickListener{
         if (!username.isEmpty()) {
             usernameEditText.setText(username);
         }
+
+        initRequestFocus();
     }
 
 }

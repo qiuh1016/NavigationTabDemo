@@ -40,17 +40,25 @@
                     android:layout_height="50dp"
                     android:background="@drawable/top_unselect">
 
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:textSize="15sp"
+                        android:text="手机号"
+                        android:textColor="@color/tab_text_normal"
+                        android:layout_marginLeft="20dp"
+                        android:gravity="center_vertical"/>
+
                     <EditText
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:inputType="phone"
                         android:id="@+id/cellphone_editText_in_check_phone_activity"
                         android:layout_weight="1"
-                        android:hint="请输入您的手机号"
                         android:layout_marginRight="20dp"
                         android:background="#FFFFFF"
                         android:layout_marginLeft="20dp"
-                        android:textSize="16sp"
+                        android:textSize="15sp"
                         android:singleLine="true" />
                 </LinearLayout>
 
@@ -64,17 +72,25 @@
                     android:layout_height="50dp"
                     android:background="@drawable/bottom_unselect">
 
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:textSize="15sp"
+                        android:text="随机码"
+                        android:textColor="@color/tab_text_normal"
+                        android:layout_marginLeft="20dp"
+                        android:gravity="center_vertical"/>
+
                     <EditText
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:inputType="number"
                         android:id="@+id/codeUtils_editText_in_check_phone_activity"
                         android:layout_weight="1"
-                        android:hint="请输入图片验证码"
                         android:layout_marginLeft="20dp"
                         android:layout_marginRight="20dp"
                         android:background="#FFFFFF"
-                        android:textSize="16sp"
+                        android:textSize="15sp"
                         android:singleLine="true" />
 
                     <ImageView
@@ -96,17 +112,25 @@
                     android:layout_height="50dp"
                     android:background="@drawable/bottom_unselect">
 
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:textSize="15sp"
+                        android:text="短信码"
+                        android:textColor="@color/tab_text_normal"
+                        android:layout_marginLeft="20dp"
+                        android:gravity="center_vertical"/>
+
                     <EditText
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:inputType="number"
                         android:id="@+id/sms_editText_in_check_phone_activity"
                         android:layout_weight="1"
-                        android:hint="请输入短信验证码"
                         android:layout_marginLeft="20dp"
                         android:layout_marginRight="20dp"
                         android:background="#FFFFFF"
-                        android:textSize="16sp"
+                        android:textSize="15sp"
                         android:singleLine="true" />
 
                     <Button

@@ -54,10 +54,6 @@ import com.loopj.android.http.AsyncHttpClient;
 import com.loopj.android.http.JsonHttpResponseHandler;
 import com.loopj.android.http.RequestParams;
 
-import okhttp3.Call;
-import okhttp3.OkHttpClient;
-import okhttp3.Request;
-
 import static android.widget.Toast.LENGTH_SHORT;
 
 public class ioConfirmActivity extends Activity {

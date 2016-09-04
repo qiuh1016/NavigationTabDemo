@@ -1,14 +1,17 @@
 SharedPreferences :
 
 system:
-	version			String
-	manualCheckUpdate	Boolen
+	//version			String
+	//manualCheckUpdate	Boolen
 
 user: 
 	username 		String
 	password 		String
 	hasLogin		Boolen
 	sessionKey		String
-	debugMode		String
+	IDCard			String
+
+
+	//debugMode		String
 
 

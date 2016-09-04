@@ -29,6 +29,7 @@ public class TodoActivity extends Activity {
         initNavigationView();
         initNumber();
         initLineClick();
+
     }
 
     public void onBackPressed() {
@@ -58,6 +59,15 @@ public class TodoActivity extends Activity {
     }
 
     private void initNumber() {
+
+        Bundle bundle = getIntent().getExtras();
+        //TODO 从主页进入的话 如何显示
+        if (bundle != null) {
+            todoNumber[0] = bundle.getInt("Check_Drawing_Examine_Opinion_Count");
+            todoNumber[1] = bundle.getInt("Check_Detect_Info_Detail_Inspection_Count");
+            todoNumber[2] = bundle.getInt("Check_Detect_Info_Opinion_Count");
+        }
+
         TextView number1 = (TextView) findViewById(R.id.numberText1_in_todo_activity);
         TextView number2 = (TextView) findViewById(R.id.numberText2_in_todo_activity);
         TextView number3 = (TextView) findViewById(R.id.numberText3_in_todo_activity);

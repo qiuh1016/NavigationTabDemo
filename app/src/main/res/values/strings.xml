@@ -2,6 +2,10 @@
 <resources>
     <string name="app_name">浙渔通渔民版</string>
 
+    <string name="user_terms"><u>用户协议</u></string>
+    <string name="password">密&#160;&#160;&#160;&#160;码</string>
+    <string name="username">用户名</string>
+
     <string name="gird_1_in_fragment_homepage">业务办理</string>
     <string name="gird_2_in_fragment_homepage">记录查询</string>
     <string name="gird_3_in_fragment_homepage">电子签证</string>
@@ -45,7 +49,8 @@
     <string name="line_2_in_route_activity">结束时间：</string>
     <string name="line_3_in_route_activity">显示中间点：</string>
 
-    <string name="user_terms"><u>用户协议</u></string>
+
+
 
     <!--API-->
     <string name="rcldServerIP">http://120.27.149.252</string>
@@ -54,6 +59,8 @@
 
     <string name="loginUrl">/Account/login</string>
     <string name="sendSMSUrl">/Account/SendSms</string>
+    <string name="registerUrl">/Account/Register</string>
+    <string name="getTodoCountUrl">/Business/getTodoCount</string>
 
     <!--rcld Api-->
     

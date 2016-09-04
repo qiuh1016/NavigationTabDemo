@@ -43,7 +43,7 @@ dependencies {
     compile 'net.steamcrafted:load-toast:1.0.10'
     compile 'com.akexorcist:RoundCornerProgressBar:2.0.3'
     compile 'com.youth.banner:banner:1.2.8'
-    compile 'com.squareup.okhttp3:okhttp:3.4.1'
+//    compile 'com.squareup.okhttp3:okhttp:3.4.1'
     compile 'com.umeng.analytics:analytics:latest.integration'
 //    compile project(':pullToRefresh')
     compile project(':PushSDK')
