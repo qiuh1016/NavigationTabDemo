@@ -51,13 +51,19 @@ public class MapFragment extends BaseFragment implements  BaiduMap.OnMarkerClick
 
     private String[] shipNames = {
             "浙三渔04529",
-            "浙嘉渔3214",
-            "浙嘉渔1314"};
+            "浙象渔84006",
+            "浙象渔10035"};
 
     private String[] shipNumbers = {
             "3303811998090003",
             "3303812001050005",
             "3302251998010002"};
+
+    private LatLng[] shipLocations = {
+            new LatLng(30, 122),
+            new LatLng(31, 121),
+            new LatLng(32.5, 120.5)
+    };
 
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -68,6 +74,10 @@ public class MapFragment extends BaseFragment implements  BaiduMap.OnMarkerClick
         initNavigationView();
         initMapView();
         initLoginBroadcast();
+
+        if (user.getBoolean("hasLogin", false)) {
+            drawMapMark();
+        }
 
         return view;
     }
@@ -116,8 +126,6 @@ public class MapFragment extends BaseFragment implements  BaiduMap.OnMarkerClick
 
     private void mapMark(LatLng latLng, String shipInfo){
 
-        mapStatus(latLng);
-
         //定义Maker坐标点
         LatLng point = latLng;
         //构建Marker图标
@@ -125,10 +133,14 @@ public class MapFragment extends BaseFragment implements  BaiduMap.OnMarkerClick
                 .fromResource(R.drawable.icon_point);
         //构建MarkerOption，用于在地图上添加Marker
         OverlayOptions option = new MarkerOptions()
+                .title(shipInfo)
                 .position(point)
                 .icon(bitmap);
+
         //在地图上添加Marker，并显示
-        comMarker = (Marker) baiduMap.addOverlay(option);
+        baiduMap.addOverlay(option);
+
+        /*
 
         //创建InfoWindow展示的view
         Button button = new Button(getActivity());
@@ -157,6 +169,8 @@ public class MapFragment extends BaseFragment implements  BaiduMap.OnMarkerClick
             infoWindowIsShow = true;
         }
 
+        */
+
 
     }
 
@@ -172,9 +186,11 @@ public class MapFragment extends BaseFragment implements  BaiduMap.OnMarkerClick
     @Override
     public boolean onMarkerClick(Marker marker) {
 
+        String shipName = marker.getTitle();
+
         Intent intent = new Intent();
         Bundle bundle = new Bundle();
-        bundle.putString("shipName", "浙三渔04529");
+        bundle.putString("shipName", shipName); //"浙三渔04529"
         intent.putExtras(bundle);
         intent.setClass(getActivity(), ShipInfoActivity.class);
         startActivity(intent);
@@ -208,8 +224,7 @@ public class MapFragment extends BaseFragment implements  BaiduMap.OnMarkerClick
             Boolean loginFlag = bundle.getBoolean("loginFlag");
 
             if (loginFlag) {
-                mapMark(new LatLng(30, 122), "浙嘉渔1234");
-                mapMark(new LatLng(31, 123), "浙嘉渔1234");
+                drawMapMark();
             } else {
                 baiduMap.clear();
             }
@@ -217,8 +232,25 @@ public class MapFragment extends BaseFragment implements  BaiduMap.OnMarkerClick
         }
     }
 
-    public void onStop() {
-        super.onStop();
+    public void onDestroy() {
+        super.onDestroy();
         getActivity().unregisterReceiver(myLoginStateReceiver);
     }
+
+    private void drawMapMark() {
+
+        double lats = 0.0;
+        double lngs = 0.0;
+        for (int i = 0; i < shipNames.length; i++) {
+            mapMark(shipLocations[i], shipNames[i]);
+            lats += shipLocations[i].latitude;
+            lngs += shipLocations[i].longitude;
+        }
+
+        int count = shipNames.length;
+        LatLng mediaPoint = new LatLng(lats / count, lngs / count);
+        mapStatus(mediaPoint);
+
+    }
+
 }
