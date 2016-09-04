@@ -278,7 +278,7 @@
         <service android:name="com.fr.android.app.activity.IFUpdateService"></service>
 
 
-
+        <!--fr end-->
 
 
 

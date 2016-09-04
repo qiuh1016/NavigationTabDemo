@@ -216,4 +216,9 @@ public class MapFragment extends BaseFragment implements  BaiduMap.OnMarkerClick
 
         }
     }
+
+    public void onStop() {
+        super.onStop();
+        getActivity().unregisterReceiver(myLoginStateReceiver);
+    }
 }

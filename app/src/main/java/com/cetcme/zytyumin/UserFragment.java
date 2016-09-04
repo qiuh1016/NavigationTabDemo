@@ -1,10 +1,8 @@
 package com.cetcme.zytyumin;
 
-import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.content.IntentFilter;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Handler;
@@ -20,6 +18,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.cetcme.zytyumin.MyClass.CustomDialog;
 import com.kaopiz.kprogresshud.KProgressHUD;
 
 import com.cetcme.zytyumin.IconPager.BaseFragment;
@@ -220,28 +219,52 @@ public class UserFragment extends BaseFragment {
     }
 
     private void logoutDialog() {
-        AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
-        builder.setIcon(android.R.drawable.ic_menu_myplaces);
-        builder.setMessage("是否继续?");
-        builder.setTitle("即将退出登录");
+
+        CustomDialog.Builder builder = new CustomDialog.Builder(getActivity());
+        builder.setTitle("提示");
+        builder.setMessage("即将退出，是否继续?");
+        builder.setCancelable(false);
         builder.setPositiveButton("退出", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialogInterface, int i) {
+            public void onClick(DialogInterface dialog, int which) {
+                Log.i(TAG, "onClick: right");
+                dialog.dismiss();
                 logout();
+                //设置你的操作事项
             }
         });
-        builder.setNegativeButton("取消", null);
 
-        /**
-         * 设置自定义按钮
-         */
-        AlertDialog alertDialog = builder.create();
-        alertDialog.show();
+        builder.setNegativeButton("取消", new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int which) {
+                Log.i(TAG, "onClick: left");
+                dialog.dismiss();
+            }
+        });
 
-        Button btnPositive = alertDialog.getButton(android.app.AlertDialog.BUTTON_POSITIVE);
-        Button btnNegative = alertDialog.getButton(android.app.AlertDialog.BUTTON_NEGATIVE);
-        btnNegative.setTextColor(getResources().getColor(R.color.main_color));
-        btnPositive.setTextColor(getResources().getColor(R.color.main_color));
+        builder.create().show();
+
+
+//        AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+//        builder.setIcon(android.R.drawable.ic_menu_myplaces);
+//        builder.setMessage("是否继续?");
+//        builder.setTitle("即将退出登录");
+//        builder.setPositiveButton("退出", new DialogInterface.OnClickListener() {
+//            @Override
+//            public void onClick(DialogInterface dialogInterface, int i) {
+//                logout();
+//            }
+//        });
+//        builder.setNegativeButton("取消", null);
+//
+//        /**
+//         * 设置自定义按钮
+//         */
+//        AlertDialog alertDialog = builder.create();
+//        alertDialog.show();
+//
+//        Button btnPositive = alertDialog.getButton(android.app.AlertDialog.BUTTON_POSITIVE);
+//        Button btnNegative = alertDialog.getButton(android.app.AlertDialog.BUTTON_NEGATIVE);
+//        btnNegative.setTextColor(getResources().getColor(R.color.main_color));
+//        btnPositive.setTextColor(getResources().getColor(R.color.main_color));
 
     }
 
@@ -279,6 +302,16 @@ public class UserFragment extends BaseFragment {
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }
+            }
+
+            @Override
+            public void onFailure(int statusCode, Header[] headers, Throwable throwable, JSONObject errorResponse) {
+                Log.i(TAG, "onFailure: get todo network error");
+            }
+
+            @Override
+            public void onFailure(int statusCode, Header[] headers, String responseString, Throwable throwable) {
+                Log.i(TAG, "onFailure: get todo network error");
             }
         });
 
