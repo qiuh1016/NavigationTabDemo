@@ -36,8 +36,9 @@
                     <TextView style="@style/userText"
                               android:text="@string/line_1_in_todo_activity" />
                     <TextView style="@style/numberText"
-                        android:text="0"
-                        android:id="@+id/numberText1_in_todo_activity"/>
+                              android:text="0"
+                              android:id="@+id/numberText1_in_todo_activity"
+                              android:layout_marginRight="5dp"/>
                     <ImageView style="@style/img_arrow"/>
                 </LinearLayout>
 
@@ -50,7 +51,8 @@
                               android:text="@string/line_2_in_todo_activity" />
                     <TextView style="@style/numberText"
                               android:text="0"
-                              android:id="@+id/numberText2_in_todo_activity"/>
+                              android:id="@+id/numberText2_in_todo_activity"
+                              android:layout_marginRight="5dp"/>
                     <ImageView style="@style/img_arrow"/>
                 </LinearLayout>
 
@@ -63,7 +65,8 @@
                               android:text="@string/line_3_in_todo_activity" />
                     <TextView style="@style/numberText"
                               android:text="0"
-                              android:id="@+id/numberText3_in_todo_activity"/>
+                              android:id="@+id/numberText3_in_todo_activity"
+                              android:layout_marginRight="5dp"/>
                     <ImageView style="@style/img_arrow"/>
                 </LinearLayout>
 
@@ -75,7 +78,8 @@
                               android:text="@string/line_4_in_todo_activity" />
                     <TextView style="@style/numberText"
                               android:text="0"
-                              android:id="@+id/numberText4_in_todo_activity"/>
+                              android:id="@+id/numberText4_in_todo_activity"
+                              android:layout_marginRight="5dp"/>
                     <ImageView style="@style/img_arrow"/>
                 </LinearLayout>
 

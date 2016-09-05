@@ -290,6 +290,13 @@ public class UserFragment extends BaseFragment {
 
                         todoNumber = Check_Drawing_Examine_Opinion_Count + Check_Detect_Info_Detail_Inspection_Count + Check_Detect_Info_Opinion_Count;
                         initTodoNumber();
+                        int[] todoNumbers = {
+                                Check_Drawing_Examine_Opinion_Count,
+                                Check_Detect_Info_Detail_Inspection_Count,
+                                Check_Detect_Info_Opinion_Count,
+                                0
+                        };
+                        sendTodoNumberBroadcast(todoNumbers);
                     } else if (code == 2) {
                         Toast.makeText(getActivity(), "登陆信息过期，请重新登陆",Toast.LENGTH_SHORT).show();
                         SharedPreferences.Editor editor = user.edit();//获取编辑器
@@ -343,6 +350,13 @@ public class UserFragment extends BaseFragment {
         Intent intent = new Intent();
         intent.setAction("com.loginFlag");
         intent.putExtra("loginFlag" , login);
+        getActivity().sendBroadcast(intent);
+    }
+
+    private void sendTodoNumberBroadcast(int[] todoNumbers) {
+        Intent intent = new Intent();
+        intent.setAction("com.todoNumbers");
+        intent.putExtra("todoNumbers" , todoNumbers);
         getActivity().sendBroadcast(intent);
     }
 }

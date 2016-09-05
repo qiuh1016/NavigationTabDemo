@@ -92,17 +92,6 @@ public class HomepageFragment extends BaseFragment {
             "渔业渔政管理局开展定点扶贫村结对帮扶工作"
     };
 
-//    //TODO: 测试用的船名
-//    public String[] shipNames = {
-//             "浙三渔04529",
-//             "浙嘉渔3214",
-//             "浙嘉渔1314"};
-//
-//    public String[] shipNumbers = {
-//            "3303811998090003",
-//            "3303812001050005",
-//            "3302251998010002"};
-
     @Override
     public View onCreateView(LayoutInflater inflater, final ViewGroup container, Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.fragment_homepage, null);
@@ -182,7 +171,7 @@ public class HomepageFragment extends BaseFragment {
 
                     if (position == 2) {
                         /**
-                         * 打开电子签证界面前进行判断是否只有一条船
+                         * 打开电子签证界面前进行判断船只数量
                          */
                         List<Ship> ships = ((MainActivity)getActivity()).getShips();
 
@@ -212,6 +201,19 @@ public class HomepageFragment extends BaseFragment {
                             Toast.makeText(getActivity(), "您的名下没有船只", Toast.LENGTH_SHORT).show();
                         }
 
+                    } else if (position == 5){
+                        /**
+                         * 待办业务
+                         */
+                        Bundle bundle = new Bundle();
+                        bundle.putInt("Check_Drawing_Examine_Opinion_Count", ((MainActivity) getActivity()).getTodoNumbers()[0]);
+                        bundle.putInt("Check_Detect_Info_Detail_Inspection_Count", ((MainActivity) getActivity()).getTodoNumbers()[1]);
+                        bundle.putInt("Check_Detect_Info_Opinion_Count", ((MainActivity) getActivity()).getTodoNumbers()[2]);
+                        Intent intent = new Intent(getActivity(), TodoActivity.class);
+                        intent.putExtras(bundle);
+                        MainActivity activity = (MainActivity) getActivity();
+                        startActivity(intent);
+                        activity.overridePendingTransition(R.anim.push_left_in_no_alpha, R.anim.push_left_out_no_alpha);
                     } else {
                         Intent intent = new Intent();
                         intent.setClass(getActivity(), gridClass[position]);

@@ -18,7 +18,6 @@ import com.baidu.mapapi.SDKInitializer;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.baidu.mapapi.model.LatLng;
 import com.cetcme.zytyumin.IconPager.BaseFragment;
 import com.cetcme.zytyumin.IconPager.IconPagerAdapter;
 import com.cetcme.zytyumin.IconPager.IconTabPageIndicator;
@@ -34,6 +33,7 @@ public class MainActivity extends FragmentActivity {
     private String TAG = "MainActivity";
 
     private MyShipDataReceiver myShipDataReceiver;
+    private MyTodoNumbersReceiver myTodoNumbersReceiver;
 
     //按2次返回退出
     private boolean hasPressedBackOnce = false;
@@ -42,8 +42,14 @@ public class MainActivity extends FragmentActivity {
 
     private List<Ship> ships = new ArrayList<>();
 
+    private int[] todoNumbers = {0, 0, 0, 0};
+
     public List<Ship> getShips() {
         return this.ships;
+    }
+
+    public int[] getTodoNumbers() {
+        return this.todoNumbers;
     }
 
     @Override
@@ -52,7 +58,7 @@ public class MainActivity extends FragmentActivity {
         SDKInitializer.initialize(getApplicationContext());
         setContentView(R.layout.activity_main);
         initViews();
-        initShipDataBroadcast();
+        initBroadcast();
 
 //        ships.add(new Ship("浙三渔04529", "3303811998090003", 30,122, false));
 //        ships.add(new Ship("浙象渔84006", "3303812001050005", 31,121, false));
@@ -149,17 +155,32 @@ public class MainActivity extends FragmentActivity {
 
         }
     }
+    public class MyTodoNumbersReceiver extends BroadcastReceiver {
 
-    private void initShipDataBroadcast() {
+        @Override
+        public void onReceive(Context arg0, Intent arg1) {
+
+            Log.i(TAG, "onReceive: get todo numbers");
+            Bundle bundle = arg1.getExtras();
+            todoNumbers = (int[]) bundle.getSerializable("todoNumbers");
+
+        }
+    }
+
+    private void initBroadcast() {
         myShipDataReceiver = new MyShipDataReceiver();
+        myTodoNumbersReceiver = new MyTodoNumbersReceiver();
         IntentFilter filter = new IntentFilter();
         filter.addAction("com.shipData");
+        filter.addAction("com.todoNumbers");
         registerReceiver(myShipDataReceiver, filter);
+        registerReceiver(myTodoNumbersReceiver,filter);
     }
 
     public void onDestroy() {
         super.onDestroy();
         unregisterReceiver(myShipDataReceiver);
+        unregisterReceiver(myTodoNumbersReceiver);
     }
 
 }

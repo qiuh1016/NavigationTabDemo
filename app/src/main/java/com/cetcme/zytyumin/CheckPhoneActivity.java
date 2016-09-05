@@ -288,7 +288,10 @@ public class CheckPhoneActivity extends Activity implements View.OnClickListener
         /**
          * 没发送过sms就return
          */
-        if (!isSendSMS) return;
+        if (!isSendSMS) {
+            ButtonShack.run(nextButton);
+            return;
+        }
 
         /**
          * 如果短信验证码空或长度不为4就return

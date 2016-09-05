@@ -39,7 +39,8 @@ android:background="#eeeeee" >
                     <TextView style="@style/userText" android:text="我的待办" />
                     <TextView style="@style/numberText"
                               android:text="0"
-                              android:id="@+id/todoNumber_in_fragment_user"/>
+                              android:id="@+id/todoNumber_in_fragment_user"
+                              android:layout_marginRight="5dp"/>
                     <ImageView style="@style/img_arrow"/>
                 </LinearLayout>
 

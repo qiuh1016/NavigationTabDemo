@@ -12,6 +12,10 @@ import com.daimajia.androidanimations.library.YoYo;
  */
 public class ButtonShack {
 
+    public static void delay(int ms , final Runnable runnable) {
+        new Handler().postDelayed(runnable, ms);
+    }
+
     public static void run(Button button) {
 
         YoYo.with(Techniques.Shake)
@@ -120,7 +124,5 @@ public class ButtonShack {
 //        },50);
     }
 
-    private static void delay(int ms , final Runnable runnable) {
-        new Handler().postDelayed(runnable, ms);
-    }
+
 }

@@ -279,6 +279,19 @@ public class LoginActivity extends Activity implements View.OnClickListener{
     }
 
     @Override
+    protected void onStart() {
+        super.onStart();
+//        new Handler().postDelayed(new Runnable() {
+//            @Override
+//            public void run() {
+//                YoYo.with(Techniques.DropOut)
+//                        .duration(700)
+//                        .playOn(findViewById(R.id.title_textView_in_login_activity));
+//            }
+//        }, 300);
+    }
+
+    @Override
     public void onResume() {
         super.onResume();
         String username = user.getString("username", "");
@@ -291,10 +304,6 @@ public class LoginActivity extends Activity implements View.OnClickListener{
         }
 
         loginButton.requestFocus();
-
-        YoYo.with(Techniques.DropOut)
-                .duration(700)
-                .playOn(findViewById(R.id.title_textView_in_login_activity));
 
     }
 

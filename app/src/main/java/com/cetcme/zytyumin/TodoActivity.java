@@ -15,7 +15,7 @@ public class TodoActivity extends Activity {
 
     private NavigationView navigationView;
     private String TAG = "TodoActivity";
-    private int[] todoNumber = {0, 0, 0, 0};
+    private int[] todoNumbers = {0, 0, 0, 0};
 
     private String url_line_1 = "http://61.164.218.155:5008/WebReport/ReportServer?reportlet=apply%2Fpic_opinion_phone.cpt&op=write&appid=109";
     private String url_line_2 = "";
@@ -63,9 +63,9 @@ public class TodoActivity extends Activity {
         Bundle bundle = getIntent().getExtras();
         //TODO 从主页进入的话 如何显示
         if (bundle != null) {
-            todoNumber[0] = bundle.getInt("Check_Drawing_Examine_Opinion_Count");
-            todoNumber[1] = bundle.getInt("Check_Detect_Info_Detail_Inspection_Count");
-            todoNumber[2] = bundle.getInt("Check_Detect_Info_Opinion_Count");
+            todoNumbers[0] = bundle.getInt("Check_Drawing_Examine_Opinion_Count");
+            todoNumbers[1] = bundle.getInt("Check_Detect_Info_Detail_Inspection_Count");
+            todoNumbers[2] = bundle.getInt("Check_Detect_Info_Opinion_Count");
         }
 
         TextView number1 = (TextView) findViewById(R.id.numberText1_in_todo_activity);
@@ -73,15 +73,15 @@ public class TodoActivity extends Activity {
         TextView number3 = (TextView) findViewById(R.id.numberText3_in_todo_activity);
         TextView number4 = (TextView) findViewById(R.id.numberText4_in_todo_activity);
 
-        number1.setText(String.valueOf(todoNumber[0]));
-        number2.setText(String.valueOf(todoNumber[1]));
-        number3.setText(String.valueOf(todoNumber[2]));
-        number4.setText(String.valueOf(todoNumber[3]));
+        number1.setText(String.valueOf(todoNumbers[0]));
+        number2.setText(String.valueOf(todoNumbers[1]));
+        number3.setText(String.valueOf(todoNumbers[2]));
+        number4.setText(String.valueOf(todoNumbers[3]));
 
-        number1.setVisibility( todoNumber[0] == 0 ? View.INVISIBLE : View.VISIBLE);
-        number2.setVisibility( todoNumber[1] == 0 ? View.INVISIBLE : View.VISIBLE);
-        number3.setVisibility( todoNumber[2] == 0 ? View.INVISIBLE : View.VISIBLE);
-        number4.setVisibility( todoNumber[3] == 0 ? View.INVISIBLE : View.VISIBLE);
+        number1.setVisibility( todoNumbers[0] == 0 ? View.INVISIBLE : View.VISIBLE);
+        number2.setVisibility( todoNumbers[1] == 0 ? View.INVISIBLE : View.VISIBLE);
+        number3.setVisibility( todoNumbers[2] == 0 ? View.INVISIBLE : View.VISIBLE);
+        number4.setVisibility( todoNumbers[3] == 0 ? View.INVISIBLE : View.VISIBLE);
     }
 
     private void initLineClick() {
