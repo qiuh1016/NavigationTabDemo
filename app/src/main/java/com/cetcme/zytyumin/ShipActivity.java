@@ -9,24 +9,31 @@ import android.widget.LinearLayout;
 import com.cetcme.zytyumin.MyClass.ListCell;
 import com.cetcme.zytyumin.MyClass.ListSeparator;
 import com.cetcme.zytyumin.MyClass.NavigationView;
+import com.cetcme.zytyumin.MyClass.Ship;
+
+import java.util.List;
 
 public class ShipActivity extends Activity {
 
     private boolean openFromMapFragment;
     private String[] shipNames;
     private String[] shipNumbers;
+    private List<Ship> ships;
+
+    private String TAG = "ShipActivity";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ship);
 
+        Log.i(TAG, "onCreate: ");
+
         openFromMapFragment = getIntent().getExtras().getBoolean("openFromMapFragment");
-        shipNames = getIntent().getExtras().getStringArray("shipNames");
-        shipNumbers = getIntent().getExtras().getStringArray("shipNumbers");
+        ships = (List<Ship>) getIntent().getExtras().getSerializable("ships");
 
         initNavigationView();
-        initLayout();
+        initLayoutWithShipClass();
     }
 
     public void onBackPressed() {
@@ -114,6 +121,70 @@ public class ShipActivity extends Activity {
              * 分割线 list_separator
              */
             if (i != shipNames.length - 1) {
+                ListSeparator listSeparator = new ListSeparator(this);
+                linearLayout.addView(listSeparator);
+            }
+        }
+
+    }
+
+    private void initLayoutWithShipClass() {
+        LinearLayout linearLayout = (LinearLayout) findViewById(R.id.linerLayout_in_visa_activity);
+
+        int selector;
+        for (int i = 0; i < ships.size(); i++) {
+
+            if (i == 0) {
+                selector = ships.size() == 1 ? R.drawable.single_layout_selector : R.drawable.top_layout_selector;
+            } else if (i == ships.size() - 1){
+                selector = (i % 2 == 0) ? R.drawable.bottom_layout_selector: R.drawable.bottom_layout_light_selector;
+            } else {
+                selector = (i % 2 == 0) ? R.drawable.mid_layout_selector: R.drawable.mid_layout_light_selector;
+            }
+
+            /**
+             * 功能行 list_cell
+             */
+            ListCell listCell = new ListCell(this, ships.get(i).name, selector);
+            final int finalI = i;
+            listCell.setClickCallback(new ListCell.ClickCallback() {
+                @Override
+                public void onClick() {
+                    Log.i("main", "onClick: " + ships.get(finalI).name);
+
+                    if (openFromMapFragment) {
+                        /**
+                         * 进入ship info
+                         */
+                        Intent intent = new Intent();
+                        Bundle bundle = new Bundle();
+                        bundle.putString("shipName", ships.get(finalI).name);
+                        intent.putExtras(bundle);
+                        intent.setClass(getApplicationContext(), ShipInfoActivity.class);
+                        startActivity(intent);
+                    } else {
+                        /**
+                         * 进入visa界面
+                         */
+                        Intent intent = new Intent();
+                        intent.setClass(getApplicationContext(), VisaActivity.class);
+                        Bundle bundle = new Bundle();
+                        bundle.putString("shipName", ships.get(finalI).name);
+                        bundle.putString("shipNumber", ships.get(finalI).number);
+                        intent.putExtras(bundle);
+                        startActivity(intent);
+                        overridePendingTransition(R.anim.push_left_in_no_alpha, R.anim.push_left_out_no_alpha);
+                    }
+
+
+                }
+            });
+            linearLayout.addView(listCell);
+
+            /**
+             * 分割线 list_separator
+             */
+            if (i != ships.size() - 1) {
                 ListSeparator listSeparator = new ListSeparator(this);
                 linearLayout.addView(listSeparator);
             }

@@ -4,7 +4,6 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.v4.content.ContextCompat;
@@ -17,9 +16,10 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import com.baidu.mapapi.model.LatLng;
 import com.cetcme.zytyumin.MyClass.ButtonShack;
-import com.cetcme.zytyumin.MyClass.DensityUtil;
 import com.cetcme.zytyumin.MyClass.PrivateEncode;
+import com.cetcme.zytyumin.MyClass.Ship;
 import com.daimajia.androidanimations.library.Techniques;
 import com.daimajia.androidanimations.library.YoYo;
 import com.kaopiz.kprogresshud.KProgressHUD;
@@ -30,13 +30,14 @@ import com.loopj.android.http.AsyncHttpClient;
 import com.loopj.android.http.JsonHttpResponseHandler;
 import com.loopj.android.http.RequestParams;
 
-import net.steamcrafted.loadtoast.LoadToast;
-
 import org.apache.http.Header;
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.io.IOException;
+import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
 
 
 public class LoginActivity extends Activity implements View.OnClickListener{
@@ -207,13 +208,17 @@ public class LoginActivity extends Activity implements View.OnClickListener{
                     int code = response.getInt("Code");
                     String msg = response.getString("Msg");
                     String sessionKey = response.getString("SessionKey");
-                    JSONObject user = response.getJSONObject("LogonUser");
-                    String IDCard = user.getString("IDCard");
 
                     /**
                      * 登录成功
                      */
                     if (code == 0) {
+
+                        JSONObject user = response.getJSONObject("LogonUser");
+                        String IDCard = user.getString("IDCard");
+                        JSONArray shipArray = user.getJSONArray("Ships");
+                        dealWhitShipArray(shipArray);
+
                         kProgressHUD.dismiss();
                         okHUD.show();
                         saveData(true, username, password, sessionKey, IDCard);
@@ -224,7 +229,7 @@ public class LoginActivity extends Activity implements View.OnClickListener{
                                 onBackPressed();
                             }
                         },1000);
-                        sendBroadcast(true);
+                        sendLoginFlagBroadcast(true);
                     } else {
                         /**
                          * 登录失败
@@ -297,11 +302,49 @@ public class LoginActivity extends Activity implements View.OnClickListener{
         checkBox.setChecked(!checkBox.isChecked());
     }
 
-    private void sendBroadcast(boolean login) {
+    private void sendLoginFlagBroadcast(boolean login) {
         Intent intent = new Intent();
         intent.setAction("com.loginFlag");
         intent.putExtra("loginFlag" , login);
         sendBroadcast(intent);
+    }
+
+    private void sendShipDataBroadcast(List<Ship> ships) {
+        Intent intent = new Intent();
+        intent.setAction("com.shipData");
+        intent.putExtra("ships" , (Serializable) ships);
+        sendBroadcast(intent);
+    }
+
+    private void dealWhitShipArray(JSONArray shipArray) {
+        List<Ship> ships = new ArrayList<>();
+
+
+        for (int i = 0; i < shipArray.length(); i++) {
+            try {
+                JSONObject shipJSON = shipArray.getJSONObject(i);
+                String shipName = shipJSON.getString("ShipName");
+                String shipNumber = shipJSON.getString("ShipNo");
+                boolean deviceInstall = shipJSON.getBoolean("DeviceInstall");
+                //TODO 差经纬度
+                double latitude = 30.0 + i / 2;  //shipJSON.getDouble("latitude");
+                double longitude = 120.0 + i / 2; //shipJSON.getDouble("longitude");
+
+                Ship ship = new Ship(shipName, shipNumber, latitude, longitude, deviceInstall);
+                ships.add(ship);
+
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+        }
+
+        if (shipArray.length() == 0) {
+//            ships.add(new Ship("浙三渔04529", "3303811998090003", 30,122, false));
+//            ships.add(new Ship("浙象渔10035", "3302251998010002", 32.5,122, false));
+        }
+
+        sendShipDataBroadcast(ships);
+
     }
 
 }

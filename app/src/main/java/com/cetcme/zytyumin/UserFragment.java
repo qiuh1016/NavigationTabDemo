@@ -7,7 +7,6 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.annotation.Nullable;
-import android.support.v7.app.AlertDialog;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -319,7 +318,7 @@ public class UserFragment extends BaseFragment {
 
     private void logout() {
         kProgressHUD.show();
-        sendBroadcast(false);
+        sendLoginFlagBroadcast(false);
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
@@ -340,7 +339,7 @@ public class UserFragment extends BaseFragment {
         }, 1000);
     }
 
-    private void sendBroadcast(boolean login) {
+    private void sendLoginFlagBroadcast(boolean login) {
         Intent intent = new Intent();
         intent.setAction("com.loginFlag");
         intent.putExtra("loginFlag" , login);

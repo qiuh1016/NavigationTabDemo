@@ -13,6 +13,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.Toast;
 
 import com.baidu.mapapi.map.BaiduMap;
 import com.baidu.mapapi.map.BitmapDescriptor;
@@ -29,8 +30,12 @@ import com.baidu.mapapi.model.LatLng;
 
 import com.cetcme.zytyumin.IconPager.BaseFragment;
 import com.cetcme.zytyumin.MyClass.NavigationView;
+import com.cetcme.zytyumin.MyClass.Ship;
 
 import org.mozilla.javascript.tools.debugger.Main;
+
+import java.io.Serializable;
+import java.util.List;
 
 /**
  * Created by qiuhong on 8/24/16.
@@ -51,25 +56,7 @@ public class MapFragment extends BaseFragment implements  BaiduMap.OnMarkerClick
 
     private MyLoginStateReceiver myLoginStateReceiver;
 
-    private String[] shipNames;
-    private String[] shipNumbers;
-    private LatLng[] shipLocations;
-
-//    private String[] shipNames = {
-//            "浙三渔04529",
-//            "浙象渔84006",
-//            "浙象渔10035"};
-//
-//    private String[] shipNumbers = {
-//            "3303811998090003",
-//            "3303812001050005",
-//            "3302251998010002"};
-//
-//    private LatLng[] shipLocations = {
-//            new LatLng(30, 122),
-//            new LatLng(31, 121),
-//            new LatLng(32.5, 120.5)
-//    };
+    private List<Ship> ships;
 
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -98,13 +85,17 @@ public class MapFragment extends BaseFragment implements  BaiduMap.OnMarkerClick
             public void onRightClick() {
                 Log.i("main","点击了右侧按钮!");
 
+                if (ships.size() == 0) {
+                    Toast.makeText(getActivity(), "您的名下没有船只", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+
                 if (user.getBoolean("hasLogin", false)) {
                     Intent intent = new Intent();
                     intent.setClass(getActivity(), ShipActivity.class);
                     Bundle bundle = new Bundle();
                     bundle.putBoolean("openFromMapFragment", true);
-                    bundle.putStringArray("shipNames", shipNames);
-                    bundle.putStringArray("shipNumbers", shipNumbers);
+                    bundle.putSerializable("ships", (Serializable) ships);
                     intent.putExtras(bundle);
                     startActivity(intent);
                     MainActivity activity = (MainActivity) getActivity();
@@ -245,20 +236,21 @@ public class MapFragment extends BaseFragment implements  BaiduMap.OnMarkerClick
 
     private void drawMapMark() {
 
-        shipNames = ((MainActivity) getActivity()).getShipNames();
-        shipNumbers = ((MainActivity) getActivity()).getShipNumbers();
-        shipLocations = ((MainActivity) getActivity()).getShipLocations();
-
-        double lats = 0.0;
-        double lngs = 0.0;
-        for (int i = 0; i < shipNames.length; i++) {
-            mapMark(shipLocations[i], shipNames[i]);
-            lats += shipLocations[i].latitude;
-            lngs += shipLocations[i].longitude;
+        ships = ((MainActivity) getActivity()).getShips();
+        if (ships.size() == 0) {
+            mapStatus(new LatLng(30, 122));
+            return;
+        }
+        double lat = 0.0;
+        double lng = 0.0;
+        int count = ships.size();
+        for (int i = 0; i < count; i++) {
+            mapMark(new LatLng(ships.get(i).latitude, ships.get(i).longitude), ships.get(i).name);
+            lat += ships.get(i).latitude;
+            lng += ships.get(i).longitude;
         }
 
-        int count = shipNames.length;
-        LatLng mediaPoint = new LatLng(lats / count, lngs / count);
+        LatLng mediaPoint = new LatLng(lat / count, lng / count);
         mapStatus(mediaPoint);
 
     }

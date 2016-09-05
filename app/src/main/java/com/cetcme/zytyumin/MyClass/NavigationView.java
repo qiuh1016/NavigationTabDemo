@@ -32,6 +32,7 @@ public class NavigationView extends RelativeLayout implements View.OnClickListen
     private ImageView backView;
     private TextView titleView;
     private ImageView rightView;
+
     public NavigationView(Context context, AttributeSet attrs) {
         super(context, attrs);
         View view = LayoutInflater.from(context).inflate(R.layout.navigation_view, this, true);

@@ -16,9 +16,11 @@ import android.widget.SimpleAdapter;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.cetcme.zytyumin.MyClass.Ship;
 import com.youth.banner.Banner;
 import com.youth.banner.BannerConfig;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -182,30 +184,32 @@ public class HomepageFragment extends BaseFragment {
                         /**
                          * 打开电子签证界面前进行判断是否只有一条船
                          */
-                        String[] shipNames = ((MainActivity)getActivity()).getShipNames();
-                        String[] shipNumbers = ((MainActivity)getActivity()).getShipNumbers();
+                        List<Ship> ships = ((MainActivity)getActivity()).getShips();
 
-                        if (shipNames.length > 1) {
+                        Log.i(TAG, "onItemClick: ");
+                        
+                        if (ships.size() > 1) {
                             Intent intent = new Intent();
                             intent.setClass(getActivity(), ShipActivity.class);
                             Bundle bundle = new Bundle();
                             bundle.putBoolean("openFromMapFragment", false);
-                            bundle.putStringArray("shipNames", shipNames);
-                            bundle.putStringArray("shipNumbers", shipNumbers);
+                            bundle.putSerializable("ships", (Serializable) ships);
+                            intent.putExtras(bundle);
+                            startActivity(intent);
+                            MainActivity activity = (MainActivity) getActivity();
+                            activity.overridePendingTransition(R.anim.push_left_in_no_alpha, R.anim.push_left_out_no_alpha);
+                        } else if (ships.size() == 1){
+                            Intent intent = new Intent();
+                            intent.setClass(getActivity(), gridClass[position]);
+                            Bundle bundle = new Bundle();
+                            bundle.putString("shipName", ships.get(0).name);
+                            bundle.putString("shipNumber", ships.get(0).number);
                             intent.putExtras(bundle);
                             startActivity(intent);
                             MainActivity activity = (MainActivity) getActivity();
                             activity.overridePendingTransition(R.anim.push_left_in_no_alpha, R.anim.push_left_out_no_alpha);
                         } else {
-                            Intent intent = new Intent();
-                            intent.setClass(getActivity(), gridClass[position]);
-                            Bundle bundle = new Bundle();
-                            bundle.putString("shipName", shipNames[0]);
-                            bundle.putString("shipNumber", shipNumbers[0]);
-                            intent.putExtras(bundle);
-                            startActivity(intent);
-                            MainActivity activity = (MainActivity) getActivity();
-                            activity.overridePendingTransition(R.anim.push_left_in_no_alpha, R.anim.push_left_out_no_alpha);
+                            Toast.makeText(getActivity(), "您的名下没有船只", Toast.LENGTH_SHORT).show();
                         }
 
                     } else {
@@ -225,8 +229,8 @@ public class HomepageFragment extends BaseFragment {
     }
 
     public List<Map<String, Object>> getData(){
-        //icon和iconName的长度是相同的，这里任选其一都可以
-        for(int i=0;i<gridIcon.length;i++){
+
+        for(int i = 0; i < gridIcon.length; i++){
             Map<String, Object> map = new HashMap<>();
             map.put("image", gridIcon[i]);
             map.put("text", gridName[i]);
@@ -300,7 +304,6 @@ public class HomepageFragment extends BaseFragment {
 
                 LinearLayout linearLayout = (LinearLayout) convertView.findViewById(R.id.grid_item_layout);
                 linearLayout.setPadding(30,30,30,30);
-//                linearLayout.
 
                 switch (position) {
                     case 0:
@@ -321,7 +324,6 @@ public class HomepageFragment extends BaseFragment {
                 }
 
             }
-
 
             return convertView;
         }

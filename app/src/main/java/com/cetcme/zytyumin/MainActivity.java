@@ -1,11 +1,16 @@
 package com.cetcme.zytyumin;
 
+import android.content.BroadcastReceiver;
+import android.content.Context;
+import android.content.Intent;
+import android.content.IntentFilter;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
+import android.util.Log;
 import android.widget.Toast;
 
 import com.baidu.mapapi.SDKInitializer;
@@ -18,6 +23,7 @@ import com.cetcme.zytyumin.IconPager.BaseFragment;
 import com.cetcme.zytyumin.IconPager.IconPagerAdapter;
 import com.cetcme.zytyumin.IconPager.IconTabPageIndicator;
 import com.cetcme.zytyumin.IconPager.NoScrollViewPager;
+import com.cetcme.zytyumin.MyClass.Ship;
 
 
 public class MainActivity extends FragmentActivity {
@@ -25,42 +31,20 @@ public class MainActivity extends FragmentActivity {
     private NoScrollViewPager mViewPager;
     private IconTabPageIndicator mIndicator;
 
+    private String TAG = "MainActivity";
+
+    private MyShipDataReceiver myShipDataReceiver;
+
     //按2次返回退出
     private boolean hasPressedBackOnce = false;
     //back toast
     private Toast backToast;
 
+    private List<Ship> ships = new ArrayList<>();
 
-    //TODO: 测试用的 需要更新数据  什么时候更新 什么时候更新map
-    private String[] shipNames = {
-            "浙三渔04529",
-            "浙象渔84006",
-            "浙象渔10035"};
-
-    private String[] shipNumbers = {
-            "3303811998090003",
-            "3303812001050005",
-            "3302251998010002"};
-
-    private LatLng[] shipLocations = {
-            new LatLng(30, 122),
-            new LatLng(31, 121),
-            new LatLng(32.5, 120.5)
-    };
-
-    public String[] getShipNames() {
-        return this.shipNames;
+    public List<Ship> getShips() {
+        return this.ships;
     }
-
-    public String[] getShipNumbers() {
-        return this.shipNumbers;
-    }
-
-    public LatLng[] getShipLocations() {
-        return this.shipLocations;
-    }
-
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -68,6 +52,12 @@ public class MainActivity extends FragmentActivity {
         SDKInitializer.initialize(getApplicationContext());
         setContentView(R.layout.activity_main);
         initViews();
+        initShipDataBroadcast();
+
+//        ships.add(new Ship("浙三渔04529", "3303811998090003", 30,122, false));
+//        ships.add(new Ship("浙象渔84006", "3303812001050005", 31,121, false));
+//        ships.add(new Ship("浙象渔10035", "3302251998010002", 30.5,120.5, false));
+//        ships.add(new Ship("浙象渔10035", "3302251998010002", 32.5,122, false));
     }
 
     private void initViews() {
@@ -146,6 +136,30 @@ public class MainActivity extends FragmentActivity {
             backToast.cancel();
             super.onBackPressed();
         }
+    }
+
+    public class MyShipDataReceiver extends BroadcastReceiver {
+
+        @Override
+        public void onReceive(Context arg0, Intent arg1) {
+
+            Log.i(TAG, "onReceive: get ship data");
+            Bundle bundle = arg1.getExtras();
+            ships = (List<Ship>) bundle.getSerializable("ships");
+
+        }
+    }
+
+    private void initShipDataBroadcast() {
+        myShipDataReceiver = new MyShipDataReceiver();
+        IntentFilter filter = new IntentFilter();
+        filter.addAction("com.shipData");
+        registerReceiver(myShipDataReceiver, filter);
+    }
+
+    public void onDestroy() {
+        super.onDestroy();
+        unregisterReceiver(myShipDataReceiver);
     }
 
 }
