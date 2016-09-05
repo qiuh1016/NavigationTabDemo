@@ -20,6 +20,8 @@ import android.widget.Toast;
 import com.cetcme.zytyumin.MyClass.ButtonShack;
 import com.cetcme.zytyumin.MyClass.DensityUtil;
 import com.cetcme.zytyumin.MyClass.PrivateEncode;
+import com.daimajia.androidanimations.library.Techniques;
+import com.daimajia.androidanimations.library.YoYo;
 import com.kaopiz.kprogresshud.KProgressHUD;
 
 
@@ -284,6 +286,11 @@ public class LoginActivity extends Activity implements View.OnClickListener{
         }
 
         loginButton.requestFocus();
+
+        YoYo.with(Techniques.DropOut)
+                .duration(700)
+                .playOn(findViewById(R.id.title_textView_in_login_activity));
+
     }
 
     public void rememberPSWLineTapped(View v) {

@@ -30,6 +30,8 @@ import com.baidu.mapapi.model.LatLng;
 import com.cetcme.zytyumin.IconPager.BaseFragment;
 import com.cetcme.zytyumin.MyClass.NavigationView;
 
+import org.mozilla.javascript.tools.debugger.Main;
+
 /**
  * Created by qiuhong on 8/24/16.
  */
@@ -49,21 +51,25 @@ public class MapFragment extends BaseFragment implements  BaiduMap.OnMarkerClick
 
     private MyLoginStateReceiver myLoginStateReceiver;
 
-    private String[] shipNames = {
-            "浙三渔04529",
-            "浙象渔84006",
-            "浙象渔10035"};
+    private String[] shipNames;
+    private String[] shipNumbers;
+    private LatLng[] shipLocations;
 
-    private String[] shipNumbers = {
-            "3303811998090003",
-            "3303812001050005",
-            "3302251998010002"};
-
-    private LatLng[] shipLocations = {
-            new LatLng(30, 122),
-            new LatLng(31, 121),
-            new LatLng(32.5, 120.5)
-    };
+//    private String[] shipNames = {
+//            "浙三渔04529",
+//            "浙象渔84006",
+//            "浙象渔10035"};
+//
+//    private String[] shipNumbers = {
+//            "3303811998090003",
+//            "3303812001050005",
+//            "3302251998010002"};
+//
+//    private LatLng[] shipLocations = {
+//            new LatLng(30, 122),
+//            new LatLng(31, 121),
+//            new LatLng(32.5, 120.5)
+//    };
 
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -238,6 +244,10 @@ public class MapFragment extends BaseFragment implements  BaiduMap.OnMarkerClick
     }
 
     private void drawMapMark() {
+
+        shipNames = ((MainActivity) getActivity()).getShipNames();
+        shipNumbers = ((MainActivity) getActivity()).getShipNumbers();
+        shipLocations = ((MainActivity) getActivity()).getShipLocations();
 
         double lats = 0.0;
         double lngs = 0.0;

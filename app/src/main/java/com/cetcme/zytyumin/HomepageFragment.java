@@ -90,20 +90,16 @@ public class HomepageFragment extends BaseFragment {
             "渔业渔政管理局开展定点扶贫村结对帮扶工作"
     };
 
-    public enum Function {
-        SERVICE, RECORD, VISE, LAW, PROCESS, TODO
-    }
-
-    //TODO: 测试用的船名
-    public String[] shipNames = {
-             "浙三渔04529",
-             "浙嘉渔3214",
-             "浙嘉渔1314"};
-
-    public String[] shipNumbers = {
-            "3303811998090003",
-            "3303812001050005",
-            "3302251998010002"};
+//    //TODO: 测试用的船名
+//    public String[] shipNames = {
+//             "浙三渔04529",
+//             "浙嘉渔3214",
+//             "浙嘉渔1314"};
+//
+//    public String[] shipNumbers = {
+//            "3303811998090003",
+//            "3303812001050005",
+//            "3302251998010002"};
 
     @Override
     public View onCreateView(LayoutInflater inflater, final ViewGroup container, Bundle savedInstanceState) {
@@ -186,6 +182,9 @@ public class HomepageFragment extends BaseFragment {
                         /**
                          * 打开电子签证界面前进行判断是否只有一条船
                          */
+                        String[] shipNames = ((MainActivity)getActivity()).getShipNames();
+                        String[] shipNumbers = ((MainActivity)getActivity()).getShipNumbers();
+
                         if (shipNames.length > 1) {
                             Intent intent = new Intent();
                             intent.setClass(getActivity(), ShipActivity.class);

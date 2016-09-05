@@ -38,7 +38,7 @@
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:text="@string/app_name"
-                android:id="@+id/textView3"
+                android:id="@+id/title_textView_in_login_activity"
                 android:textSize="35sp"
                 android:textColor="@color/main_color"
                 android:gravity="center"/>

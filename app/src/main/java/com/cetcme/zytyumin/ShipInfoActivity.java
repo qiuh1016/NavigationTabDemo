@@ -93,7 +93,7 @@ public class ShipInfoActivity extends Activity {
      */
     @Override
     public boolean onTouchEvent(MotionEvent event) {
-        finish();
+//        finish();
 //        Log.i(TAG, "onTouchEvent: ");
         return true;
     }

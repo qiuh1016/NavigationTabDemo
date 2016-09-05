@@ -13,6 +13,7 @@ import com.baidu.mapapi.SDKInitializer;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.baidu.mapapi.model.LatLng;
 import com.cetcme.zytyumin.IconPager.BaseFragment;
 import com.cetcme.zytyumin.IconPager.IconPagerAdapter;
 import com.cetcme.zytyumin.IconPager.IconTabPageIndicator;
@@ -28,6 +29,38 @@ public class MainActivity extends FragmentActivity {
     private boolean hasPressedBackOnce = false;
     //back toast
     private Toast backToast;
+
+
+    //TODO: 测试用的 需要更新数据  什么时候更新 什么时候更新map
+    private String[] shipNames = {
+            "浙三渔04529",
+            "浙象渔84006",
+            "浙象渔10035"};
+
+    private String[] shipNumbers = {
+            "3303811998090003",
+            "3303812001050005",
+            "3302251998010002"};
+
+    private LatLng[] shipLocations = {
+            new LatLng(30, 122),
+            new LatLng(31, 121),
+            new LatLng(32.5, 120.5)
+    };
+
+    public String[] getShipNames() {
+        return this.shipNames;
+    }
+
+    public String[] getShipNumbers() {
+        return this.shipNumbers;
+    }
+
+    public LatLng[] getShipLocations() {
+        return this.shipLocations;
+    }
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
