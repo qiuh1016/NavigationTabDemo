@@ -2,6 +2,7 @@ package com.cetcme.zytyumin;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Handler;
@@ -14,7 +15,15 @@ import android.widget.Toast;
 
 import com.cetcme.zytyumin.MyClass.ButtonShack;
 import com.cetcme.zytyumin.MyClass.NavigationView;
+import com.cetcme.zytyumin.MyClass.PrivateEncode;
 import com.kaopiz.kprogresshud.KProgressHUD;
+import com.loopj.android.http.AsyncHttpClient;
+import com.loopj.android.http.JsonHttpResponseHandler;
+import com.loopj.android.http.RequestParams;
+
+import org.apache.http.Header;
+import org.json.JSONException;
+import org.json.JSONObject;
 
 public class ChangePasswordActivity extends Activity {
 
@@ -30,15 +39,16 @@ public class ChangePasswordActivity extends Activity {
     private boolean hasLogin;
 
     private String TAG = "ChangePasswordActivity";
+    private int minPSWLength = 5;
 
-    private int minPSWLength = 6;
+    private SharedPreferences user;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_change_password);
 
-        SharedPreferences user = getSharedPreferences("user", Context.MODE_PRIVATE);
+        user = getSharedPreferences("user", Context.MODE_PRIVATE);
         hasLogin = user.getBoolean("hasLogin", false);
 
         initNavigationView();
@@ -113,12 +123,47 @@ public class ChangePasswordActivity extends Activity {
     }
 
     private void resetPSW() {
-        //TODO
         Log.i(TAG, "resetPSW: ");
+
+        String newPSW1 = newPasswordEditText_1.getText().toString();
+        String newPSW2 = newPasswordEditText_2.getText().toString();
+
+        /**
+         * 密码未填全
+         */
+        if (newPSW1.isEmpty() || newPSW2.isEmpty()) {
+            Toast.makeText(getApplicationContext(), "信息未填全", Toast.LENGTH_SHORT).show();
+            ButtonShack.run(changePasswordButton);
+            return;
+        }
+
+        /**
+         * 新密码位数不足
+         */
+        if (newPSW1.length() < minPSWLength) {
+            Toast.makeText(getApplicationContext(), "新密码位数不能少于" + minPSWLength + "位", Toast.LENGTH_SHORT).show();
+            ButtonShack.run(changePasswordButton);
+            return;
+        }
+
+        /**
+         * 新密码不一致
+         */
+        if (!newPSW1.equals(newPSW2)) {
+            Toast.makeText(getApplicationContext(), "密码不一致", Toast.LENGTH_SHORT).show();
+            ButtonShack.run(changePasswordButton);
+            return;
+        }
+
+        /**
+         * 忘记密码请求
+         */
+        Log.i(TAG, "changePSW: 忘记密码网络请求");
+        String phone = getIntent().getExtras().getString("phone");
+        resetPSWRequest(phone, newPSW1);
     }
 
     private void changePSW() {
-        //TODO
         Log.i(TAG, "changePSW: ");
 
         String oldPSW = oldPasswordEditText.getText().toString();
@@ -175,32 +220,145 @@ public class ChangePasswordActivity extends Activity {
         /**
          * 修改密码请求
          */
-
         Log.i(TAG, "changePSW: 修改密码网络请求");
+        String sessionKey = user.getString("sessionKey", "");
+        String account = user.getString("username", "");
+        changePSWRequest(sessionKey, account, newPSW1);
+
+    }
+
+    private void changePSWRequest(String sessionKey, String account,String pwd) {
         kProgressHUD.show();
 
-        new Handler().postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                kProgressHUD.dismiss();
-                okHUD.setLabel("测试成功");
-                okHUD.show();
-                new Handler().postDelayed(new Runnable() {
-                    @Override
-                    public void run() {
-                        okHUD.dismiss();
-                    }
-                }, 1000);
-            }
-        }, 1000);
+        RequestParams params = new RequestParams();
+        params.put("pwd", PrivateEncode.getMD5(pwd));
+        params.put("sessionKey", sessionKey);
+        params.put("account", account);
+        String url = getString(R.string.serverIP) + getString(R.string.changePSWUrl);
 
+        AsyncHttpClient client = new AsyncHttpClient();
+        client.get(url, params, new JsonHttpResponseHandler("UTF-8") {
+            @Override
+            public void onSuccess(int statusCode, Header[] headers, JSONObject response) {
+                try {
+
+                    kProgressHUD.dismiss();
+
+                    Log.i(TAG, "onSuccess: changePSW" + response.toString());
+                    int code = response.getInt("Code");
+                    if (code == 0) {
+                        okHUD.show();
+                        new Handler().postDelayed(new Runnable() {
+                            @Override
+                            public void run() {
+                                okHUD.dismiss();
+                                onBackPressed();
+                            }
+                        }, 1000);
+
+                    } else if (code == 2) {
+                        Toast.makeText(getApplicationContext(), "登陆信息过期，请重新登陆", Toast.LENGTH_SHORT).show();
+                        SharedPreferences.Editor editor = user.edit();//获取编辑器
+                        editor.putBoolean("hasLogin", false);
+                        editor.apply();//提交修改
+                        startLoginActivity();
+                        Log.i(TAG, "onSuccess: 登陆信息过期");
+                    } else {
+                        kProgressHUD.dismiss();
+                        ButtonShack.run(changePasswordButton);
+                        Toast.makeText(ChangePasswordActivity.this, "sessionKey错误", Toast.LENGTH_SHORT).show();
+                    }
+
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                    kProgressHUD.dismiss();
+                    ButtonShack.run(changePasswordButton);
+                    Toast.makeText(ChangePasswordActivity.this, "解析错误", Toast.LENGTH_SHORT).show();
+                }
+            }
+
+            @Override
+            public void onFailure(int statusCode, Header[] headers, Throwable throwable, JSONObject errorResponse) {
+                Log.i(TAG, "onFailure: get todo network error");
+                kProgressHUD.dismiss();
+                ButtonShack.run(changePasswordButton);
+                Toast.makeText(ChangePasswordActivity.this, "解析错误", Toast.LENGTH_SHORT).show();
+            }
+
+            @Override
+            public void onFailure(int statusCode, Header[] headers, String responseString, Throwable throwable) {
+                Log.i(TAG, "onFailure: get todo network error");
+                kProgressHUD.dismiss();
+                ButtonShack.run(changePasswordButton);
+                Toast.makeText(ChangePasswordActivity.this, "解析错误", Toast.LENGTH_SHORT).show();
+            }
+        });
+    }
+
+    private void resetPSWRequest(String phone, String pwd) {
+        kProgressHUD.show();
+
+        RequestParams params = new RequestParams();
+        params.put("pwd", PrivateEncode.getMD5(pwd));
+        params.put("phone", phone);
+        String url = getString(R.string.serverIP) + getString(R.string.forgetPSWUrl);
+
+        AsyncHttpClient client = new AsyncHttpClient();
+        client.get(url, params, new JsonHttpResponseHandler("UTF-8") {
+            @Override
+            public void onSuccess(int statusCode, Header[] headers, JSONObject response) {
+                try {
+
+                    kProgressHUD.dismiss();
+
+                    Log.i(TAG, "onSuccess: changePSW" + response.toString());
+                    boolean flag = response.getBoolean("Flag");
+                    if (flag) {
+                        okHUD.show();
+                        new Handler().postDelayed(new Runnable() {
+                            @Override
+                            public void run() {
+                                okHUD.dismiss();
+                                onBackPressed();
+                            }
+                        }, 1000);
+                    } else{
+                        kProgressHUD.dismiss();
+                        ButtonShack.run(changePasswordButton);
+                        Toast.makeText(ChangePasswordActivity.this, "修改失败", Toast.LENGTH_SHORT).show();
+                    }
+
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                    kProgressHUD.dismiss();
+                    ButtonShack.run(changePasswordButton);
+                    Toast.makeText(ChangePasswordActivity.this, "解析错误", Toast.LENGTH_SHORT).show();
+                }
+            }
+
+            @Override
+            public void onFailure(int statusCode, Header[] headers, Throwable throwable, JSONObject errorResponse) {
+                Log.i(TAG, "onFailure: change psw network error");
+                kProgressHUD.dismiss();
+                ButtonShack.run(changePasswordButton);
+                Toast.makeText(ChangePasswordActivity.this, "网络连接失败", Toast.LENGTH_SHORT).show();
+            }
+
+            @Override
+            public void onFailure(int statusCode, Header[] headers, String responseString, Throwable throwable) {
+                Log.i(TAG, "onFailure: change psw network error");
+                kProgressHUD.dismiss();
+                ButtonShack.run(changePasswordButton);
+                Toast.makeText(ChangePasswordActivity.this, "网络连接失败", Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 
     private void initHud() {
         //hudView
         kProgressHUD = KProgressHUD.create(this)
                 .setStyle(KProgressHUD.Style.SPIN_INDETERMINATE)
-                .setLabel("登陆中")
+                .setLabel("修改中")
                 .setAnimationSpeed(1)
                 .setDimAmount(0.3f)
                 .setSize(110, 110)
@@ -209,10 +367,16 @@ public class ChangePasswordActivity extends Activity {
         imageView.setBackgroundResource(R.drawable.checkmark);
         okHUD  =  KProgressHUD.create(this)
                 .setCustomView(imageView)
-                .setLabel("登陆成功")
+                .setLabel("修改成功")
                 .setCancellable(false)
                 .setSize(110,110)
                 .setDimAmount(0.3f);
+    }
+
+    private void startLoginActivity() {
+        Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
+        startActivity(intent);
+        overridePendingTransition(R.anim.push_up_in_no_alpha, R.anim.stay);
     }
 
 }

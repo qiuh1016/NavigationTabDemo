@@ -59,6 +59,8 @@
     <string name="sendSMSUrl">:8085/Account/SendSms</string>
     <string name="registerUrl">:8085/Account/Register</string>
     <string name="getTodoCountUrl">:8085/Business/getTodoCount</string>
+    <string name="changePSWUrl">:8085/Business/changePwd</string>
+    <string name="forgetPSWUrl">:8085/Account/changePwd</string>
 
     <string name="getShipInfoByNo">:5000/bpm/YZSoft/Webservice/AppWebservice.asmx/GetShipInfoByNo</string>
 

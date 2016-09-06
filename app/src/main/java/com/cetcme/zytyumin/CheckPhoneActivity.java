@@ -326,6 +326,9 @@ public class CheckPhoneActivity extends Activity implements View.OnClickListener
             overridePendingTransition(R.anim.push_left_in_no_alpha, R.anim.push_left_out_no_alpha);
         } else {
             intent.setClass(this, ChangePasswordActivity.class);
+            Bundle phoneBundle = new Bundle();
+            phoneBundle.putString("phone", sendSMSPhoneNumber);
+            intent.putExtras(phoneBundle);
             startActivity(intent);
             finish();
             overridePendingTransition(R.anim.push_left_in_no_alpha, R.anim.push_left_out_no_alpha);

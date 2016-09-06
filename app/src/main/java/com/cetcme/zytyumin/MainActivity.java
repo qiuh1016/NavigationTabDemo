@@ -232,10 +232,6 @@ public class MainActivity extends FragmentActivity {
                                 Check_Detect_Info_Opinion_Count,
                                 0
                         };
-//
-//                        todoNumbers[0] = Check_Drawing_Examine_Opinion_Count;
-//                        todoNumbers[1] = Check_Detect_Info_Detail_Inspection_Count;
-//                        todoNumbers[2] = Check_Detect_Info_Opinion_Count;
 
                     } else if (code == 2) {
                         Toast.makeText(getApplicationContext(), "登陆信息过期，请重新登陆",Toast.LENGTH_SHORT).show();
