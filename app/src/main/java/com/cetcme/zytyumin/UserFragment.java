@@ -344,7 +344,7 @@ public class UserFragment extends BaseFragment {
                     }
                 },1000);
             }
-        }, 1000);
+        }, 500);
     }
 
     private void sendLoginFlagBroadcast(boolean login) {

@@ -320,9 +320,9 @@ public class LoginActivity extends Activity implements View.OnClickListener{
                 String shipName = shipJSON.getString("ShipName");
                 String shipNumber = shipJSON.getString("ShipNo");
                 boolean deviceInstall = shipJSON.getBoolean("DeviceInstall");
-                //TODO 差经纬度
-                double latitude = 30.0 + i / 2.0;  //shipJSON.getDouble("latitude");
-                double longitude = 120.0 + i / 2.0; //shipJSON.getDouble("longitude");
+
+                double latitude = shipJSON.getDouble("Latitude") / 600000.0; //30.0 + i / 2.0;
+                double longitude = shipJSON.getDouble("Longitude") / 600000.0; //120.0 + i / 2.0;
 
                 Ship ship = new Ship(shipName, shipNumber, latitude, longitude, deviceInstall);
                 Log.i(TAG, "dealWhitShipArray: " + latitude);

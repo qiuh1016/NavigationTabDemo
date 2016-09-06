@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
+import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -31,8 +32,6 @@ import java.util.Date;
 public class ShipInfoActivity extends Activity {
 
     private String TAG = "ShipInfoActivity";
-//    private String shipName;
-//    private String shipNumber;
 
     private Ship ship;
 
@@ -52,8 +51,6 @@ public class ShipInfoActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ship_info);
 
-//        shipName = getIntent().getExtras().getString("shipName");
-//        shipNumber = getIntent().getExtras().getString("shipNumber");
         ship = (Ship) getIntent().getExtras().getSerializable("ship");
 
         toast = Toast.makeText(getApplicationContext(), "", Toast.LENGTH_SHORT);
@@ -94,6 +91,13 @@ public class ShipInfoActivity extends Activity {
         shipTypeTextView     = (TextView) findViewById(R.id.text5_in_ship_info_activity);
         jobTypeTextView      = (TextView) findViewById(R.id.text6_in_ship_info_activity);
         updateDateTextView   = (TextView) findViewById(R.id.text7_in_ship_info_activity);
+
+        Button routeButton = (Button) findViewById(R.id.route_button_in_ship_info_activity);
+//        routeButton.setEnabled(ship.deviceInstall);
+        if (!ship.deviceInstall) {
+            routeButton.setBackgroundResource(R.drawable.single_select_unavailable);
+        }
+
     }
 
     /**
@@ -102,7 +106,6 @@ public class ShipInfoActivity extends Activity {
     @Override
     public boolean onTouchEvent(MotionEvent event) {
 //        finish();
-//        Log.i(TAG, "onTouchEvent: ");
         return true;
     }
 
@@ -114,7 +117,6 @@ public class ShipInfoActivity extends Activity {
         intent.putExtras(bundle);
         startActivity(intent);
         overridePendingTransition(R.anim.push_left_in_no_alpha, R.anim.push_left_out_no_alpha);
-//        Toast.makeText(ShipInfoActivity.this, "显示详情界面", Toast.LENGTH_SHORT).show();
     }
 
     public void routeButtonTapped(View v) {
