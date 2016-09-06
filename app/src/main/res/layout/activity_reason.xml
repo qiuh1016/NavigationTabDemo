@@ -39,15 +39,23 @@
                     android:layout_height="50dp"
                     android:background="@drawable/top_unselect">
 
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:textSize="15sp"
+                        android:text="姓&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;名"
+                        android:textColor="@color/tab_text_normal"
+                        android:layout_marginLeft="20dp"
+                        android:gravity="center_vertical"/>
+
                     <EditText
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:id="@+id/name_in_reason_activity"
                         android:layout_weight="1"
-                        android:hint="姓名"
+                        android:hint=""
                         android:layout_marginRight="20dp"
                         android:background="#FFFFFF"
-                        android:password="false"
                         android:layout_marginLeft="20dp"
                         android:textSize="16sp"
                         android:singleLine="true" />
@@ -63,16 +71,23 @@
                     android:layout_height="50dp"
                     android:background="@drawable/bottom_unselect">
 
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:textSize="15sp"
+                        android:text="身&#160;&#160;份&#160;&#160;证"
+                        android:textColor="@color/tab_text_normal"
+                        android:layout_marginLeft="20dp"
+                        android:gravity="center_vertical"/>
+
                     <EditText
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:id="@+id/id_in_reason_activity"
                         android:layout_weight="1"
-                        android:hint="身份证"
                         android:layout_marginLeft="20dp"
                         android:layout_marginRight="20dp"
                         android:background="#FFFFFF"
-                        android:password="false"
                         android:textSize="16sp"
                         android:singleLine="true"
                         android:inputType="text"/>
@@ -88,16 +103,23 @@
                     android:layout_height="50dp"
                     android:background="@drawable/bottom_unselect">
 
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:textSize="15sp"
+                        android:text="添加原因"
+                        android:textColor="@color/tab_text_normal"
+                        android:layout_marginLeft="20dp"
+                        android:gravity="center_vertical"/>
+
                     <EditText
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:id="@+id/reason_in_reason_activity"
                         android:layout_weight="1"
-                        android:hint="添加原因"
                         android:layout_marginLeft="20dp"
                         android:layout_marginRight="20dp"
                         android:background="#FFFFFF"
-                        android:password="false"
                         android:textSize="16sp"
                         android:singleLine="true" />
                 </LinearLayout>

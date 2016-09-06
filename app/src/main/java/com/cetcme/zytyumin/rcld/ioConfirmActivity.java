@@ -27,6 +27,7 @@ import android.widget.SimpleAdapter;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.cetcme.zytyumin.MyClass.CustomDialog;
 import com.cetcme.zytyumin.MyClass.DensityUtil;
 import com.cetcme.zytyumin.MyClass.NavigationView;
 import com.cetcme.zytyumin.MyClass.PrivateEncode;
@@ -130,10 +131,8 @@ public class ioConfirmActivity extends Activity {
         });
     }
 
-    private NavigationView navigationView;
-
     private void initNavigationView() {
-        navigationView = (NavigationView) findViewById(R.id.nav_main_in_io_confirm_activity);
+        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_main_in_io_confirm_activity);
         navigationView.setTitle(title);
         navigationView.setBackView(R.drawable.icon_back_button);
         navigationView.setRightView(0);
@@ -241,17 +240,36 @@ public class ioConfirmActivity extends Activity {
                 punchInfo = punchInfo.substring(0,punchInfo.length() - 2);
                 punchInfo += ".";
 
-                AlertDialog.Builder builder = new AlertDialog.Builder(ioConfirmActivity.this);
-                //builder.setMessage(punchInfo);
-                builder.setTitle("确认上传？"); //("共" + dataList.size() + "人,确认上传?");
-                builder.setNegativeButton("取消", null);
+
+                CustomDialog.Builder builder = new CustomDialog.Builder(ioConfirmActivity.this);
+                builder.setTitle("提示");
+                builder.setMessage("确认上传？");
+                builder.setCancelable(false);
                 builder.setPositiveButton("上传", new DialogInterface.OnClickListener() {
-                    @Override
                     public void onClick(DialogInterface dialog, int which) {
+                        dialog.dismiss();
                         upload();
                     }
                 });
+
+                builder.setNegativeButton("取消", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.dismiss();
+                    }
+                });
                 builder.create().show();
+
+//                AlertDialog.Builder builder = new AlertDialog.Builder(ioConfirmActivity.this);
+//                //builder.setMessage(punchInfo);
+//                builder.setTitle("确认上传？"); //("共" + dataList.size() + "人,确认上传?");
+//                builder.setNegativeButton("取消", null);
+//                builder.setPositiveButton("上传", new DialogInterface.OnClickListener() {
+//                    @Override
+//                    public void onClick(DialogInterface dialog, int which) {
+//                        upload();
+//                    }
+//                });
+//                builder.create().show();
                 return false;
             }
         });
@@ -282,26 +300,46 @@ public class ioConfirmActivity extends Activity {
         punchInfo = punchInfo.substring(0,punchInfo.length() - 2);
         punchInfo += ".";
 
-        AlertDialog.Builder builder = new AlertDialog.Builder(ioConfirmActivity.this);
-        //builder.setMessage(punchInfo);
-        builder.setTitle("确认上传？"); //("共" + dataList.size() + "人,确认上传?");
-        builder.setNegativeButton("取消", null);
+
+        CustomDialog.Builder builder = new CustomDialog.Builder(ioConfirmActivity.this);
+        builder.setTitle("提示");
+        builder.setMessage("确认上传？");
+        builder.setCancelable(false);
         builder.setPositiveButton("上传", new DialogInterface.OnClickListener() {
-            @Override
             public void onClick(DialogInterface dialog, int which) {
+                dialog.dismiss();
                 upload();
             }
         });
-        /**
-         * 设置自定义按钮
-         */
-        AlertDialog alertDialog = builder.create();
-        alertDialog.show();
 
-        Button btnPositive = alertDialog.getButton(android.app.AlertDialog.BUTTON_POSITIVE);
-        Button btnNegative = alertDialog.getButton(android.app.AlertDialog.BUTTON_NEGATIVE);
-        btnNegative.setTextColor(getResources().getColor(R.color.main_color));
-        btnPositive.setTextColor(getResources().getColor(R.color.main_color));
+        builder.setNegativeButton("取消", new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int which) {
+                dialog.dismiss();
+            }
+        });
+        builder.create().show();
+
+
+//        AlertDialog.Builder builder = new AlertDialog.Builder(ioConfirmActivity.this);
+//        //builder.setMessage(punchInfo);
+//        builder.setTitle("确认上传？"); //("共" + dataList.size() + "人,确认上传?");
+//        builder.setNegativeButton("取消", null);
+//        builder.setPositiveButton("上传", new DialogInterface.OnClickListener() {
+//            @Override
+//            public void onClick(DialogInterface dialog, int which) {
+//                upload();
+//            }
+//        });
+//        /**
+//         * 设置自定义按钮
+//         */
+//        AlertDialog alertDialog = builder.create();
+//        alertDialog.show();
+//
+//        Button btnPositive = alertDialog.getButton(android.app.AlertDialog.BUTTON_POSITIVE);
+//        Button btnNegative = alertDialog.getButton(android.app.AlertDialog.BUTTON_NEGATIVE);
+//        btnNegative.setTextColor(getResources().getColor(R.color.main_color));
+//        btnPositive.setTextColor(getResources().getColor(R.color.main_color));
     }
 
     public void onBackPressed() {
@@ -311,28 +349,49 @@ public class ioConfirmActivity extends Activity {
         }
 
         if (showBackDialog) {
-            AlertDialog.Builder builder = new AlertDialog.Builder(ioConfirmActivity.this);
-            builder.setIcon(android.R.drawable.ic_delete);
-            builder.setTitle("返回将丢失现有操作");
-            builder.setMessage("是否继续？");
+//            AlertDialog.Builder builder = new AlertDialog.Builder(ioConfirmActivity.this);
+//            builder.setIcon(android.R.drawable.ic_delete);
+//            builder.setTitle("返回将丢失现有操作");
+//            builder.setMessage("是否继续？");
+//            builder.setPositiveButton("返回", new DialogInterface.OnClickListener() {
+//                @Override
+//                public void onClick(DialogInterface dialog, int which) {
+//                    showBackDialog = false;
+//                    onBackPressed();
+//                }
+//            });
+//            builder.setNegativeButton("取消",null);
+//            /**
+//             * 设置自定义按钮
+//             */
+//            AlertDialog alertDialog = builder.create();
+//            alertDialog.show();
+//
+//            Button btnPositive = alertDialog.getButton(android.app.AlertDialog.BUTTON_POSITIVE);
+//            Button btnNegative = alertDialog.getButton(android.app.AlertDialog.BUTTON_NEGATIVE);
+//            btnNegative.setTextColor(getResources().getColor(R.color.main_color));
+//            btnPositive.setTextColor(getResources().getColor(R.color.main_color));
+
+
+            CustomDialog.Builder builder = new CustomDialog.Builder(ioConfirmActivity.this);
+            builder.setTitle("提示");
+            builder.setMessage("返回将丢失现有操作，是否继续?");
+            builder.setCancelable(false);
             builder.setPositiveButton("返回", new DialogInterface.OnClickListener() {
-                @Override
                 public void onClick(DialogInterface dialog, int which) {
+                    dialog.dismiss();
                     showBackDialog = false;
                     onBackPressed();
                 }
             });
-            builder.setNegativeButton("取消",null);
-            /**
-             * 设置自定义按钮
-             */
-            AlertDialog alertDialog = builder.create();
-            alertDialog.show();
 
-            Button btnPositive = alertDialog.getButton(android.app.AlertDialog.BUTTON_POSITIVE);
-            Button btnNegative = alertDialog.getButton(android.app.AlertDialog.BUTTON_NEGATIVE);
-            btnNegative.setTextColor(getResources().getColor(R.color.main_color));
-            btnPositive.setTextColor(getResources().getColor(R.color.main_color));
+            builder.setNegativeButton("取消", new DialogInterface.OnClickListener() {
+                public void onClick(DialogInterface dialog, int which) {
+                    dialog.dismiss();
+                }
+            });
+            builder.create().show();
+
 
         } else {
             super.onBackPressed();
@@ -492,22 +551,18 @@ public class ioConfirmActivity extends Activity {
     }
 
     private void dialog(final Map<String,Object> map, final int position) {
-        AlertDialog.Builder builder = new AlertDialog.Builder(ioConfirmActivity.this);
-        builder.setMessage(
-                "姓名：" + map.get("name") + "\n" +
+        CustomDialog.Builder builder = new CustomDialog.Builder(ioConfirmActivity.this);
+        builder.setTitle("人员信息");
+        builder.setMessage( "姓名：" + map.get("name") + "\n" +
                 "身份证：" + map.get("id") + "\n" +
                 "出入港标志：" + map.get("iofFlag") + "\n" +
                 "数据类型：" + map.get("dataTypeString") + "\n" +
                 "打卡时间：" + map.get("punchTime") + "\n"+
-                "原因：" + map.get("reason")
-        );
-        builder.setTitle("人员信息");
-        builder.setPositiveButton("取消", null);
-        //删除
-        builder.setNegativeButton("删除", new DialogInterface.OnClickListener() {
-            @Override
+                "原因：" + map.get("reason"));
+        builder.setCancelable(false);
+        builder.setPositiveButton("删除", new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int which) {
-                Log.i("Main","删除");
+                dialog.dismiss();
 
                 int dataType = (int) map.get("dataType");
 
@@ -549,19 +604,89 @@ public class ioConfirmActivity extends Activity {
                 }
 
                 simpleAdapter.notifyDataSetChanged();
-
             }
         });
-        /**
-         * 设置自定义按钮
-         */
-        AlertDialog alertDialog = builder.create();
-        alertDialog.show();
 
-        Button btnPositive = alertDialog.getButton(android.app.AlertDialog.BUTTON_POSITIVE);
-        Button btnNegative = alertDialog.getButton(android.app.AlertDialog.BUTTON_NEGATIVE);
-        btnNegative.setTextColor(getResources().getColor(R.color.main_color));
-        btnPositive.setTextColor(getResources().getColor(R.color.main_color));
+        builder.setNegativeButton("取消", new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int which) {
+                dialog.dismiss();
+            }
+        });
+
+        builder.create().show();
+
+//
+//
+//        AlertDialog.Builder builder = new AlertDialog.Builder(ioConfirmActivity.this);
+//        builder.setMessage(
+//                "姓名：" + map.get("name") + "\n" +
+//                "身份证：" + map.get("id") + "\n" +
+//                "出入港标志：" + map.get("iofFlag") + "\n" +
+//                "数据类型：" + map.get("dataTypeString") + "\n" +
+//                "打卡时间：" + map.get("punchTime") + "\n"+
+//                "原因：" + map.get("reason")
+//        );
+//        builder.setTitle("人员信息");
+//        builder.setPositiveButton("取消", null);
+//        //删除
+//        builder.setNegativeButton("删除", new DialogInterface.OnClickListener() {
+//            @Override
+//            public void onClick(DialogInterface dialog, int which) {
+//                Log.i("Main","删除");
+//
+//                int dataType = (int) map.get("dataType");
+//
+//                //dataType 0: 自动生成 1: 手动添加 2: 手动删除
+//                if (dataType == 1) {
+//                    dataList.remove(position);
+//                    ids.remove(position);
+//                } else if (dataType == 0) {
+//
+//                    final EditText et = new EditText(ioConfirmActivity.this);
+//
+//                    new AlertDialog.Builder(ioConfirmActivity.this).setTitle("删除原因")
+//                            .setIcon(android.R.drawable.ic_menu_info_details)
+//                            .setView(et)
+//                            .setPositiveButton("确定", new DialogInterface.OnClickListener() {
+//                                public void onClick(DialogInterface dialog, int which) {
+//                                    String input = et.getText().toString();
+//                                    if (input.equals("")) {
+//                                        Toast.makeText(getApplicationContext(), "删除原因不能为空", Toast.LENGTH_SHORT).show();
+//                                    }
+//                                    else {
+//                                        //操作
+//                                        dataList.get(position).put("reason", input);
+//                                        dataList.get(position).put("dataType", 2);
+//                                        dataList.get(position).put("dataTypeString", "手动删除");
+//                                        simpleAdapter.notifyDataSetChanged();
+//                                    }
+//                                }
+//                            })
+//                            .setNegativeButton("取消", null)
+//                            .show();
+//
+//
+//
+//                } else if (dataType == 2) {
+//                    dataList.get(position).put("reason", "");
+//                    dataList.get(position).put("dataType", 0);
+//                    dataList.get(position).put("dataTypeString", "自动生成");
+//                }
+//
+//                simpleAdapter.notifyDataSetChanged();
+//
+//            }
+//        });
+//        /**
+//         * 设置自定义按钮
+//         */
+//        AlertDialog alertDialog = builder.create();
+//        alertDialog.show();
+//
+//        Button btnPositive = alertDialog.getButton(android.app.AlertDialog.BUTTON_POSITIVE);
+//        Button btnNegative = alertDialog.getButton(android.app.AlertDialog.BUTTON_NEGATIVE);
+//        btnNegative.setTextColor(getResources().getColor(R.color.main_color));
+//        btnPositive.setTextColor(getResources().getColor(R.color.main_color));
     }
 
     private void upload() {

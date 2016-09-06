@@ -236,8 +236,9 @@ public class RegisterInfoActivity extends Activity {
                             @Override
                             public void run() {
                                 okHUD.dismiss();
+                                onBackPressed();
                             }
-                        }, 2000);
+                        }, 1000);
                         Log.i(TAG, "onSuccess: register success");
                     } else  {
                         kProgressHUD.dismiss();

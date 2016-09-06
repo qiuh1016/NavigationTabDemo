@@ -13,9 +13,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import com.baidu.mapapi.map.BaiduMap;
+import com.baidu.mapapi.map.BaiduMapOptions;
 import com.baidu.mapapi.map.BitmapDescriptor;
 import com.baidu.mapapi.map.BitmapDescriptorFactory;
 import com.baidu.mapapi.map.InfoWindow;
@@ -27,6 +29,8 @@ import com.baidu.mapapi.map.Marker;
 import com.baidu.mapapi.map.MarkerOptions;
 import com.baidu.mapapi.map.OverlayOptions;
 import com.baidu.mapapi.model.LatLng;
+
+import android.graphics.Point;
 
 import com.cetcme.zytyumin.IconPager.BaseFragment;
 import com.cetcme.zytyumin.MyClass.NavigationView;
@@ -117,9 +121,31 @@ public class MapFragment extends BaseFragment implements  BaiduMap.OnMarkerClick
     }
 
     private void initMapView() {
-        mapView = (MapView) view.findViewById(R.id.baiduMap_in_fragment_2);
+//        mapView = (MapView) view.findViewById(R.id.baiduMap_in_fragment_2);
+
+        LinearLayout linearLayout = (LinearLayout) view.findViewById(R.id.layout_map_fragment);
+        BaiduMapOptions baiduMapOptions = new BaiduMapOptions()
+                .overlookingGesturesEnabled(false)
+                .rotateGesturesEnabled(false)
+                .zoomControlsEnabled(true);
+        mapView = new MapView(this.getActivity(), baiduMapOptions);
+        LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT);
+        mapView.setLayoutParams(params);
+
+        linearLayout.addView(mapView);
         baiduMap = mapView.getMap();
         baiduMap.setOnMarkerClickListener(this);
+
+        /**
+         * 设置默认中心点
+         */
+        LatLng centerPoint = new LatLng(30, 122);
+        MapStatus mapStatus = new MapStatus.Builder().target(centerPoint).zoom(8)
+                .build();
+        MapStatusUpdate mapStatusUpdate = MapStatusUpdateFactory
+                .newMapStatus(mapStatus);
+        baiduMap.setMapStatus(mapStatusUpdate);
+
     }
 
     private void mapMark(Ship ship){
@@ -179,7 +205,7 @@ public class MapFragment extends BaseFragment implements  BaiduMap.OnMarkerClick
 
     private void mapStatus(LatLng latLng) {
         //设置中心点 和显示范围
-        MapStatus mapStatus = new MapStatus.Builder().target(latLng).zoom(9) //15
+        MapStatus mapStatus = new MapStatus.Builder().target(latLng).zoom(8) //15
                 .build();
         MapStatusUpdate mapStatusUpdate = MapStatusUpdateFactory
                 .newMapStatus(mapStatus);
@@ -254,7 +280,9 @@ public class MapFragment extends BaseFragment implements  BaiduMap.OnMarkerClick
         }
 
         LatLng mediaPoint = new LatLng(lat / count, lng / count);
-        mapStatus(mediaPoint);
+//        mapStatus(mediaPoint);
+
+//        mapStatus(new LatLng(30, 122));
 
     }
 
