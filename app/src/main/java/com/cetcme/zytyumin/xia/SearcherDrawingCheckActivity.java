@@ -9,7 +9,9 @@ import com.cetcme.zytyumin.jecInfoHttp.ParseJson;
 import com.cetcme.zytyumin.MyClass.NavigationView;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
@@ -127,8 +129,10 @@ public class SearcherDrawingCheckActivity extends Activity {
 						R.id.app_name, R.id.app_date });
 		mListView.setAdapter(mAdapter);
 
+		SharedPreferences user = getSharedPreferences("user", Context.MODE_PRIVATE);
+		String username = user.getString("username", "");
 		new GetShipDetectRecordInfoTask()
-				.execute(new String[] { "mm147258369" });
+				.execute(new String[] { username });
 	}
 
 	private ArrayList<HashMap<String, String>> resultList = new ArrayList<HashMap<String, String>>();

@@ -9,7 +9,9 @@ import com.cetcme.zytyumin.jecInfoHttp.ParseJson;
 import com.cetcme.zytyumin.MyClass.NavigationView;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
@@ -146,8 +148,10 @@ public class SearcherPayEnsuranceActivity extends Activity {
 						R.id.is_own });
 		mListView.setAdapter(mAdapter);
 
+		SharedPreferences user = getSharedPreferences("user", Context.MODE_PRIVATE);
+		String IDCard = user.getString("IDCard", "");
 		new GetPayInsuranceInfoTask()
-				.execute(new String[] { "330935000000451" });
+				.execute(new String[] { IDCard });
 	}
 
 	private ArrayList<HashMap<String, String>> resultList = new ArrayList<HashMap<String, String>>();

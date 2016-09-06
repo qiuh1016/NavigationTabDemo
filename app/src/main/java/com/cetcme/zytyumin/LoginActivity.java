@@ -279,19 +279,6 @@ public class LoginActivity extends Activity implements View.OnClickListener{
     }
 
     @Override
-    protected void onStart() {
-        super.onStart();
-//        new Handler().postDelayed(new Runnable() {
-//            @Override
-//            public void run() {
-//                YoYo.with(Techniques.DropOut)
-//                        .duration(700)
-//                        .playOn(findViewById(R.id.title_textView_in_login_activity));
-//            }
-//        }, 300);
-    }
-
-    @Override
     public void onResume() {
         super.onResume();
         String username = user.getString("username", "");
@@ -347,13 +334,15 @@ public class LoginActivity extends Activity implements View.OnClickListener{
             }
         }
 
+        //TODO: test
         if (shipArray.length() == 0) {
-//            ships.add(new Ship("浙三渔04529", "3303811998090003", 30,122, false));
-//            ships.add(new Ship("浙象渔10035", "3302251998010002", 32.5,122, false));
+            ships.add(new Ship("浙普渔运18888", "3309222001090011", 30,122, true));
+            ships.add(new Ship("浙路渔81966", "3310811999010012", 32.5,122, false));
+        } else {
+
         }
 
         sendShipDataBroadcast(ships);
-
     }
 
 }

@@ -9,7 +9,9 @@ import com.cetcme.zytyumin.jecInfoHttp.ParseJson;
 import com.cetcme.zytyumin.MyClass.NavigationView;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
@@ -134,8 +136,9 @@ public class SearcherClaimActivity extends Activity {
 				new int[] { R.id.ship_name, R.id.start_date, R.id.dead_date,
 						R.id.is_own });
 		mListView.setAdapter(mAdapter);
-
-		new GetClaimInfoTask().execute(new String[] { "330903196504260394" });
+		SharedPreferences user = getSharedPreferences("user", Context.MODE_PRIVATE);
+		String IDCard = user.getString("IDCard", "");
+		new GetClaimInfoTask().execute(new String[] { IDCard });
 	}
 
 	private ArrayList<HashMap<String, String>> resultList = new ArrayList<HashMap<String, String>>();

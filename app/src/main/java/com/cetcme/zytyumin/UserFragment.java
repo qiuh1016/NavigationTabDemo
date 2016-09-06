@@ -303,6 +303,7 @@ public class UserFragment extends BaseFragment {
                         editor.putBoolean("hasLogin", false);
                         editor.apply();//提交修改
                         startLoginActivity();
+                        Log.i(TAG, "onSuccess: 登陆信息过期");
                     }
 
                 } catch (JSONException e) {

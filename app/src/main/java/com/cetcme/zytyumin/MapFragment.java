@@ -121,17 +121,22 @@ public class MapFragment extends BaseFragment implements  BaiduMap.OnMarkerClick
         baiduMap.setOnMarkerClickListener(this);
     }
 
-    private void mapMark(LatLng latLng, String shipInfo){
+    private void mapMark(Ship ship){
 
         //定义Maker坐标点
-        LatLng point = latLng;
+        LatLng point = new LatLng(ship.latitude, ship.longitude);
         //构建Marker图标
         BitmapDescriptor bitmap = BitmapDescriptorFactory
                 .fromResource(R.drawable.icon_point);
         //构建MarkerOption，用于在地图上添加Marker
+        Bundle bundle = new Bundle();
+//        bundle.putString("shipName", ship.name);
+//        bundle.putString("shipNumber", ship.number);
+//        bundle.putBoolean("deviceInstall", ship.deviceInstall);
+        bundle.putSerializable("ship", ship);
         OverlayOptions option = new MarkerOptions()
-                .title(shipInfo)
                 .position(point)
+                .extraInfo(bundle)
                 .icon(bitmap);
 
         //在地图上添加Marker，并显示
@@ -182,12 +187,8 @@ public class MapFragment extends BaseFragment implements  BaiduMap.OnMarkerClick
 
     @Override
     public boolean onMarkerClick(Marker marker) {
-
-        String shipName = marker.getTitle();
-
+        Bundle bundle = marker.getExtraInfo();
         Intent intent = new Intent();
-        Bundle bundle = new Bundle();
-        bundle.putString("shipName", shipName); //"浙三渔04529"
         intent.putExtras(bundle);
         intent.setClass(getActivity(), ShipInfoActivity.class);
         startActivity(intent);
@@ -237,6 +238,7 @@ public class MapFragment extends BaseFragment implements  BaiduMap.OnMarkerClick
     private void drawMapMark() {
 
         ships = ((MainActivity) getActivity()).getShips();
+        Log.i(TAG, "drawMapMark: "+ ships.toString());
         if (ships.size() == 0) {
             mapStatus(new LatLng(30, 122));
             return;
@@ -245,7 +247,7 @@ public class MapFragment extends BaseFragment implements  BaiduMap.OnMarkerClick
         double lng = 0.0;
         int count = ships.size();
         for (int i = 0; i < count; i++) {
-            mapMark(new LatLng(ships.get(i).latitude, ships.get(i).longitude), ships.get(i).name);
+            mapMark(ships.get(i));
             lat += ships.get(i).latitude;
             lng += ships.get(i).longitude;
         }

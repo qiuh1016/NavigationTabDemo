@@ -1096,4 +1096,267 @@ public class ParseJson {
 		return new SimpleDateFormat("yyyy/MM/dd HH:mm:ss").format(time);
 	}
 
+	public HashMap<String, String> getShipdetailInfo(String result) {
+
+		HashMap<String, String> map = new HashMap<String, String>();
+
+		JSONObject jsonObject, childJsonObject;
+
+		try {
+			jsonObject = new JSONObject(result);
+			String state = null;
+			if (jsonObject.has("STATE")) {
+				state = jsonObject.getString("STATE");
+			}
+
+			if ("1".equalsIgnoreCase(state) && jsonObject.has("SHIP_INFO")) {
+
+				childJsonObject = jsonObject.getJSONObject("SHIP_INFO");
+				if (childJsonObject.has("SHIP_NAME")) {
+					map.put("SHIP_NAME", childJsonObject.getString("SHIP_NAME"));
+				} else {
+					Log.d(TAG, "Not exist this key!");
+				}
+				if (childJsonObject.has("SHIP_NO")) {
+					map.put("SHIP_NO", childJsonObject.getString("SHIP_NO"));
+				} else {
+					Log.d(TAG, "Not exist this key!");
+				}
+				if (childJsonObject.has("SHIP_DISTRICT")) {
+					map.put("SHIP_DISTRICT",
+							childJsonObject.getString("SHIP_DISTRICT"));
+				} else {
+					Log.d(TAG, "Not exist this key!");
+				}
+				if (childJsonObject.has("SHIP_PORT")) {
+					map.put("SHIP_PORT", childJsonObject.getString("SHIP_PORT"));
+				} else {
+					Log.d(TAG, "Not exist this key!");
+				}
+				if (childJsonObject.has("JOB_TYPE")) {
+					map.put("JOB_TYPE", childJsonObject.getString("JOB_TYPE"));
+				} else {
+					Log.d(TAG, "Not exist this key!");
+				}
+
+				if (childJsonObject.has("SHIP_BUSINESS_TYPE")) {
+					map.put("SHIP_BUSINESS_TYPE",
+							childJsonObject.getString("SHIP_BUSINESS_TYPE"));
+				} else {
+					Log.d(TAG, "Not exist this key!");
+				}
+				if (childJsonObject.has("SHIP_TOT_POWER")) {
+					map.put("SHIP_TOT_POWER",
+							childJsonObject.getString("SHIP_TOT_POWER"));
+				} else {
+					Log.d(TAG, "Not exist this key!");
+				}
+				if (childJsonObject.has("APP_SHIP_MATERIAL")) {
+					map.put("APP_SHIP_MATERIAL",
+							childJsonObject.getString("APP_SHIP_MATERIAL"));
+				} else {
+					Log.d(TAG, "Not exist this key!");
+				}
+				if (childJsonObject.has("SHIP_LENGTH")) {
+					map.put("SHIP_LENGTH",
+							childJsonObject.getString("SHIP_LENGTH"));
+				} else {
+					Log.d(TAG, "Not exist this key!");
+				}
+				if (childJsonObject.has("SHIP_WIDTH")) {
+					map.put("SHIP_WIDTH",
+							childJsonObject.getString("SHIP_WIDTH"));
+				} else {
+					Log.d(TAG, "Not exist this key!");
+				}
+				if (childJsonObject.has("SHIP_DEEP")) {
+					map.put("SHIP_DEEP", childJsonObject.getString("SHIP_DEEP"));
+				} else {
+					Log.d(TAG, "Not exist this key!");
+				}
+				if (childJsonObject.has("SHIP_TOT_TON")) {
+					map.put("SHIP_TOT_TON",
+							childJsonObject.getString("SHIP_TOT_TON"));
+				} else {
+					Log.d(TAG, "Not exist this key!");
+				}
+				if (childJsonObject.has("SHIP_BUILD_COMP_DATE")) {
+
+					String temp = childJsonObject
+							.getString("SHIP_BUILD_COMP_DATE");
+					map.put("SHIP_BUILD_COMP_DATE",
+							temp.substring(temp.indexOf("(") + 1,
+									temp.indexOf("+")));
+				} else {
+					Log.d(TAG, "Not exist this key!");
+				}
+
+				if (childJsonObject.has("JOB_PLACE")) {
+					map.put("JOB_PLACE", childJsonObject.getString("JOB_PLACE"));
+				} else {
+					Log.d(TAG, "Not exist this key!");
+				}
+
+				if (childJsonObject.has("OWNER_NAME")) {
+					map.put("OWNER_NAME",
+							childJsonObject.getString("OWNER_NAME"));
+				} else {
+					Log.d(TAG, "Not exist this key!");
+				}
+				if (childJsonObject.has("OWNER_NO")) {
+					map.put("OWNER_NO", childJsonObject.getString("OWNER_NO"));
+				} else {
+					Log.d(TAG, "Not exist this key!");
+				}
+				if (childJsonObject.has("OWNER_ADDR")) {
+					map.put("OWNER_ADDR",
+							childJsonObject.getString("OWNER_ADDR"));
+				} else {
+					Log.d(TAG, "Not exist this key!");
+				}
+				if (childJsonObject.has("OWNER_TEL")) {
+					map.put("OWNER_TEL", childJsonObject.getString("OWNER_TEL"));
+				} else {
+					Log.d(TAG, "Not exist this key!");
+				}
+
+				// OWNER_CERT_NO
+				if (childJsonObject.has("OWNER_CERT_NO")) {
+					map.put("OWNER_CERT_NO",
+							childJsonObject.getString("OWNER_CERT_NO"));
+				} else {
+					Log.d(TAG, "Not exist this key!");
+				}
+				// OWNER_CERT_GET_DATE
+				if (childJsonObject.has("OWNER_CERT_GET_DATE")) {
+					map.put("OWNER_CERT_GET_DATE",
+							childJsonObject.getString("OWNER_CERT_GET_DATE"));
+				} else {
+					Log.d(TAG, "Not exist this key!");
+				}
+				// NATIONALITY_CERT_NO
+				if (childJsonObject.has("NATIONALITY_CERT_NO")) {
+					map.put("NATIONALITY_CERT_NO",
+							childJsonObject.getString("NATIONALITY_CERT_NO"));
+				} else {
+					Log.d(TAG, "Not exist this key!");
+				}
+				// NATIONALITY_CERT_PERIOD_DATE
+				if (childJsonObject.has("NATIONALITY_CERT_PERIOD_DATE")) {
+					map.put("NATIONALITY_CERT_PERIOD_DATE", childJsonObject
+							.getString("NATIONALITY_CERT_PERIOD_DATE"));
+				} else {
+					Log.d(TAG, "Not exist this key!");
+				}
+				// CHECK_CERT_NO
+				if (childJsonObject.has("CHECK_CERT_NO")) {
+					map.put("CHECK_CERT_NO",
+							childJsonObject.getString("CHECK_CERT_NO"));
+				} else {
+					Log.d(TAG, "Not exist this key!");
+				}
+				// CHECK_DEPT
+				if (childJsonObject.has("CHECK_DEPT")) {
+					map.put("CHECK_DEPT",
+							childJsonObject.getString("CHECK_DEPT"));
+				} else {
+					Log.d(TAG, "Not exist this key!");
+				}
+				// CHECK_CERT_DATE
+				if (childJsonObject.has("CHECK_CERT_DATE")) {
+					map.put("CHECK_CERT_DATE",
+							childJsonObject.getString("CHECK_CERT_DATE"));
+				} else {
+					Log.d(TAG, "Not exist this key!");
+				}
+				// CHECK_CERT_PERIOD_DATE
+				if (childJsonObject.has("CHECK_CERT_PERIOD_DATE")) {
+					map.put("CHECK_CERT_PERIOD_DATE",
+							childJsonObject.getString("CHECK_CERT_PERIOD_DATE"));
+				} else {
+					Log.d(TAG, "Not exist this key!");
+				}
+				// FISHING_PERMIT_NO
+				if (childJsonObject.has("FISHING_PERMIT_NO")) {
+					map.put("FISHING_PERMIT_NO",
+							childJsonObject.getString("FISHING_PERMIT_NO"));
+				} else {
+					Log.d(TAG, "Not exist this key!");
+				}
+				// FISHING_PERMIT_CERT_OWNER
+				if (childJsonObject.has("FISHING_PERMIT_CERT_OWNER")) {
+					map.put("FISHING_PERMIT_CERT_OWNER", childJsonObject
+							.getString("FISHING_PERMIT_CERT_OWNER"));
+				} else {
+					Log.d(TAG, "Not exist this key!");
+				}
+				// FISHING_PERMIT_SIGNATE_DEPT
+				if (childJsonObject.has("FISHING_PERMIT_SIGNATE_DEPT")) {
+					map.put("FISHING_PERMIT_SIGNATE_DEPT", childJsonObject
+							.getString("FISHING_PERMIT_SIGNATE_DEPT"));
+				} else {
+					Log.d(TAG, "Not exist this key!");
+				}
+				// FISHING_PERMIT_SIGNATE_TIME
+				if (childJsonObject.has("FISHING_PERMIT_SIGNATE_TIME")) {
+					map.put("FISHING_PERMIT_SIGNATE_TIME", childJsonObject
+							.getString("FISHING_PERMIT_SIGNATE_TIME"));
+				} else {
+					Log.d(TAG, "Not exist this key!");
+				}
+				// FISHING_PERMIT_LOGOUT_TIME
+				if (childJsonObject.has("FISHING_PERMIT_LOGOUT_TIME")) {
+					map.put("FISHING_PERMIT_LOGOUT_TIME", childJsonObject
+							.getString("FISHING_PERMIT_LOGOUT_TIME"));
+				} else {
+					Log.d(TAG, "Not exist this key!");
+				}
+				// FISHING_GEAR_NAME
+				if (childJsonObject.has("FISHING_GEAR_NAME")) {
+					map.put("FISHING_GEAR_NAME",
+							childJsonObject.getString("FISHING_GEAR_NAME"));
+				} else {
+					Log.d(TAG, "Not exist this key!");
+				}
+
+				if (childJsonObject.has("JOB_PLACE")) {
+					map.put("JOB_PLACE", childJsonObject.getString("JOB_PLACE"));
+				} else {
+					Log.d(TAG, "Not exist this key!");
+				}
+
+				if (childJsonObject.has("OWNER_NAME")) {
+					map.put("OWNER_NAME",
+							childJsonObject.getString("OWNER_NAME"));
+				} else {
+					Log.d(TAG, "Not exist this key!");
+				}
+				if (childJsonObject.has("OWNER_NO")) {
+					map.put("OWNER_NO", childJsonObject.getString("OWNER_NO"));
+				} else {
+					Log.d(TAG, "Not exist this key!");
+				}
+				if (childJsonObject.has("OWNER_ADDR")) {
+					map.put("OWNER_ADDR",
+							childJsonObject.getString("OWNER_ADDR"));
+				} else {
+					Log.d(TAG, "Not exist this key!");
+				}
+				if (childJsonObject.has("OWNER_TEL")) {
+					map.put("OWNER_TEL", childJsonObject.getString("OWNER_TEL"));
+				} else {
+					Log.d(TAG, "Not exist this key!");
+				}
+
+			} else {
+				return null;
+			}
+
+		} catch (JSONException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return map;
+	}
+
 }

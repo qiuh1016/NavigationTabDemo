@@ -367,6 +367,12 @@
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan|stateHidden">
         </activity>
+        <activity
+            android:name=".xia.DetailFishShipActivity"
+            android:launchMode="standard"
+            android:screenOrientation="portrait">
+        </activity>
+
         <activity android:name=".rcld.ioConfirmActivity"/>
         <activity android:name=".rcld.iofSailorActivity"/>
         <activity android:name=".rcld.ioLogActivity"/>

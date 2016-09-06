@@ -155,7 +155,87 @@
     <string name="xlistview_footer_hint_ready">松开载入更多</string>
     <string name="switch_wifi">建议切换到WIFI模式！</string>
     <string name="no_network">无法连接服务器，请检查网络！</string>
+
+    <!--渔船信息-->
+    <string name="ship_info_title">渔船信息</string>
+    <string name="ship_detect_info_title">检验信息</string>
+    <string name="port_basic_info">渔港基本信息</string>
+    <string name="port_detail_info">渔港详细信息</string>
+    <string name="insurance_detail_title">投保详细信息</string>
+    <string name="claim_detail_title">理赔详细信息</string>
+    <string name="detail_oil_patch">渔船油补详细信息</string>
+    <string name="ship_name">船名</string>
+    <string name="ship_no">渔船编码</string>
+    <string name="ship_port">船籍港</string>
+    <string name="disc_ship">渔船所属地</string>
+    <string name="owner_account">账号</string>
+    <string name="owner_account_name">开户名</string>
+    <string name="owner_bank_account">银行账户</string>
+    <string name="dist_ship_district">渔船所属地</string>
+    <string name="ship_age">船龄</string>
+    <string name="ship_business_type">渔船业务类型</string>
+    <string name="ship_business_type_t">业务类型</string>
+    <string name="ship_type">船舶类型</string>
+    <string name="ship_dict_job_type">兼做作业类型</string>
+    <string name="main_ship_job_type">主作业类型</string>
+    <string name="ship_job_way">兼做作业方式</string>
+    <string name="main_ship_job_way">主作业方式</string>
+    <string name="ship_length">船长(米)</string>
+    <string name="ship_tot_length">总长(米)</string>
+    <string name="ship_tot_ton">总吨位(吨)</string>
+    <string name="ship_width">型宽(米)</string>
+    <string name="ship_deep">型深(米)</string>
+    <string name="ship_tot_power">主机总功率</string>
+    <string name="total_ton">总吨位</string>
+    <string name="last_year_oil_patch">去年油补</string>
+    <string name="this_year_oil_patch">今年油补</string>
+    <string name="oil_patch">油补</string>
+    <string name="Owner_account_name">开户名</string>
+    <string name="dict_ship_material">渔船材质</string>
+    <string name="ship_build_comp_date">渔船建造日期</string>
+    <string name="ship_engine_amount">渔船发动机个数</string>
+    <string name="job_place">渔船作业范围</string>
+    <string name="ship_owner_info">渔船所有人信息</string>
+    <string name="owner_name">渔船所有人</string>
+    <string name="owner_no">渔船所有人身份证号</string>
+    <string name="owner_addr">渔船所有人住址</string>
+    <string name="owner_tel">渔船所有人手机号</string>
+    <string name="owner_contact">联系电话</string>
+    <string name="cert_info_title">证书信息</string>
+    <string name="patch_info">补助信息</string>
+    <string name="job_way">作业方式</string>
+    <string name="produced">补助年度内是否正常生产</string>
+    <string name="illegal">补助年度内有无违法违规行为</string>
+    <string name="proportion">扣减比例</string>
+    <string name="fuel_consumption">年实际耗油量</string>
+    <string name="oil_time">油补时间</string>
+    <string name="funds_2014">2014年度补助金额 (万元)</string>
+    <string name="funds_2015">2015年度补助金额 (万元)</string>
+    <string name="funds_2016">2016年度助金额 (万元)</string>
+    <string name="funds_2017">2017年度补助金额 (万元)</string>
+    <string name="funds_2018">2018年度补助金额 (万元)</string>
+    <string name="funds_2019">2019年度补助金额 (万元)</string>
+    <string name="owner_cert_no">渔船所有权证书编号</string>
+    <string name="owner_cert_get_date">获取证书日期</string>
+    <string name="nationality_cert_no">渔船登记（国籍）证书编号</string>
+    <string name="nationality_cert_period_date">渔船国籍证有效期</string>
+    <string name="check_cert_no">渔船检验证书编号</string>
+    <string name="check_dept">渔船检验部门</string>
+    <string name="check_basic_info">船检基本信息</string>
+    <string name="check_detail_info">船检详细信息</string>
+    <string name="check_cert_get_date">发证日期</string>
+    <string name="check_cert_period_date">船检证书有效期</string>
+    <string name="fishing_permit_cert_no">渔业捕捞许可证号 </string>
+    <string name="fishing_permit_cert_owner">捕捞许可证所有人</string>
+    <string name="finshing_permit_signate_dept">证书发放单位</string>
+    <string name="finshing_permit_signate_date">发证日期</string>
+    <string name="finshing_permit_signate_logout_date">捕捞许可证有效期</string>
+    <string name="fishing_gear_name">渔具名称</string>
+    <string name="ship_detect_type">检验类型</string>
     <!--xia end-->
+
+
+
 
 
     <!--fr-->

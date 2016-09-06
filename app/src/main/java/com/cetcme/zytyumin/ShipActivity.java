@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.LinearLayout;
+import android.widget.Toast;
 
 import com.cetcme.zytyumin.MyClass.ListCell;
 import com.cetcme.zytyumin.MyClass.ListSeparator;
@@ -16,8 +17,6 @@ import java.util.List;
 public class ShipActivity extends Activity {
 
     private boolean openFromMapFragment;
-    private String[] shipNames;
-    private String[] shipNumbers;
     private List<Ship> ships;
 
     private String TAG = "ShipActivity";
@@ -64,70 +63,6 @@ public class ShipActivity extends Activity {
         });
     }
 
-    private void initLayout() {
-        LinearLayout linearLayout = (LinearLayout) findViewById(R.id.linerLayout_in_visa_activity);
-
-        int selector;
-        for (int i = 0; i < shipNames.length; i++) {
-
-            if (i == 0) {
-                selector = R.drawable.top_layout_selector;
-            } else if (i == shipNames.length - 1){
-                selector = (i % 2 == 0) ? R.drawable.bottom_layout_selector: R.drawable.bottom_layout_light_selector;
-            } else {
-                selector = (i % 2 == 0) ? R.drawable.mid_layout_selector: R.drawable.mid_layout_light_selector;
-            }
-
-            /**
-             * 功能行 list_cell
-             */
-            ListCell listCell = new ListCell(this, shipNames[i], selector);
-            final int finalI = i;
-            listCell.setClickCallback(new ListCell.ClickCallback() {
-                @Override
-                public void onClick() {
-                    Log.i("main", "onClick: " + shipNames[finalI]);
-
-                    if (openFromMapFragment) {
-                        /**
-                         * 进入ship info
-                         */
-                        Intent intent = new Intent();
-                        Bundle bundle = new Bundle();
-                        bundle.putString("shipName", shipNames[finalI]);
-                        intent.putExtras(bundle);
-                        intent.setClass(getApplicationContext(), ShipInfoActivity.class);
-                        startActivity(intent);
-                    } else {
-                        /**
-                         * 进入visa界面
-                         */
-                        Intent intent = new Intent();
-                        intent.setClass(getApplicationContext(), VisaActivity.class);
-                        Bundle bundle = new Bundle();
-                        bundle.putString("shipName", shipNames[finalI]);
-                        bundle.putString("shipNumber", shipNumbers[finalI]);
-                        intent.putExtras(bundle);
-                        startActivity(intent);
-                        overridePendingTransition(R.anim.push_left_in_no_alpha, R.anim.push_left_out_no_alpha);
-                    }
-
-
-                }
-            });
-            linearLayout.addView(listCell);
-
-            /**
-             * 分割线 list_separator
-             */
-            if (i != shipNames.length - 1) {
-                ListSeparator listSeparator = new ListSeparator(this);
-                linearLayout.addView(listSeparator);
-            }
-        }
-
-    }
-
     private void initLayoutWithShipClass() {
         LinearLayout linearLayout = (LinearLayout) findViewById(R.id.linerLayout_in_visa_activity);
 
@@ -158,7 +93,7 @@ public class ShipActivity extends Activity {
                          */
                         Intent intent = new Intent();
                         Bundle bundle = new Bundle();
-                        bundle.putString("shipName", ships.get(finalI).name);
+                        bundle.putSerializable("ship", ships.get(finalI));
                         intent.putExtras(bundle);
                         intent.setClass(getApplicationContext(), ShipInfoActivity.class);
                         startActivity(intent);
@@ -166,14 +101,19 @@ public class ShipActivity extends Activity {
                         /**
                          * 进入visa界面
                          */
-                        Intent intent = new Intent();
-                        intent.setClass(getApplicationContext(), VisaActivity.class);
-                        Bundle bundle = new Bundle();
-                        bundle.putString("shipName", ships.get(finalI).name);
-                        bundle.putString("shipNumber", ships.get(finalI).number);
-                        intent.putExtras(bundle);
-                        startActivity(intent);
-                        overridePendingTransition(R.anim.push_left_in_no_alpha, R.anim.push_left_out_no_alpha);
+                        if (ships.get(finalI).deviceInstall) {
+                            Intent intent = new Intent();
+                            intent.setClass(getApplicationContext(), VisaActivity.class);
+                            Bundle bundle = new Bundle();
+                            bundle.putString("shipName", ships.get(finalI).name);
+                            bundle.putString("shipNumber", ships.get(finalI).number);
+                            intent.putExtras(bundle);
+                            startActivity(intent);
+                            overridePendingTransition(R.anim.push_left_in_no_alpha, R.anim.push_left_out_no_alpha);
+                        } else {
+                            Toast.makeText(ShipActivity.this, "本船不支持电子签证", Toast.LENGTH_SHORT).show();
+                        }
+
                     }
 
 

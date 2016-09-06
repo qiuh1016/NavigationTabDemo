@@ -14,7 +14,9 @@ import android.widget.Toast;
 
 import com.cetcme.zytyumin.MyClass.NavigationView;
 import com.cetcme.zytyumin.MyClass.PrivateEncode;
+import com.cetcme.zytyumin.MyClass.Ship;
 import com.cetcme.zytyumin.rcld.RouteActivity;
+import com.cetcme.zytyumin.xia.DetailFishShipActivity;
 import com.loopj.android.http.AsyncHttpClient;
 import com.loopj.android.http.JsonHttpResponseHandler;
 import com.loopj.android.http.RequestParams;
@@ -29,7 +31,10 @@ import java.util.Date;
 public class ShipInfoActivity extends Activity {
 
     private String TAG = "ShipInfoActivity";
-    private String shipName;
+//    private String shipName;
+//    private String shipNumber;
+
+    private Ship ship;
 
     private TextView shipMaterialTextView;
     private TextView shipLengthTextView;
@@ -47,20 +52,23 @@ public class ShipInfoActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ship_info);
 
-        shipName = getIntent().getExtras().getString("shipName");
+//        shipName = getIntent().getExtras().getString("shipName");
+//        shipNumber = getIntent().getExtras().getString("shipNumber");
+        ship = (Ship) getIntent().getExtras().getSerializable("ship");
+
         toast = Toast.makeText(getApplicationContext(), "", Toast.LENGTH_SHORT);
 
         initNavigationView();
         initUI();
 
-        getShipInfo(this.shipName);
+        getShipInfo(this.ship.number);
 
     }
 
     private void initNavigationView() {
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_main_in_ship_info_activity);
         navigationView.setBackgroundResource(R.drawable.top_select);
-        navigationView.setTitle(shipName);
+        navigationView.setTitle(ship.name);
         navigationView.setBackView(R.drawable.icon_back_button);
         navigationView.setRightView(0);
         navigationView.setClickCallback(new NavigationView.ClickCallback() {
@@ -99,24 +107,32 @@ public class ShipInfoActivity extends Activity {
     }
 
     public void detailButtonTapped(View v) {
-//        Intent intent = new Intent();
-//        intent.setClass(this, ServiceActivity.class);
-//        overridePendingTransition(R.anim.push_left_in_no_alpha, R.anim.push_left_out_no_alpha);
-//        startActivity(intent);
-        Toast.makeText(ShipInfoActivity.this, "显示详情界面", Toast.LENGTH_SHORT).show();
+        Intent intent = new Intent();
+        intent.setClass(this, DetailFishShipActivity.class);
+        Bundle bundle = new Bundle();
+        bundle.putString("shipNumber", ship.number);
+        intent.putExtras(bundle);
+        startActivity(intent);
+        overridePendingTransition(R.anim.push_left_in_no_alpha, R.anim.push_left_out_no_alpha);
+//        Toast.makeText(ShipInfoActivity.this, "显示详情界面", Toast.LENGTH_SHORT).show();
     }
 
     public void routeButtonTapped(View v) {
-        Intent intent = new Intent();
-        intent.setClass(this, RouteActivity.class);
-        overridePendingTransition(R.anim.push_left_in_no_alpha, R.anim.push_left_out_no_alpha);
-        startActivity(intent);
+        if (ship.deviceInstall) {
+            Intent intent = new Intent();
+            intent.setClass(this, RouteActivity.class);
+            startActivity(intent);
+            overridePendingTransition(R.anim.push_left_in_no_alpha, R.anim.push_left_out_no_alpha);
+        } else {
+            Toast.makeText(this, "本船不支持查看轨迹", Toast.LENGTH_SHORT).show();
+        }
+
     }
 
-    private void getShipInfo(String shipName) {
+    private void getShipInfo(String shipNumber) {
         RequestParams params = new RequestParams();
-        params.put("shipName", shipName);
-        String urlBody = "http://61.164.218.155:5000//bpm/YZSoft/Webservice/AppWebservice.asmx/GetShipInfoByName";
+        params.put("shipNo", shipNumber);
+        String urlBody = "http://61.164.218.155:5000//bpm/YZSoft/Webservice/AppWebservice.asmx/GetShipInfoByNo";
         String url = "http://61.164.218.155:5000//bpm/YZSoft/Webservice/AppWebservice.asmx/GetShipInfoByName?shipName=浙三渔04529";
 
         AsyncHttpClient client = new AsyncHttpClient();

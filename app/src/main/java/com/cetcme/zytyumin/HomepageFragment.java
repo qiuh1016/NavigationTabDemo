@@ -1,6 +1,8 @@
 package com.cetcme.zytyumin;
 
+import android.content.BroadcastReceiver;
 import android.content.Context;
+import android.content.IntentFilter;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -45,6 +47,11 @@ public class HomepageFragment extends BaseFragment {
     private List<Map<String, Object>> data_list;
     private SimpleAdapter sim_adapter;
 
+    private Toast toast;
+    private MyLoginStateReceiver myLoginStateReceiver;
+
+    private List<Ship> ships;
+
     private int[] gridIcon = {
             R.drawable.homepage_service,
             R.drawable.homepage_record,
@@ -60,7 +67,7 @@ public class HomepageFragment extends BaseFragment {
             ServiceActivity.class,
             RecordActivity.class,
             VisaActivity.class,
-            SignActivity.class,
+            null,
             ProcessActivity.class,
             TodoActivity.class
     };
@@ -109,6 +116,9 @@ public class HomepageFragment extends BaseFragment {
         initNavigationView();
         initGridView();
         initBanner();
+        initLoginBroadcast();
+
+        toast = Toast.makeText(getActivity(), "您的名下没有船只", Toast.LENGTH_SHORT);
 
         return view;
     }
@@ -173,9 +183,12 @@ public class HomepageFragment extends BaseFragment {
                         /**
                          * 打开电子签证界面前进行判断船只数量
                          */
-                        List<Ship> ships = ((MainActivity)getActivity()).getShips();
 
-                        Log.i(TAG, "onItemClick: ");
+                        if (ships == null) {
+                            Log.i(TAG, "onItemClick: ships null");
+                            toast.show();
+                            return;
+                        }
                         
                         if (ships.size() > 1) {
                             Intent intent = new Intent();
@@ -198,7 +211,7 @@ public class HomepageFragment extends BaseFragment {
                             MainActivity activity = (MainActivity) getActivity();
                             activity.overridePendingTransition(R.anim.push_left_in_no_alpha, R.anim.push_left_out_no_alpha);
                         } else {
-                            Toast.makeText(getActivity(), "您的名下没有船只", Toast.LENGTH_SHORT).show();
+                            toast.show();
                         }
 
                     } else if (position == 5){
@@ -223,7 +236,7 @@ public class HomepageFragment extends BaseFragment {
                     }
 
                 } else {
-                    Toast.makeText(getActivity(), "待开发", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getActivity(), "即将上线", Toast.LENGTH_SHORT).show();
                 }
 
             }
@@ -263,6 +276,34 @@ public class HomepageFragment extends BaseFragment {
                 startActivity(intent);
             }
         });
+    }
+
+    private void initLoginBroadcast() {
+        myLoginStateReceiver = new MyLoginStateReceiver();
+        IntentFilter filter = new IntentFilter();
+        filter.addAction("com.loginFlag");
+        getActivity().registerReceiver(myLoginStateReceiver, filter);
+    }
+
+    public class MyLoginStateReceiver extends BroadcastReceiver {
+
+        @Override
+        public void onReceive(Context arg0, Intent arg1) {
+
+            Log.i(TAG, "onReceive: get login flag");
+            Bundle bundle = arg1.getExtras();
+            Boolean loginFlag = bundle.getBoolean("loginFlag");
+
+            if (loginFlag) {
+                ships = ((MainActivity) getActivity()).getShips();
+            }
+
+        }
+    }
+
+    public void onDestroy() {
+        super.onDestroy();
+        getActivity().unregisterReceiver(myLoginStateReceiver);
     }
 
     class MyGridAdapter extends SimpleAdapter {
@@ -329,8 +370,6 @@ public class HomepageFragment extends BaseFragment {
 
             return convertView;
         }
-
-
 
     }
 }
