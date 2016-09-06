@@ -132,8 +132,7 @@ public class ShipInfoActivity extends Activity {
     private void getShipInfo(String shipNumber) {
         RequestParams params = new RequestParams();
         params.put("shipNo", shipNumber);
-        String urlBody = "http://61.164.218.155:5000//bpm/YZSoft/Webservice/AppWebservice.asmx/GetShipInfoByNo";
-        String url = "http://61.164.218.155:5000//bpm/YZSoft/Webservice/AppWebservice.asmx/GetShipInfoByName?shipName=浙三渔04529";
+        String urlBody = getString(R.string.serverIP) + getString(R.string.getShipInfoByNo);
 
         AsyncHttpClient client = new AsyncHttpClient();
         client.get(urlBody, params, new JsonHttpResponseHandler("UTF-8") {

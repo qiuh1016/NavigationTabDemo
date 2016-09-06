@@ -53,12 +53,32 @@
     <!--API-->
     <string name="rcldServerIP">http://120.27.149.252</string>
     <string name="defaultServerIP_1">http://120.27.149.252</string>
-    <string name="serverIP">http://61.164.218.155:8085</string>
+    <string name="serverIP">http://61.164.218.155</string>
 
-    <string name="loginUrl">/Account/login</string>
-    <string name="sendSMSUrl">/Account/SendSms</string>
-    <string name="registerUrl">/Account/Register</string>
-    <string name="getTodoCountUrl">/Business/getTodoCount</string>
+    <string name="loginUrl">:8085/Account/login</string>
+    <string name="sendSMSUrl">:8085/Account/SendSms</string>
+    <string name="registerUrl">:8085/Account/Register</string>
+    <string name="getTodoCountUrl">:8085/Business/getTodoCount</string>
+
+    <string name="getShipInfoByNo">:5000/bpm/YZSoft/Webservice/AppWebservice.asmx/GetShipInfoByNo</string>
+
+    <!--process url-->
+    <string name="process_line_1_url">:5008/WebReport/ReportServer?reportlet=zhuangby%2F%5B6e14%5D%5B4e1a%5D%5B8239%5D%5B8236%5D%5B68c0%5D%5B9a8c%5D%5B8bb8%5D%5B53ef%5D.cpt</string>
+    <string name="process_line_2_url">:5008/WebReport/ReportServer?reportlet=zhuangby%2F%5B6e14%5D%5B4e1a%5D%5B8239%5D%5B8236%5D%5B767b%5D%5B8bb0%5D.cpt</string>
+    <string name="process_line_3_url">:5008/WebReport/ReportServer?reportlet=zhuangby%2F%5B6e14%5D%5B4e1a%5D%5B6355%5D%5B635e%5D%5B8bb8%5D%5B53ef%5D.cpt</string>
+    <!--serivce url-->
+    <string name="service_line_1_url">:5008/WebReport/ReportServer?reportlet=apply%2Fchuanjian_1_phone.cpt&amp; op=write&amp;app_account=</string>
+    <string name="service_line_2_url">:5008/WebReport/ReportServer?reportlet=apply%2Fexamine_apply_phone.cpt&amp;op=write&amp;user=</string>
+    <string name="service_line_3_url">:</string>
+    <!--get todolist url-->
+    <string name="get_todo_line_1_url">:8085/Business/getDrawingExamineOpinionList</string>
+    <string name="get_todo_line_2_url">:8085/Business/getDetectInfoDetailInspectionList</string>
+    <string name="get_todo_line_3_url">:8085/Business/getDetectInfoOpinionList</string>
+    <string name="get_todo_line_4_url">:</string>
+    <string name="fr_todo_line_1_url">:5008/WebReport/ReportServer?reportlet=apply%2Fpic_opinion_phone.cpt&amp;op=write&amp;appid=</string>
+    <string name="fr_todo_line_2_url">:5008/WebReport/ReportServer?formlet=apply%2Fbaojian.frm&amp;appid=</string>
+    <string name="fr_todo_line_3_url">:5008/WebReport/ReportServer?reportlet=apply%2Fchange_opinion_phone.cpt&amp;op=write&amp;appid=</string>
+    <string name="fr_todo_line_4_url">:</string>
 
 
     <!--rcld Api-->

@@ -16,14 +16,18 @@ public class ServiceActivity extends Activity {
 
     private String TAG = "ServiceActivity";
 
-    private String url_line_1 = "http://61.164.218.155:5008/WebReport/ReportServer?reportlet=apply%2Fchuanjian_1.cpt&op=write&app_account=";
-    private String url_line_2 = "http://61.164.218.155:5008/WebReport/ReportServer?reportlet=apply%2Fexamine_apply_phone.cpt&op=write&user=";
-    private String url_line_3 = "";
+    private String url_line_1;
+    private String url_line_2;
+    private String url_line_3;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_service);
+
+        url_line_1 = getString(R.string.serverIP) + getString(R.string.service_line_1_url);
+        url_line_2 = getString(R.string.serverIP) + getString(R.string.service_line_2_url);
+        url_line_3 = getString(R.string.serverIP) + getString(R.string.service_line_3_url);
 
         initNavigationView();
         initURL();

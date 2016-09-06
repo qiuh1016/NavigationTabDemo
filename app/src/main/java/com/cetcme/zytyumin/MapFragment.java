@@ -85,12 +85,13 @@ public class MapFragment extends BaseFragment implements  BaiduMap.OnMarkerClick
             public void onRightClick() {
                 Log.i("main","点击了右侧按钮!");
 
-                if (ships.size() == 0) {
-                    Toast.makeText(getActivity(), "您的名下没有船只", Toast.LENGTH_SHORT).show();
-                    return;
-                }
-
                 if (user.getBoolean("hasLogin", false)) {
+
+                    if (ships.size() == 0) {
+                        Toast.makeText(getActivity(), "您的名下没有船只", Toast.LENGTH_SHORT).show();
+                        return;
+                    }
+
                     Intent intent = new Intent();
                     intent.setClass(getActivity(), ShipActivity.class);
                     Bundle bundle = new Bundle();

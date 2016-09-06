@@ -1,5 +1,6 @@
 package com.cetcme.zytyumin;
 
+import android.app.Activity;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.IntentFilter;
@@ -273,6 +274,8 @@ public class HomepageFragment extends BaseFragment {
                 intent.putExtras(bundle);
                 intent.setClass(getActivity(), WebActivity.class);
                 startActivity(intent);
+                Activity activity = getActivity();
+                activity.overridePendingTransition(R.anim.push_up_in_no_alpha, R.anim.stay);
             }
         });
     }
@@ -335,7 +338,6 @@ public class HomepageFragment extends BaseFragment {
             LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 
             if (convertView == null) {
-                Log.i(TAG, "getView: " + position);
 
                 convertView = inflater.inflate(R.layout.grid_item, parent, false);
 

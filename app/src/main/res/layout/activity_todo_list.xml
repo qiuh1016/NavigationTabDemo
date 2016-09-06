@@ -24,7 +24,8 @@
                 android:layout_height="20dp" />
 
             <LinearLayout style="@style/wrap_layout"
-                          android:id="@+id/linerLayout_in_todo_list_activity"/>
+                          android:id="@+id/linerLayout_in_todo_list_activity"
+                          android:visibility="invisible"/>
 
 
 

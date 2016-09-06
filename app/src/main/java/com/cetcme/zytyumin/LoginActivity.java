@@ -196,7 +196,6 @@ public class LoginActivity extends Activity implements View.OnClickListener{
         params.put("deviceType", "0");
         params.put("clientId", "1");
         String urlBody = getString(R.string.serverIP) + getString(R.string.loginUrl);
-        String url = "http://61.164.218.155:8085/Account/login?loginName="+username+"&password="+PrivateEncode.getMD5(password)+"&deviceType=0&clientId=1";
 
         AsyncHttpClient client = new AsyncHttpClient();
         client.get(urlBody, params, new JsonHttpResponseHandler("UTF-8") {
@@ -314,8 +313,6 @@ public class LoginActivity extends Activity implements View.OnClickListener{
 
     private void dealWhitShipArray(JSONArray shipArray) {
         List<Ship> ships = new ArrayList<>();
-
-        Log.i(TAG, "dealWhitShipArray: " + shipArray.toString());
 
         for (int i = 0; i < shipArray.length(); i++) {
             try {

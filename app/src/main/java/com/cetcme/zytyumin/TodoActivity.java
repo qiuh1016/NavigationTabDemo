@@ -17,11 +17,6 @@ public class TodoActivity extends Activity {
     private String TAG = "TodoActivity";
     private int[] todoNumbers = {0, 0, 0, 0};
 
-    private String url_line_1 = "http://61.164.218.155:5008/WebReport/ReportServer?reportlet=apply%2Fpic_opinion_phone.cpt&op=write&appid=109";
-    private String url_line_2 = "";
-    private String url_line_3 = "http://61.164.218.155:5008/WebReport/ReportServer?reportlet=apply%2Fchange_opinion_phone.cpt&op=write&appid=225";
-    private String url_line_4 = "";
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

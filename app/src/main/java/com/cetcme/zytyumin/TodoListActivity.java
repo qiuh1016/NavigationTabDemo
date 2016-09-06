@@ -115,20 +115,20 @@ public class TodoListActivity extends Activity {
     private void initURL() {
         switch (title) {
             case "审图意见书":
-                url =  "http://61.164.218.155:8085/Business/getDrawingExamineOpinionList";
-                frURL = "http://61.164.218.155:5008/WebReport/ReportServer?reportlet=apply%2Fpic_opinion_phone.cpt&op=write&appid=";
+                url = getString(R.string.serverIP) + getString(R.string.get_todo_line_1_url);
+                frURL = getString(R.string.serverIP) + getString(R.string.fr_todo_line_1_url);
                 break;
             case "报检表":
-                url = "http://61.164.218.155:8085/Business/getDetectInfoDetailInspectionList";
-                frURL = "http://61.164.218.155:5008/WebReport/ReportServer?formlet=apply%2Fbaojian.frm&appid=";
+                url = getString(R.string.serverIP) + getString(R.string.get_todo_line_2_url);
+                frURL = getString(R.string.serverIP) + getString(R.string.fr_todo_line_2_url);
                 break;
             case "整改意见书":
-                url = "http://61.164.218.155:8085/Business/getDetectInfoOpinionList";
-                frURL = "http://61.164.218.155:5008/WebReport/ReportServer?reportlet=apply%2Fchange_opinion_phone.cpt&op=write&appid=";
+                url = getString(R.string.serverIP) + getString(R.string.get_todo_line_3_url);
+                frURL = getString(R.string.serverIP) + getString(R.string.fr_todo_line_3_url);
                 break;
             case "检验记录":
-                url = "";
-                frURL = "";
+                url = getString(R.string.serverIP) + getString(R.string.get_todo_line_4_url);
+                frURL = getString(R.string.serverIP) + getString(R.string.fr_todo_line_4_url);
                 break;
         }
     }
@@ -163,7 +163,6 @@ public class TodoListActivity extends Activity {
                         JSONArray list = response.getJSONArray("List");
                         if (list.length() == 0) {
                             Toast.makeText(TodoListActivity.this, "无数据", Toast.LENGTH_SHORT).show();
-                            initLayout(todoObjects);
                             kProgressHUD.dismiss();
                             return;
                         }
@@ -188,7 +187,7 @@ public class TodoListActivity extends Activity {
                                 case "整改意见书":
                                     todo.setName(object.getString("ship_name"));
                                     todo.setTime(getFormatTime(object.getString("app_date")));
-                                    todo.setID(object.getInt("id"));
+                                    todo.setID(object.getInt("appid"));
                                     break;
                                 case "检验记录":
                                     todo.setName(object.getString("ship_name"));
@@ -240,14 +239,7 @@ public class TodoListActivity extends Activity {
 
     private void initLayout(final List<TodoObject> todos) {
         LinearLayout linearLayout = (LinearLayout) findViewById(R.id.linerLayout_in_todo_list_activity);
-
-        if (todos.size() == 0) {
-            linearLayout.setVisibility(View.INVISIBLE);
-            Log.i(TAG, "initLayout: *********************");
-            return;
-        } else {
-            linearLayout.setVisibility(View.VISIBLE);
-        }
+        linearLayout.setVisibility(View.VISIBLE);
 
         int selector;
         for (int i = 0; i < todos.size(); i++) {
@@ -274,13 +266,14 @@ public class TodoListActivity extends Activity {
                         return;
                     }
                     Intent intent = new Intent();
-                    String urlString = frURL + todos.get(finalI).id;
+                    String urlString = frURL +todos.get(finalI).id;
                     if (title.equals("报检表")) {
                         SharedPreferences user = getSharedPreferences("user", Context.MODE_PRIVATE);
                         String username = user.getString("username", "");
                         urlString += "&account=" + username;
                     }
                     intent.putExtra("url", urlString);
+                    Log.i(TAG, "onClick: " + urlString);
                     intent.putExtra("title", title);
                     intent.setClass(getApplicationContext(), LoadAppFromURLActivity.class);
                     startActivity(intent);

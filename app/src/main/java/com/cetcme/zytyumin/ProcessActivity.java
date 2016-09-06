@@ -14,14 +14,19 @@ public class ProcessActivity extends Activity {
 
     private String TAG = "ProcessActivity";
 
-    private String url_line_1 = "http://61.164.218.155:5008/WebReport/ReportServer?reportlet=zhuangby%2F%5B6e14%5D%5B4e1a%5D%5B8239%5D%5B8236%5D%5B68c0%5D%5B9a8c%5D%5B8bb8%5D%5B53ef%5D.cpt";
-    private String url_line_2 = "http://61.164.218.155:5008/WebReport/ReportServer?reportlet=zhuangby%2F%5B6e14%5D%5B4e1a%5D%5B8239%5D%5B8236%5D%5B767b%5D%5B8bb0%5D.cpt";
-    private String url_line_3 = "http://61.164.218.155:5008/WebReport/ReportServer?reportlet=zhuangby%2F%5B6e14%5D%5B4e1a%5D%5B6355%5D%5B635e%5D%5B8bb8%5D%5B53ef%5D.cpt";
+    private String url_line_1;
+    private String url_line_2;
+    private String url_line_3;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_process);
+
+        url_line_1 = getString(R.string.serverIP) + getString(R.string.process_line_1_url);
+        url_line_2 = getString(R.string.serverIP) + getString(R.string.process_line_2_url);
+        url_line_3 = getString(R.string.serverIP) + getString(R.string.process_line_3_url);
+
         initNavigationView();
         initLineClick();
     }
