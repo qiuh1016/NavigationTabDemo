@@ -50,8 +50,6 @@
     <string name="line_3_in_route_activity">显示中间点：</string>
 
 
-
-
     <!--API-->
     <string name="rcldServerIP">http://120.27.149.252</string>
     <string name="defaultServerIP_1">http://120.27.149.252</string>
@@ -62,8 +60,8 @@
     <string name="registerUrl">/Account/Register</string>
     <string name="getTodoCountUrl">/Business/getTodoCount</string>
 
+
     <!--rcld Api-->
-    
     <string name="shipGetUrl">/api/ship/get.json</string>
     <string name="shipUpdateUrl">/api/ship/update.json</string>
     <string name="fenceUrl">/api/fence/all.json</string>
@@ -235,9 +233,6 @@
     <!--xia end-->
 
 
-
-
-
     <!--fr-->
     <string name="fr_server_list">服务器列表</string>
     <string name="fr_demo_server">Demo服务器</string>
@@ -354,7 +349,6 @@
     <string name="fr_upload_failed_try_again">上传失败，请重新上传</string>
 
 
-
     <string name="fr_add_server">添加服务器</string>
     <string name="fr_no_download_update">未下载/更新</string>
     <string name="fr_clear_cache_data">清除缓存数据</string>
@@ -374,7 +368,6 @@
     <string name="fr_forget_login_password">忘记手势密码？</string>
     <string name="fr_sure_clear">数据清除后将不可恢复，\n确定清除？</string>
     <string name="fr_close">关闭</string>
-
 
 
     <!--服务器及目录相关 -->
@@ -537,7 +530,6 @@
     <string name="fr_input_date_time_later">输入日期或时间大于最晚限制</string>
 
 
-
     <!--Bi相关 -->
     <string name="fr_I_create">我创建的</string>
     <string name="fr_ensure_first_time_smaller">请保证前面时间小于/等于后面的时间</string>
@@ -659,7 +651,6 @@
     <string name="fr_certain_functions_incompatible">app在模拟器中运行，部分功能存在兼容性问题</string>
     <string name="fr_url_empty">URL 为空</string>
     <string name="fr_url_cannot_empty">URL不能为空</string>
-
 
 
     <!-- 图表相关-->

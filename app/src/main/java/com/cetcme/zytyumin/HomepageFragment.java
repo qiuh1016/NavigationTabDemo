@@ -83,7 +83,6 @@ public class HomepageFragment extends BaseFragment {
     };
 
     private String[] urls = new String[] {
-            "https://view.inews.qq.com/a/NEW201608260218860A",
             "http://www.cnfm.gov.cn/tpxwsyyzw/201607/t20160729_5222942.htm",
             "http://www.cnfm.gov.cn/tpxwsyyzw/201606/t20160613_5167471.htm",
             "http://www.cnfm.gov.cn/tpxwsyyzw/201606/t20160607_5163334.htm",
@@ -260,7 +259,7 @@ public class HomepageFragment extends BaseFragment {
         banner.setBannerStyle(BannerConfig.CIRCLE_INDICATOR_TITLE_INSIDE);
         banner.setImages(images);
         banner.setBannerTitle(titles);
-        banner.setDelayTime(8000);
+        banner.setDelayTime(6000);
         banner.setScrollerTime(350);
         banner.setOnBannerClickListener(new Banner.OnBannerClickListener() {
             @Override

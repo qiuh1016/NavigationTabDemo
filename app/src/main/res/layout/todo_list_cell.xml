@@ -1,0 +1,33 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/list_cell"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    android:paddingTop="16dp"
+    android:paddingBottom="16dp"
+    android:paddingLeft="12dp"
+    android:paddingRight="12dp"
+    android:focusable="true"
+    android:clickable="true"
+    android:background="@drawable/single_layout_selector">
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="name"
+        android:textColor="@color/text_clo"
+        android:textSize="15sp"
+        android:layout_weight="1"
+        android:id="@+id/name_text_in_todo_list_cell" />
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="time"
+        android:textColor="@color/text_clo"
+        android:textSize="15sp"
+        android:id="@+id/time_text_in_todo_list_cell"/>
+
+</LinearLayout>

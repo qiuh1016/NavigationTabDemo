@@ -315,6 +315,7 @@ public class LoginActivity extends Activity implements View.OnClickListener{
     private void dealWhitShipArray(JSONArray shipArray) {
         List<Ship> ships = new ArrayList<>();
 
+        Log.i(TAG, "dealWhitShipArray: " + shipArray.toString());
 
         for (int i = 0; i < shipArray.length(); i++) {
             try {
@@ -323,10 +324,12 @@ public class LoginActivity extends Activity implements View.OnClickListener{
                 String shipNumber = shipJSON.getString("ShipNo");
                 boolean deviceInstall = shipJSON.getBoolean("DeviceInstall");
                 //TODO 差经纬度
-                double latitude = 30.0 + i / 2;  //shipJSON.getDouble("latitude");
-                double longitude = 120.0 + i / 2; //shipJSON.getDouble("longitude");
+                double latitude = 30.0 + i / 2.0;  //shipJSON.getDouble("latitude");
+                double longitude = 120.0 + i / 2.0; //shipJSON.getDouble("longitude");
 
                 Ship ship = new Ship(shipName, shipNumber, latitude, longitude, deviceInstall);
+                Log.i(TAG, "dealWhitShipArray: " + latitude);
+                Log.i(TAG, "dealWhitShipArray: " + longitude);
                 ships.add(ship);
 
             } catch (JSONException e) {
@@ -334,13 +337,13 @@ public class LoginActivity extends Activity implements View.OnClickListener{
             }
         }
 
-        //TODO: test
-        if (shipArray.length() == 0) {
-            ships.add(new Ship("浙普渔运18888", "3309222001090011", 30,122, true));
-            ships.add(new Ship("浙路渔81966", "3310811999010012", 32.5,122, false));
-        } else {
-
-        }
+//        //TODO: test
+//        if (shipArray.length() == 0) {
+//            ships.add(new Ship("浙普渔运18888", "3309222001090011", 30,122, true));
+//            ships.add(new Ship("浙路渔81966", "3310811999010012", 32.5,122, false));
+//        } else {
+//
+//        }
 
         sendShipDataBroadcast(ships);
     }

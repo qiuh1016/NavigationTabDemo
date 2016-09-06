@@ -8,7 +8,7 @@
     <uses-permission android:name="ANDROID.PERMISSION.BIND_VPN_SERVICE"/>
     <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
     <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
     <uses-permission android:name="android.permission.VIBRATE"/>
@@ -24,19 +24,20 @@
     <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
     <uses-permission android:name="android.permission.BROADCAST_STICKY"/>
     <uses-permission android:name="android.permission.WRITE_SETTINGS"/>
+
     <uses-feature android:name="android.hardware.camera"/>
     <uses-feature android:name="android.hardware.camera.autofocus"/>
-    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
 
     <!-- 支持iBeancon 需要蓝牙权限 -->
-    <uses-permission android:name="android.permission.BLUETOOTH" />
-    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.BLUETOOTH"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
     <!-- 支持个推3.0 电子围栏功能 -->
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
     <!-- 浮动通知权限 -->
-    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
-
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
 
     <!-- 【必须】 信鸽SDK所需权限 开始 -->
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
@@ -46,10 +47,9 @@
     <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES"/>
     <uses-permission android:name="android.permission.GET_TASKS"/>
     <uses-permission android:name="android.permission.READ_LOGS"/>
+
     <!-- 【必须】 信鸽SDK所需权限 结束 -->
-
     <!-- frandroid 相关权限 写入结束 -->
-
     <application
         android:allowBackup="true"
         android:icon="@drawable/zheyutongicon"
@@ -68,75 +68,73 @@
             </intent-filter>
         </activity>
 
-
-
-
-
-
         <!-- frandroid 相关activity设置写入开始 -->
-        <activity android:name="com.fr.android.parameter.ui.widget.core.IFTextScanActivity"
-                  android:configChanges="orientation|keyboardHidden"
-                  android:exported="true"
-                  android:screenOrientation="sensorPortrait"
-                  android:theme="@android:style/Theme.NoTitleBar"
-            />
-        <activity android:name="com.fr.android.parameter.ui.widget.core.IFTextScanHorizontalActivity"
-                  android:configChanges="orientation|keyboardHidden"
-                  android:exported="true"
-                  android:screenOrientation="sensorLandscape"
-                  android:theme="@android:style/Theme.NoTitleBar"
-            />
-
+        <activity
+            android:name="com.fr.android.parameter.ui.widget.core.IFTextScanActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:exported="true"
+            android:screenOrientation="sensorPortrait"
+            android:theme="@android:style/Theme.NoTitleBar"/>
+        <activity
+            android:name="com.fr.android.parameter.ui.widget.core.IFTextScanHorizontalActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:exported="true"
+            android:screenOrientation="sensorLandscape"
+            android:theme="@android:style/Theme.NoTitleBar"/>
         <activity
             android:name="com.fr.android.form.IFFormActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
             android:theme="@android:style/Theme.Holo.Light.NoActionBar"
-            android:windowSoftInputMode="stateHidden|adjustResize"
-            android:configChanges="orientation|keyboardHidden|screenSize"/>
+            android:windowSoftInputMode="stateHidden|adjustResize"/>
         <activity
             android:name="com.fr.android.form.IFFormActivity4BI"
+            android:configChanges="orientation|keyboardHidden|screenSize"
             android:theme="@android:style/Theme.Holo.Light.NoActionBar"
-            android:windowSoftInputMode="stateHidden|adjustResize"
-            android:configChanges="orientation|keyboardHidden|screenSize"/>
-        <activity android:name="com.fr.android.report.IFReportActivity"
-                  android:configChanges="orientation|screenSize|keyboardHidden"
-                  android:windowSoftInputMode="stateHidden|adjustResize"
-                  android:theme="@style/IFTheme"
-            />
-        <activity android:name="com.fr.android.report.IFReportActivityWithPath"
-                  android:configChanges="orientation|screenSize|keyboardHidden"
-                  android:windowSoftInputMode="stateHidden|adjustResize"
-                  android:theme="@style/IFTheme"
-            />
-        <activity android:name="com.fr.android.form.IFFormActivityWithPath"
-                  android:theme="@android:style/Theme.Holo.Light.NoActionBar"
-                  android:windowSoftInputMode="stateHidden|adjustResize"
-                  android:configChanges="orientation|keyboardHidden|screenSize"/>
-
-        <activity android:name="com.fr.android.report.IFWebViewActivity"
-                  android:theme="@android:style/Theme.Holo.Light.NoActionBar"
-                  android:configChanges="orientation|screenSize|keyboardHidden"
-            />
+            android:windowSoftInputMode="stateHidden|adjustResize"/>
+        <activity
+            android:name="com.fr.android.report.IFReportActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:theme="@style/IFTheme"
+            android:windowSoftInputMode="stateHidden|adjustResize"/>
+        <activity
+            android:name="com.fr.android.report.IFReportActivityWithPath"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:theme="@style/IFTheme"
+            android:windowSoftInputMode="stateHidden|adjustResize"/>
+        <activity
+            android:name="com.fr.android.form.IFFormActivityWithPath"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:theme="@android:style/Theme.Holo.Light.NoActionBar"
+            android:windowSoftInputMode="stateHidden|adjustResize"/>
+        <activity
+            android:name="com.fr.android.report.IFWebViewActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:theme="@android:style/Theme.Holo.Light.NoActionBar"/>
         <activity android:name="com.fr.android.chart.Gallery3DActivity"/>
-        <activity android:name="com.fr.android.report.IFGalleryActivity"
-                  android:screenOrientation="sensorPortrait"
-                  android:theme="@android:style/Theme.Translucent.NoTitleBar"
-            />
-        <activity android:name="com.fr.android.report.IFGalleryActivityHorizontal"
-                  android:screenOrientation="sensorLandscape"
-                  android:theme="@android:style/Theme.Translucent.NoTitleBar"
-            />
-        <activity android:name="com.fr.android.report.IFShareActivity"
-                  android:theme="@style/NoAnimationTheme"
-                  android:screenOrientation="sensorPortrait"/>
-        <activity android:name="com.fr.android.report.IFShareActivityHorizontal"
-                  android:theme="@style/NoAnimationTheme"
-                  android:screenOrientation="sensorLandscape"/>
-        <activity android:name="com.fr.android.app.activity.IFConfigActivity"
-                  android:theme="@android:style/Theme.Holo.Light.NoActionBar"
-                  android:screenOrientation="sensorPortrait"/>
-        <activity android:name="com.fr.android.app.activity.IFConfigActivity4Pad"
-                  android:theme="@android:style/Theme.Translucent.NoTitleBar"
-                  android:screenOrientation="sensorLandscape"/>
+        <activity
+            android:name="com.fr.android.report.IFGalleryActivity"
+            android:screenOrientation="sensorPortrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <activity
+            android:name="com.fr.android.report.IFGalleryActivityHorizontal"
+            android:screenOrientation="sensorLandscape"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <activity
+            android:name="com.fr.android.report.IFShareActivity"
+            android:screenOrientation="sensorPortrait"
+            android:theme="@style/NoAnimationTheme"/>
+        <activity
+            android:name="com.fr.android.report.IFShareActivityHorizontal"
+            android:screenOrientation="sensorLandscape"
+            android:theme="@style/NoAnimationTheme"/>
+        <activity
+            android:name="com.fr.android.app.activity.IFConfigActivity"
+            android:screenOrientation="sensorPortrait"
+            android:theme="@android:style/Theme.Holo.Light.NoActionBar"/>
+        <activity
+            android:name="com.fr.android.app.activity.IFConfigActivity4Pad"
+            android:screenOrientation="sensorLandscape"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
         <activity
             android:name="com.fr.android.app.contents.IFMainPage"
             android:alwaysRetainTaskState="true"
@@ -144,22 +142,23 @@
             android:exported="true"
             android:screenOrientation="portrait"
             android:theme="@android:style/Theme.Holo.Light.NoActionBar"/>
-
-        <activity android:name="com.fr.android.app.offline.ui.IFTempStoragePage"
-                  android:screenOrientation="sensorPortrait"
-                  android:theme="@android:style/Theme.Holo.Light.NoActionBar"/>
-        <activity android:name="com.fr.android.app.offline.ui.IFTempStoragePage4Pad"
-                  android:screenOrientation="sensorLandscape"
-                  android:theme="@android:style/Theme.Holo.Light.NoActionBar"/>
-        <activity android:name="com.fr.android.app.push.IFNotificationHandler"
-                  android:theme="@style/TransparentTheme"/>
-
-        <activity android:name="com.fr.android.app.activity.IFLoginZY"
-                  android:theme="@android:style/Theme.Holo.Light.NoActionBar"></activity>
-
-        <activity android:name="com.fr.android.app.activity.IFLoginZY4Pad"
-                  android:theme="@android:style/Theme.Holo.Light.NoActionBar"></activity>
-
+        <activity
+            android:name="com.fr.android.app.offline.ui.IFTempStoragePage"
+            android:screenOrientation="sensorPortrait"
+            android:theme="@android:style/Theme.Holo.Light.NoActionBar"/>
+        <activity
+            android:name="com.fr.android.app.offline.ui.IFTempStoragePage4Pad"
+            android:screenOrientation="sensorLandscape"
+            android:theme="@android:style/Theme.Holo.Light.NoActionBar"/>
+        <activity
+            android:name="com.fr.android.app.push.IFNotificationHandler"
+            android:theme="@style/TransparentTheme"/>
+        <activity
+            android:name="com.fr.android.app.activity.IFLoginZY"
+            android:theme="@android:style/Theme.Holo.Light.NoActionBar"/>
+        <activity
+            android:name="com.fr.android.app.activity.IFLoginZY4Pad"
+            android:theme="@android:style/Theme.Holo.Light.NoActionBar"/>
         <activity
             android:name="com.fr.android.app.activity.IFServerPage4Pad"
             android:configChanges="orientation|keyboardHidden"
@@ -200,7 +199,6 @@
             android:exported="true"
             android:screenOrientation="landscape"
             android:theme="@style/TransparentTheme"/>
-
         <activity
             android:name="com.fr.android.app.activity.IFAboutActivity4Pad"
             android:exported="true"
@@ -223,66 +221,63 @@
             android:exported="true"
             android:screenOrientation="landscape"
             android:theme="@android:style/Theme.NoTitleBar"/>
-
-        <activity android:name="com.fr.android.ui.imageupload.IFImageSelectActivity"
-                  android:theme="@style/IFTheme"/>
-        <activity android:name="com.fr.android.ui.imageupload.IFImageSelectActivity4Pad"
-                  android:screenOrientation="sensorLandscape"/>
-
-        <activity android:name="com.fr.android.ui.imageupload.IFSelectChooseActivity"
-                  android:configChanges="orientation|keyboardHidden"
-                  android:exported="true"
-                  android:theme="@style/TransparentTheme"/>
-
-        <activity android:name="com.fr.android.ui.imageupload.IFSelectChooseActivity4Pad"
-                  android:screenOrientation="sensorLandscape"/>
-
-        <activity android:name="com.fr.android.activity.LoadAppFromURLActivity"
-                  android:exported="true"/>
+        <activity
+            android:name="com.fr.android.ui.imageupload.IFImageSelectActivity"
+            android:theme="@style/IFTheme"/>
+        <activity
+            android:name="com.fr.android.ui.imageupload.IFImageSelectActivity4Pad"
+            android:screenOrientation="sensorLandscape"/>
+        <activity
+            android:name="com.fr.android.ui.imageupload.IFSelectChooseActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:exported="true"
+            android:theme="@style/TransparentTheme"/>
+        <activity
+            android:name="com.fr.android.ui.imageupload.IFSelectChooseActivity4Pad"
+            android:screenOrientation="sensorLandscape"/>
+        <activity
+            android:name="com.fr.android.activity.LoadAppFromURLActivity"
+            android:exported="true"/>
         <activity
             android:name="com.fr.android.activity.LoadAppFromWelcomeActivity"
-            android:theme="@android:style/Theme.NoTitleBar"
-            android:exported="true"/>
-
+            android:exported="true"
+            android:theme="@android:style/Theme.NoTitleBar"/>
         <activity
             android:name="com.fr.android.tools.BugReportActivity"
             android:theme="@android:style/Theme.NoTitleBar"/>
-
         <activity
             android:name="com.fr.android.bi.FineBIViewController"
-            android:hardwareAccelerated="false"
-            android:theme="@android:style/Theme.Holo.Light"
             android:configChanges="orientation|keyboardHidden|screenSize"
-            android:label="@string/app_name" >
+            android:hardwareAccelerated="false"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.Holo.Light">
         </activity>
         <activity
             android:name="com.fr.android.bi.LinkController"
             android:configChanges="orientation|keyboardHidden|screenSize"
-            android:label="@string/app_name" >
+            android:label="@string/app_name">
         </activity>
+        <activity
+            android:name="com.fr.android.app.activity.IFChangePasswordActivity"
+            android:theme="@android:style/Theme.Holo.Light.NoActionBar"/>
+        <activity
+            android:name="com.fr.android.app.activity.IFChangePasswordActivity4Pad"
+            android:screenOrientation="sensorLandscape"
+            android:theme="@android:style/Theme.Holo.Light.NoActionBar"/>
+        <activity
+            android:name="com.fr.android.ui.gesturelock.IFGestureLockActivity"
+            android:theme="@android:style/Theme.Holo.Light"/>
+        <activity
+            android:name="com.fr.android.vpn.IFVPNPage"
+            android:theme="@android:style/Theme.Holo.Light.NoActionBar"/>
+        <activity
+            android:name="com.fr.android.vpn.IFVPNPage4Pad"
+            android:theme="@android:style/Theme.Holo.Light.NoActionBar"
+            android:windowSoftInputMode="stateHidden|adjustResize"/>
 
-        <activity android:name="com.fr.android.app.activity.IFChangePasswordActivity"
-                  android:theme="@android:style/Theme.Holo.Light.NoActionBar"/>
-        <activity android:name="com.fr.android.app.activity.IFChangePasswordActivity4Pad"
-                  android:theme="@android:style/Theme.Holo.Light.NoActionBar"
-                  android:screenOrientation="sensorLandscape"/>
-        <activity android:name="com.fr.android.ui.gesturelock.IFGestureLockActivity"
-                  android:theme="@android:style/Theme.Holo.Light"/>
+        <service android:name="com.fr.android.app.activity.IFUpdateService"/>
 
-        <activity android:name="com.fr.android.vpn.IFVPNPage"
-                  android:theme="@android:style/Theme.Holo.Light.NoActionBar"/>
-        <activity android:name="com.fr.android.vpn.IFVPNPage4Pad"
-                  android:theme="@android:style/Theme.Holo.Light.NoActionBar"
-                  android:windowSoftInputMode="stateHidden|adjustResize"/>
-
-        <service android:name="com.fr.android.app.activity.IFUpdateService"></service>
-
-
-        <!--fr end-->
-
-
-
-
+        <!-- fr end -->
 
         <activity android:name=".ServiceActivity"/>
         <activity android:name=".RecordActivity"/>
@@ -372,7 +367,6 @@
             android:launchMode="standard"
             android:screenOrientation="portrait">
         </activity>
-
         <activity android:name=".rcld.ioConfirmActivity"/>
         <activity android:name=".rcld.iofSailorActivity"/>
         <activity android:name=".rcld.ioLogActivity"/>
@@ -386,6 +380,8 @@
         </activity>
         <activity android:name=".rcld.RouteActivity"/>
         <activity android:name=".rcld.RouteDisplayActivity"/>
+        <activity android:name=".TodoListActivity">
+        </activity>
     </application>
 
 </manifest>

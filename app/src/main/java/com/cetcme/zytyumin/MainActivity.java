@@ -4,6 +4,7 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.v4.app.Fragment;
@@ -23,6 +24,13 @@ import com.cetcme.zytyumin.IconPager.IconPagerAdapter;
 import com.cetcme.zytyumin.IconPager.IconTabPageIndicator;
 import com.cetcme.zytyumin.IconPager.NoScrollViewPager;
 import com.cetcme.zytyumin.MyClass.Ship;
+import com.loopj.android.http.AsyncHttpClient;
+import com.loopj.android.http.JsonHttpResponseHandler;
+import com.loopj.android.http.RequestParams;
+
+import org.apache.http.Header;
+import org.json.JSONException;
+import org.json.JSONObject;
 
 
 public class MainActivity extends FragmentActivity {
@@ -34,6 +42,8 @@ public class MainActivity extends FragmentActivity {
 
     private MyShipDataReceiver myShipDataReceiver;
     private MyTodoNumbersReceiver myTodoNumbersReceiver;
+
+    private SharedPreferences user;
 
     //按2次返回退出
     private boolean hasPressedBackOnce = false;
@@ -57,13 +67,11 @@ public class MainActivity extends FragmentActivity {
         super.onCreate(savedInstanceState);
         SDKInitializer.initialize(getApplicationContext());
         setContentView(R.layout.activity_main);
+
+        user = getSharedPreferences("user", Context.MODE_PRIVATE);
+
         initViews();
         initBroadcast();
-
-//        ships.add(new Ship("浙三渔04529", "3303811998090003", 30,122, false));
-//        ships.add(new Ship("浙象渔84006", "3303812001050005", 31,121, false));
-//        ships.add(new Ship("浙象渔10035", "3302251998010002", 30.5,120.5, false));
-//        ships.add(new Ship("浙象渔10035", "3302251998010002", 32.5,122, false));
     }
 
     private void initViews() {
@@ -181,6 +189,79 @@ public class MainActivity extends FragmentActivity {
         super.onDestroy();
         unregisterReceiver(myShipDataReceiver);
         unregisterReceiver(myTodoNumbersReceiver);
+        SharedPreferences.Editor editor = user.edit();//获取编辑器
+        editor.putBoolean("hasLogin", false);
+        editor.apply();//提交修改
+    }
+
+    public void onResume() {
+        super.onResume();
+        getTodoCount(user.getString("sessionKey", ""), user.getString("username", ""));
+
+    }
+
+    private void startLoginActivity() {
+        Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
+        startActivity(intent);
+        overridePendingTransition(R.anim.push_up_in_no_alpha, R.anim.stay);
+    }
+
+    private void getTodoCount(String sessionKey, String account) {
+        Log.i(TAG, "getTodoCount: to get todo count");
+        RequestParams params = new RequestParams();
+        params.put("account", account);
+        params.put("sessionKey", sessionKey);
+        String urlBody = getString(R.string.serverIP) + getString(R.string.getTodoCountUrl);
+
+        AsyncHttpClient client = new AsyncHttpClient();
+        client.get(urlBody, params, new JsonHttpResponseHandler("UTF-8") {
+            @Override
+            public void onSuccess(int statusCode, Header[] headers, JSONObject response) {
+                try {
+
+                    Log.i(TAG, "onSuccess: getTODOCount" + response.toString());
+                    int code = response.getInt("Code");
+                    if (code == 0) {
+                        int Check_Drawing_Examine_Opinion_Count = response.getInt("Check_Drawing_Examine_Opinion_Count");
+                        int Check_Detect_Info_Detail_Inspection_Count = response.getInt("Check_Detect_Info_Detail_Inspection_Count");
+                        int Check_Detect_Info_Opinion_Count = response.getInt("Check_Detect_Info_Opinion_Count");
+
+                        todoNumbers = new int[] {
+                                Check_Drawing_Examine_Opinion_Count,
+                                Check_Detect_Info_Detail_Inspection_Count,
+                                Check_Detect_Info_Opinion_Count,
+                                0
+                        };
+//
+//                        todoNumbers[0] = Check_Drawing_Examine_Opinion_Count;
+//                        todoNumbers[1] = Check_Detect_Info_Detail_Inspection_Count;
+//                        todoNumbers[2] = Check_Detect_Info_Opinion_Count;
+
+                    } else if (code == 2) {
+                        Toast.makeText(getApplicationContext(), "登陆信息过期，请重新登陆",Toast.LENGTH_SHORT).show();
+                        SharedPreferences.Editor editor = user.edit();//获取编辑器
+                        editor.putBoolean("hasLogin", false);
+                        editor.apply();//提交修改
+                        startLoginActivity();
+                        Log.i(TAG, "onSuccess: 登陆信息过期");
+                    }
+
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+            }
+
+            @Override
+            public void onFailure(int statusCode, Header[] headers, Throwable throwable, JSONObject errorResponse) {
+                Log.i(TAG, "onFailure: get todo network error");
+            }
+
+            @Override
+            public void onFailure(int statusCode, Header[] headers, String responseString, Throwable throwable) {
+                Log.i(TAG, "onFailure: get todo network error");
+            }
+        });
+
     }
 
 }

@@ -89,22 +89,21 @@ public class TodoActivity extends Activity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent();
-                intent.putExtra("url", url_line_1);
                 intent.putExtra("title", getString(R.string.line_1_in_todo_activity));
-                intent.setClass(getApplicationContext(), LoadAppFromURLActivity.class);
+                intent.setClass(getApplicationContext(), TodoListActivity.class);
                 startActivity(intent);
+                overridePendingTransition(R.anim.push_left_in_no_alpha, R.anim.push_left_out_no_alpha);
             }
         });
 
         findViewById(R.id.line_2_in_todo_activity).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                Intent intent = new Intent();
-//                intent.putExtra("url", url_line_2);
-//                intent.putExtra("title", getString(R.string.line_2_in_todo_activity));
-//                intent.setClass(getApplicationContext(), LoadAppFromURLActivity.class);
-//                startActivity(intent);
-                Toast.makeText(getApplicationContext(), "待完善", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent();
+                intent.putExtra("title", getString(R.string.line_2_in_todo_activity));
+                intent.setClass(getApplicationContext(), TodoListActivity.class);
+                startActivity(intent);
+                overridePendingTransition(R.anim.push_left_in_no_alpha, R.anim.push_left_out_no_alpha);
             }
         });
 
@@ -112,10 +111,10 @@ public class TodoActivity extends Activity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent();
-                intent.putExtra("url", url_line_3);
                 intent.putExtra("title", getString(R.string.line_3_in_todo_activity));
-                intent.setClass(getApplicationContext(), LoadAppFromURLActivity.class);
+                intent.setClass(getApplicationContext(), TodoListActivity.class);
                 startActivity(intent);
+                overridePendingTransition(R.anim.push_left_in_no_alpha, R.anim.push_left_out_no_alpha);
             }
         });
 
@@ -123,11 +122,11 @@ public class TodoActivity extends Activity {
             @Override
             public void onClick(View v) {
 //                Intent intent = new Intent();
-//                intent.putExtra("url", url_line_4);
 //                intent.putExtra("title", getString(R.string.line_4_in_todo_activity));
-//                intent.setClass(getApplicationContext(), LoadAppFromURLActivity.class);
+//                intent.setClass(getApplicationContext(), TodoListActivity.class);
 //                startActivity(intent);
-                Toast.makeText(getApplicationContext(), "待完善", Toast.LENGTH_SHORT).show();
+//                overridePendingTransition(R.anim.push_left_in_no_alpha, R.anim.push_left_out_no_alpha);
+                Toast.makeText(getApplicationContext(), "即将上线", Toast.LENGTH_SHORT).show();
             }
         });
     }

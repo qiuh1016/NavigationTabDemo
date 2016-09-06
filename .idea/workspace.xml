@@ -62,897 +62,24 @@
     </layouts>
   </component>
   <component name="AndroidLogFilters">
+    <option name="TOOL_WINDOW_CUSTOM_FILTER" value="dealWhitShipArray" />
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e279e6be-7f14-4cf0-a014-66e978e760d8" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/cetcme/zytyumin/xia/DetailFishShipActivity.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/layout/detail_fish_ship_layout_two.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/layout/detail_title.xml" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/.gitignore" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/build.gradle" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/proguard-rules.pro" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/AndroidManifest.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/assets/ChartTemplate.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/assets/before.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/assets/buildTest.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/assets/init.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/assets/login/css/mui.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/assets/login/css/style.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/assets/login/fonts/mui.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/assets/login/images/icon_leftblue_normal.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/assets/login/images/iocn_edit_blue.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/assets/login/login.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/assets/style.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/anim/down_to_in.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/anim/fade_in.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/anim/fade_out.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/anim/in_from_right.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/anim/keep_origin.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/anim/keep_origin_main_page.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/anim/out_to_down.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/anim/out_to_left.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/anim/pop_enter.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/anim/pop_exit.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/anim/progress_round.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/anim/push_down_in.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/anim/push_down_out.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/anim/push_left_in.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/anim/push_left_out.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/anim/push_right_in.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/anim/push_right_out.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/anim/slide_in_from_bottom.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/anim/slide_in_from_top.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/anim/slide_left_in.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/anim/slide_left_out.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/anim/slide_out_to_bottom.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/anim/slide_out_to_top.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/anim/slide_right_in.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/anim/slide_right_out.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/anim/zoom_in.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/anim/zoom_out.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/a.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/add_server_background.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/alert_background.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/alert_button_normal.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/alert_button_pressed.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/alert_button_warn.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/alert_dialog_background.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/alert_dialog_button_normal.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/alert_dialog_button_pressed.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/app_icon.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/arrow.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/arrow_detail.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/b.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/back_normal.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/back_pressed.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/back_unable.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/ball.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/barcode.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/bg_widget.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/body_background.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/button_disabled.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/button_edit_normal.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/button_login_normal.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/button_login_press.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/button_name_password.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/button_recommand_normal.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/button_recommand_pressed.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/button_searchs_normal.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/button_searchs_press.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/button_server_ok.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/c.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/chart_init.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/d.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/defaultcover2x.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/delete_normal.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/delete_pressed.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/delete_server_background.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/device_window_background.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/drawer_shadow.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/drawer_shadow_heavy.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/e.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/edit_checked.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/edit_text_background.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/edit_unchecked.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/editor.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/f.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/farward_normal.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/farward_pressed.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/farward_unable.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/favourite_checked.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/favourite_normal.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/fr_config_option.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/fr_default_ptr_flip.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/fr_default_ptr_rotate.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/fr_gesture_locker_bg.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/fr_icon_link_hint.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/fr_icon_map_drilldown.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/fr_icon_map_drilldown_gray.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/fr_icon_map_drillup.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/fr_icon_map_drillup_gray.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/fr_icon_map_link.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/fr_icon_order.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/fr_icon_order_a2z.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/fr_icon_ordering.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/fr_icon_page.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/fr_icon_redo_d.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/fr_icon_redo_n.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/fr_icon_reorder.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/fr_icon_search_blue.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/fr_icon_search_gray.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/fr_icon_selected.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/fr_icon_setting.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/fr_icon_undo_d.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/fr_icon_undo_n.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/fr_indicator_arrow.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/fr_loading_close.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/fr_preview_bar.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/fr_preview_bubble.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/fr_preview_column_bar.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/fr_preview_donut.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/fr_preview_map.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/fr_preview_meter.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/fr_preview_pie.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/fr_preview_radar.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/fr_preview_stacked_bar.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/fr_preview_table.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/fr_preview_xy_scatter.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/frame_00.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/frame_01.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/frame_02.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/frame_03.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/frame_04.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/frame_05.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/frame_06.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/frame_07.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/frame_08.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/frame_09.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/frame_10.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/frame_11.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/frame_12.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/frame_13.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/frame_14.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/frame_15.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/frame_16.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/frame_17.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/frame_18.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/frame_19.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/frame_20.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/frame_21.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/frame_22.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/frame_23.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/frame_24.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/frame_25.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/frame_26.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/frame_27.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/frame_28.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/frame_29.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/frame_30.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/frame_31.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/frame_32.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/frame_33.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/frame_34.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/frame_35.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/frame_36.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/frame_37.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/frame_38.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/frame_39.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/frame_40.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/frame_41.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/frame_42.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/frame_43.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/frame_44.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/frame_45.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/frame_46.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/frame_47.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/frame_48.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/frame_49.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/frame_50.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/frame_51.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/funnel.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/g.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/gallery_photo_1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/grey_dot.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/guide01.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/guide02.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/guide03.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/guide04.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/guide05.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/h.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/i.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/icon_add_normal.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/icon_at_normal.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/icon_at_press.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/icon_cancel_normal.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/icon_check_normal.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/icon_choice_normal.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/icon_collect_normal.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/icon_collect_press.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/icon_contents_normal.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/icon_date_normal.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/icon_datetime_normal.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/icon_delete.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/icon_delete_noenable.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/icon_down_normal.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/icon_edit02_normal.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/icon_figure_normal.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/icon_fold_normal.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/icon_gismap.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/icon_gismap_popup.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/icon_home_normal.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/icon_info_normal.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/icon_left_normal.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/icon_leftblue_normal.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/icon_leftblue_press.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/icon_like_press.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/icon_linkage_normal.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/icon_linkage_press.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/icon_many_normal.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/icon_many_partial.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/icon_many_press.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/icon_notice.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/icon_notice_pad.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/icon_only_normal.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/icon_only_press.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/icon_order_z2a.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/icon_right_normal.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/icon_rightblue_normal.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/icon_rightblue_press.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/icon_scancode.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/icon_screen_normal.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/icon_screen_press.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/icon_search_normal.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/icon_select_original.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/icon_server_normal.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/icon_server_press.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/icon_share.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/icon_submint.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/icon_sure_submit.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/icon_temporary_save.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/icon_text_normal.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/icon_time_normal.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/icon_unfold_normal.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/icon_unselect_original.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/icon_write_multiselect.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/icon_write_multiselect_red.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/icon_write_multiunselect.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/icon_write_multiunselect_red.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/icon_write_normal.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/icon_write_press.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/icon_write_red.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/iocn_about.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/iocn_contents_blue.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/iocn_contents_normal.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/iocn_contents_press.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/iocn_contents_white.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/iocn_edit_blue.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/iocn_edit_white.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/iocn_left_normal.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/iocn_left_press.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/iocn_like_blue.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/iocn_like_normal.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/iocn_like_press.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/iocn_like_white.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/iocn_name_normal.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/iocn_password_normal.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/iocn_qrcode_blue.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/iocn_qrcode_white.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/iocn_right_normal.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/iphone_dlg_bk.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/item.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/item_pressed.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/j.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/k.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/l.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/light.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/login_page_background.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/logo.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/m.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/main_menu_background.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/map_chart_link.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/map_chart_return.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/mm_title_back_focused.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/mm_title_back_normal.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/mm_title_back_pressed.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/mmtitle_bg_alpha.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/multi_select.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/multi_unselect.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/n.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/o.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/p.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/pad_background_2x.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/popwindow_background.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/q.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/qr_back.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/r.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/radiobutton__like_selector.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/radiobutton_index_selector.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/radiobutton_text_selector.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/recent_normal.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/recent_pressed.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/reload.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/report_cover_flow.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/s.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/selectnumber.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/server_selected.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/sever_select_background.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/svgmap.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/switch_bg_off.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/switch_bg_off_disable.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/switch_bg_on.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/switch_bg_on_disable.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/switch_off.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/switch_on.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/switch_thumb.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/t.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/test_white.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/title_background.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/title_btn_back_normal.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/title_btn_back_pressed.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/title_btn_normal.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/title_btn_pressed.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/title_menu_background.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/title_menu_button_left_background.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/title_menu_button_right_background.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/toolbar_background.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/top_shadow.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/type_cpt_history.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/type_default.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/type_default_history.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/type_frm_history.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/type_link.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/type_link_history.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/type_multi_dir.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/type_single_dir.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/u.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/v.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/w.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/welcome.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/welcome_land.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/x.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/y.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-hdpi/z.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-ldpi/a.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-ldpi/app_icon.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-ldpi/b.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-ldpi/c.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-ldpi/d.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-ldpi/e.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-ldpi/f.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-ldpi/fr_icon_redo_d.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-ldpi/fr_icon_redo_n.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-ldpi/fr_icon_undo_d.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-ldpi/fr_icon_undo_n.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-ldpi/g.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-ldpi/h.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-ldpi/i.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-ldpi/j.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-ldpi/k.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-ldpi/l.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-ldpi/m.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-ldpi/n.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-ldpi/o.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-ldpi/p.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-ldpi/q.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-ldpi/r.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-ldpi/s.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-ldpi/t.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-ldpi/u.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-ldpi/v.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-ldpi/w.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-ldpi/x.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-ldpi/y.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-ldpi/z.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-mdpi/a.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-mdpi/b.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-mdpi/c.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-mdpi/d.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-mdpi/e.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-mdpi/f.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-mdpi/fr_default_ptr_flip.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-mdpi/fr_default_ptr_rotate.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-mdpi/fr_gesture_lock_bg.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-mdpi/fr_indicator_arrow.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-mdpi/g.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-mdpi/h.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-mdpi/i.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-mdpi/icon_write_multiselect.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-mdpi/icon_write_multiunselect.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-mdpi/icon_write_normal.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-mdpi/icon_write_press.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-mdpi/j.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-mdpi/k.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-mdpi/l.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-mdpi/m.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-mdpi/n.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-mdpi/o.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-mdpi/p.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-mdpi/q.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-mdpi/r.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-mdpi/s.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-mdpi/t.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-mdpi/u.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-mdpi/v.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-mdpi/w.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-mdpi/x.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-mdpi/y.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-mdpi/z.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xhdpi/a.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xhdpi/app_icon.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xhdpi/b.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xhdpi/button_server_ok.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xhdpi/c.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xhdpi/d.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xhdpi/e.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xhdpi/f.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xhdpi/fr_config_option.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xhdpi/fr_default_ptr_flip.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xhdpi/fr_default_ptr_rotate.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xhdpi/fr_icon_link_hint.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xhdpi/fr_icon_map_drilldown.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xhdpi/fr_icon_map_drilldown_gray.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xhdpi/fr_icon_map_drillup.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xhdpi/fr_icon_map_drillup_gray.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xhdpi/fr_icon_map_link.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xhdpi/fr_icon_order.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xhdpi/fr_icon_order_a2z.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xhdpi/fr_icon_ordering.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xhdpi/fr_icon_page.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xhdpi/fr_icon_reorder.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xhdpi/fr_icon_search_blue.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xhdpi/fr_icon_search_gray.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xhdpi/fr_icon_selected.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xhdpi/fr_icon_setting.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xhdpi/fr_indicator_arrow.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xhdpi/fr_loading_close.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xhdpi/fr_offline_submit_failed.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xhdpi/fr_preview_bar.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xhdpi/fr_preview_bubble.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xhdpi/fr_preview_column_bar.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xhdpi/fr_preview_donut.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xhdpi/fr_preview_map.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xhdpi/fr_preview_meter.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xhdpi/fr_preview_pie.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xhdpi/fr_preview_radar.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xhdpi/fr_preview_stacked_bar.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xhdpi/fr_preview_table.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xhdpi/fr_preview_xy_scatter.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xhdpi/fr_refresh_click.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xhdpi/fr_save.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xhdpi/frame_00.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xhdpi/frame_01.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xhdpi/frame_02.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xhdpi/frame_03.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xhdpi/frame_04.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xhdpi/frame_05.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xhdpi/frame_06.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xhdpi/frame_07.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xhdpi/frame_08.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xhdpi/frame_09.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xhdpi/frame_10.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xhdpi/frame_11.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xhdpi/frame_12.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xhdpi/frame_13.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xhdpi/frame_14.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xhdpi/frame_15.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xhdpi/frame_16.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xhdpi/frame_17.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xhdpi/frame_18.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xhdpi/frame_19.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xhdpi/frame_20.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xhdpi/frame_21.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xhdpi/frame_22.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xhdpi/frame_23.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xhdpi/frame_24.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xhdpi/frame_25.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xhdpi/frame_26.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xhdpi/frame_27.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xhdpi/frame_28.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xhdpi/frame_29.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xhdpi/frame_30.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xhdpi/frame_31.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xhdpi/frame_32.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xhdpi/frame_33.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xhdpi/frame_34.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xhdpi/frame_35.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xhdpi/frame_36.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xhdpi/frame_37.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xhdpi/frame_38.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xhdpi/frame_39.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xhdpi/frame_40.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xhdpi/frame_41.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xhdpi/frame_42.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xhdpi/frame_43.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xhdpi/frame_44.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xhdpi/frame_45.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xhdpi/frame_46.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xhdpi/frame_47.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xhdpi/frame_48.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xhdpi/frame_49.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xhdpi/frame_50.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xhdpi/frame_51.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xhdpi/g.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xhdpi/guide01.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xhdpi/guide02.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xhdpi/guide03.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xhdpi/guide04.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xhdpi/guide05.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xhdpi/h.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xhdpi/i.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xhdpi/icon_at_normal.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xhdpi/icon_at_press.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xhdpi/icon_collect_normal.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xhdpi/icon_collect_press.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xhdpi/icon_contents_normal.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xhdpi/icon_delete.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xhdpi/icon_delete_noenable.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xhdpi/icon_fold_normal.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xhdpi/icon_home_normal.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xhdpi/icon_leftblue_normal.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xhdpi/icon_leftblue_press.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xhdpi/icon_many_normal.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xhdpi/icon_many_press.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xhdpi/icon_notice.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xhdpi/icon_notice_pad.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xhdpi/icon_only_normal.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xhdpi/icon_only_press.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xhdpi/icon_order_z2a.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xhdpi/icon_rightblue_normal.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xhdpi/icon_rightblue_press.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xhdpi/icon_scancode.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xhdpi/icon_screen_normal.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xhdpi/icon_screen_press.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xhdpi/icon_search_normal.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xhdpi/icon_select_original.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xhdpi/icon_server_normal.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xhdpi/icon_server_press.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xhdpi/icon_share.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xhdpi/icon_sure_submit.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xhdpi/icon_temporary_save.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xhdpi/icon_unfold_normal.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xhdpi/icon_unselect_original.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xhdpi/icon_write_multiselect.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xhdpi/icon_write_multiunselect.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xhdpi/iocn_about.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xhdpi/iocn_contents_normal.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xhdpi/iocn_contents_normal_press.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xhdpi/iocn_contents_press.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xhdpi/iocn_edit_blue.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xhdpi/iocn_edit_white.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xhdpi/iocn_left_normal.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xhdpi/iocn_left_press.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xhdpi/iocn_like_press.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xhdpi/iocn_name_normal.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xhdpi/iocn_password_normal.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xhdpi/iocn_qrcode_blue.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xhdpi/iocn_qrcode_white.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xhdpi/iocn_right_normal.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xhdpi/iocn_right_press.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xhdpi/j.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xhdpi/k.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xhdpi/l.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xhdpi/m.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xhdpi/n.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xhdpi/o.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xhdpi/p.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xhdpi/q.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xhdpi/r.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xhdpi/s.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xhdpi/t.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xhdpi/u.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xhdpi/v.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xhdpi/w.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xhdpi/welcome.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xhdpi/welcome_land.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xhdpi/x.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xhdpi/y.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xhdpi/z.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xxhdpi/fr_config_option.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xxhdpi/fr_icon_link_hint.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xxhdpi/fr_icon_map_drilldown.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xxhdpi/fr_icon_map_drilldown_gray.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xxhdpi/fr_icon_map_drillup.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xxhdpi/fr_icon_map_drillup_gray.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xxhdpi/fr_icon_map_link.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xxhdpi/fr_icon_order.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xxhdpi/fr_icon_order_a2z.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xxhdpi/fr_icon_ordering.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xxhdpi/fr_icon_page.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xxhdpi/fr_icon_reorder.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xxhdpi/fr_icon_search_blue.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xxhdpi/fr_icon_selected.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xxhdpi/fr_icon_setting.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xxhdpi/fr_preview_bar.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xxhdpi/fr_preview_bubble.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xxhdpi/fr_preview_column_bar.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xxhdpi/fr_preview_donut.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xxhdpi/fr_preview_map.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xxhdpi/fr_preview_meter.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xxhdpi/fr_preview_pie.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xxhdpi/fr_preview_radar.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xxhdpi/fr_preview_stacked_bar.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xxhdpi/fr_preview_table.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xxhdpi/fr_preview_xy_scatter.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xxhdpi/guide01.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xxhdpi/guide02.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xxhdpi/guide03.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xxhdpi/guide04.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xxhdpi/guide05.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xxhdpi/icon_at_normal.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xxhdpi/icon_at_press.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xxhdpi/icon_collect_normal.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xxhdpi/icon_collect_press.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xxhdpi/icon_contents_normal.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xxhdpi/icon_delete.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xxhdpi/icon_delete_noenable.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xxhdpi/icon_fold_normal.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xxhdpi/icon_home_normal.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xxhdpi/icon_leftblue_normal.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xxhdpi/icon_leftblue_press.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xxhdpi/icon_many_normal.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xxhdpi/icon_many_partial.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xxhdpi/icon_many_press.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xxhdpi/icon_notice.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xxhdpi/icon_notice_pad.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xxhdpi/icon_only_normal.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xxhdpi/icon_only_press.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xxhdpi/icon_order_z2a.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xxhdpi/icon_rightblue_normal.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xxhdpi/icon_rightblue_press.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xxhdpi/icon_scancode.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xxhdpi/icon_screen_normal.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xxhdpi/icon_screen_press.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xxhdpi/icon_search_normal.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xxhdpi/icon_select_original.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xxhdpi/icon_server_normal.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xxhdpi/icon_server_press.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xxhdpi/icon_share.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xxhdpi/icon_sure_submit.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xxhdpi/icon_temporary_save.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xxhdpi/icon_unfold_normal.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xxhdpi/icon_unselect_original.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xxhdpi/iocn_about.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xxhdpi/iocn_contents_normal.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xxhdpi/iocn_contents_normal_press.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xxhdpi/iocn_contents_press.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xxhdpi/iocn_edit_blue.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xxhdpi/iocn_edit_white.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xxhdpi/iocn_left_normal.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xxhdpi/iocn_left_press.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xxhdpi/iocn_like_press.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xxhdpi/iocn_name_normal.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xxhdpi/iocn_password_normal.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xxhdpi/iocn_qrcode_blue.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xxhdpi/iocn_qrcode_white.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xxhdpi/iocn_right_normal.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xxhdpi/iocn_right_press.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xxhdpi/welcome.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable-xxhdpi/welcome_land.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable/.directory" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable/action_head_light.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable/actionbar_button_background.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable/alert_dialog_button.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable/bi_back.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable/blue_circle.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable/blue_vect_button.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable/circle.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable/circle_empty.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable/circle_empty_white.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable/circle_filled.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable/circle_filled_white.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable/controller_background.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable/corners_bg.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable/delete_button.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable/dialog.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable/dragbar_item.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable/dragbar_item_light.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable/edit_tonggle.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable/form_widget_bg.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable/forward.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable/fr_bi_arrow_down.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable/fr_bi_arrow_right.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable/fr_bi_bar.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable/fr_bi_bubble.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable/fr_bi_circle.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable/fr_bi_crosstable.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable/fr_bi_drilldown.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable/fr_bi_drilldown_gray.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable/fr_bi_drillup.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable/fr_bi_drillup_gray.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable/fr_bi_filtable.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable/fr_bi_gismap.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable/fr_bi_grouptable.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable/fr_bi_invisible.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable/fr_bi_link.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable/fr_bi_map.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable/fr_bi_meters.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable/fr_bi_order.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable/fr_bi_order_a2z.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable/fr_bi_order_z2a.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable/fr_bi_ordering.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable/fr_bi_out_of_order.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable/fr_bi_pagedown.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable/fr_bi_pagedown_disable.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable/fr_bi_pageup.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable/fr_bi_pageup_disable.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable/fr_bi_pie.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable/fr_bi_points.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable/fr_bi_radar.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable/fr_bi_reorder.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable/fr_bi_stackbar.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable/fr_bi_tree_widget.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable/fr_bi_vertical.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable/fr_bi_visible.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable/fr_body_background_pad.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable/fr_border_bg_focused.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable/fr_border_bg_normal.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable/fr_cover_home.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable/fr_dimension_setting_body_bg.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable/fr_dimension_setting_titlebar_bg.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable/fr_editor_bg.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable/fr_editor_bg_blue.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable/fr_editor_bg_gray.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable/fr_editor_bg_ltgray.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable/fr_error_hint_bg.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable/fr_gesture_lock_bg.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable/fr_gesture_lock_bg_pad.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable/fr_icon_check_rect.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable/fr_icon_info.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable/fr_icon_link.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable/fr_icon_page.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable/fr_icon_redo_d.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable/fr_icon_redo_n.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable/fr_icon_setting.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable/fr_icon_uncheck_rect.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable/fr_icon_undo_d.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable/fr_icon_undo_n.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable/fr_index_background.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable/fr_indicator_bg_bottom.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable/fr_indicator_bg_top.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable/fr_loading_bg.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable/fr_loading_close.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable/fr_login_bg.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable/fr_login_bg_title.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable/fr_offline_submit_failed.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable/fr_pad_item_bg.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable/fr_pic_dir.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable/fr_pic_empty.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable/fr_pic_selected.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable/fr_pic_unselected.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable/fr_refresh.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable/fr_refresh_click.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable/fr_refresh_failed.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable/fr_refresh_success.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable/fr_release_refresh.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable/fr_save.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable/fr_selected.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable/fr_share_color_blue.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable/fr_share_color_blue_selected.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable/fr_share_color_purple.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable/fr_share_color_purple_selected.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable/fr_share_color_red.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable/fr_share_color_red_selected.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable/fr_submit_failed_pad.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable/fr_unselected.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable/fr_vertical_line.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable/fr_vpn_off.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable/fr_vpn_on.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable/green_circle.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable/hud_background.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable/hud_background_view.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable/icon.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable/light_button_background.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable/line_shadow.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable/list_nobackground_selector.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable/list_normal_background_selector.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable/ltblue_round_rect_button.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable/menu_button.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable/menu_recommended_button.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable/mm_title_back_btn.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable/node_bi.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable/node_fav.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable/node_folder.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable/node_fr.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable/node_link.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable/node_my.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable/node_share2me.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable/ptr_rotate_arrow.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable/purple_vect_button.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable/recent_tonggle.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable/red_circle.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable/red_vect_button.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable/round_close.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable/search_bg.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable/shadow_rect.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable/title_back_button.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable/title_button.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable/title_button_recommended.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable/toast.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable/toolbar_back_button.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable/toolbar_favourite_button.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable/toolbar_forward_button.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable/tree_node_background_highlight.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable/update_decoration.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable/vect_button.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable/white_circle.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/drawable/yes.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/layout/bi_controller.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/layout/bi_report.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/layout/bi_tree_cell_date.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/layout/bi_tree_cell_input.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/layout/bi_tree_cell_string.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/layout/bi_tree_header.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/layout/bi_tree_header_expanded.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/layout/connection_menu.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/layout/custom_progress_dialog.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/layout/device.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/layout/finebi_tableview.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/layout/fr_picture_select.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/layout/fragment_navigation_drawer.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/layout/gis.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/layout/hud_view.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/layout/item.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/layout/link.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/layout/list_device_item.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/layout/login.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/layout/login_h5.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/layout/main.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/layout/main_menu.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/layout/main_page_ui.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/layout/node_cell.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/layout/nodes_controller.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/layout/paraitems.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/layout/paramtest.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/layout/pull_to_refresh_header_horizontal.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/layout/pull_to_refresh_header_vertical.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/layout/server.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/layout/server_cell.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/layout/server_config.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/layout/server_config_add.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/layout/start.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/layout/tree_cell.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/layout/uispinner.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/layout/update.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/layout/welcome.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/menu/bi_comment_controller.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/menu/bi_controller.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/menu/nodes_controller.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/mipmap-hdpi/ic_launcher.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/mipmap-mdpi/ic_launcher.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/mipmap-xhdpi/ic_launcher.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/mipmap-xxhdpi/ic_launcher.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/mipmap-xxxhdpi/ic_launcher.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/raw/beep.ogg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/raw/realm_properties" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/values-en/strings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/values-w820dp/dimens.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/values-zh-rHK/strings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/values-zh-rMO/strings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/values-zh-rTW/strings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/values-zh/strings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/values/attrs.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/values/colors.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/values/dimens.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/values/ids.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/values/pull_refresh_strings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/values/strings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FRAndroid/src/main/res/values/styles.xml" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/cetcme/zytyumin/MyClass/TodoListCell.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/cetcme/zytyumin/TodoListActivity.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_todo_list.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/layout/todo_list_cell.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/cetcme/zytyumin/HomepageFragment.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/cetcme/zytyumin/HomepageFragment.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/cetcme/zytyumin/LoginActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/cetcme/zytyumin/LoginActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/cetcme/zytyumin/MapFragment.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/cetcme/zytyumin/MapFragment.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/cetcme/zytyumin/ShipActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/cetcme/zytyumin/ShipActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/cetcme/zytyumin/ShipInfoActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/cetcme/zytyumin/ShipInfoActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/cetcme/zytyumin/UserFragment.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/cetcme/zytyumin/UserFragment.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/cetcme/zytyumin/jecInfoHttp/ParseJson.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/cetcme/zytyumin/jecInfoHttp/ParseJson.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/cetcme/zytyumin/xia/SearcherClaimActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/cetcme/zytyumin/xia/SearcherClaimActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/cetcme/zytyumin/xia/SearcherDrawingCheckActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/cetcme/zytyumin/xia/SearcherDrawingCheckActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/cetcme/zytyumin/xia/SearcherPayEnsuranceActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/cetcme/zytyumin/xia/SearcherPayEnsuranceActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/cetcme/zytyumin/xia/SearcherShipDetectActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/cetcme/zytyumin/xia/SearcherShipDetectActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/cetcme/zytyumin/xia/SearcherTradeActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/cetcme/zytyumin/xia/SearcherTradeActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/detail_info_item.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/detail_info_item.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/cetcme/zytyumin/MainActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/cetcme/zytyumin/MainActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/cetcme/zytyumin/ServiceActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/cetcme/zytyumin/ServiceActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/cetcme/zytyumin/TodoActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/cetcme/zytyumin/TodoActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_todo.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_todo.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/values/dimens.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values/dimens.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
     </list>
     <ignored path="zytyumin.iws" />
@@ -1000,19 +127,90 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ShipActivity.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/cetcme/zytyumin/ShipActivity.java">
+      <file leaf-file-name="HomepageFragment.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/cetcme/zytyumin/HomepageFragment.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-1.4665178">
-              <caret line="19" column="29" selection-start-line="19" selection-start-column="29" selection-end-line="19" selection-end-column="29" />
+            <state vertical-scroll-proportion="0.30357143">
+              <caret line="143" column="5" selection-start-line="143" selection-start-column="5" selection-end-line="143" selection-end-column="5" />
               <folding>
-                <element signature="method#onCreate#0;class#ShipActivity#0" expanded="false" />
-                <element signature="method#onBackPressed#0;class#ShipActivity#0" expanded="false" />
-                <element signature="method#initNavigationView#0;class#ShipActivity#0" expanded="false" />
-                <element signature="class#1588:1902" expanded="false" />
-                <element signature="method#onBackClick#0;class#1588:1902" expanded="false" />
+                <element signature="docComment;class#HomepageFragment#0" expanded="false" />
+                <element signature="method#onCreateView#0;class#HomepageFragment#0" expanded="false" />
+                <element signature="method#initNavigationView#0;class#HomepageFragment#0" expanded="false" />
+                <element signature="class#4413:4694" expanded="false" />
+                <element signature="method#initGridView#0;class#HomepageFragment#0" expanded="false" />
+                <element signature="method#getData#0;class#HomepageFragment#0" expanded="false" />
+                <element signature="method#initLoginBroadcast#0;class#HomepageFragment#0" expanded="false" />
+                <element signature="class#MyLoginStateReceiver#0;class#HomepageFragment#0" expanded="false" />
+                <element signature="method#onReceive#0;class#MyLoginStateReceiver#0;class#HomepageFragment#0" expanded="false" />
+                <element signature="method#onDestroy#0;class#HomepageFragment#0" expanded="false" />
+                <element signature="class#MyGridAdapter#0;class#HomepageFragment#0" expanded="false" />
+                <element signature="docComment;method#MyGridAdapter#0;class#MyGridAdapter#0;class#HomepageFragment#0" expanded="false" />
+                <element signature="method#MyGridAdapter#0;class#MyGridAdapter#0;class#HomepageFragment#0" expanded="false" />
+                <element signature="method#getView#0;class#MyGridAdapter#0;class#HomepageFragment#0" expanded="false" />
               </folding>
             </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserFragment.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/cetcme/zytyumin/UserFragment.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="55" column="45" selection-start-line="55" selection-start-column="45" selection-end-line="55" selection-end-column="45" />
+              <folding>
+                <element signature="docComment;class#UserFragment#0" expanded="false" />
+                <element signature="method#initNavigationView#0;class#UserFragment#0" expanded="false" />
+                <element signature="class#2277:2558" expanded="false" />
+                <element signature="method#initHud#0;class#UserFragment#0" expanded="false" />
+                <element signature="method#initLoginButton#0;class#UserFragment#0" expanded="false" />
+                <element signature="method#modifyLoginButton#0;class#UserFragment#0" expanded="false" />
+                <element signature="method#onResume#0;class#UserFragment#0" expanded="false" />
+                <element signature="method#logoutDialog#0;class#UserFragment#0" expanded="false" />
+                <element signature="e#8700#8779#0" expanded="false" />
+                <element signature="method#onFailure#0;class#10160:12450" expanded="false" />
+                <element signature="method#onFailure#1;class#10160:12450" expanded="false" />
+                <element signature="method#sendLoginFlagBroadcast#0;class#UserFragment#0" expanded="false" />
+                <element signature="method#sendTodoNumberBroadcast#0;class#UserFragment#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LoginActivity.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/cetcme/zytyumin/LoginActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="327" column="50" selection-start-line="327" selection-start-column="50" selection-end-line="327" selection-end-column="50" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="fragment_user.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_user.xml">
+          <provider editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+          <provider selected="true" editor-type-id="android-designer">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="activity_login.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_login.xml">
+          <provider editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.59090906">
+              <caret line="114" column="41" selection-start-line="114" selection-start-column="16" selection-end-line="114" selection-end-column="46" />
+              <folding />
+            </state>
+          </provider>
+          <provider selected="true" editor-type-id="android-designer">
+            <state />
           </provider>
         </entry>
       </file>
@@ -1022,8 +220,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="valueResourceFile" />
-        <option value="layoutResourceFile_vertical" />
         <option value="resourceFile" />
+        <option value="layoutResourceFile_vertical" />
         <option value="Class" />
       </list>
     </option>
@@ -4606,10 +3804,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/src/main/java/com/cetcme/zytyumin/MyClass/PrivateEncode.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_route.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/cetcme/zytyumin/rcld/RouteDisplayActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/cetcme/zytyumin/rcld/RouteActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/search_trade_layout.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/search_ship_detect_layout.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/search_pay_insurance_layout.xml" />
@@ -4634,29 +3828,33 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/cetcme/zytyumin/ChangePasswordActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/cetcme/zytyumin/MyClass/ButtonShack.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/cetcme/zytyumin/CheckPhoneActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/cetcme/zytyumin/TodoActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/cetcme/zytyumin/MainActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_user.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_todo.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/cetcme/zytyumin/UserFragment.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/cetcme/zytyumin/jecInfoHttp/ParseJson.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
         <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/detail_fish_ship_layout_two.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/detail_info_item.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/detail_title.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/cetcme/zytyumin/xia/DetailFishShipActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/cetcme/zytyumin/ShipInfoActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/cetcme/zytyumin/ServiceActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/cetcme/zytyumin/MapFragment.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/cetcme/zytyumin/HomepageFragment.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/cetcme/zytyumin/LoginActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/cetcme/zytyumin/xia/SearcherPayEnsuranceActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/cetcme/zytyumin/xia/SearcherClaimActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/cetcme/zytyumin/xia/SearcherTradeActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/cetcme/zytyumin/xia/SearcherShipDetectActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/cetcme/zytyumin/xia/SearcherDrawingCheckActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/cetcme/zytyumin/ShipActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_todo_list.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/todo_list_cell.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/cetcme/zytyumin/MyClass/TodoListCell.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/cetcme/zytyumin/TodoActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/cetcme/zytyumin/ServiceActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/cetcme/zytyumin/MainActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/cetcme/zytyumin/TodoListActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_todo.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/cetcme/zytyumin/LoginActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/cetcme/zytyumin/HomepageFragment.java" />
       </list>
     </option>
   </component>
@@ -4817,7 +4015,7 @@
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidPsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="xia" />
+              <option name="myItemId" value="rcld" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -5249,7 +4447,8 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32909605" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Android Model" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297568" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32768363" sideWeight="0.49264705" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32909605" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Android Monitor" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32768363" sideWeight="0.49264705" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3997175" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32909605" sideWeight="0.5100143" order="7" side_tool="true" content_ui="tabs" />
@@ -5268,7 +4467,6 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32909605" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -5291,209 +4489,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$USER_HOME$/Library/Android/sdk/sources/android-23/android/app/Dialog.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.2222223">
-          <caret line="350" column="9" selection-start-line="350" selection-start-column="9" selection-end-line="350" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/cetcme/zytyumin/MyClass/CustomDialog.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="212" column="46" selection-start-line="212" selection-start-column="46" selection-end-line="212" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/dialog.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="31" column="36" selection-start-line="31" selection-start-column="36" selection-end-line="31" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/app/libs/baidumapapi_map_v4_0_0.jar!/com/baidu/mapapi/map/OverlayOptions.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3087886">
-          <caret line="13" column="15" selection-start-line="13" selection-start-column="15" selection-end-line="13" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/app/libs/baidumapapi_map_v4_0_0.jar!/com/baidu/mapapi/map/MarkerOptions.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="35.796295">
-          <caret line="60" column="55" selection-start-line="60" selection-start-column="51" selection-end-line="60" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.daimajia.androidanimations/library/1.1.3/45585f2203926cff3866df8fff61bc5eed482eb2/library-1.1.3-sources.jar!/com/daimajia/androidanimations/library/Techniques.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.5535715">
-          <caret line="99" column="9" selection-start-line="99" selection-start-column="4" selection-end-line="99" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="65" column="43" selection-start-line="65" selection-start-column="26" selection-end-line="65" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Library/Android/sdk/sources/android-23/java/lang/Object.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="130" column="13" selection-start-line="130" selection-start-column="13" selection-end-line="130" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Library/Android/sdk/sources/android-23/java/util/ArrayList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33235294">
-          <caret line="80" column="11" selection-start-line="80" selection-start-column="11" selection-end-line="80" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/app/libs/baidumapapi_base_v4_0_0.jar!/com/baidu/mapapi/model/LatLng.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.1543943">
-          <caret line="12" column="42" selection-start-line="12" selection-start-column="42" selection-end-line="12" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/cetcme/zytyumin/MyClass/NavigationView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.40625">
-          <caret line="48" column="0" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.daimajia.androidanimations/library/1.1.3/45585f2203926cff3866df8fff61bc5eed482eb2/library-1.1.3-sources.jar!/com/daimajia/androidanimations/library/YoYo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3325893">
-          <caret line="56" column="36" selection-start-line="56" selection-start-column="36" selection-end-line="56" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/cetcme/zytyumin/ChangePasswordActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.42647058">
-          <caret line="149" column="11" selection-start-line="149" selection-start-column="11" selection-end-line="149" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/cetcme/zytyumin/CheckPhoneActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.17205882">
-          <caret line="292" column="19" selection-start-line="292" selection-start-column="19" selection-end-line="292" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/cetcme/zytyumin/MyClass/ButtonShack.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.17205882">
-          <caret line="14" column="10" selection-start-line="14" selection-start-column="10" selection-end-line="14" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/cetcme/zytyumin/MyClass/Ship.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.55441177">
-          <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="43" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/color/tab_text_selector.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/color.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="52" column="17" selection-start-line="52" selection-start-column="17" selection-end-line="52" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_user.xml">
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
-      </provider>
-    </entry>
-    <entry file="android-dummy:///Users/qiuhong/Desktop/zytyumin/app/Translations Editor">
-      <provider selected="true" editor-type-id="string-resource-editor">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_todo.xml">
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="18" column="4" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/cetcme/zytyumin/TodoActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="27" column="41" selection-start-line="27" selection-start-column="41" selection-end-line="27" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/cetcme/zytyumin/MainActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="153" column="31" selection-start-line="153" selection-start-column="31" selection-end-line="153" selection-end-column="31" />
-          <folding>
-            <element signature="e#1357#1358#0" expanded="false" />
-            <element signature="e#1390#1391#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/cetcme/zytyumin/UserFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="310" column="17" selection-start-line="310" selection-start-column="17" selection-end-line="310" selection-end-column="17" />
-          <folding>
-            <element signature="docComment;class#UserFragment#0" expanded="false" />
-            <element signature="method#initNavigationView#0;class#UserFragment#0" expanded="false" />
-            <element signature="class#2277:2558" expanded="false" />
-            <element signature="method#initTodoNumber#0;class#UserFragment#0" expanded="false" />
-            <element signature="method#initHud#0;class#UserFragment#0" expanded="false" />
-            <element signature="method#initLoginButton#0;class#UserFragment#0" expanded="false" />
-            <element signature="method#startLoginActivity#0;class#UserFragment#0" expanded="false" />
-            <element signature="method#modifyLoginButton#0;class#UserFragment#0" expanded="false" />
-            <element signature="method#onResume#0;class#UserFragment#0" expanded="false" />
-            <element signature="method#logoutDialog#0;class#UserFragment#0" expanded="false" />
-            <element signature="e#8700#8779#0" expanded="false" />
-            <element signature="method#onFailure#0;class#10160:12450" expanded="false" />
-            <element signature="method#onFailure#1;class#10160:12450" expanded="false" />
-            <element signature="method#logout#0;class#UserFragment#0" expanded="false" />
-            <element signature="method#sendLoginFlagBroadcast#0;class#UserFragment#0" expanded="false" />
-            <element signature="method#sendTodoNumberBroadcast#0;class#UserFragment#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/cetcme/zytyumin/jecInfoHttp/ParseJson.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -5509,9 +4504,9 @@
         <state vertical-scroll-proportion="0.786385">
           <caret line="372" column="49" selection-start-line="372" selection-start-column="49" selection-end-line="372" selection-end-column="49" />
           <folding>
-            <element signature="e#3064#3082#0" expanded="true" />
-            <element signature="e#13180#13198#0" expanded="true" />
-            <element signature="e#13399#13417#0" expanded="true" />
+            <element signature="e#3057#3075#0" expanded="true" />
+            <element signature="e#13023#13056#0" expanded="true" />
+            <element signature="e#13256#13274#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -5524,29 +4519,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_login.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.8039215">
-          <caret line="114" column="41" selection-start-line="114" selection-start-column="16" selection-end-line="114" selection-end-column="46" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/cetcme/zytyumin/xia/DetailShipDetectInfoActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-31.836735">
-          <caret line="159" column="15" selection-start-line="159" selection-start-column="15" selection-end-line="159" selection-end-column="15" />
           <folding />
         </state>
       </provider>
@@ -5605,7 +4581,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="82" column="5" selection-start-line="82" selection-start-column="5" selection-end-line="82" selection-end-column="5" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -5619,45 +4595,6 @@
       </provider>
       <provider editor-type-id="android-designer">
         <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/cetcme/zytyumin/ShipInfoActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.86460805">
-          <caret line="126" column="73" selection-start-line="126" selection-start-column="73" selection-end-line="126" selection-end-column="73" />
-          <folding>
-            <element signature="e#5433#5481#0" expanded="true" />
-            <element signature="e#5573#5621#0" expanded="true" />
-            <element signature="e#5711#5759#0" expanded="true" />
-            <element signature="e#5848#5896#0" expanded="true" />
-            <element signature="e#5982#6030#0" expanded="true" />
-            <element signature="e#6118#6166#0" expanded="true" />
-            <element signature="e#6787#6835#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/cetcme/zytyumin/HomepageFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.75446427">
-          <caret line="236" column="0" selection-start-line="236" selection-start-column="0" selection-end-line="236" selection-end-column="0" />
-          <folding>
-            <element signature="e#3533#3580#0" expanded="true" />
-            <element signature="e#3598#3645#0" expanded="true" />
-            <element signature="e#3663#3710#0" expanded="true" />
-            <element signature="e#3728#3775#0" expanded="true" />
-            <element signature="e#3793#3840#0" expanded="true" />
-            <element signature="e#3858#3905#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/cetcme/zytyumin/LoginActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5066964">
-          <caret line="278" column="5" selection-start-line="278" selection-start-column="5" selection-end-line="278" selection-end-column="5" />
-          <folding />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/cetcme/zytyumin/MapFragment.java">
@@ -5727,32 +4664,357 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/cetcme/zytyumin/ServiceActivity.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_todo_list.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.53571427">
-          <caret line="67" column="11" selection-start-line="67" selection-start-column="11" selection-end-line="67" selection-end-column="11" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/update.xml">
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/welcome.xml">
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_ship.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.43402225">
+          <caret line="21" column="18" selection-start-line="0" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/login.xml">
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/login_h5.xml">
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/server_cell.xml">
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/pull_to_refresh_header_horizontal.xml">
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/list_cell.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.5882354">
+          <caret line="18" column="33" selection-start-line="18" selection-start-column="33" selection-end-line="18" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/todo_list_cell.xml">
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.272727">
+          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/punch_list_cell.xml">
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/cetcme/zytyumin/MyClass/ListCell.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.13382353">
+          <caret line="13" column="74" selection-start-line="13" selection-start-column="22" selection-end-line="13" selection-end-column="74" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/cetcme/zytyumin/RecordActivity.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/cetcme/zytyumin/MyClass/TodoListCell.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.56473213">
-          <caret line="79" column="48" selection-start-line="79" selection-start-column="48" selection-end-line="79" selection-end-column="48" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="28" column="46" selection-start-line="28" selection-start-column="46" selection-end-line="28" selection-end-column="46" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/cetcme/zytyumin/MyClass/Ship.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="27" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/app/libs/frmobile.jar!/com/fr/android/activity/LoadAppFromURLActivity.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.18527316">
+          <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/cetcme/zytyumin/ShipActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.4665178">
-          <caret line="19" column="29" selection-start-line="19" selection-start-column="29" selection-end-line="19" selection-end-column="29" />
+        <state vertical-scroll-proportion="2.4375">
+          <caret line="132" column="5" selection-start-line="18" selection-start-column="4" selection-end-line="132" selection-end-column="5" />
           <folding>
             <element signature="method#onCreate#0;class#ShipActivity#0" expanded="false" />
             <element signature="method#onBackPressed#0;class#ShipActivity#0" expanded="false" />
             <element signature="method#initNavigationView#0;class#ShipActivity#0" expanded="false" />
             <element signature="class#1588:1902" expanded="false" />
             <element signature="method#onBackClick#0;class#1588:1902" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4235589">
+          <caret line="62" column="0" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/cetcme/zytyumin/ShipInfoActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.34375">
+          <caret line="160" column="24" selection-start-line="160" selection-start-column="24" selection-end-line="166" selection-end-column="111" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/cetcme/zytyumin/rcld/PunchActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="7.863839">
+          <caret line="307" column="8" selection-start-line="307" selection-start-column="8" selection-end-line="307" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/cetcme/zytyumin/ServiceActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="100" column="61" selection-start-line="100" selection-start-column="61" selection-end-line="100" selection-end-column="61" />
+          <folding>
+            <element signature="e#2309#2782#0" expanded="true" />
+            <element signature="e#2781#2782#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_todo.xml">
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="19" column="4" selection-start-line="19" selection-start-column="4" selection-end-line="19" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/cetcme/zytyumin/TodoActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.34411764">
+          <caret line="27" column="41" selection-start-line="27" selection-start-column="41" selection-end-line="27" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/cetcme/zytyumin/TodoListActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.15294118">
+          <caret line="165" column="52" selection-start-line="165" selection-start-column="52" selection-end-line="165" selection-end-column="52" />
+          <folding>
+            <element signature="class#2308:2622" expanded="false" />
+            <element signature="method#onBackClick#0;class#2308:2622" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/cetcme/zytyumin/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.2764706">
+          <caret line="194" column="5" selection-start-line="194" selection-start-column="5" selection-end-line="194" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#6636#6664#0" expanded="true" />
+            <element signature="e#6667#6702#0" expanded="true" />
+            <element signature="method#onFailure#0;class#6801:9107" expanded="false" />
+            <element signature="method#onFailure#1;class#6801:9107" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/cetcme/zytyumin/RecordActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.17205882">
+          <caret line="22" column="42" selection-start-line="22" selection-start-column="42" selection-end-line="22" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_record.xml">
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_todo_list.xml">
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-15.363636">
+          <caret line="26" column="76" selection-start-line="26" selection-start-column="43" selection-end-line="26" selection-end-column="76" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_user.xml">
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_login.xml">
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.59090906">
+          <caret line="114" column="41" selection-start-line="114" selection-start-column="16" selection-end-line="114" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/cetcme/zytyumin/LoginActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="327" column="50" selection-start-line="327" selection-start-column="50" selection-end-line="327" selection-end-column="50" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/cetcme/zytyumin/UserFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="55" column="45" selection-start-line="55" selection-start-column="45" selection-end-line="55" selection-end-column="45" />
+          <folding>
+            <element signature="docComment;class#UserFragment#0" expanded="false" />
+            <element signature="method#initNavigationView#0;class#UserFragment#0" expanded="false" />
+            <element signature="class#2277:2558" expanded="false" />
+            <element signature="method#initHud#0;class#UserFragment#0" expanded="false" />
+            <element signature="method#initLoginButton#0;class#UserFragment#0" expanded="false" />
+            <element signature="method#modifyLoginButton#0;class#UserFragment#0" expanded="false" />
+            <element signature="method#onResume#0;class#UserFragment#0" expanded="false" />
+            <element signature="method#logoutDialog#0;class#UserFragment#0" expanded="false" />
+            <element signature="e#8700#8779#0" expanded="false" />
+            <element signature="method#onFailure#0;class#10160:12450" expanded="false" />
+            <element signature="method#onFailure#1;class#10160:12450" expanded="false" />
+            <element signature="method#sendLoginFlagBroadcast#0;class#UserFragment#0" expanded="false" />
+            <element signature="method#sendTodoNumberBroadcast#0;class#UserFragment#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/cetcme/zytyumin/HomepageFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.30357143">
+          <caret line="143" column="5" selection-start-line="143" selection-start-column="5" selection-end-line="143" selection-end-column="5" />
+          <folding>
+            <element signature="docComment;class#HomepageFragment#0" expanded="false" />
+            <element signature="method#onCreateView#0;class#HomepageFragment#0" expanded="false" />
+            <element signature="method#initNavigationView#0;class#HomepageFragment#0" expanded="false" />
+            <element signature="class#4413:4694" expanded="false" />
+            <element signature="method#initGridView#0;class#HomepageFragment#0" expanded="false" />
+            <element signature="method#getData#0;class#HomepageFragment#0" expanded="false" />
+            <element signature="method#initLoginBroadcast#0;class#HomepageFragment#0" expanded="false" />
+            <element signature="class#MyLoginStateReceiver#0;class#HomepageFragment#0" expanded="false" />
+            <element signature="method#onReceive#0;class#MyLoginStateReceiver#0;class#HomepageFragment#0" expanded="false" />
+            <element signature="method#onDestroy#0;class#HomepageFragment#0" expanded="false" />
+            <element signature="class#MyGridAdapter#0;class#HomepageFragment#0" expanded="false" />
+            <element signature="docComment;method#MyGridAdapter#0;class#MyGridAdapter#0;class#HomepageFragment#0" expanded="false" />
+            <element signature="method#MyGridAdapter#0;class#MyGridAdapter#0;class#HomepageFragment#0" expanded="false" />
+            <element signature="method#getView#0;class#MyGridAdapter#0;class#HomepageFragment#0" expanded="false" />
           </folding>
         </state>
       </provider>
