@@ -23,6 +23,7 @@
         android:id="@+id/textView_in_List_Cell" />
 
     <ImageView
+        android:id="@+id/imageView_in_List_Cell"
         android:layout_height="20dp"
         android:layout_width="20dp"
         android:src="@drawable/setting_arrow_big"/>

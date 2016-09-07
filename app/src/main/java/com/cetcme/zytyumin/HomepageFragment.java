@@ -68,7 +68,7 @@ public class HomepageFragment extends BaseFragment {
             ServiceActivity.class,
             RecordActivity.class,
             VisaActivity.class,
-            null,
+            LawActivity.class,
             ProcessActivity.class,
             TodoActivity.class
     };

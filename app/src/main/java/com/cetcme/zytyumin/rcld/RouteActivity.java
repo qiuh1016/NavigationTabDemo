@@ -1,6 +1,7 @@
 package com.cetcme.zytyumin.rcld;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Handler;
@@ -71,6 +72,8 @@ public class RouteActivity extends AppCompatActivity implements View.OnClickList
     private Double dpf = 0.0;
     private String totalRange;
 
+    private String shipNo;
+
     private SlideDateTimeListener listener = new SlideDateTimeListener() {
 
         @Override
@@ -103,6 +106,8 @@ public class RouteActivity extends AppCompatActivity implements View.OnClickList
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_route);
+
+        shipNo = getIntent().getExtras().getString("shipNo");
 
         getSupportActionBar().hide();
 
@@ -298,34 +303,31 @@ public class RouteActivity extends AppCompatActivity implements View.OnClickList
 
     private void getRouteData() {
 
-
-
-        String username,password,serverIP,deviceNo,shipNo;
+        String username,password;
         SharedPreferences user = getSharedPreferences("user", Activity.MODE_PRIVATE);
         username = user.getString("username","");
         password = user.getString("password","");
-        serverIP = user.getString("serverIP",getString(R.string.defaultServerIP_1));
-        deviceNo = user.getString("deviceNo","");
-        shipNo   = user.getString("shipNo"  ,"");
 
-        //TODO: 测试用 要去掉的
-        username = "3309032010100007";
-        password = PrivateEncode.b64_md5("888888");
-        deviceNo = "16046023";
-        shipNo = username;
+//        //TODO: 测试用 要去掉的
+//        username = "3309032010100007";
+//        password = PrivateEncode.b64_md5("888888");
+//        deviceNo = "16046023";
+//        shipNo = username;
 
         //设置参数
         final RequestParams params = new RequestParams();
         params.put("userName" , username);
-        params.put("password" , password);
+        params.put("password" , PrivateEncode.getMD5(password));
         params.put("shipNo"   , shipNo);
         params.put("startTime", startTime);
         params.put("endTime"  , endTime);
         params.put("dpf"      , dpf);
+        params.put("jkxxUser" , username);
+
         Log.i("Main", params.toString());
 
-        String urlBody = "http://"+serverIP+ getString(R.string.trailGetUrl);
-        String url = urlBody+"?userName=" + username +"&password="+password+"&deviceNo=" + deviceNo+"&startTime="+startTime+"&endTime=" + endTime;
+        String urlBody = getString(R.string.rcldServerIP)+ getString(R.string.trailGetUrl);
+//        String url = urlBody+"?userName=" + username +"&password="+password+"&deviceNo=" + deviceNo+"&startTime="+startTime+"&endTime=" + endTime;
         AsyncHttpClient client = new AsyncHttpClient();
         client.setURLEncodingEnabled(true);
         client.get(urlBody, params, new JsonHttpResponseHandler("UTF-8"){

@@ -80,6 +80,13 @@
         <item name="android:background">@color/border_clo</item>
     </style>
 
+    <!-- view分割线样式 2 -->
+    <style name="bg_line_vertical">
+        <item name="android:layout_width">1px</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@color/border_clo</item>
+    </style>
+
     <!-- 上圆角样式 -->
     <style name="top_layout" parent="base_layout">
         <item name="android:background">@drawable/top_layout_selector</item>

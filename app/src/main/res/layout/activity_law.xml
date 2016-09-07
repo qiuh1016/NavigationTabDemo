@@ -6,7 +6,7 @@
               android:background="#eeeeee" >
 
     <com.cetcme.zytyumin.MyClass.NavigationView
-        android:id="@+id/nav_main_in_todo_list_activity"
+        android:id="@+id/nav_main_in_law_activity"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 
@@ -21,19 +21,17 @@
 
             <Space
                 android:layout_width="match_parent"
-                android:layout_height="20dp" />
+                android:layout_height="5dp" />
 
             <LinearLayout style="@style/wrap_layout"
-                          android:id="@+id/linerLayout_in_todo_list_activity"
+                          android:id="@+id/linerLayout_in_law_activity"
                           android:visibility="invisible"/>
 
             <Space
                 android:layout_width="match_parent"
-                android:layout_height="20dp" />
+                android:layout_height="8dp" />
 
         </LinearLayout>
     </ScrollView>
-
-
 
 </LinearLayout>

@@ -208,7 +208,6 @@ public class TodoListActivity extends Activity {
                          */
                         kProgressHUD.dismiss();
                         Toast.makeText(getApplicationContext(), msg, Toast.LENGTH_SHORT).show();
-                        Log.i(TAG, "onSuccess: rotation");
                     }
 
                 } catch (JSONException e) {

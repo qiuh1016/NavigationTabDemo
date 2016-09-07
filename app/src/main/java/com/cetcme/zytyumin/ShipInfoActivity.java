@@ -123,6 +123,9 @@ public class ShipInfoActivity extends Activity {
         if (ship.deviceInstall) {
             Intent intent = new Intent();
             intent.setClass(this, RouteActivity.class);
+            Bundle bundle = new Bundle();
+            bundle.putString("shipNo", ship.number);
+            intent.putExtras(bundle);
             startActivity(intent);
             overridePendingTransition(R.anim.push_left_in_no_alpha, R.anim.push_left_out_no_alpha);
         } else {

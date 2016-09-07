@@ -10,6 +10,7 @@ import android.widget.SimpleAdapter;
 import android.widget.Toast;
 
 import com.cetcme.zytyumin.MyClass.NavigationView;
+import com.cetcme.zytyumin.MyClass.PrivateEncode;
 import com.cetcme.zytyumin.R;
 //import com.handmark.pulltorefresh.library.PullToRefreshBase;
 //import com.handmark.pulltorefresh.library.PullToRefreshListView;
@@ -199,12 +200,10 @@ public class PunchActivity extends Activity {
         }
 
         //获取保存的用户名和密码
-        String username,password,serverIP,shipNo;
+        String username,password;
         SharedPreferences user = getSharedPreferences("user", Activity.MODE_PRIVATE);
         username = user.getString("username","");
         password = user.getString("password","");
-        serverIP = user.getString("serverIP", getString(R.string.defaultServerIP_1));
-        shipNo   = user.getString("shipNo","");
 
         //刷新则清空
         if (isRefresh) {
@@ -219,12 +218,13 @@ public class PunchActivity extends Activity {
         //设置输入参数
         RequestParams params = new RequestParams();
         params.put("userName", username);
-        params.put("password", password);
+        params.put("password", PrivateEncode.getMD5(password));
         params.put("shipNo", shipNo);
         params.put("pageNum", currentPage + 1);
         params.put("pageSize", pageSize);
+        params.put("jkxxUser", username);
 
-        String urlBody = "http://"+serverIP+ getString(R.string.punchAllByPageUrl);
+        String urlBody = getString(R.string.rcldServerIP)+ getString(R.string.punchAllByPageUrl);
         String url = urlBody+"?userName="+username+"&password="+password+"&pageNum=0"+"&pageSize=20";
         AsyncHttpClient client = new AsyncHttpClient();
         client.get(urlBody, params, new JsonHttpResponseHandler("UTF-8"){

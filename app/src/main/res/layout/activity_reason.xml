@@ -155,9 +155,6 @@
                     android:layout_height="wrap_content"
                     android:text="Fill"
                     android:id="@+id/fill_button_in_reason_activity"
-                    android:layout_alignParentTop="true"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentStart="true"
                     android:layout_marginLeft="16dp"/>
 
                 <Button
@@ -165,10 +162,8 @@
                     android:layout_height="wrap_content"
                     android:text="ID Check: ON"
                     android:id="@+id/id_check_button_in_reason_activity"
-                    android:layout_alignParentTop="true"
-                    android:layout_toRightOf="@+id/button111"
-                    android:layout_toEndOf="@+id/button111"
                     android:layout_marginLeft="16dp"/>
+                
             </LinearLayout>
 
         </LinearLayout>

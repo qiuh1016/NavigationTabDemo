@@ -61,6 +61,9 @@
     <string name="getTodoCountUrl">:8085/Business/getTodoCount</string>
     <string name="changePSWUrl">:8085/Business/changePwd</string>
     <string name="forgetPSWUrl">:8085/Account/changePwd</string>
+    <string name="getLawTitleListUrl">:8085/Business/getLawTitleList</string>
+    <string name="getLawChapterByLawIdUrl">:8085/Business/getLawChapterByLawId</string>
+    <string name="getLawClauseByChapterIdUrl">:8085/Business/getLawClauseByChapterId</string>
 
     <string name="getShipInfoByNo">:5000/bpm/YZSoft/Webservice/AppWebservice.asmx/GetShipInfoByNo</string>
 

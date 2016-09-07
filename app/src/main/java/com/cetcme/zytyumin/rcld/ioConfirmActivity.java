@@ -70,7 +70,7 @@ public class ioConfirmActivity extends Activity {
 
     private Boolean showBackDialog = true;
 
-    private String shipNo;
+    private String shipNo = "";
 
     private String title;
 
@@ -450,12 +450,10 @@ public class ioConfirmActivity extends Activity {
                 .show();
 
         //获取保存的用户名和密码
-        String username,password,serverIP,shipNo;
+        String username,password;
         SharedPreferences user = getSharedPreferences("user", Activity.MODE_PRIVATE);
         username = user.getString("username","");
         password = user.getString("password","");
-        shipNo   = user.getString("shipNo"  ,"");
-        serverIP = user.getString("serverIP", getString(R.string.defaultServerIP_1));
 
         dataList = new ArrayList<>();
 
@@ -469,19 +467,16 @@ public class ioConfirmActivity extends Activity {
         calendar.add(Calendar.HOUR, -5);//小时减5
         String startTime = df.format(calendar.getTime());//输出格式化的日期
 
-
-
         //设置输入参数
         RequestParams params = new RequestParams();
         params.put("userName", username);
-        params.put("password", password);
+        params.put("password", PrivateEncode.getMD5(password));
         params.put("startTime", startTime);
         params.put("endTime", endTime);
         params.put("shipNo", shipNo);
+        params.put("jkxxUser", username);
 
-        Log.i("Main",startTime +" "+ endTime);
-
-        String urlBody = "http://"+serverIP+ getString(R.string.punchGetUrl);
+        String urlBody = getString(R.string.rcldServerIP)+ getString(R.string.punchGetUrl);
         String url = urlBody+"?userName="+username+"&password="+password+"&shipNo="+shipNo+"&startTime="+startTime+"&endTime="+endTime;
         AsyncHttpClient client = new AsyncHttpClient();
         client.get(url, null, new JsonHttpResponseHandler("UTF-8"){
@@ -491,10 +486,7 @@ public class ioConfirmActivity extends Activity {
                 Log.i("Main",response.toString());
                 try {
                     String msg = response.getString("msg");
-                    if (msg.equals("没有符合条件的数据")) {
-                        toast.setText("没有符合条件的数据");
-                        toast.show();
-                    } else if (msg.equals("成功")) {
+                    if (msg.equals("成功")) {
 
                         JSONArray dataArray = response.getJSONArray("data");
 
@@ -514,7 +506,9 @@ public class ioConfirmActivity extends Activity {
                             ids.add(punch.getString("sailorIdNo"));
                         }
                         simpleAdapter.notifyDataSetChanged();
-
+                    } else {
+                        toast.setText(msg);
+                        toast.show();
                     }
                 } catch (JSONException e) {
                     e.printStackTrace();
@@ -731,23 +725,21 @@ public class ioConfirmActivity extends Activity {
         }
 
         //获取保存的用户名和密码
-        String username,password,serverIP,shipNo;
+        String username,password;
         SharedPreferences user = getSharedPreferences("user", Activity.MODE_PRIVATE);
         username = user.getString("username","");
         password = user.getString("password","");
-        serverIP = user.getString("serverIP", getString(R.string.defaultServerIP_1));
-        shipNo   = user.getString("shipNo","");
 
         //设置输入参数
         RequestParams params = new RequestParams();
         params.put("userName", username);
-        params.put("password", password);
+        params.put("password", PrivateEncode.getMD5(password));
         params.put("shipNo", shipNo);
         params.put("iofFlag", iofFlag);
         params.put("sailors", sailors);
+        params.put("jkxxUser", username);
 
-
-        String urlBody = "http://"+serverIP+ getString(R.string.sailorNewUrl);
+        String urlBody = getString(R.string.rcldServerIP)+ getString(R.string.sailorNewUrl);
 //        String url = urlBody+"?userName="+shipNumber+"&password="+password+"&startTime="+startTime+"&endTime="+endTime;
         AsyncHttpClient client = new AsyncHttpClient();
         client.setURLEncodingEnabled(true);

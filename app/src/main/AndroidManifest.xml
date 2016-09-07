@@ -382,6 +382,10 @@
         <activity android:name=".rcld.RouteDisplayActivity"/>
         <activity android:name=".TodoListActivity">
         </activity>
+        <activity android:name=".LawActivity">
+        </activity>
+        <activity android:name=".LawContentActivity">
+        </activity>
     </application>
 
 </manifest>

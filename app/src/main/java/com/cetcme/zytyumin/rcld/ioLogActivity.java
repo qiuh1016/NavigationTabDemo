@@ -14,6 +14,7 @@ import android.widget.SimpleAdapter;
 import android.widget.Toast;
 
 import com.cetcme.zytyumin.MyClass.NavigationView;
+import com.cetcme.zytyumin.MyClass.PrivateEncode;
 import com.cetcme.zytyumin.R;
 //import com.handmark.pulltorefresh.library.PullToRefreshBase;
 //import com.handmark.pulltorefresh.library.PullToRefreshListView;
@@ -144,9 +145,9 @@ public class ioLogActivity extends Activity {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 Bundle bundle = new Bundle();
-                bundle.putString("iofTime", dataList.get(i - 1).get("iofTime").toString());
-                bundle.putString("iofFlag", dataList.get(i - 1).get("iofFlag").toString());
-                bundle.putString("iofSailorList", dataList.get(i - 1).get("iofSailorList").toString());
+                bundle.putString("iofTime", dataList.get(i).get("iofTime").toString());
+                bundle.putString("iofFlag", dataList.get(i).get("iofFlag").toString());
+                bundle.putString("iofSailorList", dataList.get(i).get("iofSailorList").toString());
                 Intent intent = new Intent();
                 intent.setClass(getApplicationContext(), iofSailorActivity.class);
                 intent.putExtras(bundle);
@@ -215,12 +216,10 @@ public class ioLogActivity extends Activity {
         }
 
         //获取保存的用户名和密码
-        String username,password,serverIP,shipNo;
+        String username,password;
         SharedPreferences user = getSharedPreferences("user", Activity.MODE_PRIVATE);
         username = user.getString("username","");
         password = user.getString("password","");
-        serverIP = user.getString("serverIP", getString(R.string.defaultServerIP_1));
-        shipNo   = user.getString("shipNo","");
 
         //刷新则清空
         if (isRefresh) {
@@ -245,15 +244,16 @@ public class ioLogActivity extends Activity {
         //设置输入参数
         RequestParams params = new RequestParams();
         params.put("userName", username);
-        params.put("password", password);
+        params.put("password", PrivateEncode.getMD5(password));
         params.put("shipNo", shipNo);
         params.put("pageNum" , currentPage + 1);
         params.put("pageSize", pageSize);
+        params.put("jkxxUser", username);
 
-        String urlBody = "http://"+serverIP+ getString(R.string.iofGetUrl);
+        String urlBody = getString(R.string.rcldServerIP)+ getString(R.string.iofGetUrl);
         String url = urlBody+"?userName="+username+"&password="+password+"&pageNum=0"+"&pageSize=20";
         AsyncHttpClient client = new AsyncHttpClient();
-        client.get(this, urlBody, params, new JsonHttpResponseHandler("UTF-8"){
+        client.get(urlBody, params, new JsonHttpResponseHandler("UTF-8"){
             @Override
             public void onSuccess(int statusCode, Header[] headers, JSONObject response) {
                 // If the response is JSONObject instead of expected JSONArray
