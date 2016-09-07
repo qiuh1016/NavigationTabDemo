@@ -74,7 +74,8 @@
                 <View style="@style/bg_line"/>
 
                 <!-- 下圆角-->
-                <LinearLayout style="@style/bottom_layout" >
+                <LinearLayout style="@style/bottom_layout"
+                              android:id="@+id/version_remark_line_in_version_activity">
                     <TextView style="@style/userText"
                               android:text="版本说明" />
                     <TextView

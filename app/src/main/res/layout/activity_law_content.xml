@@ -30,8 +30,6 @@
             android:layout_marginRight="5dp"/>
     </LinearLayout>
 
-    <!-- 分割线 -->
-    <!--<View style="@style/bg_line"/>-->
 
     <LinearLayout
         android:orientation="horizontal"

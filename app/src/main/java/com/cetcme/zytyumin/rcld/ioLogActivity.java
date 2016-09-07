@@ -243,8 +243,8 @@ public class ioLogActivity extends Activity {
 
         //设置输入参数
         RequestParams params = new RequestParams();
-        params.put("userName", username);
-        params.put("password", PrivateEncode.getMD5(password));
+        params.put("userName", "jkxx");
+        params.put("password", "xMpCOKC5I4INzFCab3WEmw==");
         params.put("shipNo", shipNo);
         params.put("pageNum" , currentPage + 1);
         params.put("pageSize", pageSize);

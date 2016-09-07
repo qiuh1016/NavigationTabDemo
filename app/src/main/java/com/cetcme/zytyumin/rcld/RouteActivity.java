@@ -74,6 +74,8 @@ public class RouteActivity extends AppCompatActivity implements View.OnClickList
 
     private String shipNo;
 
+    private String TAG = "RouteActivity";
+
     private SlideDateTimeListener listener = new SlideDateTimeListener() {
 
         @Override
@@ -308,41 +310,45 @@ public class RouteActivity extends AppCompatActivity implements View.OnClickList
         username = user.getString("username","");
         password = user.getString("password","");
 
-//        //TODO: 测试用 要去掉的
-//        username = "3309032010100007";
-//        password = PrivateEncode.b64_md5("888888");
-//        deviceNo = "16046023";
-//        shipNo = username;
-
         //设置参数
         final RequestParams params = new RequestParams();
-        params.put("userName" , username);
-        params.put("password" , PrivateEncode.getMD5(password));
+        params.put("userName" , "jkxx");
+        params.put("password" , "xMpCOKC5I4INzFCab3WEmw==");
         params.put("shipNo"   , shipNo);
         params.put("startTime", startTime);
         params.put("endTime"  , endTime);
-        params.put("dpf"      , dpf);
+        params.put("dpf"      , 0.003);
         params.put("jkxxUser" , username);
 
         Log.i("Main", params.toString());
 
         String urlBody = getString(R.string.rcldServerIP)+ getString(R.string.trailGetUrl);
-//        String url = urlBody+"?userName=" + username +"&password="+password+"&deviceNo=" + deviceNo+"&startTime="+startTime+"&endTime=" + endTime;
         AsyncHttpClient client = new AsyncHttpClient();
         client.setURLEncodingEnabled(true);
         client.get(urlBody, params, new JsonHttpResponseHandler("UTF-8"){
             @Override
             public void onSuccess(int statusCode, Header[] headers, final JSONObject response) {
                 // If the response is JSONObject instead of expected JSONArray
+                Log.i(TAG, "onSuccess: " + response.toString());
                 dataString = response.toString();
                 route = new ArrayList<>();
                 try {
                     String msg = response.getString("msg");
                     totalRange = msg;
                     int code = response.getInt("code");
-
                     if (code == 0) {
+
+                        /**
+                         * 没有数据就返回
+                         */
+                        if (msg.equals("没有符合条件的数据")) {
+                            toast.setText(msg);
+                            toast.show();
+                            return;
+                        }
+
                         JSONArray data = response.getJSONArray("data");
+
 
                         for (int i = 0; i < data.length(); i++) {
                             try {
@@ -356,6 +362,7 @@ public class RouteActivity extends AppCompatActivity implements View.OnClickList
                                 e.printStackTrace();
                             }
                         }
+
                         new Handler().postDelayed(new Runnable() {
                             @Override
                             public void run() {

@@ -57,7 +57,7 @@ public class VisaActivity extends Activity {
     private void getIntentData() {
         Bundle bundle = this.getIntent().getExtras();
         shipName = bundle.getString("shipName");
-        shipNo = bundle.getString("shipNo");
+        shipNo = bundle.getString("shipNumber");
     }
 
     private void initUI() {

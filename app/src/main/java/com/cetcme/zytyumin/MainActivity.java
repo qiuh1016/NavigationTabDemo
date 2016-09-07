@@ -72,6 +72,14 @@ public class MainActivity extends FragmentActivity {
 
         initViews();
         initBroadcast();
+        updateCheck();
+    }
+
+    private void updateCheck() {
+        //autoUpdate
+        UpdateAppManager updateManager;
+        updateManager = new UpdateAppManager(this, false);
+        updateManager.checkUpdateInfo();
     }
 
     private void initViews() {

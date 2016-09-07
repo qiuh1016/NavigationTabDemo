@@ -444,6 +444,7 @@ public class ioConfirmActivity extends Activity {
         kProgressHUD = KProgressHUD.create(ioConfirmActivity.this)
                 .setStyle(KProgressHUD.Style.SPIN_INDETERMINATE)
                 .setLabel("获取中")
+                .setCancellable(false)
                 .setAnimationSpeed(1)
                 .setDimAmount(0.3f)
                 .setSize(110, 110)
@@ -469,17 +470,19 @@ public class ioConfirmActivity extends Activity {
 
         //设置输入参数
         RequestParams params = new RequestParams();
-        params.put("userName", username);
-        params.put("password", PrivateEncode.getMD5(password));
+        params.put("userName", "jkxx");
+        params.put("password", "xMpCOKC5I4INzFCab3WEmw==");
         params.put("startTime", startTime);
         params.put("endTime", endTime);
         params.put("shipNo", shipNo);
         params.put("jkxxUser", username);
 
+        Log.i("main", "getPunchData: "+ params.toString());
+
         String urlBody = getString(R.string.rcldServerIP)+ getString(R.string.punchGetUrl);
-        String url = urlBody+"?userName="+username+"&password="+password+"&shipNo="+shipNo+"&startTime="+startTime+"&endTime="+endTime;
+//        String url = urlBody+"?userName="+username+"&password="+password+"&shipNo="+shipNo+"&startTime="+startTime+"&endTime="+endTime;
         AsyncHttpClient client = new AsyncHttpClient();
-        client.get(url, null, new JsonHttpResponseHandler("UTF-8"){
+        client.get(urlBody, params, new JsonHttpResponseHandler("UTF-8"){
             @Override
             public void onSuccess(int statusCode, Header[] headers, JSONObject response) {
                 // If the response is JSONObject instead of expected JSONArray
@@ -732,8 +735,8 @@ public class ioConfirmActivity extends Activity {
 
         //设置输入参数
         RequestParams params = new RequestParams();
-        params.put("userName", username);
-        params.put("password", PrivateEncode.getMD5(password));
+        params.put("userName", "jkxx");
+        params.put("password", "xMpCOKC5I4INzFCab3WEmw==");
         params.put("shipNo", shipNo);
         params.put("iofFlag", iofFlag);
         params.put("sailors", sailors);

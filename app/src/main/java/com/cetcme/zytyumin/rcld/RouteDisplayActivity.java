@@ -54,6 +54,8 @@ public class RouteDisplayActivity extends AppCompatActivity {
 
     private int maxMediaPointMarkerNum = 1000;
 
+    private String TAG = "RouteDisplayActivity";
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -91,12 +93,13 @@ public class RouteDisplayActivity extends AppCompatActivity {
         startTimeTextView.setText(startTime);
         endTimeTextView.setText(endTime);
 
-        if (totalRange.length() > 5) {
-            distanceTextView.setText(totalRange.substring(4));
-        } else {
-            distanceTextView.setText(totalRange);
-        }
+        distanceTextView.setText(totalRange);
 
+//        if (totalRange.length() > 5) {
+//            distanceTextView.setText(totalRange.substring(4));
+//        } else {
+//            distanceTextView.setText(totalRange);
+//        }
 
         if (geoOK) {
 

@@ -2,6 +2,8 @@
 <resources>
     <string name="app_name">浙渔通渔民版</string>
 
+    <string name="originalVersionRemark">功能：\n业务办理、记录查询、电子签证、法律法规、业务流程、待办任务、轨迹查询等</string>
+
     <string name="user_terms"><u>用户协议</u></string>
     <string name="password">密&#160;&#160;&#160;&#160;码</string>
     <string name="username">用户名</string>
@@ -64,6 +66,9 @@
     <string name="getLawTitleListUrl">:8085/Business/getLawTitleList</string>
     <string name="getLawChapterByLawIdUrl">:8085/Business/getLawChapterByLawId</string>
     <string name="getLawClauseByChapterIdUrl">:8085/Business/getLawClauseByChapterId</string>
+    <string name="getLatestApkVersionURL">:8085/Account/getLatestApkVersion</string>
+    <string name="downloadUrl">:5000/bpm/zytyumin.apk</string>
+
 
     <string name="getShipInfoByNo">:5000/bpm/YZSoft/Webservice/AppWebservice.asmx/GetShipInfoByNo</string>
 

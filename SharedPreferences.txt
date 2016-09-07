@@ -1,8 +1,10 @@
 SharedPreferences :
 
 system:
-	//version			String
-	//manualCheckUpdate	Boolen
+	serverVersionCode	int
+	manualCheckUpdate	Boolen
+	newVersionRemark	String
+	oldVersionRemark	String
 
 user: 
 	username 		String
