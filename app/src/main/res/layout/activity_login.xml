@@ -35,7 +35,7 @@
 
             <TextView
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="0dp"
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:text="@string/app_name"
                 android:id="@+id/title_textView_in_login_activity"
@@ -43,6 +43,13 @@
                 android:textColor="@color/main_color"
                 android:gravity="center"/>
 
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/app_title"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp"
+                android:layout_marginTop="20dp"/>
             <Space
                 android:layout_width="match_parent"
                 android:layout_height="20dp" />

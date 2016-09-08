@@ -77,7 +77,7 @@
     <string name="process_line_2_url">:5008/WebReport/ReportServer?reportlet=zhuangby%2F%5B6e14%5D%5B4e1a%5D%5B8239%5D%5B8236%5D%5B767b%5D%5B8bb0%5D.cpt</string>
     <string name="process_line_3_url">:5008/WebReport/ReportServer?reportlet=zhuangby%2F%5B6e14%5D%5B4e1a%5D%5B6355%5D%5B635e%5D%5B8bb8%5D%5B53ef%5D.cpt</string>
     <!--serivce url-->
-    <string name="service_line_1_url">:5008/WebReport/ReportServer?reportlet=apply%2Fchuanjian_1_phone.cpt&amp; op=write&amp;app_account=</string>
+    <string name="service_line_1_url">:5008/WebReport/ReportServer?reportlet=apply%2Fchuanjian_1_phone.cpt&amp;op=write&amp;app_account=</string>
     <string name="service_line_2_url">:5008/WebReport/ReportServer?reportlet=apply%2Fexamine_apply_phone.cpt&amp;op=write&amp;user=</string>
     <string name="service_line_3_url">:</string>
     <!--get todolist url-->

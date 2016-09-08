@@ -8,6 +8,7 @@ import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -15,6 +16,7 @@ import com.cetcme.rcldandroidZhejiang.MyClass.NavigationView;
 import com.cetcme.rcldandroidZhejiang.MyClass.Ship;
 import com.cetcme.rcldandroidZhejiang.rcld.RouteActivity;
 import com.cetcme.rcldandroidZhejiang.xia.DetailFishShipActivity;
+import com.kaopiz.kprogresshud.KProgressHUD;
 import com.loopj.android.http.AsyncHttpClient;
 import com.loopj.android.http.JsonHttpResponseHandler;
 import com.loopj.android.http.RequestParams;
@@ -43,6 +45,8 @@ public class ShipInfoActivity extends Activity {
 
     private Toast toast;
 
+    private KProgressHUD kProgressHUD;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,7 +59,7 @@ public class ShipInfoActivity extends Activity {
 
         initNavigationView();
         initUI();
-
+        initHud();
         getShipInfo(this.ship.number);
 
     }
@@ -107,6 +111,17 @@ public class ShipInfoActivity extends Activity {
 
     }
 
+    private void initHud() {
+        //hudView
+        kProgressHUD = KProgressHUD.create(this)
+                .setStyle(KProgressHUD.Style.SPIN_INDETERMINATE)
+//                .setLabel("登陆中")
+                .setAnimationSpeed(1)
+                .setDimAmount(0.3f)
+                .setSize(90, 90)
+                .setCancellable(false);
+    }
+
     /**
      * 点击视图外 关闭窗口
      */
@@ -136,12 +151,15 @@ public class ShipInfoActivity extends Activity {
             startActivity(intent);
             overridePendingTransition(R.anim.push_left_in_no_alpha, R.anim.push_left_out_no_alpha);
         } else {
-            Toast.makeText(this, "本船不支持查看轨迹", Toast.LENGTH_SHORT).show();
+            toast.setText("本船不支持查看轨迹");
+            toast.show();
         }
 
     }
 
     private void getShipInfo(String shipNumber) {
+        kProgressHUD.show();
+
         RequestParams params = new RequestParams();
         params.put("shipNo", shipNumber);
         String urlBody = getString(R.string.serverIP) + getString(R.string.getShipInfoByNo);
@@ -159,12 +177,19 @@ public class ShipInfoActivity extends Activity {
                      */
                     if (msg.equals("请求成功")) {
                         JSONObject ship_info =  response.getJSONObject("SHIP_INFO");
+//                        String shipMaterial  = getString(R.string.line_1_in_ship_info_activity) + ship_info.getString("APP_SHIP_MATERIAL");
+//                        String shipLength    = getString(R.string.line_2_in_ship_info_activity) + ship_info.getString("APP_SHIP_LENGTH");
+//                        String mainPower     = getString(R.string.line_3_in_ship_info_activity) + ship_info.getString("APP_MAIN_POWER");
+//                        String allTon        = getString(R.string.line_4_in_ship_info_activity) + ship_info.getString("APP_ALL_TON");
+//                        String shipType      = getString(R.string.line_5_in_ship_info_activity) + ship_info.getString("APP_SHIP_TYPE");
+//                        String jobType       = getString(R.string.line_6_in_ship_info_activity) + ship_info.getString("APP_JOB_TYPE1");
+
                         String shipMaterial  = getString(R.string.line_1_in_ship_info_activity) + ship_info.getString("APP_SHIP_MATERIAL");
-                        String shipLength    = getString(R.string.line_2_in_ship_info_activity) + ship_info.getString("APP_SHIP_LENGTH");
-                        String mainPower     = getString(R.string.line_3_in_ship_info_activity) + ship_info.getString("APP_MAIN_POWER");
-                        String allTon        = getString(R.string.line_4_in_ship_info_activity) + ship_info.getString("APP_ALL_TON");
-                        String shipType      = getString(R.string.line_5_in_ship_info_activity) + ship_info.getString("APP_SHIP_TYPE");
-                        String jobType       = getString(R.string.line_6_in_ship_info_activity) + ship_info.getString("APP_JOB_TYPE1");
+                        String shipLength    = getString(R.string.line_2_in_ship_info_activity) + ship_info.getString("SHIP_LENGTH");
+                        String mainPower     = getString(R.string.line_3_in_ship_info_activity) + ship_info.getString("SHIP_TOT_POWER");
+                        String allTon        = getString(R.string.line_4_in_ship_info_activity) + ship_info.getString("SHIP_TOT_TON");
+                        String shipType      = getString(R.string.line_5_in_ship_info_activity) + ship_info.getString("SHIP_BUSINESS_TYPE");
+                        String jobType       = getString(R.string.line_6_in_ship_info_activity) + ship_info.getString("JOB_TYPE");
 
                         /**
                          * 转换时间格式
@@ -199,6 +224,7 @@ public class ShipInfoActivity extends Activity {
                         }, 2000);
                     }
 
+
                 } catch (JSONException e) {
                     /**
                      * json解析失败
@@ -207,6 +233,8 @@ public class ShipInfoActivity extends Activity {
                     toast.setText("json解析错误");
                     toast.show();
                 }
+
+                kProgressHUD.dismiss();
             }
 
             @Override
@@ -214,6 +242,7 @@ public class ShipInfoActivity extends Activity {
                 Log.i(TAG, "onFailure: 1");
                 toast.setText("获取信息失败");
                 toast.show();
+                kProgressHUD.dismiss();
             }
 
             @Override
@@ -221,6 +250,7 @@ public class ShipInfoActivity extends Activity {
                 Log.i(TAG, "onFailure: 2");
                 toast.setText("获取信息失败");
                 toast.show();
+                kProgressHUD.dismiss();
             }
         });
     }

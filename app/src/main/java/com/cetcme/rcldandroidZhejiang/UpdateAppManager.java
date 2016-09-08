@@ -197,6 +197,9 @@ public class UpdateAppManager {
 
                 } catch (JSONException e) {
                     Log.i(TAG, "onSuccess: json error");
+                    if (manualCheckUpdate) {
+                        showNoUpdateDialog();
+                    }
                     e.printStackTrace();
                 }
             }

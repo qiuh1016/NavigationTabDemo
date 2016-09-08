@@ -200,6 +200,7 @@ public class LoginActivity extends Activity implements View.OnClickListener{
         params.put("clientId", "1");
         String urlBody = getString(R.string.serverIP) + getString(R.string.loginUrl);
 
+        Log.i(TAG, "loginWithASC: " + params.toString());
         AsyncHttpClient client = new AsyncHttpClient();
         client.get(urlBody, params, new JsonHttpResponseHandler("UTF-8") {
             @Override
@@ -263,6 +264,7 @@ public class LoginActivity extends Activity implements View.OnClickListener{
             @Override
             public void onFailure(int statusCode, Header[] headers, String responseString, Throwable throwable) {
                 kProgressHUD.dismiss();
+                Log.i(TAG, "onFailure: " + responseString);
                 Toast.makeText(getApplicationContext(), "网络连接失败2", Toast.LENGTH_SHORT).show();
             }
         });

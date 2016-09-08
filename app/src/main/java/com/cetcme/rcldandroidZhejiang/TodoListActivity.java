@@ -41,12 +41,15 @@ public class TodoListActivity extends Activity {
     private String url;
     private String frURL;
 
+    private Toast toast;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_todo_list);
 
         title = getIntent().getExtras().getString("title");
+        toast = Toast.makeText(TodoListActivity.this, "", Toast.LENGTH_SHORT);
 
         initNavigationView();
         initHud();
@@ -61,6 +64,10 @@ public class TodoListActivity extends Activity {
     public void onPause() {
         super.onPause();
         MobclickAgent.onPause(this);
+    }
+    public void onDestroy() {
+        super.onDestroy();
+        toast.cancel();
     }
 
     public void onBackPressed() {
@@ -165,7 +172,8 @@ public class TodoListActivity extends Activity {
 
                         JSONArray list = response.getJSONArray("List");
                         if (list.length() == 0) {
-                            Toast.makeText(TodoListActivity.this, "无数据", Toast.LENGTH_SHORT).show();
+                            toast.setText("无数据");
+                            toast.show();
                             kProgressHUD.dismiss();
                             return;
                         }
@@ -210,7 +218,8 @@ public class TodoListActivity extends Activity {
                          * 获取失败
                          */
                         kProgressHUD.dismiss();
-                        Toast.makeText(getApplicationContext(), msg, Toast.LENGTH_SHORT).show();
+                        toast.setText(msg);
+                        toast.show();
                     }
 
                 } catch (JSONException e) {
@@ -220,20 +229,23 @@ public class TodoListActivity extends Activity {
                     e.printStackTrace();
                     Log.i(TAG, "onResponse: json解析错误");
                     kProgressHUD.dismiss();
-                    Toast.makeText(getApplicationContext(), "解析错误", Toast.LENGTH_SHORT).show();
+                    toast.setText("解析错误");
+                    toast.show();
                 }
             }
 
             @Override
             public void onFailure(int statusCode, Header[] headers, Throwable throwable, JSONObject errorResponse) {
                 kProgressHUD.dismiss();
-                Toast.makeText(getApplicationContext(), "网络连接失败", Toast.LENGTH_SHORT).show();
+                toast.setText("网络连接失败");
+                toast.show();
             }
 
             @Override
             public void onFailure(int statusCode, Header[] headers, String responseString, Throwable throwable) {
                 kProgressHUD.dismiss();
-                Toast.makeText(getApplicationContext(), "网络连接失败", Toast.LENGTH_SHORT).show();
+                toast.setText("网络连接失败");
+                toast.show();
             }
         });
 
@@ -264,7 +276,6 @@ public class TodoListActivity extends Activity {
                 @Override
                 public void onClick() {
                     if (frURL.isEmpty()) {
-                        Toast.makeText(TodoListActivity.this, "无链接", Toast.LENGTH_SHORT).show();
                         return;
                     }
                     Intent intent = new Intent();
