@@ -87,7 +87,7 @@
     <string name="get_todo_line_3_url">:8085/Business/getDetectInfoOpinionList</string>
     <string name="get_todo_line_4_url">:</string>
     <string name="fr_todo_line_1_url">:5008/WebReport/ReportServer?reportlet=apply%2Fpic_opinion_phone.cpt&amp;op=write&amp;appid=</string>
-    <string name="fr_todo_line_2_url">:5008/WebReport/ReportServer?formlet=apply%2Fbaojian.frm&amp;appid=</string>
+    <string name="fr_todo_line_2_url">:5008/WebReport/ReportServer?reportlet=apply%2Fbaojian.cpt&amp;op=write&amp;appid=</string>
     <string name="fr_todo_line_3_url">:5008/WebReport/ReportServer?reportlet=apply%2Fchange_opinion_phone.cpt&amp;op=write&amp;appid=</string>
     <string name="fr_todo_line_4_url">:</string>
 
