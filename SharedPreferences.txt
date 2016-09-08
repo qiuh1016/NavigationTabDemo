@@ -14,6 +14,8 @@ user:
 	IDCard			String
 	rememberPSW		boolen
 
+	ships			jsonArray -> string
+
 
 	//debugMode		String
 

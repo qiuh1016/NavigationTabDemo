@@ -10,7 +10,7 @@
     tools:context=".MainActivity">
 
 
-    <com.cetcme.zytyumin.MyClass.NavigationView
+    <com.cetcme.rcldandroidZhejiang.MyClass.NavigationView
         android:id="@+id/nav_main_in_fragment_homepage"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
@@ -42,7 +42,7 @@
             app:indicator_drawable_selected="@drawable/indicator_selected_radius"
             app:indicator_drawable_unselected="@drawable/indicator_unselected_radius" />
 
-        <com.cetcme.zytyumin.MyClass.NoScrollGridView
+        <com.cetcme.rcldandroidZhejiang.MyClass.NoScrollGridView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/gridView_in_fragment_homepage"

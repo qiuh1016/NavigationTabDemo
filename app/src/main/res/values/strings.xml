@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">浙渔通渔民版</string>
+    <string name="app_name">浙渔通</string>
 
-    <string name="originalVersionRemark">功能：\n业务办理、记录查询、电子签证、法律法规、业务流程、待办任务、轨迹查询等</string>
+    <string name="originalVersionRemark">更新：\n1、软件构架调整\n2、新增业务办理、记录查询、法律法规、业务流程、待办任务等功能</string>
 
     <string name="user_terms"><u>用户协议</u></string>
     <string name="password">密&#160;&#160;&#160;&#160;码</string>

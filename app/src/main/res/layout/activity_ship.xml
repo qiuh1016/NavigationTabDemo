@@ -5,7 +5,7 @@
     android:orientation="vertical"
     android:background="#eeeeee" >
 
-    <com.cetcme.zytyumin.MyClass.NavigationView
+    <com.cetcme.rcldandroidZhejiang.MyClass.NavigationView
         android:id="@+id/nav_main_in_ship_activity"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>

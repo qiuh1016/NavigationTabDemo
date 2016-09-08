@@ -11,7 +11,7 @@
               android:background="#EEEEEE"
               android:orientation="vertical" >
 
-    <com.cetcme.zytyumin.MyClass.NavigationView
+    <com.cetcme.rcldandroidZhejiang.MyClass.NavigationView
         android:id="@+id/nav_main_in_check_phone_activity"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>

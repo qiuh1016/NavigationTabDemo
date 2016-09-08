@@ -9,7 +9,7 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".rcld.ioConfirmActivity">
 
-    <com.cetcme.zytyumin.MyClass.NavigationView
+    <com.cetcme.rcldandroidZhejiang.MyClass.NavigationView
         android:id="@+id/nav_main_in_io_confirm_activity"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>

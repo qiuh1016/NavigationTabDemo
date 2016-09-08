@@ -10,7 +10,7 @@
     android:orientation="vertical"
     android:id="@+id/layout_map_fragment">
 
-    <com.cetcme.zytyumin.MyClass.NavigationView
+    <com.cetcme.rcldandroidZhejiang.MyClass.NavigationView
         android:id="@+id/nav_main_in_fragment_map"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>

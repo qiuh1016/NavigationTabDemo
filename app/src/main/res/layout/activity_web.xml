@@ -7,14 +7,14 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.cetcme.zytyumin.WebActivity">
+    tools:context="com.cetcme.rcldandroidZhejiang.WebActivity">
 
-    <com.cetcme.zytyumin.MyClass.NavigationView
+    <com.cetcme.rcldandroidZhejiang.MyClass.NavigationView
         android:id="@+id/nav_main_in_web_activity"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 
-    <com.cetcme.zytyumin.MyClass.ProgressWebView
+    <com.cetcme.rcldandroidZhejiang.MyClass.ProgressWebView
         android:id="@+id/progressWebView_in_web_activity"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
