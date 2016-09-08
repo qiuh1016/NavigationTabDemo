@@ -20,6 +20,7 @@ import android.widget.Toast;
 
 import com.cetcme.rcldandroidZhejiang.MyClass.ButtonShack;
 import com.cetcme.rcldandroidZhejiang.MyClass.NavigationView;
+import com.cetcme.rcldandroidZhejiang.MyClass.PrivateEncode;
 import com.kaopiz.kprogresshud.KProgressHUD;
 import com.loopj.android.http.AsyncHttpClient;
 import com.loopj.android.http.JsonHttpResponseHandler;
@@ -50,8 +51,12 @@ public class RegisterInfoActivity extends Activity {
     private String phone;
     private int accountType = 1;
 
+    private int minPSWLength = 5;
+
     private KProgressHUD kProgressHUD;
     private KProgressHUD okHUD;
+
+    private Toast toast;
 
     private String TAG = "RegisterInfoActivity";
 
@@ -66,6 +71,8 @@ public class RegisterInfoActivity extends Activity {
         Bundle bundle = getIntent().getExtras();
         phone = bundle.getString("phone");
 
+        toast = Toast.makeText(RegisterInfoActivity.this, "", Toast.LENGTH_SHORT);
+
         initNavigationView();
         initUI();
         initHud();
@@ -79,6 +86,10 @@ public class RegisterInfoActivity extends Activity {
         super.onPause();
         MobclickAgent.onPause(this);
     }
+    public void onDestroy() {
+        super.onDestroy();
+        toast.cancel();
+    }
 
     public void onBackPressed() {
         super.onBackPressed();
@@ -86,10 +97,8 @@ public class RegisterInfoActivity extends Activity {
                 R.anim.push_right_out_no_alpha);
     }
 
-    private NavigationView navigationView;
-
     private void initNavigationView() {
-        navigationView = (NavigationView) findViewById(R.id.nav_main_in_register_info_activity);
+        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_main_in_register_info_activity);
         navigationView.setTitle("注册");
         navigationView.setBackView(R.drawable.icon_back_button);
         navigationView.setRightView(0);
@@ -191,7 +200,18 @@ public class RegisterInfoActivity extends Activity {
                 || password_2.isEmpty()
                 || name.isEmpty()
                 || id.isEmpty() ) {
-            Toast.makeText(getApplicationContext(), "信息未填全", Toast.LENGTH_SHORT).show();
+            toast.setText("信息未填全");
+            toast.show();
+            ButtonShack.run((Button) findViewById(R.id.sign_up_button_in_register_info_activity));
+            return;
+        }
+
+        /**
+         * 身份证号错误
+         */
+        if (!PrivateEncode.isCard(id)) {
+            toast.setText("身份证号码错误");
+            toast.show();
             ButtonShack.run((Button) findViewById(R.id.sign_up_button_in_register_info_activity));
             return;
         }
@@ -200,10 +220,22 @@ public class RegisterInfoActivity extends Activity {
          * 密码不一致 则返回
          */
         if (!password_1.equals(password_2)) {
-            Toast.makeText(getApplicationContext(), "密码不一致", Toast.LENGTH_SHORT).show();
+            toast.setText("密码不一致");
+            toast.show();
             psw1EditText.setText("");
             psw2EditText.setText("");
             psw1EditText.requestFocus();
+            ButtonShack.run((Button) findViewById(R.id.sign_up_button_in_register_info_activity));
+            return;
+        }
+
+        /**
+         * 新密码位数不足
+         */
+        if (password_1.length() < minPSWLength) {
+            toast.setText("新密码位数不能少于" + minPSWLength + "位");
+            toast.show();
+            ButtonShack.run((Button) findViewById(R.id.sign_up_button_in_register_info_activity));
             return;
         }
 
@@ -253,7 +285,8 @@ public class RegisterInfoActivity extends Activity {
                     } else  {
                         kProgressHUD.dismiss();
                         ButtonShack.run((Button) findViewById(R.id.sign_up_button_in_register_info_activity));
-                        Toast.makeText(getApplicationContext(), msg, Toast.LENGTH_LONG).show();
+                        toast.setText(msg);
+                        toast.show();
                         Log.i(TAG, "onSuccess: register fail");
                     }
                 } catch (JSONException e) {
@@ -268,14 +301,16 @@ public class RegisterInfoActivity extends Activity {
 
             @Override
             public void onFailure(int statusCode, Header[] headers, Throwable throwable, JSONObject errorResponse) {
-                Toast.makeText(getApplicationContext(), "网络连接失败", Toast.LENGTH_SHORT).show();
+                toast.setText("网络连接失败");
+                toast.show();
                 kProgressHUD.dismiss();
                 Log.i(TAG, "onSuccess: register network error");
             }
 
             @Override
             public void onFailure(int statusCode, Header[] headers, String responseString, Throwable throwable) {
-                Toast.makeText(getApplicationContext(), "网络连接失败", Toast.LENGTH_SHORT).show();
+                toast.setText("网络连接失败");
+                toast.show();
                 kProgressHUD.dismiss();
                 Log.i(TAG, "onSuccess: register network error");
             }

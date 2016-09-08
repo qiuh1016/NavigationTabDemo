@@ -85,10 +85,8 @@ public class CheckPhoneActivity extends Activity implements View.OnClickListener
                 R.anim.push_right_out_no_alpha);
     }
 
-    private NavigationView navigationView;
-
     private void initNavigationView() {
-        navigationView = (NavigationView) findViewById(R.id.nav_main_in_check_phone_activity);
+        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_main_in_check_phone_activity);
         navigationView.setTitle("验证手机号");
         navigationView.setBackView(R.drawable.icon_back_button);
         navigationView.setRightView(0);
