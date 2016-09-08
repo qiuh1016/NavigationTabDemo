@@ -284,6 +284,20 @@ public class TodoListActivity extends Activity {
                         SharedPreferences user = getSharedPreferences("user", Context.MODE_PRIVATE);
                         String username = user.getString("username", "");
                         urlString += "&account=" + username;
+
+                        /**
+                         * 打开网页新加的代码
+                         */
+                        Log.i(TAG, "onClick: url:" +urlString);
+                        Intent webIntent = new Intent();
+                        Bundle bundle = new Bundle();
+                        bundle.putString("url", urlString);
+                        bundle.putString("title", "报检表");
+                        webIntent.putExtras(bundle);
+                        webIntent.setClass(getApplicationContext(), WebActivity.class);
+                        startActivity(webIntent);
+                        return;
+
                     }
                     intent.putExtra("url", urlString);
                     Log.i(TAG, "onClick: " + urlString);
