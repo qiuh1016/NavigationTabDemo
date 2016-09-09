@@ -208,22 +208,23 @@ public class MapFragment extends BaseFragment implements  BaiduMap.OnMarkerClick
 
     @Override
     public boolean onMarkerClick(Marker marker) {
-        Bundle bundle = marker.getExtraInfo();
-        Intent intent = new Intent();
-        intent.putExtras(bundle);
-        intent.setClass(getActivity(), ShipInfoActivity.class);
-        startActivity(intent);
+        /**
+         * 判断是否登陆
+         */
+        if (user.getBoolean("hasLogin", false)) {
+            Bundle bundle = marker.getExtraInfo();
+            Intent intent = new Intent();
+            intent.putExtras(bundle);
+            intent.setClass(getActivity(), ShipInfoActivity.class);
+            startActivity(intent);
+        } else {
+            Intent intent = new Intent(getActivity(), LoginActivity.class);
+            MainActivity activity = (MainActivity) getActivity();
+            startActivity(intent);
+            activity.overridePendingTransition(R.anim.push_up_in_no_alpha, R.anim.stay);
+        }
         return false;
 
-//        if (marker.equals(comMarker)) {
-//            if (infoWindowIsShow) {
-//                baiduMap.hideInfoWindow();
-//            } else {
-//                baiduMap.showInfoWindow(mInfoWindow);
-//            }
-//            infoWindowIsShow = !infoWindowIsShow;
-//        }
-//        return false;
     }
 
     private void initLoginBroadcast() {

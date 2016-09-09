@@ -51,10 +51,8 @@ public class ShipActivity extends Activity {
                 R.anim.push_right_out_no_alpha);
     }
 
-    private NavigationView navigationView;
-
     private void initNavigationView() {
-        navigationView = (NavigationView) findViewById(R.id.nav_main_in_ship_activity);
+        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_main_in_ship_activity);
         navigationView.setTitle("我的船只");
         navigationView.setBackView(R.drawable.icon_back_button);
         navigationView.setRightView(R.drawable.icon_search);
