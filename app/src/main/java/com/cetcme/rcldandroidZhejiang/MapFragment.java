@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.annotation.Nullable;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -26,6 +27,7 @@ import com.baidu.mapapi.map.MapView;
 import com.baidu.mapapi.map.Marker;
 import com.baidu.mapapi.map.MarkerOptions;
 import com.baidu.mapapi.map.OverlayOptions;
+import com.baidu.mapapi.map.TextureMapView;
 import com.baidu.mapapi.model.LatLng;
 
 import com.cetcme.rcldandroidZhejiang.IconPager.BaseFragment;
@@ -41,7 +43,7 @@ import java.util.List;
 public class MapFragment extends BaseFragment implements  BaiduMap.OnMarkerClickListener {
 
     private View view;
-    private MapView mapView;
+    private TextureMapView mapView;
     private BaiduMap baiduMap;
 
     private SharedPreferences user;
@@ -122,7 +124,7 @@ public class MapFragment extends BaseFragment implements  BaiduMap.OnMarkerClick
                 .overlookingGesturesEnabled(false)
                 .rotateGesturesEnabled(false)
                 .zoomControlsEnabled(true);
-        mapView = new MapView(this.getActivity(), baiduMapOptions);
+        mapView = new TextureMapView(this.getActivity(), baiduMapOptions);
         LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT);
         mapView.setLayoutParams(params);
 
@@ -203,7 +205,7 @@ public class MapFragment extends BaseFragment implements  BaiduMap.OnMarkerClick
                 .build();
         MapStatusUpdate mapStatusUpdate = MapStatusUpdateFactory
                 .newMapStatus(mapStatus);
-        baiduMap.setMapStatus(mapStatusUpdate);
+        baiduMap.animateMapStatus(mapStatusUpdate);
     }
 
     @Override
