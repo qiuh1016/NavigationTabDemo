@@ -166,11 +166,11 @@ public class UpdateAppManager {
 
                     if (code == 0) {
 //                        JSONObject apkVersion = response.getJSONObject("ApkVersion");
-                        serverVersionCode = response.getInt("versionCode");
+                        serverVersionCode = response.getInt("verCode");
                         serverVersionName = response.getString("version");
                         upgradeTime = response.getString("date");
 //                        upgradeTime = getFormatTime(upgradeTime);
-                        newVersionRemark = response.getString("content");
+                        newVersionRemark = response.getString("content").replace("\\n", "\n");
                         forceToUpdate = response.getBoolean("force_update");
 
                         //保存服务器版本 和 版本说明
@@ -215,8 +215,6 @@ public class UpdateAppManager {
             }
         });
 
-
-
     }
 
     /**
@@ -230,7 +228,7 @@ public class UpdateAppManager {
             message = "检测到新版本发布(v"+ serverVersionName + ", 发布时间: " + upgradeTime + ")，请您更新！";
         }
 
-        message += "\n" + "新版本内容:\n"+ newVersionRemark;
+        message += "\n\n" + "更新内容:\n"+ newVersionRemark;
 
         CustomDialog.Builder builder = new CustomDialog.Builder(context);
         builder.setTitle("软件版本更新");
