@@ -43,13 +43,16 @@
                 android:textColor="@color/main_color"
                 android:gravity="center"/>
 
-            <ImageView
+            <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:src="@drawable/app_title"
-                android:layout_marginLeft="40dp"
-                android:layout_marginRight="40dp"
-                android:layout_marginTop="20dp"/>
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="浙渔通"
+                android:id="@+id/textView3"
+                android:gravity="center"
+                android:textSize="45dp"
+                android:textColor="@color/main_color" />
+
             <Space
                 android:layout_width="match_parent"
                 android:layout_height="20dp" />

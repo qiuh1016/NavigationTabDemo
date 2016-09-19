@@ -53,12 +53,12 @@ public class HomepageFragment extends BaseFragment {
     private List<Ship> ships;
 
     private int[] gridIcon = {
-            R.drawable.homepage_service,
-            R.drawable.homepage_record,
-            R.drawable.homepage_visa,
-            R.drawable.homepage_low,
-            R.drawable.homepage_process,
-            R.drawable.homepage_todo
+            R.drawable.homepage_service_2,
+            R.drawable.homepage_record_2,
+            R.drawable.homepage_visa_2,
+            R.drawable.homepage_law_2,
+            R.drawable.homepage_process_2,
+            R.drawable.homepage_todo_2
     };
 
     private String[] gridName;

@@ -3,7 +3,7 @@
     <color name="tab_text_normal">#696969</color>
     <!--<color name="tab_text_selected">#71a44e</color>-->
 
-    <color name="tab_text_selected">#157CFB</color>
+    <color name="tab_text_selected">#059cd4</color>
 
     <color name="border_clo">#ccc</color>
     <color name="text_clo">#333333</color>
@@ -11,9 +11,9 @@
     <color name="blue">#419DE4</color>
     <!--<color name="main_color">#5CB85C</color>-->
     <!--<color name="light_green">#d3f7d3</color>-->
-    <color name="main_color">#157CFB</color>
-    <!-- 深蓝色3F51B5-->
-    <color name="main_color_light">#ddedfd</color>
+    <color name="main_color">#059cd4</color>
+    <!-- 深蓝色 157CFB // 浅蓝色 ddedfd-->
+    <color name="main_color_light">#E8F7FD</color>
     <color name="numberTextInListCell">#fa2222</color>
 
     <color name="logout_button_color">#fa2222</color><!--红色 -->
