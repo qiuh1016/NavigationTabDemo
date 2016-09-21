@@ -66,79 +66,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e279e6be-7f14-4cf0-a014-66e978e760d8" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/jniLibs/arm64-v8a/liblocSDK7.so" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/jniLibs/armeabi-v7a/liblocSDK7.so" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/jniLibs/armeabi/liblocSDK7.so" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/jniLibs/x86/liblocSDK7.so" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/jniLibs/x86_64/liblocSDK7.so" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/PushSDK/build/intermediates/incremental/mergeDebugAndroidTestResources/compile-file-map.properties" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/PushSDK/build/intermediates/incremental/packageDebugResources/compile-file-map.properties" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/PushSDK/build/intermediates/incremental/packageReleaseResources/compile-file-map.properties" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/PushSDK/build/intermediates/bundles/debug/jni/arm64-v8a/libcocklogic.so" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/PushSDK/build/intermediates/bundles/debug/jni/arm64-v8a/libtnet-2.1.20.1-agoo.so" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/PushSDK/build/intermediates/bundles/debug/jni/armeabi-v7a/libcocklogic.so" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/PushSDK/build/intermediates/bundles/debug/jni/armeabi-v7a/libtnet-2.1.20.1-agoo.so" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/PushSDK/build/intermediates/bundles/debug/jni/armeabi/libcocklogic.so" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/PushSDK/build/intermediates/bundles/debug/jni/armeabi/libtnet-2.1.20.1-agoo.so" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/PushSDK/build/intermediates/bundles/debug/jni/mips/libcocklogic.so" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/PushSDK/build/intermediates/bundles/debug/jni/mips/libtnet-2.1.20.1-agoo.so" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/PushSDK/build/intermediates/bundles/debug/jni/mips64/libcocklogic.so" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/PushSDK/build/intermediates/bundles/debug/jni/mips64/libtnet-2.1.20.1-agoo.so" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/PushSDK/build/intermediates/bundles/debug/jni/x86/libcocklogic.so" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/PushSDK/build/intermediates/bundles/debug/jni/x86/libtnet-2.1.20.1-agoo.so" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/PushSDK/build/intermediates/bundles/debug/jni/x86_64/libcocklogic.so" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/PushSDK/build/intermediates/bundles/debug/jni/x86_64/libtnet-2.1.20.1-agoo.so" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/PushSDK/build/intermediates/classes/androidTest/debug/com/umeng/message/lib/test/BuildConfig.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/PushSDK/build/intermediates/classes/debug/com/umeng/message/lib/BuildConfig.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/PushSDK/build/intermediates/incremental-safeguard/androidTest/debug/tag.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/PushSDK/build/intermediates/incremental-safeguard/debug/tag.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/PushSDK/build/intermediates/incremental/mergeDebugAndroidTestAssets/merger.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/PushSDK/build/intermediates/incremental/mergeDebugAndroidTestShaders/merger.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/PushSDK/build/intermediates/incremental/mergeDebugJniLibFolders/merger.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/PushSDK/build/intermediates/jniLibs/debug/arm64-v8a/libcocklogic.so" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/PushSDK/build/intermediates/jniLibs/debug/arm64-v8a/libtnet-2.1.20.1-agoo.so" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/PushSDK/build/intermediates/jniLibs/debug/armeabi-v7a/libcocklogic.so" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/PushSDK/build/intermediates/jniLibs/debug/armeabi-v7a/libtnet-2.1.20.1-agoo.so" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/PushSDK/build/intermediates/jniLibs/debug/armeabi/libcocklogic.so" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/PushSDK/build/intermediates/jniLibs/debug/armeabi/libtnet-2.1.20.1-agoo.so" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/PushSDK/build/intermediates/jniLibs/debug/com.umeng.message_v2.8.1.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/PushSDK/build/intermediates/jniLibs/debug/mips/libcocklogic.so" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/PushSDK/build/intermediates/jniLibs/debug/mips/libtnet-2.1.20.1-agoo.so" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/PushSDK/build/intermediates/jniLibs/debug/mips64/libcocklogic.so" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/PushSDK/build/intermediates/jniLibs/debug/mips64/libtnet-2.1.20.1-agoo.so" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/PushSDK/build/intermediates/jniLibs/debug/x86/libcocklogic.so" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/PushSDK/build/intermediates/jniLibs/debug/x86/libtnet-2.1.20.1-agoo.so" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/PushSDK/build/intermediates/jniLibs/debug/x86_64/libcocklogic.so" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/PushSDK/build/intermediates/jniLibs/debug/x86_64/libtnet-2.1.20.1-agoo.so" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/PushSDK/build/intermediates/transforms/mergeJavaRes/debug/jars/2/3/main.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/PushSDK/build/intermediates/transforms/mergeJavaRes/release/jars/2/3/main.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/PushSDK/build/intermediates/transforms/mergeJniLibs/debug/folders/2000/3/main/lib/arm64-v8a/libcocklogic.so" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/PushSDK/build/intermediates/transforms/mergeJniLibs/debug/folders/2000/3/main/lib/arm64-v8a/libtnet-2.1.20.1-agoo.so" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/PushSDK/build/intermediates/transforms/mergeJniLibs/debug/folders/2000/3/main/lib/armeabi-v7a/libcocklogic.so" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/PushSDK/build/intermediates/transforms/mergeJniLibs/debug/folders/2000/3/main/lib/armeabi-v7a/libtnet-2.1.20.1-agoo.so" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/PushSDK/build/intermediates/transforms/mergeJniLibs/debug/folders/2000/3/main/lib/armeabi/libcocklogic.so" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/PushSDK/build/intermediates/transforms/mergeJniLibs/debug/folders/2000/3/main/lib/armeabi/libtnet-2.1.20.1-agoo.so" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/PushSDK/build/intermediates/transforms/mergeJniLibs/debug/folders/2000/3/main/lib/mips/libcocklogic.so" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/PushSDK/build/intermediates/transforms/mergeJniLibs/debug/folders/2000/3/main/lib/mips/libtnet-2.1.20.1-agoo.so" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/PushSDK/build/intermediates/transforms/mergeJniLibs/debug/folders/2000/3/main/lib/mips64/libcocklogic.so" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/PushSDK/build/intermediates/transforms/mergeJniLibs/debug/folders/2000/3/main/lib/mips64/libtnet-2.1.20.1-agoo.so" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/PushSDK/build/intermediates/transforms/mergeJniLibs/debug/folders/2000/3/main/lib/x86/libcocklogic.so" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/PushSDK/build/intermediates/transforms/mergeJniLibs/debug/folders/2000/3/main/lib/x86/libtnet-2.1.20.1-agoo.so" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/PushSDK/build/intermediates/transforms/mergeJniLibs/debug/folders/2000/3/main/lib/x86_64/libcocklogic.so" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/PushSDK/build/intermediates/transforms/mergeJniLibs/debug/folders/2000/3/main/lib/x86_64/libtnet-2.1.20.1-agoo.so" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/libs/baidumapapi_base_v4_0_0.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/libs/baidumapapi_cloud_v4_0_0.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/libs/baidumapapi_radar_v4_0_0.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/libs/baidumapapi_search_v4_0_0.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/libs/baidumapapi_util_v4_0_0.jar" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build.gradle" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/generated/source/buildConfig/androidTest/debug/com/handmark/pulltorefresh/library/test/BuildConfig.java" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/generated/source/buildConfig/debug/com/handmark/pulltorefresh/library/BuildConfig.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/generated/source/buildConfig/release/com/handmark/pulltorefresh/library/BuildConfig.java" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/generated/source/r/androidTest/debug/com/handmark/pulltorefresh/library/R.java" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/generated/source/r/androidTest/debug/com/handmark/pulltorefresh/library/test/R.java" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/generated/source/r/debug/com/handmark/pulltorefresh/library/R.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/generated/source/r/release/com/handmark/pulltorefresh/library/R.java" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/blame/res/androidTest/debug/multi/values-ar.json" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/blame/res/androidTest/debug/multi/values-cs.json" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/blame/res/androidTest/debug/multi/values-de.json" afterPath="" />
@@ -203,184 +136,9 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/bundles/debug/res/values-ru/values-ru.xml" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/bundles/debug/res/values-zh/values-zh.xml" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/bundles/debug/res/values/values.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/bundles/release/AndroidManifest.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/bundles/release/R.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/bundles/release/aapt/AndroidManifest.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/bundles/release/classes.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/bundles/release/res/anim/slide_in_from_bottom.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/bundles/release/res/anim/slide_in_from_top.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/bundles/release/res/anim/slide_out_to_bottom.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/bundles/release/res/anim/slide_out_to_top.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/bundles/release/res/drawable-hdpi-v4/default_ptr_flip.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/bundles/release/res/drawable-hdpi-v4/default_ptr_rotate.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/bundles/release/res/drawable-hdpi-v4/indicator_arrow.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/bundles/release/res/drawable-mdpi-v4/default_ptr_flip.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/bundles/release/res/drawable-mdpi-v4/default_ptr_rotate.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/bundles/release/res/drawable-mdpi-v4/indicator_arrow.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/bundles/release/res/drawable-xhdpi-v4/default_ptr_flip.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/bundles/release/res/drawable-xhdpi-v4/default_ptr_rotate.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/bundles/release/res/drawable-xhdpi-v4/indicator_arrow.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/bundles/release/res/drawable/indicator_bg_bottom.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/bundles/release/res/drawable/indicator_bg_top.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/bundles/release/res/layout/pull_to_refresh_header_horizontal.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/bundles/release/res/layout/pull_to_refresh_header_vertical.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/bundles/release/res/values/values.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/classes/androidTest/debug/com/handmark/pulltorefresh/library/R$anim.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/classes/androidTest/debug/com/handmark/pulltorefresh/library/R$attr.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/classes/androidTest/debug/com/handmark/pulltorefresh/library/R$dimen.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/classes/androidTest/debug/com/handmark/pulltorefresh/library/R$drawable.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/classes/androidTest/debug/com/handmark/pulltorefresh/library/R$id.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/classes/androidTest/debug/com/handmark/pulltorefresh/library/R$layout.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/classes/androidTest/debug/com/handmark/pulltorefresh/library/R$string.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/classes/androidTest/debug/com/handmark/pulltorefresh/library/R$styleable.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/classes/androidTest/debug/com/handmark/pulltorefresh/library/R.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/classes/androidTest/debug/com/handmark/pulltorefresh/library/test/BuildConfig.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/classes/androidTest/debug/com/handmark/pulltorefresh/library/test/R$anim.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/classes/androidTest/debug/com/handmark/pulltorefresh/library/test/R$attr.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/classes/androidTest/debug/com/handmark/pulltorefresh/library/test/R$dimen.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/classes/androidTest/debug/com/handmark/pulltorefresh/library/test/R$drawable.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/classes/androidTest/debug/com/handmark/pulltorefresh/library/test/R$id.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/classes/androidTest/debug/com/handmark/pulltorefresh/library/test/R$layout.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/classes/androidTest/debug/com/handmark/pulltorefresh/library/test/R$string.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/classes/androidTest/debug/com/handmark/pulltorefresh/library/test/R$styleable.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/classes/androidTest/debug/com/handmark/pulltorefresh/library/test/R.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/classes/debug/com/handmark/pulltorefresh/library/BuildConfig.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/classes/debug/com/handmark/pulltorefresh/library/ILoadingLayout.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/classes/debug/com/handmark/pulltorefresh/library/IPullToRefresh.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/classes/debug/com/handmark/pulltorefresh/library/LoadingLayoutProxy.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/classes/debug/com/handmark/pulltorefresh/library/OverscrollHelper$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/classes/debug/com/handmark/pulltorefresh/library/OverscrollHelper.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/classes/debug/com/handmark/pulltorefresh/library/PullToRefreshAdapterViewBase$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/classes/debug/com/handmark/pulltorefresh/library/PullToRefreshAdapterViewBase.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/classes/debug/com/handmark/pulltorefresh/library/PullToRefreshBase$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/classes/debug/com/handmark/pulltorefresh/library/PullToRefreshBase$2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/classes/debug/com/handmark/pulltorefresh/library/PullToRefreshBase$3.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/classes/debug/com/handmark/pulltorefresh/library/PullToRefreshBase$4.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/classes/debug/com/handmark/pulltorefresh/library/PullToRefreshBase$AnimationStyle.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/classes/debug/com/handmark/pulltorefresh/library/PullToRefreshBase$Mode.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/classes/debug/com/handmark/pulltorefresh/library/PullToRefreshBase$OnLastItemVisibleListener.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/classes/debug/com/handmark/pulltorefresh/library/PullToRefreshBase$OnPullEventListener.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/classes/debug/com/handmark/pulltorefresh/library/PullToRefreshBase$OnRefreshListener.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/classes/debug/com/handmark/pulltorefresh/library/PullToRefreshBase$OnRefreshListener2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/classes/debug/com/handmark/pulltorefresh/library/PullToRefreshBase$OnSmoothScrollFinishedListener.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/classes/debug/com/handmark/pulltorefresh/library/PullToRefreshBase$Orientation.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/classes/debug/com/handmark/pulltorefresh/library/PullToRefreshBase$SmoothScrollRunnable.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/classes/debug/com/handmark/pulltorefresh/library/PullToRefreshBase$State.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/classes/debug/com/handmark/pulltorefresh/library/PullToRefreshBase.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/classes/debug/com/handmark/pulltorefresh/library/PullToRefreshExpandableListView$InternalExpandableListView.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/classes/debug/com/handmark/pulltorefresh/library/PullToRefreshExpandableListView$InternalExpandableListViewSDK9.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/classes/debug/com/handmark/pulltorefresh/library/PullToRefreshExpandableListView.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/classes/debug/com/handmark/pulltorefresh/library/PullToRefreshGridView$InternalGridView.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/classes/debug/com/handmark/pulltorefresh/library/PullToRefreshGridView$InternalGridViewSDK9.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/classes/debug/com/handmark/pulltorefresh/library/PullToRefreshGridView.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/classes/debug/com/handmark/pulltorefresh/library/PullToRefreshHorizontalScrollView$InternalHorizontalScrollViewSDK9.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/classes/debug/com/handmark/pulltorefresh/library/PullToRefreshHorizontalScrollView.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/classes/debug/com/handmark/pulltorefresh/library/PullToRefreshListView$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/classes/debug/com/handmark/pulltorefresh/library/PullToRefreshListView$InternalListView.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/classes/debug/com/handmark/pulltorefresh/library/PullToRefreshListView$InternalListViewSDK9.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/classes/debug/com/handmark/pulltorefresh/library/PullToRefreshListView.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/classes/debug/com/handmark/pulltorefresh/library/PullToRefreshScrollView$InternalScrollViewSDK9.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/classes/debug/com/handmark/pulltorefresh/library/PullToRefreshScrollView.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/classes/debug/com/handmark/pulltorefresh/library/PullToRefreshWebView$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/classes/debug/com/handmark/pulltorefresh/library/PullToRefreshWebView$2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/classes/debug/com/handmark/pulltorefresh/library/PullToRefreshWebView$InternalWebViewSDK9.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/classes/debug/com/handmark/pulltorefresh/library/PullToRefreshWebView.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/classes/debug/com/handmark/pulltorefresh/library/R$anim.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/classes/debug/com/handmark/pulltorefresh/library/R$attr.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/classes/debug/com/handmark/pulltorefresh/library/R$dimen.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/classes/debug/com/handmark/pulltorefresh/library/R$drawable.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/classes/debug/com/handmark/pulltorefresh/library/R$id.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/classes/debug/com/handmark/pulltorefresh/library/R$layout.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/classes/debug/com/handmark/pulltorefresh/library/R$string.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/classes/debug/com/handmark/pulltorefresh/library/R$styleable.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/classes/debug/com/handmark/pulltorefresh/library/R.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/classes/debug/com/handmark/pulltorefresh/library/extras/PullToRefreshWebView2$JsValueCallback.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/classes/debug/com/handmark/pulltorefresh/library/extras/PullToRefreshWebView2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/classes/debug/com/handmark/pulltorefresh/library/extras/SoundPullEventListener.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/classes/debug/com/handmark/pulltorefresh/library/internal/EmptyViewMethodAccessor.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/classes/debug/com/handmark/pulltorefresh/library/internal/FlipLoadingLayout$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/classes/debug/com/handmark/pulltorefresh/library/internal/FlipLoadingLayout.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/classes/debug/com/handmark/pulltorefresh/library/internal/IndicatorLayout$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/classes/debug/com/handmark/pulltorefresh/library/internal/IndicatorLayout.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/classes/debug/com/handmark/pulltorefresh/library/internal/LoadingLayout$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/classes/debug/com/handmark/pulltorefresh/library/internal/LoadingLayout.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/classes/debug/com/handmark/pulltorefresh/library/internal/RotateLoadingLayout.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/classes/debug/com/handmark/pulltorefresh/library/internal/Utils.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/classes/debug/com/handmark/pulltorefresh/library/internal/ViewCompat$SDK11.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/classes/debug/com/handmark/pulltorefresh/library/internal/ViewCompat$SDK16.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/classes/debug/com/handmark/pulltorefresh/library/internal/ViewCompat.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/classes/release/com/handmark/pulltorefresh/library/BuildConfig.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/classes/release/com/handmark/pulltorefresh/library/ILoadingLayout.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/classes/release/com/handmark/pulltorefresh/library/IPullToRefresh.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/classes/release/com/handmark/pulltorefresh/library/LoadingLayoutProxy.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/classes/release/com/handmark/pulltorefresh/library/OverscrollHelper$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/classes/release/com/handmark/pulltorefresh/library/OverscrollHelper.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/classes/release/com/handmark/pulltorefresh/library/PullToRefreshAdapterViewBase$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/classes/release/com/handmark/pulltorefresh/library/PullToRefreshAdapterViewBase.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/classes/release/com/handmark/pulltorefresh/library/PullToRefreshBase$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/classes/release/com/handmark/pulltorefresh/library/PullToRefreshBase$2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/classes/release/com/handmark/pulltorefresh/library/PullToRefreshBase$3.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/classes/release/com/handmark/pulltorefresh/library/PullToRefreshBase$4.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/classes/release/com/handmark/pulltorefresh/library/PullToRefreshBase$AnimationStyle.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/classes/release/com/handmark/pulltorefresh/library/PullToRefreshBase$Mode.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/classes/release/com/handmark/pulltorefresh/library/PullToRefreshBase$OnLastItemVisibleListener.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/classes/release/com/handmark/pulltorefresh/library/PullToRefreshBase$OnPullEventListener.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/classes/release/com/handmark/pulltorefresh/library/PullToRefreshBase$OnRefreshListener.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/classes/release/com/handmark/pulltorefresh/library/PullToRefreshBase$OnRefreshListener2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/classes/release/com/handmark/pulltorefresh/library/PullToRefreshBase$OnSmoothScrollFinishedListener.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/classes/release/com/handmark/pulltorefresh/library/PullToRefreshBase$Orientation.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/classes/release/com/handmark/pulltorefresh/library/PullToRefreshBase$SmoothScrollRunnable.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/classes/release/com/handmark/pulltorefresh/library/PullToRefreshBase$State.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/classes/release/com/handmark/pulltorefresh/library/PullToRefreshBase.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/classes/release/com/handmark/pulltorefresh/library/PullToRefreshExpandableListView$InternalExpandableListView.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/classes/release/com/handmark/pulltorefresh/library/PullToRefreshExpandableListView$InternalExpandableListViewSDK9.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/classes/release/com/handmark/pulltorefresh/library/PullToRefreshExpandableListView.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/classes/release/com/handmark/pulltorefresh/library/PullToRefreshGridView$InternalGridView.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/classes/release/com/handmark/pulltorefresh/library/PullToRefreshGridView$InternalGridViewSDK9.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/classes/release/com/handmark/pulltorefresh/library/PullToRefreshGridView.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/classes/release/com/handmark/pulltorefresh/library/PullToRefreshHorizontalScrollView$InternalHorizontalScrollViewSDK9.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/classes/release/com/handmark/pulltorefresh/library/PullToRefreshHorizontalScrollView.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/classes/release/com/handmark/pulltorefresh/library/PullToRefreshListView$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/classes/release/com/handmark/pulltorefresh/library/PullToRefreshListView$InternalListView.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/classes/release/com/handmark/pulltorefresh/library/PullToRefreshListView$InternalListViewSDK9.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/classes/release/com/handmark/pulltorefresh/library/PullToRefreshListView.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/classes/release/com/handmark/pulltorefresh/library/PullToRefreshScrollView$InternalScrollViewSDK9.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/classes/release/com/handmark/pulltorefresh/library/PullToRefreshScrollView.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/classes/release/com/handmark/pulltorefresh/library/PullToRefreshWebView$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/classes/release/com/handmark/pulltorefresh/library/PullToRefreshWebView$2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/classes/release/com/handmark/pulltorefresh/library/PullToRefreshWebView$InternalWebViewSDK9.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/classes/release/com/handmark/pulltorefresh/library/PullToRefreshWebView.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/classes/release/com/handmark/pulltorefresh/library/R$anim.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/classes/release/com/handmark/pulltorefresh/library/R$attr.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/classes/release/com/handmark/pulltorefresh/library/R$dimen.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/classes/release/com/handmark/pulltorefresh/library/R$drawable.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/classes/release/com/handmark/pulltorefresh/library/R$id.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/classes/release/com/handmark/pulltorefresh/library/R$layout.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/classes/release/com/handmark/pulltorefresh/library/R$string.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/classes/release/com/handmark/pulltorefresh/library/R$styleable.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/classes/release/com/handmark/pulltorefresh/library/R.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/classes/release/com/handmark/pulltorefresh/library/extras/PullToRefreshWebView2$JsValueCallback.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/classes/release/com/handmark/pulltorefresh/library/extras/PullToRefreshWebView2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/classes/release/com/handmark/pulltorefresh/library/extras/SoundPullEventListener.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/classes/release/com/handmark/pulltorefresh/library/internal/EmptyViewMethodAccessor.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/classes/release/com/handmark/pulltorefresh/library/internal/FlipLoadingLayout$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/classes/release/com/handmark/pulltorefresh/library/internal/FlipLoadingLayout.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/classes/release/com/handmark/pulltorefresh/library/internal/IndicatorLayout$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/classes/release/com/handmark/pulltorefresh/library/internal/IndicatorLayout.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/classes/release/com/handmark/pulltorefresh/library/internal/LoadingLayout$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/classes/release/com/handmark/pulltorefresh/library/internal/LoadingLayout.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/classes/release/com/handmark/pulltorefresh/library/internal/RotateLoadingLayout.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/classes/release/com/handmark/pulltorefresh/library/internal/Utils.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/classes/release/com/handmark/pulltorefresh/library/internal/ViewCompat$SDK11.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/classes/release/com/handmark/pulltorefresh/library/internal/ViewCompat$SDK16.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/classes/release/com/handmark/pulltorefresh/library/internal/ViewCompat.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/incremental-safeguard/androidTest/debug/tag.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/incremental-safeguard/debug/tag.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/incremental-safeguard/release/tag.txt" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/incremental/compileDebugAidl/dependency.store" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/incremental/compileDebugAndroidTestAidl/dependency.store" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/incremental/compileReleaseAidl/dependency.store" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/incremental/mergeDebugAndroidTestAssets/merger.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/incremental/mergeDebugAndroidTestResources/compile-file-map.properties" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/incremental/mergeDebugAndroidTestResources/merged.dir/values-ar/values-ar.xml" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/incremental/mergeDebugAndroidTestResources/merged.dir/values-cs/values-cs.xml" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/incremental/mergeDebugAndroidTestResources/merged.dir/values-de/values-de.xml" afterPath="" />
@@ -399,16 +157,31 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/incremental/mergeDebugAndroidTestResources/merged.dir/values-ro/values-ro.xml" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/incremental/mergeDebugAndroidTestResources/merged.dir/values-ru/values-ru.xml" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/incremental/mergeDebugAndroidTestResources/merged.dir/values-zh/values-zh.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/incremental/mergeDebugAndroidTestResources/merged.dir/values/values.xml" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/incremental/mergeDebugAndroidTestResources/merger.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/incremental/mergeDebugAndroidTestShaders/merger.xml" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/incremental/mergeDebugAssets/merger.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/incremental/mergeDebugJniLibFolders/merger.xml" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/incremental/mergeDebugShaders/merger.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/incremental/mergeReleaseAssets/merger.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/incremental/mergeReleaseJniLibFolders/merger.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/incremental/mergeReleaseShaders/merger.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/incremental/packageDebugResources/compile-file-map.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/incremental/packageDebugResources/merged.dir/values-ar/values-ar.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/incremental/packageDebugResources/merged.dir/values-cs/values-cs.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/incremental/packageDebugResources/merged.dir/values-de/values-de.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/incremental/packageDebugResources/merged.dir/values-es/values-es.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/incremental/packageDebugResources/merged.dir/values-fi/values-fi.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/incremental/packageDebugResources/merged.dir/values-fr/values-fr.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/incremental/packageDebugResources/merged.dir/values-he/values-he.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/incremental/packageDebugResources/merged.dir/values-it/values-it.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/incremental/packageDebugResources/merged.dir/values-iw/values-iw.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/incremental/packageDebugResources/merged.dir/values-ja/values-ja.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/incremental/packageDebugResources/merged.dir/values-ko/values-ko.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/incremental/packageDebugResources/merged.dir/values-nl/values-nl.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/incremental/packageDebugResources/merged.dir/values-pl/values-pl.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/incremental/packageDebugResources/merged.dir/values-pt-rBR/values-pt-rBR.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/incremental/packageDebugResources/merged.dir/values-pt/values-pt.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/incremental/packageDebugResources/merged.dir/values-ro/values-ro.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/incremental/packageDebugResources/merged.dir/values-ru/values-ru.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/incremental/packageDebugResources/merged.dir/values-zh/values-zh.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/incremental/packageDebugResources/merged.dir/values/values.xml" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/incremental/packageDebugResources/merger.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/incremental/packageReleaseResources/merger.xml" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/manifest/androidTest/debug/AndroidManifest.xml" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/manifests/aapt/debug/AndroidManifest.xml" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/res/merged/androidTest/debug/anim/slide_in_from_bottom.xml" afterPath="" />
@@ -450,7 +223,6 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/res/resources-debug-androidTest.ap_" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/symbols/androidTest/debug/R.txt" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/outputs/aar/pullToRefresh-debug.aar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/outputs/aar/pullToRefresh-release.aar" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/src/main/AndroidManifest.xml" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/src/main/java/com/handmark/pulltorefresh/library/ILoadingLayout.java" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/src/main/java/com/handmark/pulltorefresh/library/IPullToRefresh.java" afterPath="" />
@@ -512,51 +284,13 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/src/main/res/values/dimens.xml" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/src/main/res/values/ids.xml" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/src/main/res/values/pull_refresh_strings.xml" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/PushSDK/build/intermediates/bundles/debug/aapt/AndroidManifest.xml" afterPath="$PROJECT_DIR$/PushSDK/build/intermediates/manifests/aapt/debug/AndroidManifest.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/PushSDK/build/intermediates/bundles/release/aapt/AndroidManifest.xml" afterPath="$PROJECT_DIR$/PushSDK/build/intermediates/manifests/aapt/release/AndroidManifest.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/libs/baidumapapi_map_v4_0_0.jar" afterPath="$PROJECT_DIR$/app/libs/BaiduLBS_Android.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/jniLibs/arm64-v8a/libBaiduMapSDK_base_v4_0_0.so" afterPath="$PROJECT_DIR$/app/src/main/jniLibs/arm64-v8a/libBaiduMapSDK_base_v4_0_0.so" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/jniLibs/arm64-v8a/libBaiduMapSDK_cloud_v4_0_0.so" afterPath="$PROJECT_DIR$/app/src/main/jniLibs/arm64-v8a/libBaiduMapSDK_cloud_v4_0_0.so" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/jniLibs/arm64-v8a/libBaiduMapSDK_map_v4_0_0.so" afterPath="$PROJECT_DIR$/app/src/main/jniLibs/arm64-v8a/libBaiduMapSDK_map_v4_0_0.so" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/jniLibs/arm64-v8a/libBaiduMapSDK_radar_v4_0_0.so" afterPath="$PROJECT_DIR$/app/src/main/jniLibs/arm64-v8a/libBaiduMapSDK_radar_v4_0_0.so" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/jniLibs/arm64-v8a/libBaiduMapSDK_search_v4_0_0.so" afterPath="$PROJECT_DIR$/app/src/main/jniLibs/arm64-v8a/libBaiduMapSDK_search_v4_0_0.so" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/jniLibs/arm64-v8a/libBaiduMapSDK_util_v4_0_0.so" afterPath="$PROJECT_DIR$/app/src/main/jniLibs/arm64-v8a/libBaiduMapSDK_util_v4_0_0.so" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/jniLibs/armeabi-v7a/libBaiduMapSDK_base_v4_0_0.so" afterPath="$PROJECT_DIR$/app/src/main/jniLibs/armeabi-v7a/libBaiduMapSDK_base_v4_0_0.so" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/jniLibs/armeabi-v7a/libBaiduMapSDK_cloud_v4_0_0.so" afterPath="$PROJECT_DIR$/app/src/main/jniLibs/armeabi-v7a/libBaiduMapSDK_cloud_v4_0_0.so" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/jniLibs/armeabi-v7a/libBaiduMapSDK_map_v4_0_0.so" afterPath="$PROJECT_DIR$/app/src/main/jniLibs/armeabi-v7a/libBaiduMapSDK_map_v4_0_0.so" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/jniLibs/armeabi-v7a/libBaiduMapSDK_radar_v4_0_0.so" afterPath="$PROJECT_DIR$/app/src/main/jniLibs/armeabi-v7a/libBaiduMapSDK_radar_v4_0_0.so" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/jniLibs/armeabi-v7a/libBaiduMapSDK_search_v4_0_0.so" afterPath="$PROJECT_DIR$/app/src/main/jniLibs/armeabi-v7a/libBaiduMapSDK_search_v4_0_0.so" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/jniLibs/armeabi-v7a/libBaiduMapSDK_util_v4_0_0.so" afterPath="$PROJECT_DIR$/app/src/main/jniLibs/armeabi-v7a/libBaiduMapSDK_util_v4_0_0.so" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/jniLibs/armeabi/libBaiduMapSDK_base_v4_0_0.so" afterPath="$PROJECT_DIR$/app/src/main/jniLibs/armeabi/libBaiduMapSDK_base_v4_0_0.so" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/jniLibs/armeabi/libBaiduMapSDK_cloud_v4_0_0.so" afterPath="$PROJECT_DIR$/app/src/main/jniLibs/armeabi/libBaiduMapSDK_cloud_v4_0_0.so" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/jniLibs/armeabi/libBaiduMapSDK_map_v4_0_0.so" afterPath="$PROJECT_DIR$/app/src/main/jniLibs/armeabi/libBaiduMapSDK_map_v4_0_0.so" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/jniLibs/armeabi/libBaiduMapSDK_radar_v4_0_0.so" afterPath="$PROJECT_DIR$/app/src/main/jniLibs/armeabi/libBaiduMapSDK_radar_v4_0_0.so" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/jniLibs/armeabi/libBaiduMapSDK_search_v4_0_0.so" afterPath="$PROJECT_DIR$/app/src/main/jniLibs/armeabi/libBaiduMapSDK_search_v4_0_0.so" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/jniLibs/armeabi/libBaiduMapSDK_util_v4_0_0.so" afterPath="$PROJECT_DIR$/app/src/main/jniLibs/armeabi/libBaiduMapSDK_util_v4_0_0.so" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/jniLibs/x86/libBaiduMapSDK_base_v4_0_0.so" afterPath="$PROJECT_DIR$/app/src/main/jniLibs/x86/libBaiduMapSDK_base_v4_0_0.so" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/jniLibs/x86/libBaiduMapSDK_cloud_v4_0_0.so" afterPath="$PROJECT_DIR$/app/src/main/jniLibs/x86/libBaiduMapSDK_cloud_v4_0_0.so" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/jniLibs/x86/libBaiduMapSDK_map_v4_0_0.so" afterPath="$PROJECT_DIR$/app/src/main/jniLibs/x86/libBaiduMapSDK_map_v4_0_0.so" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/jniLibs/x86/libBaiduMapSDK_radar_v4_0_0.so" afterPath="$PROJECT_DIR$/app/src/main/jniLibs/x86/libBaiduMapSDK_radar_v4_0_0.so" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/jniLibs/x86/libBaiduMapSDK_search_v4_0_0.so" afterPath="$PROJECT_DIR$/app/src/main/jniLibs/x86/libBaiduMapSDK_search_v4_0_0.so" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/jniLibs/x86/libBaiduMapSDK_util_v4_0_0.so" afterPath="$PROJECT_DIR$/app/src/main/jniLibs/x86/libBaiduMapSDK_util_v4_0_0.so" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/jniLibs/x86_64/libBaiduMapSDK_base_v4_0_0.so" afterPath="$PROJECT_DIR$/app/src/main/jniLibs/x86_64/libBaiduMapSDK_base_v4_0_0.so" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/jniLibs/x86_64/libBaiduMapSDK_cloud_v4_0_0.so" afterPath="$PROJECT_DIR$/app/src/main/jniLibs/x86_64/libBaiduMapSDK_cloud_v4_0_0.so" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/jniLibs/x86_64/libBaiduMapSDK_map_v4_0_0.so" afterPath="$PROJECT_DIR$/app/src/main/jniLibs/x86_64/libBaiduMapSDK_map_v4_0_0.so" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/jniLibs/x86_64/libBaiduMapSDK_radar_v4_0_0.so" afterPath="$PROJECT_DIR$/app/src/main/jniLibs/x86_64/libBaiduMapSDK_radar_v4_0_0.so" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/jniLibs/x86_64/libBaiduMapSDK_search_v4_0_0.so" afterPath="$PROJECT_DIR$/app/src/main/jniLibs/x86_64/libBaiduMapSDK_search_v4_0_0.so" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/jniLibs/x86_64/libBaiduMapSDK_util_v4_0_0.so" afterPath="$PROJECT_DIR$/app/src/main/jniLibs/x86_64/libBaiduMapSDK_util_v4_0_0.so" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/generated/mockable-android-23.jar" afterPath="$PROJECT_DIR$/build/generated/mockable-android-23.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PushSDK/build/intermediates/bundles/release/classes.jar" afterPath="$PROJECT_DIR$/PushSDK/build/intermediates/bundles/release/classes.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PushSDK/build/intermediates/bundles/release/libs/com.umeng.message_v2.8.1.jar" afterPath="$PROJECT_DIR$/PushSDK/build/intermediates/bundles/release/libs/com.umeng.message_v2.8.1.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PushSDK/build/outputs/aar/PushSDK-release.aar" afterPath="$PROJECT_DIR$/PushSDK/build/outputs/aar/PushSDK-release.aar" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/gradle.xml" afterPath="$PROJECT_DIR$/.idea/gradle.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/app.iml" afterPath="$PROJECT_DIR$/app/app.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build.gradle" afterPath="$PROJECT_DIR$/app/build.gradle" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/cetcme/rcldandroidZhejiang/UserFragment.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/cetcme/rcldandroidZhejiang/UserFragment.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_user.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_user.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build.gradle" afterPath="$PROJECT_DIR$/build.gradle" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/dex-cache/cache.xml" afterPath="$PROJECT_DIR$/build/intermediates/dex-cache/cache.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/settings.gradle" afterPath="$PROJECT_DIR$/settings.gradle" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/zytyumin.iml" afterPath="$PROJECT_DIR$/zytyumin.iml" />
     </list>
     <ignored path="zytyumin.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -611,8 +345,8 @@
       <file leaf-file-name="MainActivity.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/cetcme/rcldandroidZhejiang/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="13">
-              <caret line="246" column="5" selection-start-line="246" selection-start-column="5" selection-end-line="246" selection-end-column="5" />
+            <state relative-caret-position="286">
+              <caret line="59" column="0" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -687,14 +421,14 @@
       </file>
       <file leaf-file-name="activity_login.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_login.xml">
+          <provider editor-type-id="android-designer2">
+            <state />
+          </provider>
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="689">
               <caret line="53" column="56" selection-start-line="53" selection-start-column="56" selection-end-line="53" selection-end-column="56" />
               <folding />
             </state>
-          </provider>
-          <provider editor-type-id="android-designer2">
-            <state />
           </provider>
         </entry>
       </file>
@@ -3746,6 +3480,7 @@
     </navigator>
     <panes>
       <pane id="Scratches" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -3766,6 +3501,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="AndroidView">
         <subPane>
           <PATH>
@@ -3776,8 +3512,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -4032,7 +3766,7 @@
       <listeners />
       <method />
     </configuration>
-    <configuration default="false" name="app" type="AndroidRunConfigurationType" factoryName="Android App">
+    <configuration default="false" name="app" type="AndroidRunConfigurationType" factoryName="Android App" activateToolWindowBeforeRun="false">
       <module name="app" />
       <option name="DEPLOY" value="true" />
       <option name="ARTIFACT_NAME" value="" />
@@ -4222,30 +3956,30 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="824" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32909605" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32871535" sideWeight="0.48486933" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29219145" sideWeight="0.522696" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29096046" sideWeight="0.47730398" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32909605" sideWeight="0.49754903" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32909605" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32909605" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22460657" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22460657" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297568" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24892704" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Android Model" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297568" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
-      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3997175" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -4308,7 +4042,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="18" column="55" selection-start-line="0" selection-start-column="0" selection-end-line="81" selection-end-column="15" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -4359,7 +4092,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="68" column="47" selection-start-line="68" selection-start-column="47" selection-end-line="68" selection-end-column="47" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -4410,7 +4142,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -4478,10 +4209,10 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable-hdpi/button_searchs_normal.9.png">
-      <provider selected="true" editor-type-id="ninepatcheditor">
+      <provider editor-type-id="images">
         <state />
       </provider>
-      <provider editor-type-id="images">
+      <provider selected="true" editor-type-id="ninepatcheditor">
         <state />
       </provider>
     </entry>
@@ -4501,7 +4232,6 @@
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="31" column="37" selection-start-line="31" selection-start-column="37" selection-end-line="31" selection-end-column="37" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -4509,7 +4239,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="119" column="33" selection-start-line="119" selection-start-column="33" selection-end-line="119" selection-end-column="33" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -4547,7 +4276,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -4617,14 +4345,14 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_login.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="689">
           <caret line="53" column="56" selection-start-line="53" selection-start-column="56" selection-end-line="53" selection-end-column="56" />
           <folding />
         </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/values/color.xml">
@@ -4653,8 +4381,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/cetcme/rcldandroidZhejiang/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="13">
-          <caret line="246" column="5" selection-start-line="246" selection-start-column="5" selection-end-line="246" selection-end-column="5" />
+        <state relative-caret-position="286">
+          <caret line="59" column="0" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
           <folding />
         </state>
       </provider>
