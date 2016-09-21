@@ -17,7 +17,7 @@ android:background="#eeeeee" >
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:orientation="vertical" >
 
             <Space
                 android:layout_width="match_parent"
@@ -45,9 +45,17 @@ android:background="#eeeeee" >
                 </LinearLayout>
 
                 <View style="@style/bg_line"/>
-                <!-- 下圆角-->
-                <LinearLayout style="@style/bottom_layout"
+                <!-- 无圆角-->
+                <LinearLayout style="@style/mid_layout"
                               android:id="@+id/line_3_in_fragment_user">
+                    <TextView style="@style/userText" android:text="离线地图" />
+                    <ImageView style="@style/img_arrow"/>
+                </LinearLayout>
+
+                <View style="@style/bg_line"/>
+                <!-- 下圆角-->
+                <LinearLayout style="@style/bottom_layout_light"
+                              android:id="@+id/line_4_in_fragment_user">
                     <TextView style="@style/userText" android:text="版本信息" />
                     <ImageView style="@style/img_arrow"/>
                 </LinearLayout>

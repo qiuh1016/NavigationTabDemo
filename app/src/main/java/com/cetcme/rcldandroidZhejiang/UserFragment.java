@@ -146,6 +146,17 @@ public class UserFragment extends BaseFragment {
             }
         });
 
+        LinearLayout linearLayout4 = (LinearLayout) view.findViewById(R.id.line_4_in_fragment_user);
+        linearLayout4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), VersionActivity.class);
+                MainActivity activity = (MainActivity) getActivity();
+                startActivity(intent);
+                activity.overridePendingTransition(R.anim.push_left_in_no_alpha, R.anim.push_left_out_no_alpha);
+            }
+        });
+
     }
 
     private void initHud() {
