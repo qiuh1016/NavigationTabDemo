@@ -19,21 +19,21 @@ import com.cetcme.rcldandroidZhejiang.MyClass.FragmentAdapter;
 import com.cetcme.rcldandroidZhejiang.MyClass.NavigationView;
 import com.umeng.analytics.MobclickAgent;
 
-public class SignActivity extends FragmentActivity {
+public class OfflineMapActivity extends FragmentActivity {
+
+    private String TAG = "OfflineMapActivity";
 
     /**
-     * 顶部三个LinearLayout
+     * 顶部两个LinearLayout
      */
     private LinearLayout mTabChat;
     private LinearLayout mTabFound;
-    private LinearLayout mTabContact;
 
     /**
-     * 顶部的三个TextView
+     * 顶部的两个TextView
      */
     private TextView chat;
     private TextView found;
-    private TextView contact;
 
     /**
      * Tab的那个引导线
@@ -54,7 +54,7 @@ public class SignActivity extends FragmentActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_sign);
+        setContentView(R.layout.activity_offline_map);
         res = getResources();
         initNavigationView();
         initViewPager();
@@ -80,7 +80,7 @@ public class SignActivity extends FragmentActivity {
 
     private void initNavigationView() {
         navigationView = (NavigationView) findViewById(R.id.nav_main_in_sign_activity);
-        navigationView.setTitle("登陆");
+        navigationView.setTitle("离线地图");
         navigationView.setBackView(R.drawable.icon_back_button);
         navigationView.setRightView(0);
         navigationView.setClickCallback(new NavigationView.ClickCallback() {
@@ -130,7 +130,7 @@ public class SignActivity extends FragmentActivity {
 
         //获取控件的LayoutParams参数(注意：一定要用父控件的LayoutParams写LinearLayout.LayoutParams)
         LinearLayout.LayoutParams layoutParams = (android.widget.LinearLayout.LayoutParams) mTabLine.getLayoutParams();
-        layoutParams.width = screenWidth / 3;//设置该控件的layoutParams参数
+        layoutParams.width = screenWidth / 2;//设置该控件的layoutParams参数
         mTabLine.setLayoutParams(layoutParams);//将修改好的layoutParams设置为该控件的layoutParams
     }
 
@@ -140,23 +140,18 @@ public class SignActivity extends FragmentActivity {
     private void initView() {
         chat=(TextView) findViewById(R.id.id_chat);
         found=(TextView) findViewById(R.id.id_found);
-        contact=(TextView) findViewById(R.id.id_contact);
 
         chat.setOnClickListener(new TabOnClickListener(0));
         found.setOnClickListener(new TabOnClickListener(1));
-        contact.setOnClickListener(new TabOnClickListener(2));
 
-        fragments.add(new ChatMainTab01Fragment());
-        fragments.add(new ChatMainTab02Fragment());
-        fragments.add(new ChatMainTab02Fragment());
+        fragments.add(new OfflineCityListFragment());
+        fragments.add(new OfflineManagerFragment());
 
         mTabChat=(LinearLayout) findViewById(R.id.id_tab1_chat);
         mTabFound=(LinearLayout) findViewById(R.id.id_tab2_found);
-        mTabContact=(LinearLayout) findViewById(R.id.id_tab3_contact);
 
         mTabChat.setOnClickListener(new TabOnClickListener(0));
         mTabFound.setOnClickListener(new TabOnClickListener(1));
-        mTabContact.setOnClickListener(new TabOnClickListener(2));
     }
 
     /**
@@ -165,7 +160,6 @@ public class SignActivity extends FragmentActivity {
     private void resetTextView() {
         chat.setTextColor(res.getColor(R.color.text_clo));
         found.setTextColor(res.getColor(R.color.text_clo));
-        contact.setTextColor(res.getColor(R.color.text_clo));
     }
 
     /**
@@ -198,7 +192,7 @@ public class SignActivity extends FragmentActivity {
         public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels){
             LinearLayout.LayoutParams layoutParams = (android.widget.LinearLayout.LayoutParams) mTabLine.getLayoutParams();
             //返回组件距离左侧组件的距离
-            layoutParams.leftMargin= (int) ((positionOffset + position) * screenWidth / 3);
+            layoutParams.leftMargin= (int) ((positionOffset + position) * screenWidth / 2);
             mTabLine.setLayoutParams(layoutParams);
         }
 
@@ -212,9 +206,6 @@ public class SignActivity extends FragmentActivity {
                     break;
                 case 1:
                     found.setTextColor(res.getColor(R.color.main_color));
-                    break;
-                case 2:
-                    contact.setTextColor(res.getColor(R.color.main_color));
                     break;
             }
         }

@@ -4,12 +4,17 @@
               android:layout_height="match_parent"
               android:orientation="vertical" >
 
-    <TextView
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/localmap_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:gravity="center"
-        android:text="this is first tab"
-        android:textColor="#000000"
-        android:textSize="30sp" />
+        android:orientation="vertical" >
+
+        <ListView
+            android:id="@+id/localmaplist"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
 
 </LinearLayout>

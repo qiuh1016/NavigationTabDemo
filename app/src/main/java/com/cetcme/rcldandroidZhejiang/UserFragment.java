@@ -139,7 +139,7 @@ public class UserFragment extends BaseFragment {
         linearLayout3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getActivity(), VersionActivity.class);
+                Intent intent = new Intent(getActivity(), OfflineMapActivity.class);
                 MainActivity activity = (MainActivity) getActivity();
                 startActivity(intent);
                 activity.overridePendingTransition(R.anim.push_left_in_no_alpha, R.anim.push_left_out_no_alpha);

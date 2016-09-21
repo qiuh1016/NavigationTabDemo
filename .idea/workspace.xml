@@ -24,6 +24,11 @@
           <theme>@android:style/Theme.NoTitleBar</theme>
         </config>
       </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/activity_offline_map.xml">
+        <config>
+          <theme>@android:style/Theme.NoTitleBar</theme>
+        </config>
+      </layout>
       <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/activity_register_info.xml">
         <config>
           <theme>@android:style/Theme.NoTitleBar</theme>
@@ -32,11 +37,6 @@
       <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/activity_route.xml">
         <config>
           <theme>@style/AppTheme</theme>
-        </config>
-      </layout>
-      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/activity_sign.xml">
-        <config>
-          <theme>@android:style/Theme.NoTitleBar</theme>
         </config>
       </layout>
       <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/activity_todo.xml">
@@ -62,234 +62,32 @@
     </layouts>
   </component>
   <component name="AndroidLogFilters">
+    <option name="TOOL_WINDOW_LOG_LEVEL" value="error" />
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e279e6be-7f14-4cf0-a014-66e978e760d8" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build.gradle" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/generated/source/buildConfig/androidTest/debug/com/handmark/pulltorefresh/library/test/BuildConfig.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/generated/source/buildConfig/debug/com/handmark/pulltorefresh/library/BuildConfig.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/generated/source/r/androidTest/debug/com/handmark/pulltorefresh/library/R.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/generated/source/r/androidTest/debug/com/handmark/pulltorefresh/library/test/R.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/generated/source/r/debug/com/handmark/pulltorefresh/library/R.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/blame/res/androidTest/debug/multi/values-ar.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/blame/res/androidTest/debug/multi/values-cs.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/blame/res/androidTest/debug/multi/values-de.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/blame/res/androidTest/debug/multi/values-es.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/blame/res/androidTest/debug/multi/values-fi.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/blame/res/androidTest/debug/multi/values-fr.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/blame/res/androidTest/debug/multi/values-he.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/blame/res/androidTest/debug/multi/values-it.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/blame/res/androidTest/debug/multi/values-iw.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/blame/res/androidTest/debug/multi/values-ja.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/blame/res/androidTest/debug/multi/values-ko.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/blame/res/androidTest/debug/multi/values-nl.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/blame/res/androidTest/debug/multi/values-pl.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/blame/res/androidTest/debug/multi/values-pt-rBR.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/blame/res/androidTest/debug/multi/values-pt.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/blame/res/androidTest/debug/multi/values-ro.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/blame/res/androidTest/debug/multi/values-ru.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/blame/res/androidTest/debug/multi/values-zh.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/blame/res/androidTest/debug/multi/values.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/blame/res/androidTest/debug/single/anim.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/blame/res/androidTest/debug/single/drawable-hdpi-v4.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/blame/res/androidTest/debug/single/drawable-mdpi-v4.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/blame/res/androidTest/debug/single/drawable-xhdpi-v4.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/blame/res/androidTest/debug/single/drawable.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/blame/res/androidTest/debug/single/layout.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/bundles/debug/AndroidManifest.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/bundles/debug/R.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/bundles/debug/classes.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/bundles/debug/res/anim/slide_in_from_bottom.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/bundles/debug/res/anim/slide_in_from_top.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/bundles/debug/res/anim/slide_out_to_bottom.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/bundles/debug/res/anim/slide_out_to_top.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/bundles/debug/res/drawable-hdpi-v4/default_ptr_flip.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/bundles/debug/res/drawable-hdpi-v4/default_ptr_rotate.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/bundles/debug/res/drawable-hdpi-v4/indicator_arrow.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/bundles/debug/res/drawable-mdpi-v4/default_ptr_flip.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/bundles/debug/res/drawable-mdpi-v4/default_ptr_rotate.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/bundles/debug/res/drawable-mdpi-v4/indicator_arrow.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/bundles/debug/res/drawable-xhdpi-v4/default_ptr_flip.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/bundles/debug/res/drawable-xhdpi-v4/default_ptr_rotate.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/bundles/debug/res/drawable-xhdpi-v4/indicator_arrow.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/bundles/debug/res/drawable/indicator_bg_bottom.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/bundles/debug/res/drawable/indicator_bg_top.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/bundles/debug/res/layout/pull_to_refresh_header_horizontal.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/bundles/debug/res/layout/pull_to_refresh_header_vertical.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/bundles/debug/res/values-ar/values-ar.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/bundles/debug/res/values-cs/values-cs.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/bundles/debug/res/values-de/values-de.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/bundles/debug/res/values-es/values-es.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/bundles/debug/res/values-fi/values-fi.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/bundles/debug/res/values-fr/values-fr.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/bundles/debug/res/values-he/values-he.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/bundles/debug/res/values-it/values-it.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/bundles/debug/res/values-iw/values-iw.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/bundles/debug/res/values-ja/values-ja.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/bundles/debug/res/values-ko/values-ko.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/bundles/debug/res/values-nl/values-nl.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/bundles/debug/res/values-pl/values-pl.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/bundles/debug/res/values-pt-rBR/values-pt-rBR.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/bundles/debug/res/values-pt/values-pt.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/bundles/debug/res/values-ro/values-ro.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/bundles/debug/res/values-ru/values-ru.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/bundles/debug/res/values-zh/values-zh.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/bundles/debug/res/values/values.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/incremental/compileDebugAidl/dependency.store" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/incremental/compileDebugAndroidTestAidl/dependency.store" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/incremental/mergeDebugAndroidTestResources/compile-file-map.properties" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/incremental/mergeDebugAndroidTestResources/merged.dir/values-ar/values-ar.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/incremental/mergeDebugAndroidTestResources/merged.dir/values-cs/values-cs.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/incremental/mergeDebugAndroidTestResources/merged.dir/values-de/values-de.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/incremental/mergeDebugAndroidTestResources/merged.dir/values-es/values-es.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/incremental/mergeDebugAndroidTestResources/merged.dir/values-fi/values-fi.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/incremental/mergeDebugAndroidTestResources/merged.dir/values-fr/values-fr.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/incremental/mergeDebugAndroidTestResources/merged.dir/values-he/values-he.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/incremental/mergeDebugAndroidTestResources/merged.dir/values-it/values-it.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/incremental/mergeDebugAndroidTestResources/merged.dir/values-iw/values-iw.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/incremental/mergeDebugAndroidTestResources/merged.dir/values-ja/values-ja.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/incremental/mergeDebugAndroidTestResources/merged.dir/values-ko/values-ko.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/incremental/mergeDebugAndroidTestResources/merged.dir/values-nl/values-nl.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/incremental/mergeDebugAndroidTestResources/merged.dir/values-pl/values-pl.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/incremental/mergeDebugAndroidTestResources/merged.dir/values-pt-rBR/values-pt-rBR.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/incremental/mergeDebugAndroidTestResources/merged.dir/values-pt/values-pt.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/incremental/mergeDebugAndroidTestResources/merged.dir/values-ro/values-ro.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/incremental/mergeDebugAndroidTestResources/merged.dir/values-ru/values-ru.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/incremental/mergeDebugAndroidTestResources/merged.dir/values-zh/values-zh.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/incremental/mergeDebugAndroidTestResources/merged.dir/values/values.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/incremental/mergeDebugAndroidTestResources/merger.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/incremental/mergeDebugAssets/merger.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/incremental/mergeDebugShaders/merger.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/incremental/packageDebugResources/compile-file-map.properties" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/incremental/packageDebugResources/merged.dir/values-ar/values-ar.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/incremental/packageDebugResources/merged.dir/values-cs/values-cs.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/incremental/packageDebugResources/merged.dir/values-de/values-de.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/incremental/packageDebugResources/merged.dir/values-es/values-es.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/incremental/packageDebugResources/merged.dir/values-fi/values-fi.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/incremental/packageDebugResources/merged.dir/values-fr/values-fr.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/incremental/packageDebugResources/merged.dir/values-he/values-he.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/incremental/packageDebugResources/merged.dir/values-it/values-it.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/incremental/packageDebugResources/merged.dir/values-iw/values-iw.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/incremental/packageDebugResources/merged.dir/values-ja/values-ja.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/incremental/packageDebugResources/merged.dir/values-ko/values-ko.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/incremental/packageDebugResources/merged.dir/values-nl/values-nl.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/incremental/packageDebugResources/merged.dir/values-pl/values-pl.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/incremental/packageDebugResources/merged.dir/values-pt-rBR/values-pt-rBR.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/incremental/packageDebugResources/merged.dir/values-pt/values-pt.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/incremental/packageDebugResources/merged.dir/values-ro/values-ro.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/incremental/packageDebugResources/merged.dir/values-ru/values-ru.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/incremental/packageDebugResources/merged.dir/values-zh/values-zh.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/incremental/packageDebugResources/merged.dir/values/values.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/incremental/packageDebugResources/merger.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/manifest/androidTest/debug/AndroidManifest.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/manifests/aapt/debug/AndroidManifest.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/res/merged/androidTest/debug/anim/slide_in_from_bottom.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/res/merged/androidTest/debug/anim/slide_in_from_top.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/res/merged/androidTest/debug/anim/slide_out_to_bottom.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/res/merged/androidTest/debug/anim/slide_out_to_top.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/default_ptr_flip.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/default_ptr_rotate.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/indicator_arrow.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/res/merged/androidTest/debug/drawable-mdpi-v4/default_ptr_flip.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/res/merged/androidTest/debug/drawable-mdpi-v4/default_ptr_rotate.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/res/merged/androidTest/debug/drawable-mdpi-v4/indicator_arrow.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/res/merged/androidTest/debug/drawable-xhdpi-v4/default_ptr_flip.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/res/merged/androidTest/debug/drawable-xhdpi-v4/default_ptr_rotate.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/res/merged/androidTest/debug/drawable-xhdpi-v4/indicator_arrow.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/res/merged/androidTest/debug/drawable/indicator_bg_bottom.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/res/merged/androidTest/debug/drawable/indicator_bg_top.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/res/merged/androidTest/debug/layout/pull_to_refresh_header_horizontal.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/res/merged/androidTest/debug/layout/pull_to_refresh_header_vertical.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/res/merged/androidTest/debug/values-ar/values-ar.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/res/merged/androidTest/debug/values-cs/values-cs.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/res/merged/androidTest/debug/values-de/values-de.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/res/merged/androidTest/debug/values-es/values-es.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/res/merged/androidTest/debug/values-fi/values-fi.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/res/merged/androidTest/debug/values-fr/values-fr.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/res/merged/androidTest/debug/values-he/values-he.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/res/merged/androidTest/debug/values-it/values-it.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/res/merged/androidTest/debug/values-iw/values-iw.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/res/merged/androidTest/debug/values-ja/values-ja.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/res/merged/androidTest/debug/values-ko/values-ko.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/res/merged/androidTest/debug/values-nl/values-nl.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/res/merged/androidTest/debug/values-pl/values-pl.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/res/merged/androidTest/debug/values-pt-rBR/values-pt-rBR.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/res/merged/androidTest/debug/values-pt/values-pt.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/res/merged/androidTest/debug/values-ro/values-ro.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/res/merged/androidTest/debug/values-ru/values-ru.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/res/merged/androidTest/debug/values-zh/values-zh.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/res/merged/androidTest/debug/values/values.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/res/resources-debug-androidTest.ap_" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/intermediates/symbols/androidTest/debug/R.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/build/outputs/aar/pullToRefresh-debug.aar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/src/main/AndroidManifest.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/src/main/java/com/handmark/pulltorefresh/library/ILoadingLayout.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/src/main/java/com/handmark/pulltorefresh/library/IPullToRefresh.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/src/main/java/com/handmark/pulltorefresh/library/LoadingLayoutProxy.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/src/main/java/com/handmark/pulltorefresh/library/OverscrollHelper.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/src/main/java/com/handmark/pulltorefresh/library/PullToRefreshAdapterViewBase.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/src/main/java/com/handmark/pulltorefresh/library/PullToRefreshBase.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/src/main/java/com/handmark/pulltorefresh/library/PullToRefreshExpandableListView.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/src/main/java/com/handmark/pulltorefresh/library/PullToRefreshGridView.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/src/main/java/com/handmark/pulltorefresh/library/PullToRefreshHorizontalScrollView.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/src/main/java/com/handmark/pulltorefresh/library/PullToRefreshListView.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/src/main/java/com/handmark/pulltorefresh/library/PullToRefreshScrollView.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/src/main/java/com/handmark/pulltorefresh/library/PullToRefreshWebView.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/src/main/java/com/handmark/pulltorefresh/library/extras/PullToRefreshWebView2.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/src/main/java/com/handmark/pulltorefresh/library/extras/SoundPullEventListener.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/src/main/java/com/handmark/pulltorefresh/library/internal/EmptyViewMethodAccessor.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/src/main/java/com/handmark/pulltorefresh/library/internal/FlipLoadingLayout.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/src/main/java/com/handmark/pulltorefresh/library/internal/IndicatorLayout.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/src/main/java/com/handmark/pulltorefresh/library/internal/LoadingLayout.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/src/main/java/com/handmark/pulltorefresh/library/internal/RotateLoadingLayout.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/src/main/java/com/handmark/pulltorefresh/library/internal/Utils.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/src/main/java/com/handmark/pulltorefresh/library/internal/ViewCompat.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/src/main/res/anim/slide_in_from_bottom.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/src/main/res/anim/slide_in_from_top.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/src/main/res/anim/slide_out_to_bottom.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/src/main/res/anim/slide_out_to_top.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/src/main/res/drawable-hdpi/default_ptr_flip.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/src/main/res/drawable-hdpi/default_ptr_rotate.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/src/main/res/drawable-hdpi/indicator_arrow.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/src/main/res/drawable-mdpi/default_ptr_flip.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/src/main/res/drawable-mdpi/default_ptr_rotate.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/src/main/res/drawable-mdpi/indicator_arrow.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/src/main/res/drawable-xhdpi/default_ptr_flip.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/src/main/res/drawable-xhdpi/default_ptr_rotate.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/src/main/res/drawable-xhdpi/indicator_arrow.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/src/main/res/drawable/indicator_bg_bottom.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/src/main/res/drawable/indicator_bg_top.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/src/main/res/layout/pull_to_refresh_header_horizontal.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/src/main/res/layout/pull_to_refresh_header_vertical.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/src/main/res/values-ar/pull_refresh_strings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/src/main/res/values-cs/pull_refresh_strings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/src/main/res/values-de/pull_refresh_strings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/src/main/res/values-es/pull_refresh_strings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/src/main/res/values-fi/pull_refresh_strings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/src/main/res/values-fr/pull_refresh_strings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/src/main/res/values-he/pull_refresh_strings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/src/main/res/values-it/pull_refresh_strings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/src/main/res/values-iw/pull_refresh_strings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/src/main/res/values-ja/pull_refresh_strings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/src/main/res/values-ko/pull_refresh_strings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/src/main/res/values-nl/pull_refresh_strings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/src/main/res/values-pl/pull_refresh_strings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/src/main/res/values-pt-rBR/pull_refresh_strings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/src/main/res/values-pt/pull_refresh_strings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/src/main/res/values-ro/pull_refresh_strings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/src/main/res/values-ru/pull_refresh_strings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/src/main/res/values-zh/pull_refresh_strings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/src/main/res/values/attrs.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/src/main/res/values/dimens.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/src/main/res/values/ids.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pullToRefresh/src/main/res/values/pull_refresh_strings.xml" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PushSDK/build/intermediates/bundles/release/classes.jar" afterPath="$PROJECT_DIR$/PushSDK/build/intermediates/bundles/release/classes.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PushSDK/build/intermediates/bundles/release/libs/com.umeng.message_v2.8.1.jar" afterPath="$PROJECT_DIR$/PushSDK/build/intermediates/bundles/release/libs/com.umeng.message_v2.8.1.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PushSDK/build/outputs/aar/PushSDK-release.aar" afterPath="$PROJECT_DIR$/PushSDK/build/outputs/aar/PushSDK-release.aar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/button_background_alert.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/layout/offline_localmap_list.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/layout/offline_map_list.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/layout/rename_edit_text.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/layout/route_file_listview_cell.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/cetcme/rcldandroidZhejiang/ChatMainTab01Fragment.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/cetcme/rcldandroidZhejiang/OfflineCityListFragment.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/cetcme/rcldandroidZhejiang/ChatMainTab02Fragment.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/cetcme/rcldandroidZhejiang/OfflineManagerFragment.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/cetcme/rcldandroidZhejiang/SignActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/cetcme/rcldandroidZhejiang/OfflineMapActivity.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_sign.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_offline_map.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_chat_tab_01.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_offline_city_list.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_chat_tab_02.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_offline_manager.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/res/layout/view_pager_in_sign_activity.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/view_pager_in_offline_map_activity.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PushSDK/build/intermediates/res/resources-debug-androidTest.ap_" afterPath="$PROJECT_DIR$/PushSDK/build/intermediates/res/resources-debug-androidTest.ap_" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PushSDK/build/outputs/aar/PushSDK-debug.aar" afterPath="$PROJECT_DIR$/PushSDK/build/outputs/aar/PushSDK-debug.aar" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/gradle.xml" afterPath="$PROJECT_DIR$/.idea/gradle.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/app.iml" afterPath="$PROJECT_DIR$/app/app.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build.gradle" afterPath="$PROJECT_DIR$/app/build.gradle" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/cetcme/rcldandroidZhejiang/UserFragment.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/cetcme/rcldandroidZhejiang/UserFragment.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/dex-cache/cache.xml" afterPath="$PROJECT_DIR$/build/intermediates/dex-cache/cache.xml" />
     </list>
     <ignored path="zytyumin.iws" />
@@ -342,91 +140,111 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="MainActivity.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/cetcme/rcldandroidZhejiang/MainActivity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="286">
-              <caret line="59" column="0" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="tab_map_selector.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/tab_map_selector.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="78">
-              <caret line="6" column="11" selection-start-line="6" selection-start-column="11" selection-end-line="6" selection-end-column="11" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="tab_homepage_selector.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/tab_homepage_selector.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="52">
-              <caret line="4" column="66" selection-start-line="4" selection-start-column="66" selection-end-line="4" selection-end-column="66" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="tab_record_selector.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/tab_record_selector.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="tab_user_selector.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/tab_user_selector.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="78">
-              <caret line="6" column="11" selection-start-line="6" selection-start-column="11" selection-end-line="6" selection-end-column="11" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="a.png" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable-ldpi/a.png">
-          <provider selected="true" editor-type-id="images">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UpdateAppManager.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/cetcme/rcldandroidZhejiang/UpdateAppManager.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2431">
-              <caret line="223" column="23" selection-start-line="223" selection-start-column="23" selection-end-line="223" selection-end-column="23" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="color.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/values/color.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="15" column="42" selection-start-line="15" selection-start-column="42" selection-end-line="15" selection-end-column="42" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="activity_login.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_login.xml">
+      <file leaf-file-name="activity_offline_map.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_offline_map.xml">
           <provider editor-type-id="android-designer2">
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="689">
-              <caret line="53" column="56" selection-start-line="53" selection-start-column="56" selection-end-line="53" selection-end-column="56" />
+            <state relative-caret-position="377">
+              <caret line="29" column="43" selection-start-line="29" selection-start-column="43" selection-end-line="29" selection-end-column="43" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="OfflineCityListFragment.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/cetcme/rcldandroidZhejiang/OfflineCityListFragment.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2457">
+              <caret line="227" column="51" selection-start-line="227" selection-start-column="30" selection-end-line="227" selection-end-column="51" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#6117#6118#0" expanded="true" />
+                <element signature="e#6149#6150#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="fragment_offline_city_list.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_offline_city_list.xml">
+          <provider editor-type-id="android-designer2">
+            <state />
+          </provider>
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="988">
+              <caret line="76" column="44" selection-start-line="76" selection-start-column="44" selection-end-line="76" selection-end-column="44" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="OfflineManagerFragment.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/cetcme/rcldandroidZhejiang/OfflineManagerFragment.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="318">
+              <caret line="247" column="38" selection-start-line="247" selection-start-column="38" selection-end-line="247" selection-end-column="38" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#4109#4275#0" expanded="true" />
+                <element signature="e#4274#4275#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserFragment.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/cetcme/rcldandroidZhejiang/UserFragment.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="149">
+              <caret line="232" column="0" selection-start-line="232" selection-start-column="0" selection-end-line="252" selection-end-column="32" />
+              <folding>
+                <element signature="e#5127#5550#0" expanded="true" />
+                <element signature="e#5549#5550#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="QHDialog.class" pinned="false" current-in-tab="false">
+        <entry file="jar://$PROJECT_DIR$/app/build/intermediates/exploded-aar/com.github.qiuh1016/qhLibrary/1.1.2/jars/classes.jar!/com/qiuhong/qhlibrary/Dialog/QHDialog.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="364">
+              <caret line="37" column="46" selection-start-line="37" selection-start-column="46" selection-end-line="37" selection-end-column="46" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="build.gradle" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/build.gradle">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="357">
+              <caret line="65" column="49" selection-start-line="65" selection-start-column="49" selection-end-line="65" selection-end-column="49" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="QHDialogClass.class" pinned="false" current-in-tab="false">
+        <entry file="jar://$PROJECT_DIR$/app/build/intermediates/exploded-aar/com.github.qiuh1016/qhLibrary/1.1.3/jars/classes.jar!/com/qiuhong/qhlibrary/Dialog/QHDialogClass.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="149">
+              <caret line="195" column="0" selection-start-line="195" selection-start-column="0" selection-end-line="195" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="fragment_offline_manager.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_offline_manager.xml">
+          <provider editor-type-id="android-designer2">
+            <state />
+          </provider>
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="182">
+              <caret line="14" column="41" selection-start-line="14" selection-start-column="29" selection-end-line="14" selection-end-column="41" />
               <folding />
             </state>
           </provider>
@@ -662,6 +480,11 @@
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="assembleDefault" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Prepare com.github.qiuh1016:qhLibrary:1.1.3" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="prepareComGithubQiuh1016QhLibrary113Library" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
@@ -1263,11 +1086,6 @@
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="packageDebugAndroidTest" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Prepare com.github.qiuh1016:qhLibrary:1.1.2" />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="prepareComGithubQiuh1016QhLibrary112Library" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
@@ -2043,6 +1861,11 @@
                 <option name="name" value="testReleaseUnitTest" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
+                <option name="description" value="Prepare com.github.qiuh1016:qhLibrary:1.1.3" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/app" />
+                <option name="name" value="prepareComGithubQiuh1016QhLibrary113Library" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/app" />
                 <option name="name" value="compileDebugAndroidTestShaders" />
               </ExternalTaskPojo>
@@ -2612,11 +2435,6 @@
                 <option name="name" value="packageDebugAndroidTest" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="description" value="Prepare com.github.qiuh1016:qhLibrary:1.1.2" />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/app" />
-                <option name="name" value="prepareComGithubQiuh1016QhLibrary112Library" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/app" />
                 <option name="name" value="transformClassesWithJarMergingForDebugAndroidTest" />
               </ExternalTaskPojo>
@@ -2636,7 +2454,7 @@
     </option>
     <option name="modificationStamps">
       <map>
-        <entry key="$PROJECT_DIR$" value="5894898374000" />
+        <entry key="$PROJECT_DIR$" value="5894906069000" />
       </map>
     </option>
     <option name="projectBuildClasspath">
@@ -3376,12 +3194,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/src/main/java/com/cetcme/zytyumin/UpdateAppManager.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/cetcme/rcldandroidZhejiang/ChangePasswordActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/cetcme/rcldandroidZhejiang/LawActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/cetcme/rcldandroidZhejiang/LawContentActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/cetcme/rcldandroidZhejiang/ProcessActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/cetcme/rcldandroidZhejiang/RecordActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/cetcme/rcldandroidZhejiang/ServiceActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/cetcme/rcldandroidZhejiang/SignActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/cetcme/rcldandroidZhejiang/TableActivity.java" />
@@ -3404,9 +3216,7 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/cetcme/rcldandroidZhejiang/rcld/ioLogActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/cetcme/rcldandroidZhejiang/rcld/PunchActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/cetcme/rcldandroidZhejiang/rcld/RouteActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/cetcme/rcldandroidZhejiang/UserFragment.java" />
         <option value="$PROJECT_DIR$/build.gradle" />
-        <option value="$PROJECT_DIR$/app/build.gradle" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/cetcme/rcldandroidZhejiang/ShipInfoActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/cetcme/rcldandroidZhejiang/LoginActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/cetcme/rcldandroidZhejiang/MyClass/PrivateEncode.java" />
@@ -3427,6 +3237,14 @@
         <option value="$PROJECT_DIR$/app/src/main/res/drawable/tab_user_selector.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_login.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/color.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/cetcme/rcldandroidZhejiang/UserFragment.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/view_pager_in_sign_activity.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_offline_manager.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/cetcme/rcldandroidZhejiang/OfflineMapActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_offline_city_list.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/cetcme/rcldandroidZhejiang/OfflineCityListFragment.java" />
+        <option value="$PROJECT_DIR$/app/build.gradle" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/cetcme/rcldandroidZhejiang/OfflineManagerFragment.java" />
       </list>
     </option>
   </component>
@@ -3480,7 +3298,55 @@
     </navigator>
     <panes>
       <pane id="Scratches" />
-      <pane id="PackagesPane" />
+      <pane id="AndroidView">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="zytyumin" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Gradle Scripts" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidBuildScriptsGroupNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="zytyumin" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="zytyumin" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rcldandroidZhejiang" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="zytyumin" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -3501,17 +3367,7 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="AndroidView">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="zytyumin" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -3521,12 +3377,13 @@
     <property name="device.picker.selection" value="81MEBMT2FJ88" />
     <property name="android.project.structure.last.selected" value="app" />
     <property name="android.project.structure.proportion" value="0.15" />
-    <property name="last_directory_selection" value="$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi" />
+    <property name="last_directory_selection" value="$PROJECT_DIR$/app/src/main/res/drawable" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../AndroidViewAnimations-master/demo" />
     <property name="ExportApk.ApkPath" value="$PROJECT_DIR$/app" />
     <property name="ExportApk.Flavors" value="" />
     <property name="ExportApk.BuildType" value="release" />
     <property name="UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager2.SHOW" value="true" />
+    <property name="UI_DESIGNER_EDITOR_MODE.NlPaletteManager-NlPreviewForm.SHOW" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
@@ -3536,11 +3393,11 @@
       <recent name="com.cetcme.zytyumin" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi" />
+      <recent name="$PROJECT_DIR$/app/src/main/res/drawable" />
+      <recent name="$PROJECT_DIR$/app/src/main/res/drawable-hdpi" />
       <recent name="$PROJECT_DIR$/app/src/main/res/layout" />
+      <recent name="$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi" />
       <recent name="$PROJECT_DIR$/app/src/main/java/com/cetcme/zytyumin" />
-      <recent name="$PROJECT_DIR$/app/src/main/java/com/cetcme/zytyumin/xia" />
-      <recent name="$PROJECT_DIR$/app/src/main/res/drawable-xxxhdpi" />
     </key>
   </component>
   <component name="RunManager" selected="Android App.app">
@@ -3960,7 +3817,7 @@
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32909605" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32871535" sideWeight="0.48486933" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32768363" sideWeight="0.48486933" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -3988,7 +3845,7 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297568" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3284974" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -4010,148 +3867,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/cetcme/rcldandroidZhejiang/VisaActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="46" column="36" selection-start-line="46" selection-start-column="32" selection-end-line="46" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/cetcme/rcldandroidZhejiang/UserFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="112" column="61" selection-start-line="112" selection-start-column="60" selection-end-line="112" selection-end-column="61" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="16" column="15" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/cetcme/rcldandroidZhejiang/MyClass/CustomDialog.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="159" column="81" selection-start-line="159" selection-start-column="81" selection-end-line="159" selection-end-column="81" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/dialog.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="18" column="55" selection-start-line="0" selection-start-column="0" selection-end-line="81" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/cetcme/rcldandroidZhejiang/xia/DetailFishShipActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="195" column="39" selection-start-line="195" selection-start-column="21" selection-end-line="195" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/cetcme/rcldandroidZhejiang/LoginActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="208" column="0" selection-start-line="208" selection-start-column="0" selection-end-line="208" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Library/Android/sdk/sources/android-23/android/content/Context.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="407" column="24" selection-start-line="407" selection-start-column="24" selection-end-line="407" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/cetcme/rcldandroidZhejiang/ServiceActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="75" column="30" selection-start-line="75" selection-start-column="22" selection-end-line="75" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/styles.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="48" column="17" selection-start-line="48" selection-start-column="17" selection-end-line="48" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="6" column="54" selection-start-line="6" selection-start-column="54" selection-end-line="6" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_version.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="68" column="47" selection-start-line="68" selection-start-column="47" selection-end-line="68" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/cetcme/rcldandroidZhejiang/VersionActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="31" column="45" selection-start-line="31" selection-start-column="45" selection-end-line="31" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/cetcme/rcldandroidZhejiang/MyClass/PrivateEncode.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="74" column="17" selection-start-line="74" selection-start-column="17" selection-end-line="74" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/cetcme/rcldandroidZhejiang/RegisterInfoActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="237" column="98" selection-start-line="237" selection-start-column="98" selection-end-line="237" selection-end-column="98" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/cetcme/rcldandroidZhejiang/ChangePasswordActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="149" column="8" selection-start-line="149" selection-start-column="8" selection-end-line="156" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/pull_refresh_strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/cetcme/rcldandroidZhejiang/MyClass/TodoListCell.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="54" column="0" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/detail_info_layout.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/cetcme/rcldandroidZhejiang/xia/DetailTradingInfoActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="49" column="45" selection-start-line="49" selection-start-column="45" selection-end-line="49" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$PROJECT_DIR$/app/libs/frmobile.jar!/com/fr/android/activity/LoadAppFromURLActivity.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -4209,10 +3924,10 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable-hdpi/button_searchs_normal.9.png">
-      <provider editor-type-id="images">
+      <provider selected="true" editor-type-id="ninepatcheditor">
         <state />
       </provider>
-      <provider selected="true" editor-type-id="ninepatcheditor">
+      <provider editor-type-id="images">
         <state />
       </provider>
     </entry>
@@ -4284,25 +3999,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="218" column="37" selection-start-line="218" selection-start-column="37" selection-end-line="218" selection-end-column="37" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="docComment;class#MapFragment#0" expanded="false" />
-            <element signature="method#onCreateView#0;class#MapFragment#0" expanded="false" />
-            <element signature="method#initNavigationView#0;class#MapFragment#0" expanded="false" />
-            <element signature="class#2618:4089" expanded="false" />
-            <element signature="method#onRightClick#0;class#2618:4089" expanded="false" />
-            <element signature="e#4022#4023#0" expanded="false" />
-            <element signature="e#4078#4079#0" expanded="false" />
-            <element signature="method#mapMark#0;class#MapFragment#0" expanded="false" />
-            <element signature="e#5603#5653#0" expanded="false" />
-            <element signature="method#mapStatus#0;class#MapFragment#0" expanded="false" />
-            <element signature="method#initLoginBroadcast#0;class#MapFragment#0" expanded="false" />
-            <element signature="class#MyLoginStateReceiver#0;class#MapFragment#0" expanded="false" />
-            <element signature="method#onReceive#0;class#MyLoginStateReceiver#0;class#MapFragment#0" expanded="false" />
-            <element signature="method#onDestroy#0;class#MapFragment#0" expanded="false" />
-            <element signature="method#drawMapMark#0;class#MapFragment#0" expanded="false" />
-            <element signature="e#9474#9506#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -4311,7 +4007,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="78">
           <caret line="6" column="11" selection-start-line="6" selection-start-column="11" selection-end-line="6" selection-end-column="11" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -4319,7 +4014,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="52">
           <caret line="4" column="66" selection-start-line="4" selection-start-column="66" selection-end-line="4" selection-end-column="66" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -4327,15 +4021,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/tab_user_selector.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="78">
-          <caret line="6" column="11" selection-start-line="6" selection-start-column="11" selection-end-line="6" selection-end-column="11" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -4344,13 +4029,31 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_login.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/cetcme/rcldandroidZhejiang/HomepageFragment.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="689">
-          <caret line="53" column="56" selection-start-line="53" selection-start-column="56" selection-end-line="53" selection-end-column="56" />
+        <state relative-caret-position="0">
+          <caret line="306" column="0" selection-start-line="306" selection-start-column="0" selection-end-line="306" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/cetcme/rcldandroidZhejiang/UpdateAppManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2431">
+          <caret line="223" column="23" selection-start-line="223" selection-start-column="23" selection-end-line="223" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/tab_user_selector.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="78">
+          <caret line="6" column="11" selection-start-line="6" selection-start-column="11" selection-end-line="6" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/cetcme/rcldandroidZhejiang/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="55" column="16" selection-start-line="55" selection-start-column="16" selection-end-line="55" selection-end-column="16" />
           <folding />
         </state>
       </provider>
@@ -4363,27 +4066,195 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/cetcme/rcldandroidZhejiang/HomepageFragment.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_login.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="603">
+          <caret line="53" column="56" selection-start-line="53" selection-start-column="56" selection-end-line="53" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/view_pager_in_offline_map_activity.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="533">
+          <caret line="57" column="42" selection-start-line="57" selection-start-column="42" selection-end-line="57" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/offline_localmap_list.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="306" column="0" selection-start-line="306" selection-start-column="0" selection-end-line="306" selection-end-column="0" />
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/cetcme/rcldandroidZhejiang/UpdateAppManager.java">
+    <entry file="file://$USER_HOME$/Library/Android/sdk/sources/android-23/android/widget/SimpleAdapter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2431">
-          <caret line="223" column="23" selection-start-line="223" selection-start-column="23" selection-end-line="223" selection-end-column="23" />
+        <state relative-caret-position="226">
+          <caret line="86" column="11" selection-start-line="86" selection-start-column="11" selection-end-line="86" selection-end-column="11" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/cetcme/rcldandroidZhejiang/MainActivity.java">
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jakewharton/butterknife/8.4.0/bc76ce8e6c5cf2c92ca6efbbc8b70403d3fd061e/butterknife-8.4.0-sources.jar!/butterknife/ButterKnife.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="59" column="0" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
+        <state relative-caret-position="226">
+          <caret line="121" column="25" selection-start-line="121" selection-start-column="25" selection-end-line="121" selection-end-column="25" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/Library/Android/sdk/extras/android/m2repository/com/android/support/support-v4/23.4.0/support-v4-23.4.0-sources.jar!/android/support/v4/app/Fragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="244">
+          <caret line="1366" column="54" selection-start-line="1366" selection-start-column="50" selection-end-line="1366" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable-hdpi/button_background_alert.xml" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/cetcme/rcldandroidZhejiang/OfflineMapActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="715">
+          <caret line="72" column="33" selection-start-line="72" selection-start-column="33" selection-end-line="72" selection-end-column="33" />
+          <folding>
+            <element signature="e#2343#2344#0" expanded="false" />
+            <element signature="e#2399#2400#0" expanded="false" />
+            <element signature="e#4811#4812#0" expanded="false" />
+            <element signature="e#4844#4845#0" expanded="false" />
+            <element signature="e#4883#4884#0" expanded="false" />
+            <element signature="e#4946#4947#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/button_background_alert.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_offline_manager.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="182">
+          <caret line="14" column="41" selection-start-line="14" selection-start-column="29" selection-end-line="14" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_offline_city_list.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="988">
+          <caret line="76" column="44" selection-start-line="76" selection-start-column="44" selection-end-line="76" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_offline_map.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="377">
+          <caret line="29" column="43" selection-start-line="29" selection-start-column="43" selection-end-line="29" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/cetcme/rcldandroidZhejiang/OfflineCityListFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2457">
+          <caret line="227" column="51" selection-start-line="227" selection-start-column="30" selection-end-line="227" selection-end-column="51" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#6117#6118#0" expanded="true" />
+            <element signature="e#6149#6150#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/app/build/intermediates/exploded-aar/com.github.qiuh1016/qhLibrary/1.1.3/jars/classes.jar!/com/qiuhong/qhlibrary/Dialog/QHDialog.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="91">
+          <caret line="15" column="16" selection-start-line="15" selection-start-column="16" selection-end-line="15" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/app/build/intermediates/exploded-aar/com.github.qiuh1016/qhLibrary/1.1.2/jars/classes.jar!/com/qiuhong/qhlibrary/Dialog/QHDialogClass.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="52">
+          <caret line="72" column="31" selection-start-line="72" selection-start-column="31" selection-end-line="72" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/app/build/intermediates/exploded-aar/com.github.qiuh1016/qhLibrary/1.1.2/jars/classes.jar!/com/qiuhong/qhlibrary/Dialog/QHDialog.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="364">
+          <caret line="37" column="46" selection-start-line="37" selection-start-column="46" selection-end-line="37" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="65" column="49" selection-start-line="65" selection-start-column="49" selection-end-line="65" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/app/build/intermediates/exploded-aar/com.github.qiuh1016/qhLibrary/1.1.3/jars/classes.jar!/com/qiuhong/qhlibrary/Dialog/QHDialogClass.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="149">
+          <caret line="195" column="0" selection-start-line="195" selection-start-column="0" selection-end-line="195" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/cetcme/rcldandroidZhejiang/UserFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="149">
+          <caret line="232" column="0" selection-start-line="232" selection-start-column="0" selection-end-line="252" selection-end-column="32" />
+          <folding>
+            <element signature="e#5127#5550#0" expanded="true" />
+            <element signature="e#5549#5550#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/app/libs/BaiduLBS_Android.jar!/com/baidu/mapapi/map/offline/MKOfflineMap.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="158">
+          <caret line="156" column="40" selection-start-line="156" selection-start-column="40" selection-end-line="156" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/cetcme/rcldandroidZhejiang/OfflineManagerFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="318">
+          <caret line="247" column="38" selection-start-line="247" selection-start-column="38" selection-end-line="247" selection-end-column="38" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#4109#4275#0" expanded="true" />
+            <element signature="e#4274#4275#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

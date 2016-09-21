@@ -305,7 +305,7 @@
         </activity>
         <activity android:name="com.cetcme.rcldandroidZhejiang.VersionActivity">
         </activity>
-        <activity android:name="com.cetcme.rcldandroidZhejiang.SignActivity">
+        <activity android:name="com.cetcme.rcldandroidZhejiang.OfflineMapActivity">
         </activity>
         <activity android:name="com.cetcme.rcldandroidZhejiang.CheckPhoneActivity">
         </activity>
