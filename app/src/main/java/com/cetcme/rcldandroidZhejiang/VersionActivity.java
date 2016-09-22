@@ -115,7 +115,7 @@ public class VersionActivity extends Activity {
          * 显示是否有可用更新
          */
         SharedPreferences system = getSharedPreferences("system", Context.MODE_PRIVATE);
-        int serverVersionCode = system.getInt("serverVersion", 0);
+        int serverVersionCode = system.getInt("serverVersionCode", 0);
         int currentVersionCode = getCurrentVersionCode();
         if (currentVersionCode < serverVersionCode) {
             showUpdateTextView.setText("有可用更新");
