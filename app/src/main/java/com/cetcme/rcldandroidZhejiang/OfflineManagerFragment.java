@@ -83,6 +83,10 @@ public class OfflineManagerFragment extends Fragment implements MKOfflineMapList
         lAdapter = new LocalMapAdapter();
         localMapListView.setAdapter(lAdapter);
 
+        if (localMapList.size() == 0) {
+            showNoDataLayout(true);
+        }
+
     }
 
     private void initBroadcast() {
@@ -165,7 +169,20 @@ public class OfflineManagerFragment extends Fragment implements MKOfflineMapList
         if (localMapList == null) {
             localMapList = new ArrayList<>();
         }
+
+        if (localMapList.size() == 0) {
+            showNoDataLayout(true);
+        } else {
+            showNoDataLayout(false);
+        }
         lAdapter.notifyDataSetChanged();
+    }
+
+    private void showNoDataLayout(boolean show) {
+        LinearLayout noDataLayout = (LinearLayout) view.findViewById(R.id.no_data_layout);
+        LinearLayout localMapLayout = (LinearLayout) view.findViewById(R.id.localmap_layout);
+        noDataLayout.setVisibility(show ? View.VISIBLE : View.GONE);
+        localMapLayout.setVisibility(show ? View.GONE : View.VISIBLE);
     }
 
 

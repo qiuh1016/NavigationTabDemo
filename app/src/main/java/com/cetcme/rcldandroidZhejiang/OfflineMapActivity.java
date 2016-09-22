@@ -144,8 +144,8 @@ public class OfflineMapActivity extends FragmentActivity {
         chat.setOnClickListener(new TabOnClickListener(0));
         found.setOnClickListener(new TabOnClickListener(1));
 
-        fragments.add(new OfflineCityListFragment());
         fragments.add(new OfflineManagerFragment());
+        fragments.add(new OfflineCityListFragment());
 
         mTabChat=(LinearLayout) findViewById(R.id.id_tab1_chat);
         mTabFound=(LinearLayout) findViewById(R.id.id_tab2_found);
