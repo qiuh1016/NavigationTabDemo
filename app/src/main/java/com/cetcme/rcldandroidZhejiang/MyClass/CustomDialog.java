@@ -130,13 +130,13 @@ public class CustomDialog extends Dialog {
         public CustomDialog create() {
             LayoutInflater inflater = (LayoutInflater) context
                     .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-            // instantiate the dialog with the custom Theme
+            // instantiate the custom_dialog with the custom Theme
             final CustomDialog dialog = new CustomDialog(context,R.style.myDialogActivityStyle);
-            View layout = inflater.inflate(R.layout.dialog, null);
+            View layout = inflater.inflate(R.layout.custom_dialog, null);
             dialog.addContentView(layout, new LayoutParams(
                     LayoutParams.FILL_PARENT, LayoutParams.WRAP_CONTENT));
 
-            // set the dialog title
+            // set the custom_dialog title
             NavigationView navigationView = (NavigationView) layout.findViewById(R.id.nav_main_in_dialog);
             navigationView.setBackgroundResource(R.drawable.top_select);
             navigationView.setTitle(title);
@@ -203,7 +203,7 @@ public class CustomDialog extends Dialog {
                 ((TextView) layout.findViewById(R.id.textView_in_dialog)).setText(message);
             } else if (contentView != null) {
                 // if no message set
-                // add the contentView to the dialog body
+                // add the contentView to the custom_dialog body
                 ((LinearLayout) layout.findViewById(R.id.content_in_dialog))
                         .removeAllViews();
                 ((LinearLayout) layout.findViewById(R.id.content_in_dialog))

@@ -43,18 +43,16 @@ public class OfflineCityListFragment extends Fragment implements  MKOfflineMapLi
     private String TAG = "OfflineCityListFragment";
 
     private MKOfflineMap mOffline = null;
+    private ArrayList<Map<String, Object>> allCities = new ArrayList<>();
 
     private View view;
     private Context context;
 
-    @BindView(R.id.cityid)
-    TextView cityIDTextView;
-
-    @BindView(R.id.city)
-    EditText cityNameTextView;
-
-    @BindView(R.id.state)
-    TextView stateView;
+//    @BindView(R.id.cityid)
+//    TextView cityIDTextView;
+//
+//    @BindView(R.id.city)
+//    EditText cityNameTextView;
 
     public View onCreateView(LayoutInflater inflater,ViewGroup container,Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.fragment_offline_city_list, container, false);
@@ -63,43 +61,42 @@ public class OfflineCityListFragment extends Fragment implements  MKOfflineMapLi
         mOffline = new MKOfflineMap();
         mOffline.init(this);
         initView();
-        initButtonClick();
         return view;
     }
 
     private void initView() {
 
-        ListView hotCityList = (ListView) view.findViewById(R.id.hotcitylist);
-        final ArrayList<Map<String, Object>> hotCities = new ArrayList<>();
-        // 获取热闹城市列表
-        ArrayList<MKOLSearchRecord> records1 = mOffline.getHotCityList();
-        if (records1 != null) {
-            for (MKOLSearchRecord r : records1) {
-                Map<String, Object> map = new Hashtable<>();
-                map.put("cityName", r.cityName);
-                map.put("cityID", r.cityID);
-                map.put("dataSize", this.formatDataSize(r.size));
-                hotCities.add(map);
-            }
-        }
-        SimpleAdapter hAdapter = new SimpleAdapter(context, hotCities,
-                R.layout.offline_map_list,
-                new String[] {"cityName", "dataSize"},
-                new int[] {R.id.name, R.id.size});
-        hotCityList.setAdapter(hAdapter);
-        hotCityList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                cityIDTextView.setText(hotCities.get(position).get("cityID").toString());
-                cityNameTextView.setText(hotCities.get(position).get("cityName").toString());
-            }
-        });
+//        ListView hotCityList = (ListView) view.findViewById(R.id.hotcitylist);
+//        final ArrayList<Map<String, Object>> hotCities = new ArrayList<>();
+//        // 获取热闹城市列表
+//        ArrayList<MKOLSearchRecord> records1 = mOffline.getHotCityList();
+//        if (records1 != null) {
+//            for (MKOLSearchRecord r : records1) {
+//                Map<String, Object> map = new Hashtable<>();
+//                map.put("cityName", r.cityName);
+//                map.put("cityID", r.cityID);
+//                map.put("dataSize", this.formatDataSize(r.size));
+//                hotCities.add(map);
+//            }
+//        }
+//        SimpleAdapter hAdapter = new SimpleAdapter(context, hotCities,
+//                R.layout.offline_map_list,
+//                new String[] {"cityName", "dataSize"},
+//                new int[] {R.id.name, R.id.size});
+//        hotCityList.setAdapter(hAdapter);
+//        hotCityList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+//            @Override
+//            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+//                cityIDTextView.setText(hotCities.get(position).get("cityID").toString());
+//                cityNameTextView.setText(hotCities.get(position).get("cityName").toString());
+//            }
+//        });
 
         ListView allCityList = (ListView) view.findViewById(R.id.allcitylist);
         // 获取所有支持离线地图的城市
-        final ArrayList<Map<String, Object>> allCities = new ArrayList<>();
+        allCities = new ArrayList<>();
         ArrayList<MKOLSearchRecord> records2 = mOffline.getOfflineCityList();
-        if (records1 != null) {
+        if (records2 != null) {
             for (MKOLSearchRecord r : records2) {
                 Map<String, Object> map = new Hashtable<>();
                 map.put("cityName", r.cityName);
@@ -108,67 +105,52 @@ public class OfflineCityListFragment extends Fragment implements  MKOfflineMapLi
                 allCities.add(map);
             }
         }
-        SimpleAdapter aAdapter = new SimpleAdapter(context, allCities,
-                R.layout.offline_map_list,
-                new String[] {"cityName", "dataSize"},
-                new int[] {R.id.name, R.id.size});
-        allCityList.setAdapter(aAdapter);
-        allCityList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                cityIDTextView.setText(allCities.get(position).get("cityID").toString());
-                cityNameTextView.setText(allCities.get(position).get("cityName").toString());
-            }
-        });
+        OfflineCityListAdapter offlineCityListAdapter = new OfflineCityListAdapter();
 
-    }
+//        SimpleAdapter aAdapter = new SimpleAdapter(context, allCities,
+//                R.layout.offline_map_list,
+//                new String[] {"cityName", "dataSize"},
+//                new int[] {R.id.name, R.id.size});
+        allCityList.setAdapter(offlineCityListAdapter);
+//        allCityList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+//            @Override
+//            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+//                cityIDTextView.setText(allCities.get(position).get("cityID").toString());
+//                cityNameTextView.setText(allCities.get(position).get("cityName").toString());
+//            }
+//        });
 
-    private void initButtonClick() {
-        view.findViewById(R.id.search_button_in_offline_map_fragment).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                search();
-            }
-        });
-
-        view.findViewById(R.id.start_button_in_offline_map_fragment).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                start();
-            }
-        });
     }
 
     /**
      * 搜索离线需市
      *
      */
-    public void search() {
-        ArrayList<MKOLSearchRecord> records = mOffline.searchCity(cityNameTextView
-                .getText().toString());
-        if (records == null || records.size() != 1) {
-            return;
-        }
-        cityIDTextView.setText(String.valueOf(records.get(0).cityID));
-    }
+//    public void search() {
+//        ArrayList<MKOLSearchRecord> records = mOffline.searchCity(cityNameTextView
+//                .getText().toString());
+//        if (records == null || records.size() != 1) {
+//            return;
+//        }
+//        cityIDTextView.setText(String.valueOf(records.get(0).cityID));
+//    }
 
     /**
      * 开始下载
      *
      */
-    public void start() {
-        int cityID = Integer.parseInt(cityIDTextView.getText().toString());
+    public void download(int cityID, String cityName) {
         mOffline.start(cityID);
-        Toast.makeText(context, "开始下载离线地图. cityID: " + cityID, Toast.LENGTH_SHORT).show();
+        Toast.makeText(context, "开始下载离线地图: " + cityName, Toast.LENGTH_SHORT).show();
     }
 
     @Override
     public void onPause() {
-        int cityID = Integer.parseInt(cityIDTextView.getText().toString());
-        MKOLUpdateElement temp = mOffline.getUpdateInfo(cityID);
-        if (temp != null && temp.status == MKOLUpdateElement.DOWNLOADING) {
-            mOffline.pause(cityID);
-        }
+//        int cityID = Integer.parseInt(cityIDTextView.getText().toString());
+//        MKOLUpdateElement temp = mOffline.getUpdateInfo(cityID);
+//        if (temp != null && temp.status == MKOLUpdateElement.DOWNLOADING) {
+//            mOffline.pause(cityID);
+//        }
         super.onPause();
     }
 
@@ -203,7 +185,6 @@ public class OfflineCityListFragment extends Fragment implements  MKOfflineMapLi
                 MKOLUpdateElement update = mOffline.getUpdateInfo(state);
                 // 处理下载进度更新提示
                 if (update != null) {
-                    stateView.setText(String.format("%s : %d%%", update.cityName, update.ratio));
                     sendUpdateOfflineMapStateBroadcast();
                 }
             }
@@ -227,5 +208,54 @@ public class OfflineCityListFragment extends Fragment implements  MKOfflineMapLi
         Intent intent = new Intent();
         intent.setAction("com.updateOfflineMapState");
         context.sendBroadcast(intent);
+    }
+
+    /**
+     * 离线地图管理列表适配器
+     */
+    public class OfflineCityListAdapter extends BaseAdapter {
+
+        @Override
+        public int getCount() {
+            return allCities.size();
+        }
+
+        @Override
+        public Object getItem(int index) {
+            return allCities.get(index);
+        }
+
+        @Override
+        public long getItemId(int index) {
+            return index;
+        }
+
+        @Override
+        public View getView(int index, View view, ViewGroup arg2) {
+            view = View.inflate(context, R.layout.offline_map_list, null);
+            initViewItem(view, index);
+            return view;
+        }
+
+        void initViewItem(View view, final int index) {
+            TextView downloadTextView = (TextView) view.findViewById(R.id.downloadTextView);
+            TextView nameTextView = (TextView) view.findViewById(R.id.name);
+            TextView sizeTextView = (TextView) view.findViewById(R.id.size);
+
+            final int cityID = (Integer) allCities.get(index).get("cityID");
+            final String cityName = allCities.get(index).get("cityName").toString();
+            String dataSize = allCities.get(index).get("dataSize").toString();
+
+            nameTextView.setText(cityName);
+            sizeTextView.setText(dataSize);
+
+            downloadTextView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View arg0) {
+                    download(cityID, cityName);
+                }
+            });
+        }
+
     }
 }

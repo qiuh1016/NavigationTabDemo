@@ -249,7 +249,7 @@ public class RouteActivity extends AppCompatActivity implements View.OnClickList
 
 
 //                    if (ms > 1000 * 3600 * 24) {
-//                        dialog("时间差不能超过1天！");
+//                        custom_dialog("时间差不能超过1天！");
 //                    } else {
 //                        kProgressHUD = KProgressHUD.create(RouteActivity.this)
 //                                .setStyle(KProgressHUD.Style.SPIN_INDETERMINATE)

@@ -32,6 +32,7 @@ import com.qiuhong.qhlibrary.Utils.DensityUtil;
 
 import java.util.ArrayList;
 import java.util.Hashtable;
+import java.util.List;
 import java.util.Map;
 
 import butterknife.BindView;
@@ -54,6 +55,8 @@ public class OfflineManagerFragment extends Fragment implements MKOfflineMapList
     private Context context;
     private MyUpdateOfflineMapStateReceiver myUpdateOfflineMapStateReceiver;
 
+    private Toast deleteToast;
+
     private String TAG = "OfflineManagerFragment";
 
 
@@ -64,6 +67,7 @@ public class OfflineManagerFragment extends Fragment implements MKOfflineMapList
         mOffline.init(this);
         initView();
         initBroadcast();
+        deleteToast = Toast.makeText(context, "", Toast.LENGTH_SHORT);
         return view;
     }
 
@@ -114,29 +118,43 @@ public class OfflineManagerFragment extends Fragment implements MKOfflineMapList
      * 删除离线地图
      *
      */
-    public void remove(int cityID, String cityName) {
-        removeOfflineMap(cityID, cityName);
-    }
+//    public void remove(int cityID, String cityName) {
+//        removeOfflineMap(cityID, cityName);
+//    }
 
     private void removeOfflineMap(final int cityID, final String cityName) {
-        CustomDialog.Builder builder = new CustomDialog.Builder(getActivity());
-        builder.setTitle("提示");
-        builder.setMessage("是否删除\"" + cityName +"\"?");
-        builder.setPositiveButton("删除", new DialogInterface.OnClickListener() {
+//        CustomDialog.Builder builder = new CustomDialog.Builder(getActivity());
+//        builder.setTitle("提示");
+//        builder.setMessage("是否删除\"" + cityName +"\"?");
+//        builder.setPositiveButton("删除", new DialogInterface.OnClickListener() {
+//            public void onClick(DialogInterface dialog, int which) {
+//                dialog.dismiss();
+//                mOffline.remove(cityID);
+//                Toast.makeText(context, "删除离线地图: " + cityName, Toast.LENGTH_SHORT).show();
+//                updateView();
+//            }
+//        });
+//
+//        builder.setNegativeButton("取消", new DialogInterface.OnClickListener() {
+//            public void onClick(DialogInterface dialog, int which) {
+//                dialog.dismiss();
+//            }
+//        });
+//        builder.create().show();
+
+        QHDialog removeDialog = new QHDialog(getActivity(), "提示", "是否删除\"" + cityName +"\"?");
+        removeDialog.setPositiveButton("删除", R.drawable.single_select_logout, new DialogInterface.OnClickListener() {
+            @Override
             public void onClick(DialogInterface dialog, int which) {
                 dialog.dismiss();
                 mOffline.remove(cityID);
-                Toast.makeText(context, "删除离线地图: " + cityName, Toast.LENGTH_SHORT).show();
+                deleteToast.setText("删除离线地图: " + cityName);
+                deleteToast.show();
                 updateView();
             }
         });
-
-        builder.setNegativeButton("取消", new DialogInterface.OnClickListener() {
-            public void onClick(DialogInterface dialog, int which) {
-                dialog.dismiss();
-            }
-        });
-        builder.create().show();
+        removeDialog.setNegativeButton("取消", null);
+        removeDialog.show();
     }
 
     /**
@@ -233,10 +251,9 @@ public class OfflineManagerFragment extends Fragment implements MKOfflineMapList
         }
 
         void initViewItem(View view, final MKOLUpdateElement e) {
-            Button remove = (Button) view.findViewById(R.id.remove);
+            TextView removeTextView = (TextView) view.findViewById(R.id.removeTextView);
             TextView title = (TextView) view.findViewById(R.id.title);
             TextView update = (TextView) view.findViewById(R.id.update);
-            TextView ratio = (TextView) view.findViewById(R.id.ratio);
             DonutProgress donutProgress = (DonutProgress) view.findViewById(R.id.donut_progress);
 
             donutProgress.setUnfinishedStrokeWidth(DensityUtil.dip2px(context, 2));
@@ -244,21 +261,26 @@ public class OfflineManagerFragment extends Fragment implements MKOfflineMapList
             donutProgress.setTextSize(DensityUtil.dip2px(context, 7));
             donutProgress.setProgress(e.ratio);
 
-            ratio.setText(e.ratio + "%");
+            if (e.ratio == 100) {
+                donutProgress.setVisibility(View.INVISIBLE);
+            }
             title.setText(e.cityName);
             if (e.update) {
                 update.setText("可更新");
+                update.setVisibility(View.VISIBLE);
             } else {
                 update.setText("最新");
+                update.setVisibility(View.INVISIBLE);
             }
 
-            remove.setOnClickListener(new View.OnClickListener() {
+            removeTextView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View arg0) {
                     removeOfflineMap(e.cityID, e.cityName);
                 }
             });
         }
+
 
     }
 

@@ -257,8 +257,8 @@ public class UpdateAppManager {
 //                .setCancelable(false)
 //                .setPositiveButton("下载", new OnClickListener() {
 //                    @Override
-//                    public void onClick(DialogInterface dialog, int which) {
-//                        dialog.dismiss();
+//                    public void onClick(DialogInterface custom_dialog, int which) {
+//                        custom_dialog.dismiss();
 //                        showDownloadDialog();
 //                    }
 //                });
@@ -325,13 +325,13 @@ public class UpdateAppManager {
 //        if (!forceToUpdate) {
 //            builder.setNegativeButton("取消", new OnClickListener() {
 //                @Override
-//                public void onClick(DialogInterface dialog, int which) {
+//                public void onClick(DialogInterface custom_dialog, int which) {
 //                    isCancel = true;
 //                }
 //            });
 //        }
-//        dialog = builder.create();
-//        dialog.show();
+//        custom_dialog = builder.create();
+//        custom_dialog.show();
 
 
 

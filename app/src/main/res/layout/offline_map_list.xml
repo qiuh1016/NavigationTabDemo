@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="40dp"
+    android:layout_height="wrap_content"
     android:orientation="horizontal"
-    android:padding="10dip" >
+    >
 
     <TextView
         android:id="@+id/name"
@@ -11,13 +11,39 @@
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:text="Name"
-        />
+        android:padding="10dp"/>
 
     <TextView
         android:id="@+id/size"
-        android:layout_width="60dp"
         android:layout_height="wrap_content"
         android:text="Size"
-        android:gravity="right" />
+        android:gravity="right"
+        android:padding="10dp"
+        android:layout_width="100dp"
+        android:textSize="12sp"/>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_height="match_parent"
+        android:layout_width="wrap_content"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+
+        <TextView
+            android:text="下载"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/downloadTextView"
+            android:layout_weight="1"
+            android:textSize="11sp"
+            android:textColor="@color/main_color"
+            android:background="@drawable/background_for_offline_map_download_button"
+            android:gravity="center_vertical"
+            android:layout_gravity="center"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp"/>
+    </LinearLayout>
 
 </LinearLayout>

@@ -25,6 +25,7 @@ import com.cetcme.rcldandroidZhejiang.MyClass.NavigationView;
 import com.loopj.android.http.AsyncHttpClient;
 import com.loopj.android.http.JsonHttpResponseHandler;
 import com.loopj.android.http.RequestParams;
+import com.qiuhong.qhlibrary.Dialog.QHDialog;
 
 import org.apache.http.Header;
 import org.json.JSONException;
@@ -230,27 +231,38 @@ public class UserFragment extends BaseFragment {
 
     private void logoutDialog() {
 
-        CustomDialog.Builder builder = new CustomDialog.Builder(getActivity());
-        builder.setTitle("提示");
-        builder.setMessage("即将退出，是否继续?");
-        builder.setCancelable(false);
-        builder.setPositiveButton("退出", new DialogInterface.OnClickListener() {
+        QHDialog qhDialog = new QHDialog(getActivity(), "提示", "即将退出，是否继续?");
+        qhDialog.setPositiveButton("退出", R.drawable.single_select_logout, new DialogInterface.OnClickListener() {
+            @Override
             public void onClick(DialogInterface dialog, int which) {
-                Log.i(TAG, "onClick: right");
                 dialog.dismiss();
                 logout();
-                //设置你的操作事项
             }
         });
+        qhDialog.setNegativeButton("取消", null);
+        qhDialog.show();
 
-        builder.setNegativeButton("取消", new DialogInterface.OnClickListener() {
-            public void onClick(DialogInterface dialog, int which) {
-                Log.i(TAG, "onClick: left");
-                dialog.dismiss();
-            }
-        });
-
-        builder.create().show();
+//        CustomDialog.Builder builder = new CustomDialog.Builder(getActivity());
+//        builder.setTitle("提示");
+//        builder.setMessage("即将退出，是否继续?");
+//        builder.setCancelable(false);
+//        builder.setPositiveButton("退出", new DialogInterface.OnClickListener() {
+//            public void onClick(DialogInterface custom_dialog, int which) {
+//                Log.i(TAG, "onClick: right");
+//                custom_dialog.dismiss();
+//                logout();
+//                //设置你的操作事项
+//            }
+//        });
+//
+//        builder.setNegativeButton("取消", new DialogInterface.OnClickListener() {
+//            public void onClick(DialogInterface custom_dialog, int which) {
+//                Log.i(TAG, "onClick: left");
+//                custom_dialog.dismiss();
+//            }
+//        });
+//
+//        builder.create().show();
 
 
 //        AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());

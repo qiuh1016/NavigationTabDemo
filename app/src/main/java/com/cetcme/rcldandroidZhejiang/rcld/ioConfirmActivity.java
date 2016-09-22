@@ -257,7 +257,7 @@ public class ioConfirmActivity extends Activity {
 //                builder.setNegativeButton("取消", null);
 //                builder.setPositiveButton("上传", new DialogInterface.OnClickListener() {
 //                    @Override
-//                    public void onClick(DialogInterface dialog, int which) {
+//                    public void onClick(DialogInterface custom_dialog, int which) {
 //                        upload();
 //                    }
 //                });
@@ -318,7 +318,7 @@ public class ioConfirmActivity extends Activity {
 //        builder.setNegativeButton("取消", null);
 //        builder.setPositiveButton("上传", new DialogInterface.OnClickListener() {
 //            @Override
-//            public void onClick(DialogInterface dialog, int which) {
+//            public void onClick(DialogInterface custom_dialog, int which) {
 //                upload();
 //            }
 //        });
@@ -347,7 +347,7 @@ public class ioConfirmActivity extends Activity {
 //            builder.setMessage("是否继续？");
 //            builder.setPositiveButton("返回", new DialogInterface.OnClickListener() {
 //                @Override
-//                public void onClick(DialogInterface dialog, int which) {
+//                public void onClick(DialogInterface custom_dialog, int which) {
 //                    showBackDialog = false;
 //                    onBackPressed();
 //                }
@@ -619,7 +619,7 @@ public class ioConfirmActivity extends Activity {
 //        //删除
 //        builder.setNegativeButton("删除", new DialogInterface.OnClickListener() {
 //            @Override
-//            public void onClick(DialogInterface dialog, int which) {
+//            public void onClick(DialogInterface custom_dialog, int which) {
 //                Log.i("Main","删除");
 //
 //                int dataType = (int) map.get("dataType");
@@ -636,7 +636,7 @@ public class ioConfirmActivity extends Activity {
 //                            .setIcon(android.R.drawable.ic_menu_info_details)
 //                            .setView(et)
 //                            .setPositiveButton("确定", new DialogInterface.OnClickListener() {
-//                                public void onClick(DialogInterface dialog, int which) {
+//                                public void onClick(DialogInterface custom_dialog, int which) {
 //                                    String input = et.getText().toString();
 //                                    if (input.equals("")) {
 //                                        Toast.makeText(getApplicationContext(), "删除原因不能为空", Toast.LENGTH_SHORT).show();
