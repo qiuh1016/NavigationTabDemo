@@ -180,7 +180,6 @@ public class UpdateAppManager {
                         if (serverVersionCode > currentVersionCode) {
                             FILE_NAME = FILE_PATH + "zytyumin_V" + serverVersionName +".apk";
                             showNoticeDialog();
-                            editor.putInt("serverVersionCode", serverVersionCode);
                             editor.putString("newVersionRemark", newVersionRemark);
                         } else {
                             //手动检测更新
@@ -188,7 +187,7 @@ public class UpdateAppManager {
                                 showNoUpdateDialog();
                             }
                         }
-
+                        editor.putInt("serverVersionCode", serverVersionCode);
                         editor.apply();
 
                     } else {
