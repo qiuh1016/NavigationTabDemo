@@ -260,7 +260,7 @@ public class OfflineManagerFragment extends Fragment implements MKOfflineMapList
             updateView();
         }
     }
-    
+
 
 //    @Override
 //    public void onPause() {
