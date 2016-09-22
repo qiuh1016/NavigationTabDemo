@@ -5,6 +5,7 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.util.Log;
@@ -67,10 +68,10 @@ public class OfflineManagerFragment extends Fragment implements MKOfflineMapList
         mOffline.init(this);
         initView();
         initBroadcast();
+        initButtonClick();
         deleteToast = Toast.makeText(context, "", Toast.LENGTH_SHORT);
         return view;
     }
-
 
     private void initView() {
         // 获取已下过的离线地图信息
@@ -79,13 +80,25 @@ public class OfflineManagerFragment extends Fragment implements MKOfflineMapList
             localMapList = new ArrayList<>();
         }
 
+        if (localMapList.size() == 0) {
+            showNoDataLayout(true);
+        }
+
         ListView localMapListView = (ListView) view.findViewById(R.id.localmaplist);
         lAdapter = new LocalMapAdapter();
         localMapListView.setAdapter(lAdapter);
 
-        if (localMapList.size() == 0) {
-            showNoDataLayout(true);
-        }
+        localMapListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                MKOLUpdateElement e = localMapList.get(position);
+                if (e.status == MKOLUpdateElement.SUSPENDED) {
+                    start(e.cityID, e.cityName);
+                } else if (e.status == MKOLUpdateElement.DOWNLOADING) {
+                    stop(e.cityID, e.cityName);
+                }
+            }
+        });
 
     }
 
@@ -96,56 +109,78 @@ public class OfflineManagerFragment extends Fragment implements MKOfflineMapList
         context.registerReceiver(myUpdateOfflineMapStateReceiver, filter);
     }
 
+    private void initButtonClick() {
+        view.findViewById(R.id.allDeleteButton).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                allDelete();
+            }
+        });
+
+        view.findViewById(R.id.allStopButton).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                allStop();
+            }
+        });
+
+        view.findViewById(R.id.allDownloadButton).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                allDownload();
+            }
+        });
+    }
+
     /**
      * 开始下载
      *
      */
-    public void start(int cityID) {
+    private void start(int cityID, String cityName) {
         mOffline.start(cityID);
-        Toast.makeText(context, "开始下载离线地图. cityID: " + cityID, Toast.LENGTH_SHORT)
-                .show();
+        Toast.makeText(context, "开始下载离线地图: " + cityName, Toast.LENGTH_SHORT).show();
         updateView();
+    }
+
+    private class downloadOfflineMapTask extends AsyncTask<Integer, Integer, Boolean> {
+
+        @Override
+        protected void onPreExecute() {
+            super.onPreExecute();
+        }
+
+        @Override
+        protected Boolean doInBackground(Integer... params) {
+            mOffline.start(params[0]);
+            return  true;
+        }
+
+        @Override
+        protected void onProgressUpdate(Integer... values) {
+            super.onProgressUpdate(values);
+        }
+
+        @Override
+        protected void onPostExecute(Boolean result) {
+            super.onPostExecute(result);
+        }
+
     }
 
     /**
      * 暂停下载
      *
      */
-    public void stop(int cityID) {
+    private void stop(int cityID, String cityName) {
         mOffline.pause(cityID);
-        Toast.makeText(context, "暂停下载离线地图. cityID: " + cityID, Toast.LENGTH_SHORT)
-                .show();
+        Toast.makeText(context, "暂停下载离线地图: " + cityName, Toast.LENGTH_SHORT).show();
         updateView();
     }
 
     /**
      * 删除离线地图
-     *
      */
-//    public void remove(int cityID, String cityName) {
-//        removeOfflineMap(cityID, cityName);
-//    }
-
     private void removeOfflineMap(final int cityID, final String cityName) {
-//        CustomDialog.Builder builder = new CustomDialog.Builder(getActivity());
-//        builder.setTitle("提示");
-//        builder.setMessage("是否删除\"" + cityName +"\"?");
-//        builder.setPositiveButton("删除", new DialogInterface.OnClickListener() {
-//            public void onClick(DialogInterface dialog, int which) {
-//                dialog.dismiss();
-//                mOffline.remove(cityID);
-//                Toast.makeText(context, "删除离线地图: " + cityName, Toast.LENGTH_SHORT).show();
-//                updateView();
-//            }
-//        });
-//
-//        builder.setNegativeButton("取消", new DialogInterface.OnClickListener() {
-//            public void onClick(DialogInterface dialog, int which) {
-//                dialog.dismiss();
-//            }
-//        });
-//        builder.create().show();
-
         QHDialog removeDialog = new QHDialog(getActivity(), "提示", "是否删除\"" + cityName +"\"?");
         removeDialog.setPositiveButton("删除", R.drawable.single_select_logout, new DialogInterface.OnClickListener() {
             @Override
@@ -185,7 +220,6 @@ public class OfflineManagerFragment extends Fragment implements MKOfflineMapList
         localMapLayout.setVisibility(show ? View.GONE : View.VISIBLE);
     }
 
-
     public class MyUpdateOfflineMapStateReceiver extends BroadcastReceiver {
         @Override
         public void onReceive(Context arg0, Intent arg1) {
@@ -193,6 +227,40 @@ public class OfflineManagerFragment extends Fragment implements MKOfflineMapList
         }
     }
 
+    private void allDelete() {
+        QHDialog removeDialog = new QHDialog(getActivity(), "提示", "是否删除所有已下载的离线地图?");
+        removeDialog.setPositiveButton("删除", R.drawable.single_select_logout, new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                dialog.dismiss();
+                for (MKOLUpdateElement e: localMapList) {
+                    mOffline.remove(e.cityID);
+                }
+                updateView();
+            }
+        });
+        removeDialog.setNegativeButton("取消", null);
+        removeDialog.show();
+    }
+
+    private void allStop() {
+        for (MKOLUpdateElement e: localMapList) {
+            if (e.status == MKOLUpdateElement.DOWNLOADING) {
+                mOffline.pause(e.cityID);
+            }
+            updateView();
+        }
+    }
+
+    private void allDownload() {
+        for (MKOLUpdateElement e: localMapList) {
+            if (e.status == MKOLUpdateElement.SUSPENDED) {
+                mOffline.start(e.cityID);
+            }
+            updateView();
+        }
+    }
+    
 
 //    @Override
 //    public void onPause() {
@@ -297,7 +365,6 @@ public class OfflineManagerFragment extends Fragment implements MKOfflineMapList
                 }
             });
         }
-
 
     }
 

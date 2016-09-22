@@ -5,30 +5,65 @@
               android:orientation="vertical" >
 
     <LinearLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        android:id="@+id/localmap_layout"
+        android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical" >
+        android:layout_weight="1">
 
-        <ListView
-            android:id="@+id/localmaplist"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content" />
-    </LinearLayout>
-
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                  android:orientation="vertical"
-                  android:layout_width="match_parent"
-                  android:layout_height="match_parent"
-                  android:background="#EEEEEE"
-        android:id="@+id/no_data_layout">
-
-        <TextView
+        <LinearLayout
+            android:id="@+id/localmap_layout"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="无数据"
-            android:gravity="center"/>
+            android:orientation="vertical"
+            >
+
+            <ListView
+                android:id="@+id/localmaplist"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+                      android:layout_width="match_parent"
+                      android:layout_height="match_parent"
+                      android:background="#EEEEEE"
+                      android:id="@+id/no_data_layout"
+            >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="无数据"
+                android:gravity="center"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="40dp">
+
+        <Button
+            android:text="全部删除"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/allDeleteButton"
+            android:layout_weight="1"/>
+
+        <Button
+            android:text="全部暂停"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/allStopButton"
+            android:layout_weight="1"/>
+
+        <Button
+            android:text="全部下载"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/allDownloadButton"
+            android:layout_weight="1"/>
     </LinearLayout>
 
 </LinearLayout>

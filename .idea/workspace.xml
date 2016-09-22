@@ -69,9 +69,7 @@
     <list default="true" id="e279e6be-7f14-4cf0-a014-66e978e760d8" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/cetcme/rcldandroidZhejiang/OfflineManagerFragment.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/cetcme/rcldandroidZhejiang/OfflineManagerFragment.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/cetcme/rcldandroidZhejiang/OfflineMapActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/cetcme/rcldandroidZhejiang/OfflineMapActivity.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_offline_manager.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_offline_manager.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/view_pager_in_offline_map_activity.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/view_pager_in_offline_map_activity.xml" />
     </list>
     <ignored path="zytyumin.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -126,11 +124,68 @@
       <file leaf-file-name="OfflineManagerFragment.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/cetcme/rcldandroidZhejiang/OfflineManagerFragment.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="812">
-              <caret line="94" column="54" selection-start-line="94" selection-start-column="54" selection-end-line="94" selection-end-column="54" />
+            <state relative-caret-position="258">
+              <caret line="262" column="4" selection-start-line="262" selection-start-column="4" selection-end-line="262" selection-end-column="4" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="docComment;class#OfflineManagerFragment#0" expanded="false" />
+                <element signature="docComment;field#localMapList#0;class#OfflineManagerFragment#0" expanded="false" />
+                <element signature="method#initView#0;class#OfflineManagerFragment#0" expanded="false" />
+                <element signature="method#initBroadcast#0;class#OfflineManagerFragment#0" expanded="false" />
+                <element signature="e#3751#3896#0" expanded="true" />
+                <element signature="e#3895#3896#0" expanded="true" />
+                <element signature="e#3965#4108#0" expanded="true" />
+                <element signature="e#4107#4108#0" expanded="true" />
+                <element signature="e#4181#4328#0" expanded="true" />
+                <element signature="e#4327#4328#0" expanded="true" />
+                <element signature="docComment;method#start#0;class#OfflineManagerFragment#0" expanded="false" />
+                <element signature="method#doInBackground#0;class#downloadOfflineMapTask#0;class#OfflineManagerFragment#0" expanded="false" />
+                <element signature="docComment;method#stop#0;class#OfflineManagerFragment#0" expanded="false" />
+                <element signature="method#stop#0;class#OfflineManagerFragment#0" expanded="false" />
+                <element signature="docComment;method#removeOfflineMap#0;class#OfflineManagerFragment#0" expanded="false" />
+                <element signature="docComment;method#updateView#0;class#OfflineManagerFragment#0" expanded="false" />
+                <element signature="method#showNoDataLayout#0;class#OfflineManagerFragment#0" expanded="false" />
+                <element signature="class#MyUpdateOfflineMapStateReceiver#0;class#OfflineManagerFragment#0" expanded="false" />
+                <element signature="e#8232#8247#0" expanded="false" />
+                <element signature="method#onDestroy#0;class#OfflineManagerFragment#0" expanded="false" />
+                <element signature="e#9426#9435#0" expanded="false" />
+                <element signature="docComment;class#LocalMapAdapter#0;class#OfflineManagerFragment#0" expanded="false" />
+                <element signature="class#LocalMapAdapter#0;class#OfflineManagerFragment#0" expanded="false" />
+                <element signature="method#getView#0;class#LocalMapAdapter#0;class#OfflineManagerFragment#0" expanded="false" />
+                <element signature="method#initViewItem#0;class#LocalMapAdapter#0;class#OfflineManagerFragment#0" expanded="false" />
+                <marker date="1474525337000" expanded="false" signature="4425:4571" ph="{...}" />
+                <marker date="1474525337000" expanded="false" signature="4659:5185" ph="{...}" />
+                <marker date="1474525337000" expanded="false" signature="6206:6539" ph="{...}" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MKOfflineMap.class" pinned="false" current-in-tab="false">
+        <entry file="jar://$PROJECT_DIR$/app/libs/BaiduLBS_Android.jar!/com/baidu/mapapi/map/offline/MKOfflineMap.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="259">
+              <caret line="43" column="19" selection-start-line="43" selection-start-column="19" selection-end-line="43" selection-end-column="19" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MainActivity.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/cetcme/rcldandroidZhejiang/MainActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="234">
+              <caret line="55" column="16" selection-start-line="55" selection-start-column="16" selection-end-line="55" selection-end-column="16" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="OfflineMapActivity.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/cetcme/rcldandroidZhejiang/OfflineMapActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="234">
+              <caret line="60" column="0" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -141,8 +196,8 @@
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="143">
-              <caret line="11" column="39" selection-start-line="11" selection-start-column="39" selection-end-line="11" selection-end-column="39" />
+            <state relative-caret-position="480">
+              <caret line="55" column="44" selection-start-line="55" selection-start-column="44" selection-end-line="55" selection-end-column="44" />
               <folding />
             </state>
           </provider>
@@ -3137,19 +3192,18 @@
         <option value="$PROJECT_DIR$/app/src/main/res/layout/offline_map_list.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/offline_localmap_list.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_offline_city_list.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/cetcme/rcldandroidZhejiang/OfflineCityListFragment.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/view_pager_in_offline_map_activity.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/cetcme/rcldandroidZhejiang/OfflineMapActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/no_data_layout.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/cetcme/rcldandroidZhejiang/OfflineCityListFragment.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/cetcme/rcldandroidZhejiang/OfflineMapActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_offline_manager.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/cetcme/rcldandroidZhejiang/OfflineManagerFragment.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="y" value="23" />
     <option name="width" value="1440" />
-    <option name="height" value="824" />
+    <option name="height" value="900" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -3314,6 +3368,7 @@
     <property name="ExportApk.BuildType" value="release" />
     <property name="UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager2.SHOW" value="true" />
     <property name="UI_DESIGNER_EDITOR_MODE.NlPaletteManager-NlPreviewForm.SHOW" value="false" />
+    <property name="FullScreen" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
@@ -3758,13 +3813,13 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="824" extended-state="6" />
-    <editor active="false" />
+    <frame x="0" y="0" width="1440" height="900" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29219145" sideWeight="0.522696" order="8" side_tool="true" content_ui="tabs" />
-      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.36299434" sideWeight="0.47730398" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.36228287" sideWeight="0.47730398" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -3782,7 +3837,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32909605" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22460657" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22460657" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32768363" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297568" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -3918,14 +3973,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/cetcme/rcldandroidZhejiang/MainActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="55" column="16" selection-start-line="55" selection-start-column="16" selection-end-line="55" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_login.xml">
       <provider editor-type-id="android-designer2">
         <state />
@@ -3990,13 +4037,6 @@
         <state relative-caret-position="364">
           <caret line="37" column="46" selection-start-line="37" selection-start-column="46" selection-end-line="37" selection-end-column="46" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/app/libs/BaiduLBS_Android.jar!/com/baidu/mapapi/map/offline/MKOfflineMap.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="158">
-          <caret line="156" column="40" selection-start-line="156" selection-start-column="40" selection-end-line="156" selection-end-column="40" />
         </state>
       </provider>
     </entry>
@@ -4106,14 +4146,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/cetcme/rcldandroidZhejiang/OfflineMapActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="738">
-          <caret line="151" column="0" selection-start-line="151" selection-start-column="0" selection-end-line="151" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/view_pager_in_offline_map_activity.xml">
       <provider editor-type-id="android-designer2">
         <state />
@@ -4169,14 +4201,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/cetcme/rcldandroidZhejiang/OfflineCityListFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-542">
-          <caret line="148" column="29" selection-start-line="148" selection-start-column="29" selection-end-line="152" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/offline_map_list.xml">
       <provider selected="true" editor-type-id="android-designer2">
         <state />
@@ -4204,18 +4228,77 @@
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="143">
-          <caret line="11" column="39" selection-start-line="11" selection-start-column="39" selection-end-line="11" selection-end-column="39" />
+        <state relative-caret-position="480">
+          <caret line="55" column="44" selection-start-line="55" selection-start-column="44" selection-end-line="55" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/cetcme/rcldandroidZhejiang/OfflineCityListFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="278">
+          <caret line="108" column="0" selection-start-line="108" selection-start-column="0" selection-end-line="112" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/cetcme/rcldandroidZhejiang/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="55" column="16" selection-start-line="55" selection-start-column="16" selection-end-line="55" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/cetcme/rcldandroidZhejiang/OfflineMapActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="60" column="0" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/app/libs/BaiduLBS_Android.jar!/com/baidu/mapapi/map/offline/MKOfflineMap.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="259">
+          <caret line="43" column="19" selection-start-line="43" selection-start-column="19" selection-end-line="43" selection-end-column="19" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/cetcme/rcldandroidZhejiang/OfflineManagerFragment.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="812">
-          <caret line="94" column="54" selection-start-line="94" selection-start-column="54" selection-end-line="94" selection-end-column="54" />
+        <state relative-caret-position="258">
+          <caret line="262" column="4" selection-start-line="262" selection-start-column="4" selection-end-line="262" selection-end-column="4" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="docComment;class#OfflineManagerFragment#0" expanded="false" />
+            <element signature="docComment;field#localMapList#0;class#OfflineManagerFragment#0" expanded="false" />
+            <element signature="method#initView#0;class#OfflineManagerFragment#0" expanded="false" />
+            <element signature="method#initBroadcast#0;class#OfflineManagerFragment#0" expanded="false" />
+            <element signature="e#3751#3896#0" expanded="true" />
+            <element signature="e#3895#3896#0" expanded="true" />
+            <element signature="e#3965#4108#0" expanded="true" />
+            <element signature="e#4107#4108#0" expanded="true" />
+            <element signature="e#4181#4328#0" expanded="true" />
+            <element signature="e#4327#4328#0" expanded="true" />
+            <element signature="docComment;method#start#0;class#OfflineManagerFragment#0" expanded="false" />
+            <element signature="method#doInBackground#0;class#downloadOfflineMapTask#0;class#OfflineManagerFragment#0" expanded="false" />
+            <element signature="docComment;method#stop#0;class#OfflineManagerFragment#0" expanded="false" />
+            <element signature="method#stop#0;class#OfflineManagerFragment#0" expanded="false" />
+            <element signature="docComment;method#removeOfflineMap#0;class#OfflineManagerFragment#0" expanded="false" />
+            <element signature="docComment;method#updateView#0;class#OfflineManagerFragment#0" expanded="false" />
+            <element signature="method#showNoDataLayout#0;class#OfflineManagerFragment#0" expanded="false" />
+            <element signature="class#MyUpdateOfflineMapStateReceiver#0;class#OfflineManagerFragment#0" expanded="false" />
+            <element signature="e#8232#8247#0" expanded="false" />
+            <element signature="method#onDestroy#0;class#OfflineManagerFragment#0" expanded="false" />
+            <element signature="e#9426#9435#0" expanded="false" />
+            <element signature="docComment;class#LocalMapAdapter#0;class#OfflineManagerFragment#0" expanded="false" />
+            <element signature="class#LocalMapAdapter#0;class#OfflineManagerFragment#0" expanded="false" />
+            <element signature="method#getView#0;class#LocalMapAdapter#0;class#OfflineManagerFragment#0" expanded="false" />
+            <element signature="method#initViewItem#0;class#LocalMapAdapter#0;class#OfflineManagerFragment#0" expanded="false" />
+            <marker date="1474525337000" expanded="false" signature="4425:4571" ph="{...}" />
+            <marker date="1474525337000" expanded="false" signature="4659:5185" ph="{...}" />
+            <marker date="1474525337000" expanded="false" signature="6206:6539" ph="{...}" />
           </folding>
         </state>
       </provider>
