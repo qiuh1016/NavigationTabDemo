@@ -2,7 +2,7 @@
 <resources>
     <string name="app_name">浙渔通</string>
 
-    <string name="originalVersionRemark">更新：\n1、软件构架调整\n2、新增业务办理、记录查询、法律法规、业务流程、待办任务等功能</string>
+    <string name="originalVersionRemark">更新:\n2.0.2:\n增加离线地图、轨迹录制功能\n2.0.1:\n更改首页图标和整体配色\n2.0:\n1、软件构架调整\n2、新增业务办理、记录查询、法律法规、业务流程、待办任务等功能</string>
 
     <string name="user_terms"><u>用户协议</u></string>
     <string name="password">密&#160;&#160;&#160;&#160;码</string>

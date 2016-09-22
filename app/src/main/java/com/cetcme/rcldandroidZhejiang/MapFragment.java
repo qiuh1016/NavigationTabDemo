@@ -5,14 +5,18 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.SharedPreferences;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.annotation.Nullable;
 import android.util.Log;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.baidu.mapapi.map.BaiduMap;
@@ -33,6 +37,7 @@ import com.baidu.mapapi.model.LatLng;
 import com.cetcme.rcldandroidZhejiang.IconPager.BaseFragment;
 import com.cetcme.rcldandroidZhejiang.MyClass.NavigationView;
 import com.cetcme.rcldandroidZhejiang.MyClass.Ship;
+import com.qiuhong.qhlibrary.Dialog.QHDialog;
 
 import java.io.Serializable;
 import java.util.List;
@@ -79,6 +84,24 @@ public class MapFragment extends BaseFragment implements  BaiduMap.OnMarkerClick
         NavigationView navigationView = (NavigationView) view.findViewById(R.id.nav_main_in_fragment_map);
         navigationView.setTitle("地图");
         navigationView.setRightView(R.drawable.icon_list);
+
+        RelativeLayout.LayoutParams params1 = (RelativeLayout.LayoutParams) navigationView.getBackView().getLayoutParams();
+        navigationView.removeView(navigationView.getBackView());
+
+        TextView textView_help = new TextView(getActivity());
+        textView_help.setText("录制");
+        textView_help.setTextColor(Color.WHITE);
+        textView_help.setTextSize(14);
+        textView_help.setGravity(Gravity.CENTER);
+        textView_help.setLayoutParams(params1);
+        textView_help.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                gotoRouteRecordActivity();
+            }
+        });
+        navigationView.addView(textView_help);
+
         navigationView.setClickCallback(new NavigationView.ClickCallback() {
 
             @Override
@@ -281,6 +304,14 @@ public class MapFragment extends BaseFragment implements  BaiduMap.OnMarkerClick
 
 //        mapStatus(new LatLng(30, 122));
 
+    }
+
+    private void gotoRouteRecordActivity() {
+        Intent intent = new Intent();
+        intent.setClass(getActivity(), RouteRecordActivity.class);
+        startActivity(intent);
+        MainActivity activity = (MainActivity) getActivity();
+        activity.overridePendingTransition(R.anim.push_left_in_no_alpha, R.anim.push_left_out_no_alpha);
     }
 
 }
