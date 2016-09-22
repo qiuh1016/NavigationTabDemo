@@ -182,7 +182,7 @@ public class UpdateAppManager {
                             showNoticeDialog();
                             editor.putInt("serverVersionCode", serverVersionCode);
                             editor.putString("newVersionRemark", newVersionRemark);
-                        } else if (serverVersionCode == currentVersionCode) {
+                        } else {
                             //手动检测更新
                             if (manualCheckUpdate) {
                                 showNoUpdateDialog();
