@@ -72,7 +72,7 @@
             android:value="8dd255d6576746ffd0ffc9481ed7cb19" >
         </meta-data>
 
-        <activity android:name="com.cetcme.rcldandroidZhejiang.MainActivity">
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
@@ -291,117 +291,143 @@
 
         <!-- fr end -->
 
-        <activity android:name="com.cetcme.rcldandroidZhejiang.ServiceActivity"/>
-        <activity android:name="com.cetcme.rcldandroidZhejiang.RecordActivity"/>
-        <activity android:name="com.cetcme.rcldandroidZhejiang.ShipActivity"/>
-        <activity android:name="com.cetcme.rcldandroidZhejiang.VisaActivity"/>
-        <activity android:name="com.cetcme.rcldandroidZhejiang.LoginActivity"/>
-        <activity android:name="com.cetcme.rcldandroidZhejiang.WebActivity"/>
+        <activity android:name=".ServiceActivity"
+            android:launchMode="singleTask"/>
+        <activity android:name=".RecordActivity"
+                  android:launchMode="singleTask"/>
+        <activity android:name=".ShipActivity"
+                  android:launchMode="singleTask"/>
+        <activity android:name=".VisaActivity"
+                  android:launchMode="singleTask"/>
+        <activity android:name=".LoginActivity"
+            android:launchMode="singleTop"/>
+        <activity android:name=".WebActivity"
+                  android:launchMode="singleTask"/>
         <activity
-            android:name="com.cetcme.rcldandroidZhejiang.SplashActivity"
+            android:name=".SplashActivity"
             android:theme="@style/SplashTheme"/>
-        <activity android:name="com.cetcme.rcldandroidZhejiang.TableActivity"/>
-        <activity android:name="com.cetcme.rcldandroidZhejiang.TodoActivity">
+        <activity android:name=".TableActivity"/>
+        <activity android:name=".TodoActivity"
+                  android:launchMode="singleTask">
         </activity>
-        <activity android:name="com.cetcme.rcldandroidZhejiang.ChangePasswordActivity">
+        <activity android:name=".ChangePasswordActivity"
+                  android:launchMode="singleTask">
         </activity>
-        <activity android:name="com.cetcme.rcldandroidZhejiang.VersionActivity">
+        <activity android:name=".VersionActivity"
+                  android:launchMode="singleTask">
         </activity>
-        <activity android:name="com.cetcme.rcldandroidZhejiang.OfflineMapActivity">
+        <activity android:name=".OfflineMapActivity"
+                  android:launchMode="singleTask">
         </activity>
-        <activity android:name="com.cetcme.rcldandroidZhejiang.CheckPhoneActivity">
+        <activity android:name=".CheckPhoneActivity"
+                  android:launchMode="singleTask">
         </activity>
-        <activity android:name="com.cetcme.rcldandroidZhejiang.RegisterInfoActivity">
+        <activity android:name=".RegisterInfoActivity"
+                  android:launchMode="singleTask">
         </activity>
         <activity
-            android:name="com.cetcme.rcldandroidZhejiang.xia.SearchRecordListActivity"
+            android:name=".xia.SearchRecordListActivity"
             android:launchMode="standard"
             android:screenOrientation="portrait">
         </activity>
         <activity
-            android:name="com.cetcme.rcldandroidZhejiang.xia.SearcherPayEnsuranceActivity"
+            android:name=".xia.SearcherPayEnsuranceActivity"
             android:launchMode="standard"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan|stateHidden">
         </activity>
         <activity
-            android:name="com.cetcme.rcldandroidZhejiang.xia.DetailPayInsuranceInfoActivity"
+            android:name=".xia.DetailPayInsuranceInfoActivity"
             android:launchMode="standard"
             android:screenOrientation="portrait">
         </activity>
         <activity
-            android:name="com.cetcme.rcldandroidZhejiang.xia.SearcherClaimActivity"
+            android:name=".xia.SearcherClaimActivity"
             android:launchMode="standard"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan|stateHidden">
         </activity>
         <activity
-            android:name="com.cetcme.rcldandroidZhejiang.xia.DetailClaimInfoActivity"
+            android:name=".xia.DetailClaimInfoActivity"
             android:launchMode="standard"
             android:screenOrientation="portrait">
         </activity>
         <activity
-            android:name="com.cetcme.rcldandroidZhejiang.xia.SearcherTradeActivity"
+            android:name=".xia.SearcherTradeActivity"
             android:launchMode="standard"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan|stateHidden">
         </activity>
         <activity
-            android:name="com.cetcme.rcldandroidZhejiang.xia.DetailTradingInfoActivity"
+            android:name=".xia.DetailTradingInfoActivity"
             android:launchMode="standard"
             android:screenOrientation="portrait">
         </activity>
         <activity
-            android:name="com.cetcme.rcldandroidZhejiang.xia.SearcherShipDetectActivity"
+            android:name=".xia.SearcherShipDetectActivity"
             android:launchMode="standard"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan|stateHidden">
         </activity>
         <activity
-            android:name="com.cetcme.rcldandroidZhejiang.xia.SearcherDrawingCheckActivity"
+            android:name=".xia.SearcherDrawingCheckActivity"
             android:launchMode="standard"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan|stateHidden">
         </activity>
         <activity
-            android:name="com.cetcme.rcldandroidZhejiang.xia.DetailShipDetectInfoActivity"
+            android:name=".xia.DetailShipDetectInfoActivity"
             android:launchMode="standard"
             android:screenOrientation="portrait">
         </activity>
         <activity
-            android:name="com.cetcme.rcldandroidZhejiang.xia.DetailDrawingCheckInfoActivity"
+            android:name=".xia.DetailDrawingCheckInfoActivity"
             android:launchMode="standard"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan|stateHidden">
         </activity>
         <activity
-            android:name="com.cetcme.rcldandroidZhejiang.xia.DetailFishShipActivity"
+            android:name=".xia.DetailFishShipActivity"
             android:launchMode="standard"
             android:screenOrientation="portrait">
         </activity>
-        <activity android:name="com.cetcme.rcldandroidZhejiang.rcld.ioConfirmActivity"/>
-        <activity android:name="com.cetcme.rcldandroidZhejiang.rcld.iofSailorActivity"/>
-        <activity android:name="com.cetcme.rcldandroidZhejiang.rcld.ioLogActivity"/>
-        <activity android:name="com.cetcme.rcldandroidZhejiang.rcld.ReasonActivity"/>
-        <activity android:name="com.cetcme.rcldandroidZhejiang.rcld.PunchActivity"/>
+        <activity android:name=".rcld.ioConfirmActivity"
+                  android:launchMode="singleInstance"/>
+        <activity android:name=".rcld.iofSailorActivity"
+                  android:launchMode="singleTask"/>
+        <activity android:name=".rcld.ioLogActivity"
+                  android:launchMode="singleTask"/>
+        <activity android:name=".rcld.ReasonActivity"
+                  android:launchMode="singleTask"/>
+        <activity android:name=".rcld.PunchActivity"
+                  android:launchMode="singleTask"/>
         <activity
-            android:name="com.cetcme.rcldandroidZhejiang.ShipInfoActivity"
-            android:theme="@style/myDialogActivityStyle">
+            android:name=".ShipInfoActivity"
+            android:theme="@style/myDialogActivityStyle"
+            android:launchMode="singleTask">
         </activity>
-        <activity android:name="com.cetcme.rcldandroidZhejiang.ProcessActivity">
+        <activity android:name=".ProcessActivity"
+                  android:launchMode="singleTask">
         </activity>
-        <activity android:name="com.cetcme.rcldandroidZhejiang.rcld.RouteActivity"/>
-        <activity android:name="com.cetcme.rcldandroidZhejiang.rcld.RouteDisplayActivity"/>
-        <activity android:name="com.cetcme.rcldandroidZhejiang.TodoListActivity">
+        <activity android:name=".rcld.RouteActivity"
+                  android:launchMode="singleTask"/>
+        <activity android:name=".rcld.RouteDisplayActivity"
+                  android:launchMode="singleTask"/>
+        <activity android:name=".TodoListActivity"
+                  android:launchMode="singleTask">
         </activity>
-        <activity android:name="com.cetcme.rcldandroidZhejiang.LawActivity">
+        <activity android:name=".LawActivity"
+                  android:launchMode="singleTask">
         </activity>
-        <activity android:name="com.cetcme.rcldandroidZhejiang.LawContentActivity">
+        <activity android:name=".LawContentActivity"
+                  android:launchMode="singleTask">
         </activity>
         <activity android:name=".RouteRecordActivity"
-                  android:screenOrientation="portrait"/>
+                  android:screenOrientation="portrait"
+                  android:launchMode="singleTask"/>
         <activity android:name=".RouteFilesActivity"
-                  android:screenOrientation="portrait"/>
+                  android:screenOrientation="portrait"
+                  android:launchMode="singleTask"/>
     </application>
 
 </manifest>

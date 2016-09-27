@@ -18,6 +18,8 @@ import com.baidu.mapapi.map.MarkerOptions;
 import com.baidu.mapapi.map.OverlayOptions;
 import com.baidu.mapapi.map.PolylineOptions;
 import com.baidu.mapapi.model.LatLng;
+import com.baidu.mapapi.model.LatLngBounds;
+import com.cetcme.rcldandroidZhejiang.MyClass.FileUtil;
 import com.cetcme.rcldandroidZhejiang.MyClass.NavigationView;
 import com.cetcme.rcldandroidZhejiang.MyClass.PrivateEncode;
 import com.umeng.analytics.MobclickAgent;
@@ -43,11 +45,14 @@ public class RouteDisplayActivity extends AppCompatActivity {
 
     private Boolean showMediaPoint;
 
-    private List<LatLng> latLngs = new LinkedList<>();
+    private List<LatLng> latLngs = new ArrayList<>();
 
     private LatLng maxPoint;
     private LatLng minPoint;
     private LatLng mediaPoint;
+
+    private LatLngBounds latLngBounds;
+
     private Double distance;
 
     private Boolean isConverted;
@@ -77,6 +82,7 @@ public class RouteDisplayActivity extends AppCompatActivity {
         distanceTextView = (TextView) findViewById(R.id.distanceTextView);
         mapView = (MapView) findViewById(R.id.baiduMapInRouteDisplayActivity);
         baiduMap = mapView.getMap();
+        baiduMap.setCompassPosition(new android.graphics.Point(80, 80));
         baiduMap.clear();
 
         //获取上个Activity给的数据
@@ -109,12 +115,24 @@ public class RouteDisplayActivity extends AppCompatActivity {
                     JSONObject dataJSON = new JSONObject(convedListString);
                     JSONArray resultArray = dataJSON.getJSONArray("result");
 
+                    LatLngBounds.Builder latLngBoundsBuilder = new LatLngBounds.Builder();
+//                    String filename = System.currentTimeMillis() + ".txt";
+//                    FileUtil.saveFile(filename, "[");
                     for (int i = 0; i < resultArray.length(); i++) {
                         JSONObject data = (JSONObject) resultArray.get(i);
                         Double lat = data.getDouble("y");
                         Double lng = data.getDouble("x");
                         LatLng latLng = new LatLng(lat, lng);
                         latLngs.add(latLng);
+                        latLngBoundsBuilder.include(latLng);
+
+//                        if (i == 0) {
+//                            FileUtil.appendData(filename, "{" + latLng.toString() + "}");
+//                        } else if (i == resultArray.length() - 1) {
+//                            FileUtil.appendData(filename, ",{" + latLng.toString() + "}]");
+//                        } else {
+//                            FileUtil.appendData(filename, ",{" + latLng.toString() + "}");
+//                        }
                     }
                     isConverted = true;
 
@@ -129,16 +147,18 @@ public class RouteDisplayActivity extends AppCompatActivity {
                 JSONObject dataJSON = new JSONObject(dataString);
                 JSONArray resultArray = dataJSON.getJSONArray("data");
 
+                LatLngBounds.Builder latLngBoundsBuilder = new LatLngBounds.Builder();
                 for (int i = 0; i < resultArray.length(); i++) {
                     JSONObject data = (JSONObject) resultArray.get(i);
                     Double lat = data.getDouble("latitude");
                     Double lng = data.getDouble("longitude");
                     LatLng latLng = new LatLng(lat, lng);
                     latLngs.add(latLng);
-                    latLngs.add(latLng);
-                    latLngs.add(latLng);
+                    latLngBoundsBuilder.include(latLng);
                 }
                 isConverted = false;
+                latLngBounds =  latLngBoundsBuilder.build();
+
             } catch (JSONException e) {
                 e.printStackTrace();
             }
@@ -214,14 +234,10 @@ public class RouteDisplayActivity extends AppCompatActivity {
         //添加在地图中
         baiduMap.addOverlay(ooPolyline);
 
-        //TODO: 根据坐标list设置中心点和 范围   完成 需要多测试
         //设置中心点 和 显示范围
-        MapStatus mapStatus = new MapStatus.Builder().target(mediaPoint).zoom(zoomLevel(distance)) //15
-                .build();
         MapStatusUpdate mapStatusUpdate = MapStatusUpdateFactory
-                .newMapStatus(mapStatus);
-        baiduMap.setMapStatus(mapStatusUpdate);
-
+                .newLatLngBounds(latLngBounds);
+        baiduMap.animateMapStatus(mapStatusUpdate);
 
         //起点终点标注
         //构建Marker图标
@@ -245,7 +261,6 @@ public class RouteDisplayActivity extends AppCompatActivity {
 
             BitmapDescriptor mediaBitmap = BitmapDescriptorFactory
                     .fromResource(R.drawable.icon_point);
-//                        .fromResource(android.R.drawable.ic_notification_overlay);
             for (int i = 1; i < latLngs.size() - 1; i++) {
                 OverlayOptions mediaMaker = new MarkerOptions()
                         .position(latLngs.get(i))
@@ -356,7 +371,7 @@ public class RouteDisplayActivity extends AppCompatActivity {
 
         } else {
             //先计算中间点 和 地图level 再画路径
-            getMediaPoint(latLngs);
+//            getMediaPoint(latLngs);
             drawRoute(latLngs);
         }
 

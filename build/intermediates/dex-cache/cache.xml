@@ -93,21 +93,21 @@
     </item>
     <item
         is-multidex="true"
-        jar="/Users/qiuhong/Desktop/zytyumin/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/23.4.0/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.3"
-        sha1="c2c594cace5d83a3227b2b6e658ecbfd586d3ed9">
-        <dex dex="/Users/qiuhong/Desktop/zytyumin/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-vector-drawable-23.4.0_6ee9ec965a0eda311d7a8e417e7420cbe11fc587/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
         jar="/Users/qiuhong/Desktop/zytyumin/app/build/intermediates/exploded-aar/com.android.support/multidex/1.0.1/jars/classes.jar"
         jumboMode="true"
         optimize="true"
         revision="23.0.3"
         sha1="78ea232052df889856dcb7b7b542707c89bb3bfb">
         <dex dex="/Users/qiuhong/Desktop/zytyumin/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-multidex-1.0.1_497e0d5138c017bf28edd48aa5362a5af5f81ccd/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/qiuhong/Desktop/zytyumin/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/23.4.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="c2c594cace5d83a3227b2b6e658ecbfd586d3ed9">
+        <dex dex="/Users/qiuhong/Desktop/zytyumin/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-vector-drawable-23.4.0_6ee9ec965a0eda311d7a8e417e7420cbe11fc587/classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -124,7 +124,7 @@
         jumboMode="true"
         optimize="true"
         revision="23.0.3"
-        sha1="f9b8161948bd0617ce11243046d92f2ed7c35167">
+        sha1="4426fe036eff481995cf02da78b1b3d3f454511d">
         <dex dex="/Users/qiuhong/Desktop/zytyumin/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_568bb3f167e414f6b78769d1973df8151c16cd82/classes.dex" />
     </item>
     <item
@@ -165,6 +165,15 @@
     </item>
     <item
         is-multidex="true"
+        jar="/Users/qiuhong/Desktop/zytyumin/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="67bd36ee9340ec7c254108936ad16b24bed160cc">
+        <dex dex="/Users/qiuhong/Desktop/zytyumin/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-v4-23.4.0_adfcb863dd0e3f0b0ce49f6865fc85549fc8e010/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="/Users/qiuhong/Desktop/zytyumin/app/build/intermediates/exploded-aar/com.jakewharton/butterknife/8.4.0/jars/classes.jar"
         jumboMode="true"
         optimize="true"
@@ -180,15 +189,6 @@
         revision="23.0.3"
         sha1="f592f61bf882bf30630a0c5307e0ed60d3916849">
         <dex dex="/Users/qiuhong/Desktop/zytyumin/app/build/intermediates/transforms/dex/debug/folders/1000/2/android-async-http-1.4.6_e7e5413dac4a8576cf65d43852b87269bcf67ad3/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/qiuhong/Desktop/zytyumin/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.3"
-        sha1="67bd36ee9340ec7c254108936ad16b24bed160cc">
-        <dex dex="/Users/qiuhong/Desktop/zytyumin/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-v4-23.4.0_adfcb863dd0e3f0b0ce49f6865fc85549fc8e010/classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -241,7 +241,7 @@
         jumboMode="true"
         optimize="true"
         revision="23.0.3"
-        sha1="2b0cfb008e5d4dd87630705f1d165ecdce435bf6">
+        sha1="220d1de9e5381f1d4492bd1441a8c92317209903">
         <dex dex="/Users/qiuhong/Desktop/zytyumin/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_0d988ebef588e7d0438e73d449cb5a0f367d5954/classes.dex" />
     </item>
     <item
