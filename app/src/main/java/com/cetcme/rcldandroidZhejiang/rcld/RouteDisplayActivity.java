@@ -135,6 +135,7 @@ public class RouteDisplayActivity extends AppCompatActivity {
 //                        }
                     }
                     isConverted = true;
+                    latLngBounds =  latLngBoundsBuilder.build();
 
                 } catch (JSONException e) {
                     e.printStackTrace();

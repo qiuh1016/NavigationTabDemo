@@ -48,7 +48,7 @@ import java.util.List;
 public class MapFragment extends BaseFragment implements  BaiduMap.OnMarkerClickListener {
 
     private View view;
-    private TextureMapView mapView;
+    private MapView mapView;
     private BaiduMap baiduMap;
 
     private SharedPreferences user;
@@ -79,6 +79,25 @@ public class MapFragment extends BaseFragment implements  BaiduMap.OnMarkerClick
 
         return view;
     }
+
+//    public void onResume() {
+//        super.onResume();
+//        Log.i(TAG, "onResume: ");
+//        initMapView();
+//        if (user.getBoolean("hasLogin", false)) {
+//            drawMapMark();
+//        }
+//    }
+//
+//    public void onPause() {
+//        super.onPause();
+//        Log.i(TAG, "onPause: ");
+//        baiduMap.clear();
+//        linearLayout = null;
+//        mapView = null;
+//        baiduMap = null;
+//
+//    }
 
     private void initNavigationView() {
         NavigationView navigationView = (NavigationView) view.findViewById(R.id.nav_main_in_fragment_map);
@@ -147,7 +166,7 @@ public class MapFragment extends BaseFragment implements  BaiduMap.OnMarkerClick
                 .overlookingGesturesEnabled(false)
                 .rotateGesturesEnabled(false)
                 .zoomControlsEnabled(true);
-        mapView = new TextureMapView(this.getActivity(), baiduMapOptions);
+        mapView = new MapView(this.getActivity(), baiduMapOptions);
         LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT);
         mapView.setLayoutParams(params);
 
