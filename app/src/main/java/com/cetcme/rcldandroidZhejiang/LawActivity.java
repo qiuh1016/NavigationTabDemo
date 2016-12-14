@@ -209,7 +209,7 @@ public class LawActivity extends Activity {
             /**
              * 功能行 list_cell
              */
-            ListCell listCell = new ListCell(this, titles.get(i).title, selector);
+            ListCell listCell = new ListCell(this, i + 1 + ". " + titles.get(i).title, selector);
             listCell.removeImageView();
             listCell.setTextSize(14);
 

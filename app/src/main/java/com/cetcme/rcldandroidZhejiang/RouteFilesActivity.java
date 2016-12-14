@@ -144,6 +144,9 @@ public class RouteFilesActivity extends AppCompatActivity {
 
     private List<Map<String, Object>> getData() {
         dataList = FileUtil.getFilesData();
+        if (dataList == null) {
+            return null;
+        }
         Collections.sort(dataList, new Comparator<Map<String, Object>>() {
             @Override
             public int compare(Map<String, Object> lhs, Map<String, Object> rhs) {

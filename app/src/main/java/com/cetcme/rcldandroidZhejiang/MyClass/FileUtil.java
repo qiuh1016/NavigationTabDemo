@@ -92,6 +92,11 @@ public class FileUtil {
     public static List<Map<String, Object>> getFilesData() {
         File f = new File(FILE_PATH);
         File[] files = f.listFiles();
+
+        if (files == null) {
+            return null;
+        }
+
         List<Map<String, Object>> filesData = new ArrayList<>();
         for (File file: files) {
             Map<String, Object> map = new Hashtable<>();
