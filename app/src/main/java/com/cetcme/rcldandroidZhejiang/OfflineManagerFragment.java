@@ -36,8 +36,8 @@ import java.util.Hashtable;
 import java.util.List;
 import java.util.Map;
 
-import butterknife.BindView;
-import butterknife.ButterKnife;
+//import butterknife.BindView;
+//import butterknife.ButterKnife;
 
 /**
  * A simple {@link Fragment} subclass.

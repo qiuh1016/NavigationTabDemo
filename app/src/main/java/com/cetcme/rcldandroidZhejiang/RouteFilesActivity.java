@@ -27,15 +27,15 @@ import java.util.Comparator;
 import java.util.List;
 import java.util.Map;
 
-import butterknife.BindView;
-import butterknife.ButterKnife;
+//import butterknife.BindView;
+//import butterknife.ButterKnife;
 
 public class RouteFilesActivity extends AppCompatActivity {
 
-    @BindView(R.id.route_files_listView)
+//    @BindView(R.id.route_files_listView)
     ListView listView;
 
-    @BindView(R.id.no_data_layout)
+//    @BindView(R.id.no_data_layout)
     LinearLayout noDataLayout;
 
     private List<Map<String, Object>> dataList = new ArrayList<>();
@@ -49,7 +49,10 @@ public class RouteFilesActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_route_files);
-        ButterKnife.bind(this);
+//        ButterKnife.bind(this);
+        listView = (ListView) findViewById(R.id.route_files_listView);
+        noDataLayout = (LinearLayout) findViewById(R.id.no_data_layout);
+
         getSupportActionBar().hide();
         initListView();
         initNavigationView();

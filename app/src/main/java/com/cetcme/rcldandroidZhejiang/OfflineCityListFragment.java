@@ -32,8 +32,8 @@ import java.util.ArrayList;
 import java.util.Hashtable;
 import java.util.Map;
 
-import butterknife.BindView;
-import butterknife.ButterKnife;
+//import butterknife.BindView;
+//import butterknife.ButterKnife;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -57,7 +57,7 @@ public class OfflineCityListFragment extends Fragment implements  MKOfflineMapLi
     public View onCreateView(LayoutInflater inflater,ViewGroup container,Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.fragment_offline_city_list, container, false);
         context = this.getActivity();
-        ButterKnife.bind(this, view);
+//        ButterKnife.bind(this, view);
         mOffline = new MKOfflineMap();
         mOffline.init(this);
         initView();

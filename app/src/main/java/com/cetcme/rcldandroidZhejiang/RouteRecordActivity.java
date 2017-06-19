@@ -45,15 +45,15 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-import butterknife.BindView;
-import butterknife.ButterKnife;
+//import butterknife.BindView;
+//import butterknife.ButterKnife;
 
 public class RouteRecordActivity extends AppCompatActivity {
 
-    @BindView(R.id.recordButton)
+//    @BindView(R.id.recordButton)
     Button recordButton;
 
-    @BindView(R.id.bmapView)
+//    @BindView(R.id.bmapView)
     MapView mapView;
 
     private BaiduMap mBaiduMap;
@@ -83,8 +83,11 @@ public class RouteRecordActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         SDKInitializer.initialize(getApplicationContext());
         setContentView(R.layout.activity_route_record);
-        ButterKnife.bind(this);
+//        ButterKnife.bind(this);
         getSupportActionBar().hide();
+
+        recordButton = (Button) findViewById(R.id.recordButton);
+        mapView = (MapView) findViewById(R.id.bmapView);
 
         init();
         initHud();
